@@ -15,6 +15,9 @@
 | tools/inspect_media.py | 完整视频解码、媒体参数与物理画面顿帧检查、联系表 |
 | preview.cmd / editor.cmd / render.cmd | 用户启动入口 |
 | docs/ | 验证记录、依赖来源和边界 |
+| docs/工作台扩展方案.md | 物体/机制/表现/回放/生产架构、面板与分阶段验收；设计阶段 |
+| docs/对象机制特效与时间轴规范.md | 数据类型、接触事务、双时间、Take、粒子/音效寻帧及AI命令草案 |
+| docs/examples/scene_v2.example.json | 新架构场景数据示例，当前运行版尚不兼容 |
 | .runtime/ | D盘便携 Godot 和临时数据，不纳入源码 |
 | outputs/ | PNG、视频、事件报告，不纳入源码 |
 
