@@ -14,6 +14,8 @@ static func mechanisms(parent: Node, doc: Dictionary, send: Callable) -> void:
 		elif rule.get("type", "") == "hit_stop_on_event": hit = rule
 	var active := F.check(parent, "启用分裂规则", bool(split.get("enabled", true)))
 	var children := F.number(parent, "子球总数", float(F.value(split, "params.children_total", 2)), 2, 6, 1)
+	var children_can_split := F.check(parent, "子球继续分裂", bool(F.value(split, "params.children_can_split", true)))
+	F.text(parent, "关闭后仅初始球可分裂；开启后子球可继续分裂，仍受数量上限和出生空间保护限制。")
 	var protection := F.number(parent, "新生保护（秒）", float(F.value(split, "conditions.newborn_guard_seconds", 0.08)), 0, 2, 0.01)
 	var maximum := F.number(parent, "最大动态物体数", float(F.value(doc, "world.max_dynamic_bodies", 48)), 2, 256, 1)
 	var targets: Array = F.value(split, "conditions.other_tags_any", ["ball", "boundary"])
@@ -37,6 +39,7 @@ static func mechanisms(parent: Node, doc: Dictionary, send: Callable) -> void:
 		if balls.button_pressed: tags.append("ball")
 		s["conditions"]["other_tags_any"] = tags
 		s["params"]["children_total"] = int(children.value)
+		s["params"]["children_can_split"] = children_can_split.button_pressed
 		var h: Dictionary = hit.duplicate(true)
 		h["enabled"] = hold.button_pressed
 		h["params"] = {"seconds": seconds.value, "same_batch_policy": "maximum"}

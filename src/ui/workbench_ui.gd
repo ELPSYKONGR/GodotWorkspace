@@ -7,6 +7,16 @@ const F = preload("res://src/ui/form_helpers.gd")
 const ObjectPanel = preload("res://src/ui/object_panel.gd")
 const Components = preload("res://src/ui/component_panels.gd")
 const Production = preload("res://src/ui/production_panels.gd")
+const REJECTION_LABELS := {
+	"capacity_limit": "动态物体容量不足，可在机制页调整上限",
+	"birth_space_blocked": "子球出生空间不足",
+	"newborn_guard": "子球仍在短暂新生保护期",
+	"children_split_disabled": "子球继续分裂已关闭",
+	"minimum_radius": "子球尺寸已达物理最小值",
+	"tag_mismatch": "碰撞对象标签不符合规则",
+	"split_requires_ball": "此分裂规则只适用于球",
+	"impact_metric_unavailable": "尚无可用的真实碰撞强度数据"
+}
 var document: Dictionary = {}
 var preview_texture: Texture2D
 var preview: TextureRect
@@ -167,13 +177,22 @@ func update_runtime(info: Dictionary) -> void:
 	timeline.set_block_signals(false)
 	clock_label.text = "成片 %.3fs / %.3fs\n模拟 %.3fs" % [current_time, duration, float(info.get("sim_time", 0))]
 	var take_status := "尚未录制轨迹" if duration <= 0 else ("轨迹已过期：请重新录制" if info.get("take_stale", false) else "轨迹可用")
-	runtime_label.text = "%s%s  |  物体 %d  碰撞 %d  分裂 %d  |  %.0f FPS  |  %s" % [str(info.get("mode", "编辑")), " · 录制中" if info.get("recording", false) else "", int(info.get("active", 0)), int(info.get("contacts", 0)), int(info.get("splits", 0)), float(info.get("fps", 0)), take_status]
+	var active := int(info.get("active", 0))
+	var capacity := int(F.value(document, "world.max_dynamic_bodies", 48))
+	var capacity_status := "（已达上限）" if active >= capacity else ""
+	runtime_label.text = "%s%s  |  物体 %d/%d%s  碰撞 %d  分裂 %d  |  %.0f FPS  |  %s" % [str(info.get("mode", "编辑")), " · 录制中" if info.get("recording", false) else "", active, capacity, capacity_status, int(info.get("contacts", 0)), int(info.get("splits", 0)), float(info.get("fps", 0)), take_status]
 	job_status_label.text = "生产任务：" + str(info.get("job_status", "空闲"))
 	var lines: PackedStringArray = PackedStringArray()
 	lines.append("生产任务：" + str(info.get("job_status", "空闲")))
 	lines.append("选中：" + str(info.get("selected_id", "无")))
 	lines.append("声音状态：" + JSON.stringify(info.get("audio", {})))
 	var events: Array = info.get("events", [])
+	# This is historical evidence; a prior guard/space rejection may already have cleared.
+	for index in range(events.size() - 1, -1, -1):
+		if events[index].get("type", "") == "rule_rejected":
+			var reason := str(events[index].get("reason", ""))
+			lines.append("最近一次机制未执行：" + str(REJECTION_LABELS.get(reason, reason)))
+			break
 	for index in range(maxi(0, events.size() - 30), events.size()): lines.append(JSON.stringify(events[index]))
 	debug_text.text = "\n".join(lines)
 	if info.has("last_message") and not str(info["last_message"]).is_empty(): show_message(str(info["last_message"]), bool(info.get("last_message_is_error", false)))

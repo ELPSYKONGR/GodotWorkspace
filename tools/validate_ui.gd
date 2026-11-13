@@ -10,6 +10,7 @@ func _initialize() -> void:
 
 func _run() -> void:
 	var doc: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://docs/examples/scene_v2.example.json"))
+	_split_rule(doc["mechanisms"])["params"].erase("children_can_split")
 	var ui = load("res://src/ui/workbench_ui.gd").new()
 	ui.setup(doc, GradientTexture2D.new())
 	ui.command_requested.connect(func(op: String, args: Dictionary): commands.append({"op": op, "args": args}))
@@ -57,6 +58,13 @@ func _run() -> void:
 	ui.update_runtime(error_info)
 	result["runtime_error_keeps_error_color"] = ui.message_label.get_theme_color("font_color") == Color("ff9d9d")
 	result["audio_error_remains_visible"] = "test_missing_audio" in ui.debug_text.text
+	_validate_child_split_control(ui, doc, result)
+	ui.update_runtime({"active": 48, "events": [{"type": "rule_rejected", "reason": "children_split_disabled"}]})
+	result["capacity_limit_visible"] = "48/48" in ui.runtime_label.text and "已达上限" in ui.runtime_label.text
+	result["children_split_rejection_explained_as_history"] = "最近一次机制未执行：子球继续分裂已关闭" in ui.debug_text.text
+	ui.update_runtime({"active": 47, "events": [{"type": "rule_rejected", "reason": "children_split_disabled"}, {"type": "rule_rejected", "reason": "birth_space_blocked"}, {"type": "contact", "reason": "newborn_guard"}]})
+	result["capacity_warning_clears_below_limit"] = "47/48" in ui.runtime_label.text and not "已达上限" in ui.runtime_label.text
+	result["latest_birth_space_rejection_explained"] = "最近一次机制未执行：子球出生空间不足" in ui.debug_text.text and not "最近一次机制未执行：子球继续分裂已关闭" in ui.debug_text.text
 	# The same object inspector accepts three-dimensional arrays and shape fields.
 	doc["world"]["dimension"] = "3d"
 	doc["objects"] = [{"id": "sphere", "shape": {"primitive": "sphere", "radius": 0.44}, "transform": {"position": [0, 2, 0], "rotation_degrees": [0, 0, 0]}, "physics": {"velocity": [0, 0, 0]}, "mechanisms": []}]
@@ -74,3 +82,50 @@ func _run() -> void:
 func _buttons(node: Node, result: Array[Button]) -> void:
 	if node is Button: result.append(node)
 	for child in node.get_children(): _buttons(child, result)
+
+
+## Verify legacy defaults, stored false values and non-destructive checkbox patches.
+func _validate_child_split_control(ui: Control, doc: Dictionary, result: Dictionary) -> void:
+	var original_params: Dictionary = _split_rule(doc["mechanisms"])["params"].duplicate(true)
+	var control := _button(ui.pages["机制"], "子球继续分裂") as CheckBox
+	var apply := _button(ui.pages["机制"], "应用机制并重新模拟")
+	var default_params: Dictionary = _split_rule(commands[4]["args"]["changes"]["mechanisms"])["params"]
+	result["children_can_split_defaults_true"] = control != null and control.button_pressed and default_params.get("children_can_split") == true
+	if control == null or apply == null:
+		result["children_can_split_control_exists"] = false
+		return
+	control.button_pressed = false
+	apply.pressed.emit()
+	var expected := original_params.duplicate(true)
+	# Apply stores this numeric control as an integer; JSON fixtures parse it as float.
+	expected["children_total"] = int(expected["children_total"])
+	expected["children_can_split"] = false
+	var disabled_rules: Array = commands.back()["args"]["changes"]["mechanisms"]
+	result["children_can_split_disable_preserves_params_and_source"] = _split_rule(disabled_rules)["params"] == expected and _split_rule(doc["mechanisms"])["params"] == original_params
+	var disabled_doc := doc.duplicate(true)
+	disabled_doc["mechanisms"] = disabled_rules.duplicate(true)
+	ui.sync_document(disabled_doc, "ball_A")
+	control = _button(ui.pages["机制"], "子球继续分裂") as CheckBox
+	apply = _button(ui.pages["机制"], "应用机制并重新模拟")
+	result["children_can_split_false_reloads_unchecked"] = control != null and not control.button_pressed
+	if control == null or apply == null: return
+	control.button_pressed = true
+	apply.pressed.emit()
+	expected["children_can_split"] = true
+	result["children_can_split_reenable_preserves_false_source"] = _split_rule(commands.back()["args"]["changes"]["mechanisms"])["params"] == expected and _split_rule(disabled_doc["mechanisms"])["params"]["children_can_split"] == false
+
+
+## Find the actual inspector control by its user-facing caption.
+func _button(node: Node, caption: String) -> Button:
+	var buttons: Array[Button] = []
+	_buttons(node, buttons)
+	for button in buttons:
+		if button.text == caption: return button
+	return null
+
+
+## Select the split rule without relying on its position among other mechanisms.
+func _split_rule(rules: Array) -> Dictionary:
+	for rule in rules:
+		if rule.get("type", "") == "split_on_contact": return rule
+	return {}

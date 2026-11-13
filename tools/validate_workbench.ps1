@@ -87,6 +87,7 @@ try {
     }
     $suite.python_path = $Python
     Invoke-GodotCheck 'World' 'validate_worlds.gd' 'outputs\worlds_validation.json' 120 2400
+    Invoke-GodotCheck 'SplitInheritance' 'validate_split_inheritance.gd' 'outputs\split_inheritance_validation.json' 120 12000
     Invoke-GodotCheck 'Session' 'validate_session.gd' 'outputs\session_validation.json' 60 1600
     Invoke-GodotCheck 'Commands' 'validate_commands.gd' 'outputs\commands_validation.json' 60 100
     Invoke-GodotCheck 'Capacity' 'validate_capacity.gd' 'outputs\capacity_validation.json' 60 300

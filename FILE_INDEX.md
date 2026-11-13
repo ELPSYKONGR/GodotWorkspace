@@ -17,6 +17,7 @@
 | `config/demo_*.json` | 旧验证原型场景，只供旧入口使用 |
 | `README.md` / `CHANGELOG.md` | 项目入口说明、实际能力与改动记录 |
 | `docs/工作台使用说明.md` | 八个面板、录制/回放/生产、AI协议、代码调试与边界 |
+| `docs/破坏机制与参考渲染选项.md` | 三条本地参考抽帧证据、破坏/耐久/碎片/渲染选项及已实现与待新增边界；设计文档 |
 | `docs/工作台扩展方案.md` | 保留的整体目标方案；顶部说明已实现子集 |
 | `docs/对象机制特效与时间轴规范.md` | 保留的数据/机制/时间目标规范；非完整已实现API清单 |
 | `docs/examples/scene_v2.example.json` | `proposal_only`设计示例；日常运行使用workbench配置 |
@@ -38,7 +39,7 @@
 | `src/physics/world_3d.gd` | 原生三维刚体与传感器、三维拾取/平面布置、状态采样/恢复 |
 | `src/physics/primitive_3d.gd` | 三维原语、材质、变换及几何辅助 |
 | `src/physics/contact_anchor.gd` | 从明确的形状几何估算表现锚点；不冒充引擎真实接触点 |
-| `src/mechanisms/contact_rules.gd` | 接触episode、保护期重试、批次分裂/移除、容量与空间拒绝原因 |
+| `src/mechanisms/contact_rules.gd` | 接触episode、保护期重试、子球继续分裂开关、批次分裂/移除、容量与空间拒绝原因 |
 | `src/presentation/stage.gd` | 共享的干净Stage、世界/特效/文字组合、三维投影与输出缩放 |
 | `src/presentation/effects.gd` | 按事件/年龄恢复的屏幕粒子、圆环、闪光、Take拖尾 |
 | `src/presentation/audio.gd` | 合成短音、本地PCM WAV、试听、限流和预览声部 |
@@ -72,6 +73,7 @@
 |---|---|
 | `tools/validate_workbench.ps1` | 新工作台统一验收入口；可加Legacy与实际WAV生产，检查新报告并汇总套件状态 |
 | `tools/validate_worlds.gd` | 新二维/三维适配器、原生碰撞和机制行为 |
+| `tools/validate_split_inheritance.gd` | 默认48体拒绝诊断、二维/三维多代分裂开关、其它机制保留及布尔字段校验 |
 | `tools/validate_commands.gd` | 编辑事务、修订号冲突、幂等与撤销/重做 |
 | `tools/validate_session.gd` | 物理暂停/单步、双时间、录制与回放 |
 | `tools/validate_workbench.gd` | 原生工作台与统一命令集成 |

@@ -95,6 +95,8 @@ func _evaluate(id: String, other_id: String, pair: Dictionary) -> void:
 		var reason := ""
 		if not matches:
 			reason = "tag_mismatch"
+		elif kind == "split_on_contact" and int(spec.get("generation", 0)) > 0 and not bool(rule.get("params", {}).get("children_can_split", true)):
+			reason = "children_split_disabled"
 		elif elapsed - float(record.get("born", -1000)) < float(conditions.get("newborn_guard_seconds", 0.08)):
 			reason = "newborn_guard"
 		elif bool(conditions.get("require_minimum_impact", false)):
