@@ -14,6 +14,8 @@
 
 ## 2026-11-13 — 便携工具与AI交接
 
+- **提交**：`3a8d95e`（便携实现与交接资料）；后续文档补录提交及最终HEAD见包内MANIFEST。
+- **区块**：工具路径解析/离线恢复、媒体盘点/打包校验及AI接手文档。验证：7项打包回归、7个PowerShell/5个Python语法检查通过；E盘完整11阶段与真实生产证据见迁移验收。标准原文SHA与用户文件一致，保留原文4处行尾空格；其余新增改动通过diff检查。
 - `tools/runtime_environment.ps1`统一进程环境＞`.env`＞相对默认，重定向工程缓存；`common.ps1`、生产、旧渲染和验收入口共用工具定位。
 - `config/runtime-lock.json`、`setup.ps1`锁定并校验Godot 4.7.2、CPython 3.12.10、Pillow 11.3.0、FFmpeg 7.1及可选MinGit 2.56.1；完整安装缓存可离线恢复。新生产和媒体检查不再借用兄弟项目venv，两个inspect脚本共用FFmpeg覆盖。
 - 新增`AGENTS.md`、`LESSONS.md`、AI交接、需求与对话决策、视频研究交接、媒体JSON/CSV盘点、标准原文、第三方许可及迁移说明；明确当前能力、真实耦合、技术决策、踩坑预防、历史结论和未实现破坏。
