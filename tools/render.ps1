@@ -17,7 +17,7 @@ $log = Join-Path $destination 'godot.log'
 $movie = Join-Path $destination 'frames\frame.png'
 $report = Join-Path $destination 'report.json'
 # Real Windows rendering. The project controls duration and writes an event report.
-& $Godot --path $LabRoot --rendering-method gl_compatibility --disable-vsync --resolution 720x1280 --fixed-fps $Fps --write-movie $movie -- --config=$Config --frames=$Frames --report=$report *> $log
+& $Godot --path $LabRoot res://main.tscn --rendering-method gl_compatibility --disable-vsync --resolution 720x1280 --fixed-fps $Fps --write-movie $movie -- --config=$Config --frames=$Frames --report=$report *> $log
 if ($LASTEXITCODE -ne 0) { throw "Godot exited $LASTEXITCODE; see $log" }
 Assert-GodotLog $log
 $images = @(Get-ChildItem -LiteralPath "$destination\frames" -Filter '*.png' | Sort-Object Name)

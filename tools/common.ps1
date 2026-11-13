@@ -9,6 +9,9 @@ $env:LOCALAPPDATA = Join-Path $LabRoot '.runtime\appdata\local'
 New-Item -ItemType Directory -Path $env:TEMP, $env:APPDATA, $env:LOCALAPPDATA, "$LabRoot\scratch" -Force | Out-Null
 # Temporary fixture projects must not be imported as nested production projects.
 New-Item -ItemType File -Path "$LabRoot\scratch\.gdignore" -Force | Out-Null
+# Rendered PNG sequences are data, not editor assets; avoid importing thousands of frames.
+New-Item -ItemType Directory -Path "$LabRoot\outputs" -Force | Out-Null
+New-Item -ItemType File -Path "$LabRoot\outputs\.gdignore" -Force | Out-Null
 if (-not (Test-Path -LiteralPath $Godot)) { throw 'Godot runtime missing; see README.' }
 
 function Assert-GodotLog([string]$LogPath) {

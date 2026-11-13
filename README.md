@@ -1,54 +1,77 @@
-# AI 控制的 Godot 解压视频验证工程
+# AI 控制的 Godot 解压视频工作台
 
-Godot 4.7.2 便携版，已部署在本工程 `.runtime/`。本轮跑通 AI 改场景数据 → 真实物理 → 实时预览 → PNG → MP4 的流程。引擎免费开源，使用本地运行不产生模型 API 费用。
+Godot 4.7.2 便携工程，现已实现独立工作台：**布置物体 → 真实物理与碰撞机制 → 录制轨迹 → 实时回放 → 带声音视频生产**。右侧提供物体、机制、渲染、声音、特效、回放、生产、调试八个标签页；AI与面板使用同一命令入口。
 
-后续工作台设计见 [工作台扩展方案](docs/工作台扩展方案.md) 和 [对象、机制、特效与时间轴规范](docs/对象机制特效与时间轴规范.md)。这些是待开发方案，当前功能范围仍如下。
+本机工程位于 `D:\codex\AGI\AI视频三项目评估_20261111\06_本地部署\godot-video-lab`。引擎、缓存、临时文件、控制文件和成片均由便携启动器放在本工程所在盘。Godot 免费开源，本地运行不产生模型API费用。
 
-## 使用
+## 立即使用
 
-- 双击 `preview.cmd`：启动二维场景；按 `1` / `2` / `3` 切换二维、正交三维、透视三维。
-- 空格暂停；`R` 重放；`F5` 重载。修改当前 JSON 并保存，预览每0.5秒检查一次，成功加载后重放。
-- 双击 `editor.cmd`：打开原生 Godot 编辑器。
-- 在工程目录运行 `render.cmd`：生成8秒、30fps、720×1280二维视频。
+1. 双击 `preview.cmd` 或 `workbench.cmd`，进入新工作台。顶部切换二维、正交三维、透视三维。
+2. 点击“编辑布置”，在画面中点选、拖动，或在“物体”页修改坐标、尺寸、速度、材质、标签和碰撞过滤；点击相应“应用”按钮。
+3. 点击“录制”，让场景运行至少8秒，再点“停止录制”。默认保存到 `outputs/takes/latest.json`，并额外留存一份独立命名轨迹。
+4. 拖动底部时间轴检查实际轨迹。在“渲染／声音／特效”页修改表现，可以复用同一轨迹。
+5. 在“生产”页使用新任务名，选择30或60fps、帧数、竖屏尺寸和后端，提交任务。240帧÷30fps=8秒；时长不能超过已有轨迹。
+
+成片位于 `outputs/jobs/<任务名>/final.mp4`，同时保存输入快照、PNG、工作音轨、日志和 `validation.json`。生产使用独立进程，面板和调试高亮不会进入成片。详细操作、AI命令和排错见 [工作台使用说明](docs/工作台使用说明.md)。
+
+## 已实测样片
+
+| 样片 | 输出 | 结果 |
+|---|---|---|
+| [二维碰撞分裂](outputs/samples/2d_physics.mp4) | OpenGL，720×1280，30fps，240帧，8秒，H.264＋AAC | 完整解码、非黑帧、非静音音轨、音画对齐等媒体检查通过 |
+| [三维 Vulkan 样片](outputs/samples/3d_vulkan.mp4) | Forward+ / Vulkan，1080×1920，60fps，180帧，3秒，H.264＋AAC | 媒体检查通过；实际使用 AMD RX 6650 XT / Vulkan 1.4.315 |
+
+样片来源见 [samples/manifest.json](outputs/samples/manifest.json)，机器可读证据位于对应任务目录的 `validation.json`，渲染设备与后端见任务日志。完整新工作台验收见 [工作台验收报告](docs/工作台验收报告.md)，历史原型验收保留在 [验证报告](docs/验证报告.md)。
+
+## 语言、渲染与数据分离
+
+- **工程代码：GDScript。** Godot底层引擎为C++，不需要改引擎源码；PowerShell负责启动/生产，Python负责离线混音和媒体检查。
+- **渲染：Godot原生渲染。** 工作台默认 Compatibility / OpenGL；生产可选 `gl_compatibility` 或 `forward_plus`，后者在本工程显式使用Vulkan。当前没有实现DX11渲染路径。
+- **2D：** `RigidBody2D`；**2.5D：** 真正三维刚体加正交相机；**3D：** 同一三维世界加透视相机。
+- **数据：** `config/workbench_*.json` 是可运行的v2场景。初始场景、物理运行、表现和生产快照分离；JSON不保存Godot节点引用。
+- **回放：** Take记录实际求解后的姿态、生命周期、事件和模拟/成片双时间。回放与生产读取记录，不重新求解碰撞。
+
+双击 `editor.cmd` 打开原生Godot编辑器；F5进入新工作台。可以查看和修改全部源码，给GDScript打断点，在运行中的“远程”场景树查看实际节点。模块位置与调用关系见 [文件索引](FILE_INDEX.md)。
+
+## 当前实现范围
+
+| 方面 | 当前可用 |
+|---|---|
+| 物体 | 二维圆、矩形和有厚度的直线障碍；三维球和长方体；动态、静态、传感模式 |
+| 布置 | 点选、二维拖动、三维当前高度XZ平面拖动、数值旋转/尺寸、复制/删除、行/网格排列、锁定、50步编辑撤销/重做 |
+| 机制 | 真实接触驱动分裂、接触移除、分裂顿帧；子球总数、原球退役、同色逐代变浅、新生保护与持续接触重试；拒绝原因可查 |
+| 表现 | 文字/系统字体/字号、背景、颜色；三维材质、灯光、阴影、正交/透视相机；程序化屏幕粒子、圆环、闪光、拖尾 |
+| 声音 | wood / bell / click三种短音、本地PCM WAV、试听、音量/音高/限流/声部、48kHz离线混音与AAC成片 |
+| 回放/生产 | 真实轨迹录制、往返寻帧、双时间；单个活动生产任务、冻结输入与WAV、取消、完整媒体验证 |
+| AI控制 | 本地JSON收件箱、修订号冲突检查、结果回执、当前场景/状态与干净画面截图 |
+
+现版是可用工作台的首版。Take仍整份JSON存储，限制60秒、60000个采样、512个活动物体（动态与固定/传感各最多256）；寻帧取目标时间之前最近的已提交采样，不对碰撞间轨迹做插值。三维粒子为投影到屏幕的表现，不是参与物理的三维碎片。接触由引擎确认，显示锚点是标明来源的几何估算，真实法线/冲量没有伪造。
+
+软体、流体、布料、任意复杂网格、力场/马达、完整三维操作手柄、框选/吸附、高级停靠界面、分块轨迹存储和多任务调度尚未实现；也不承诺跨机器物理确定性或逐像素一致。完整目标架构保留在 [工作台扩展方案](docs/工作台扩展方案.md) 与 [对象、机制、特效与时间轴规范](docs/对象机制特效与时间轴规范.md)，以其顶部状态说明区分已做与待做。
+
+## 启动、恢复与兼容入口
 
 ```powershell
-# 三维样片；输出文件夹名称必须未使用，避免覆盖已有成片。
-.\render.cmd -Config config/demo_3d.json -Name my_3d -Frames 180 -Fps 30
-# 修改后的配置，用60fps导出3秒。
-.\render.cmd -Config config/demo_custom.json -Name my_custom -Frames 180 -Fps 60
-# 重复机制验收。
-powershell -NoProfile -ExecutionPolicy Bypass -File tools/validate.ps1
+# 从本工程目录启动不同工作台场景。
+.\preview.cmd -Scene 3d
+.\preview.cmd -Scene perspective
+
+# 打开Godot编辑器；F5运行新工作台。
+.\editor.cmd
+
+# 需要复查原型时显式进入旧版。
+.\preview.cmd -Legacy -Scene 2d
+.\render.cmd -Config config/demo_2d.json -Name legacy_sample_01 -Frames 240 -Fps 30
 ```
 
-成片在 `outputs/<Name>/final.mp4`，同目录保留原始帧、日志、配置副本（报告内）和碰撞事件。样片目前无声。
+`render.cmd`保留为旧版无声渲染入口，输出仍在 `outputs/<Name>/`；新工作台的带声音轨迹生产使用“生产”页或 [使用说明](docs/工作台使用说明.md) 中的 `produce_take.gd`。新v2场景不做文件自动监听；手改JSON后使用“加载场景”或AI命令重新加载。旧原型的0.5秒自动重载仍只属于 `-Legacy`。
 
-## AI 可以修改什么
+请通过启动器运行；它会将 `APPDATA`、`LOCALAPPDATA`、`TEMP`、`TMP` 指向 `.runtime/`，引擎也启用了 `_sc_` 便携模式。直接双击引擎EXE可能绕过这些路径设置。工程可整体迁移到其他非系统盘；远程4080电脑沿用用户约束，另选非C/D盘目录，不在本次自动部署。
 
-| 配置项 | 作用 |
-|---|---|
-| title / subtitle | 视频内文字 |
-| title_size / subtitle_size / font_family / text_color | 字号、系统字体名称、文字颜色 |
-| preview_fps / physics_hz | 预览帧率上限、物理求解频率 |
-| spawns[].position / velocity | 二维球初始位置、速度（720×1280逻辑坐标） |
-| gravity / restitution / radius / color | 二维重力、弹性、球大小、基础色 |
-| split_children / max_balls / protection | 子球总数、球数上限、新生保护秒数 |
-| generation_fade / hitstop_seconds | 同色逐代变浅、分裂顿帧秒数 |
-| count / palette / ramp | 三维物体数量、颜色、是否有斜坡 |
-| projection / camera_size | 三维正交或透视相机、正交视野 |
-| 导出 -Fps / -Frames | 成片帧率、帧数；时长=帧数÷帧率 |
+`.runtime/`缺失时运行 `tools/setup.ps1` 恢复Godot；FFmpeg可用 `-FFmpegSource` 指向本地文件。Python可通过环境变量`VIDEO_LAB_PYTHON`指定，否则优先使用`.runtime/python/python.exe`，再使用同级`relaxing-physics/.venv/Scripts/python.exe`。当前机器复用同级环境，迁移时须提供Python及所需库。原有二维程序未改动。依赖来源见 [依赖来源](docs/依赖来源.md)。
 
-例如把 `config/demo_2d.json` 的 `title` 改成“绿色小球能填满吗”，将 `title_size` 改成40，保存即可在运行预览里看到。新玩法通过独立物理脚本增加，现有入口负责加载与导出。JSON不需要直接引用渲染对象。
+需要重新验收时，在工程目录运行以下命令；套件会检查每个进程退出码、Godot错误日志和本次新生成的报告，汇总到`outputs/workbench_suite.json`：
 
-## 当前范围
-
-- 二维：真实 RigidBody2D，地面/墙/球接触触发分裂，原球退役，子球接替；0.08秒默认新生保护，48球默认上限。分裂是人为定义的玩法，不声称质量或能量守恒。
-- 三维：真实 RigidBody3D 的球、长方体、斜坡、容器；正交相机提供2.5D观感，透视相机提供3D画面。当前三维场景没有分裂规则。
-- 文字直接进入 Godot 画面及成片；字体使用系统字体，不复制或分发 Windows 字体文件。
-- 当前由对话中的AI编辑JSON/GDScript和执行运行命令，没有另做聊天界面。动态生成的物体在运行场景树中可查看；场景暂未制作成完整的手工布置编辑器。
-- 还未实现运动烘焙回放、跨机器严格确定性、声音设计、时间线、撤销重做和独立成品编辑器。相同种子不等于不同平台逐帧完全一致。
-
-## 本地存储与恢复
-
-必须通过这三个启动入口运行。启动器把 `APPDATA`、`LOCALAPPDATA`、`TEMP`、`TMP` 指向工程 `.runtime/`，Godot编辑器也启用 `_sc_` 便携模式。直接双击引擎EXE或直接在资源管理器中打开项目可能绕过这些环境设置。
-
-工程可以整体移动到其他非系统盘。源码使用相对路径；旧报告记录运行当时的绝对路径。如果缺失 `.runtime/`，运行 `tools/setup.ps1` 下载相同Godot并导入工程；FFmpeg可用 `-FFmpegSource` 提供本地路径。媒体检查另需Python和Pillow，本机已复用同级旧工程的环境。所有结果与实际限制见 `docs/验证报告.md`。
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File tools/validate_workbench.ps1 -Legacy -WavJob
+```
