@@ -1,0 +1,18 @@
+{
+    "mode":  "3d",
+    "title":  "球与方块的三维实验",
+    "subtitle":  "透视相机 · 真实三维刚体 · 相同场景数据",
+    "seed":  20261113,
+    "count":  12,
+    "gravity":  9.8,
+    "restitution":  0.65,
+    "projection":  "perspective",
+    "camera_size":  23.0,
+    "ramp":  true,
+    "palette":  [
+                    "#2ed5ab",
+                    "#ffb45c",
+                    "#77aaff",
+                    "#d98eff"
+                ]
+}
