@@ -80,6 +80,9 @@
 
 ## 验证工具
 
+本次新增：`tools/validate_split_controls.gd`覆盖真实机制面板、输入2/4/100、暂停后运行和Delete；`docs/工程标准落实.md`记录标准适用范围，`docs/standards/ENGINEERING_STANDARD_ENHANCED_v2.2.md`为本次用户标准原文。
+
+
 | 文件 | 检查范围 |
 |---|---|
 | `tools/validate_workbench.ps1` | 新工作台统一验收入口；可加Legacy与实际WAV生产，检查新报告并汇总套件状态 |

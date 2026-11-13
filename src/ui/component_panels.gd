@@ -13,7 +13,8 @@ static func mechanisms(parent: Node, doc: Dictionary, send: Callable) -> void:
 		if rule.get("type", "") == "split_on_contact": split = rule
 		elif rule.get("type", "") == "hit_stop_on_event": hit = rule
 	var active := F.check(parent, "启用分裂规则", bool(split.get("enabled", true)))
-	var children := F.number(parent, "子球总数", float(F.value(split, "params.children_total", 2)), 2, 6, 1)
+	var children := F.number(parent, "子球总数（2～100）", float(F.value(split, "params.children_total", 2)), 2, 100, 1)
+	F.text(parent, "子球总数必须连同其它活动物体一起容纳在上限内。例如1→100至少需要100个容量，还需足够出生空间；不足时保留原球并显示原因。")
 	var children_can_split := F.check(parent, "子球继续分裂", bool(F.value(split, "params.children_can_split", true)))
 	F.text(parent, "关闭后仅初始球可分裂；开启后子球可继续分裂，仍受数量上限和出生空间保护限制。")
 	var protection := F.number(parent, "新生保护（秒）", float(F.value(split, "conditions.newborn_guard_seconds", 0.08)), 0, 2, 0.01)
@@ -28,6 +29,7 @@ static func mechanisms(parent: Node, doc: Dictionary, send: Callable) -> void:
 	var is_3d: bool = F.value(doc, "world.dimension", "2d") == "3d"
 	var g := F.number(parent, "重力Y（2D向下为正）", float(gravity[1]), -2000, 2000, 0.1)
 	F.button(parent, "应用机制并重新模拟", func():
+		for field in [children, protection, maximum, seconds, hz, g]: field.apply()
 		var updated: Array = rules.duplicate(true)
 		var s: Dictionary = split.duplicate(true)
 		s["enabled"] = active.button_pressed

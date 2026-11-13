@@ -4,6 +4,9 @@
 
 ## 开始前
 
+本次用户标准正文为v2.2，见`docs/standards/ENGINEERING_STANDARD_ENHANCED_v2.2.md`；落实情况与尚存架构差距见`docs/工程标准落实.md`。
+
+
 依次读 [文件索引](FILE_INDEX.md)、[AI交接](docs/AI交接.md)、[需求与对话决策](docs/需求与对话决策.md)、[最近改动](CHANGELOG.md)和[工程知识与决策](LESSONS.md)。用户原始开发标准保存在 [ENGINEERING_STANDARD_ENHANCED_v2.1.md](docs/standards/ENGINEERING_STANDARD_ENHANCED_v2.1.md)。运行与验收依据为 [使用说明](docs/工作台使用说明.md)、[验收报告](docs/工作台验收报告.md)及本次交接包的迁移验收记录。
 
 1. 先检查 Git 状态及本次任务目标，确认现有实现和可复用模式，再写最小改动。

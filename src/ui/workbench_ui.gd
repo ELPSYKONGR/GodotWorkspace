@@ -83,9 +83,10 @@ func _build() -> void:
 	preview.custom_minimum_size = Vector2(380, 450)
 	preview.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	preview.mouse_filter = Control.MOUSE_FILTER_STOP
+	preview.focus_mode = Control.FOCUS_ALL
 	preview.gui_input.connect(_preview_input)
 	preview_column.add_child(preview)
-	F.text(preview_column, "点选物体 · 编辑模式拖动布置 · 右侧应用参数\n视频只渲染上方画面，工作台与调试叠加不会进入成片。")
+	F.text(preview_column, "点选物体 · Delete删除 · 编辑模式拖动布置 · 右侧应用参数\n视频只渲染上方画面，工作台与调试叠加不会进入成片。")
 	var tabs := TabContainer.new()
 	tabs.custom_minimum_size.x = 560
 	tabs.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -192,6 +193,7 @@ func update_runtime(info: Dictionary) -> void:
 		if events[index].get("type", "") == "rule_rejected":
 			var reason := str(events[index].get("reason", ""))
 			lines.append("最近一次机制未执行：" + str(REJECTION_LABELS.get(reason, reason)))
+			runtime_label.text += "\n最近一次机制未执行：" + str(REJECTION_LABELS.get(reason, reason))
 			break
 	for index in range(maxi(0, events.size() - 30), events.size()): lines.append(JSON.stringify(events[index]))
 	debug_text.text = "\n".join(lines)
@@ -208,6 +210,7 @@ func show_message(message: String, is_error: bool = false) -> void:
 # Remove preview letterboxing before emitting a logical stage coordinate.
 func _preview_input(event: InputEvent) -> void:
 	if not event is InputEventMouse: return
+	if event is InputEventMouseButton and event.pressed: preview.grab_focus()
 	var area := get_preview_rect()
 	var dragging: bool = event is InputEventMouseMotion and (event.button_mask & MOUSE_BUTTON_MASK_LEFT) != 0
 	var releasing: bool = event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed

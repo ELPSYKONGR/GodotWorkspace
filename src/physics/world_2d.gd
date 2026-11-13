@@ -211,11 +211,14 @@ func get_report() -> Dictionary:
 func birth_positions(id: String, count: int, radius: float) -> Array:
 	var center := _position(id)
 	var ring := radius * 1.08 / sin(PI / count)
-	for offset in [Vector2.ZERO, Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]:
+	# A tiny offset cannot fit four children beside a wall; also try a full ring clearance.
+	var offsets := [Vector2.ZERO, Vector2.UP * radius * 0.6, Vector2.DOWN * radius * 0.6, Vector2.LEFT * radius * 0.6, Vector2.RIGHT * radius * 0.6]
+	for direction in [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]: offsets.append(direction * (ring + radius))
+	for offset in offsets:
 		for phase_index in 12:
 			var result: Array = []
 			for index in count:
-				var point: Vector2 = center + offset * radius * 0.6 + Vector2.from_angle(phase_index * PI / 12 + TAU * index / count) * ring
+				var point: Vector2 = center + offset + Vector2.from_angle(phase_index * PI / 12 + TAU * index / count) * ring
 				if not _space_free(point, radius, id): break
 				result.append(project_array(point))
 			if result.size() == count: return result

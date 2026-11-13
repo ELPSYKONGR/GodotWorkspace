@@ -72,7 +72,7 @@ func _reset_clocks() -> void:
 ## Start playback, resume a paused world, or begin native simulation from the layout.
 func play() -> void:
 	if mode == "replay": replay_playing = true; return
-	if mode == "edit":
+	if mode == "edit" or stage.world.playback:
 		_reset_clocks()
 		mode = "playing"
 		_make_stage(false)

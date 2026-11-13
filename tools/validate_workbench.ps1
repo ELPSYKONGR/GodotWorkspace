@@ -86,6 +86,7 @@ try {
     Invoke-GodotCheck 'Commands' 'validate_commands.gd' 'outputs\commands_validation.json' 60 100
     Invoke-GodotCheck 'Capacity' 'validate_capacity.gd' 'outputs\capacity_validation.json' 60 300
     Invoke-GodotCheck 'UI' 'validate_ui.gd' 'outputs\ui_validation.json' 60 100
+    Invoke-GodotCheck 'SplitControls' 'validate_split_controls.gd' 'outputs\split_controls_validation.json' 120 15000
     Invoke-GodotCheck 'Media' 'validate_media.gd' 'outputs\media_components_validation.json' 60 300 -Realtime
     Invoke-Check 'Mixer' $Python @('-B', (Join-Path $PSScriptRoot 'validate_mixer.py')) @('outputs\mixer_validation.json')
     Invoke-GodotCheck 'Host' 'validate_workbench.gd' 'outputs\workbench_validation.json' 60 15000 -Realtime

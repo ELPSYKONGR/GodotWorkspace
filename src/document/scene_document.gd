@@ -63,7 +63,7 @@ static func validate(doc: Dictionary) -> PackedStringArray:
 	for rule in doc.get("mechanisms", []):
 		if not rule is Dictionary or not rule.get("params", {}) is Dictionary or not rule.get("conditions", {}) is Dictionary: errors.append("机制结构无效"); continue
 		if rule.get("type", "") not in ["split_on_contact", "despawn_on_contact", "hit_stop_on_event"]: errors.append("不支持的机制类型")
-		if rule.get("type", "") == "split_on_contact" and (int(rule.get("params", {}).get("children_total", 2)) < 2 or int(rule.get("params", {}).get("children_total", 2)) > 6): errors.append("分裂子球总数需要2～6")
+		if rule.get("type", "") == "split_on_contact" and (int(rule.get("params", {}).get("children_total", 2)) < 2 or int(rule.get("params", {}).get("children_total", 2)) > 100): errors.append("分裂子球总数需要2～100")
 		if rule.get("type", "") == "split_on_contact" and not (rule.get("params", {}).get("children_can_split", true) is bool): errors.append("children_can_split需要布尔值true或false")
 	var presentation: Dictionary = doc.get("presentation", {})
 	for field in ["render", "audio", "effects"]:

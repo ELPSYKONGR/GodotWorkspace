@@ -140,7 +140,7 @@ func _commit() -> void:
 			world.emit_event({"type": "retire", "id": id, "reason": "despawn", "time": elapsed})
 			continue
 		var params: Dictionary = rule.get("params", {})
-		var count := clampi(int(params.get("children_total", 2)), 2, 6)
+		var count := clampi(int(params.get("children_total", 2)), 2, 100)
 		var cap := int(document.get("world", {}).get("max_dynamic_bodies", 48))
 		if world.dynamic_count() - 1 + count > cap:
 			_reject(id, str(rule.get("id", "")), "capacity_limit", item["pair"])

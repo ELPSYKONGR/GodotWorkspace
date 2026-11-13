@@ -88,6 +88,15 @@ func _after_command(result: Dictionary) -> void:
 	elif result.get("refresh_document", false): panel.sync_document(service.document, selected_id)
 	panel.show_message(message, not result.get("ok", false))
 
+## Delete uses the same validated, undoable command as the object inspector.
+func _unhandled_key_input(event: InputEvent) -> void:
+	if not event is InputEventKey or not event.pressed or event.echo or event.keycode != KEY_DELETE: return
+	var focus := get_viewport().gui_get_focus_owner()
+	if focus is LineEdit or focus is TextEdit: return
+	if selected_id.is_empty(): return
+	_from_ui("object.remove", {"id": selected_id})
+	get_viewport().set_input_as_handled()
+
 ## Dispatch runtime commands without giving panels ownership of world nodes.
 func _runtime_command(op: String, args: Dictionary) -> Dictionary:
 	match op:
