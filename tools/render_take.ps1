@@ -4,14 +4,8 @@ param([Parameter(Mandatory=$true)][string]$JobDir)
 $env:PYTHONUTF8 = '1'
 $JobDir = [IO.Path]::GetFullPath($JobDir)
 if (-not (Test-Path -LiteralPath "$JobDir\job.json")) { throw 'Missing job.json' }
-# Allow a standalone portable Python or an explicit installation when moving this project.
-$Python = $env:VIDEO_LAB_PYTHON
-if ([string]::IsNullOrWhiteSpace($Python)) {
-    $portablePython = Join-Path $LabRoot '.runtime\python\python.exe'
-    $Python = if (Test-Path -LiteralPath $portablePython) { $portablePython } else { Join-Path (Split-Path -Parent $LabRoot) 'relaxing-physics\.venv\Scripts\python.exe' }
-}
-$FFmpeg = Join-Path $LabRoot '.runtime\ffmpeg.exe'
-$RenderGodot = Join-Path $LabRoot '.runtime\godot\Godot_v4.7.2-stable_win64.exe'
+$Python = $PythonExecutable
+$FFmpeg = $FFmpegExecutable
 $currentProcess = $null
 $stage = 'starting'
 $utf8 = New-Object System.Text.UTF8Encoding($false)

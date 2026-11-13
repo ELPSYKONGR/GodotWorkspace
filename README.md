@@ -2,6 +2,8 @@
 
 Godot 4.7.2 便携工程，现已实现独立工作台：**布置物体 → 真实物理与碰撞机制 → 录制轨迹 → 实时回放 → 带声音视频生产**。右侧提供物体、机制、渲染、声音、特效、回放、生产、调试八个标签页；AI与面板使用同一命令入口。
 
+迁移和其它AI接手先读[总任务入口](../../START_HERE.md)、[AI交接](docs/AI交接.md)和[迁移与打包说明](docs/迁移与打包说明.md)。完整运行包包含独立运行工具、离线安装缓存、视频研究和对话文字；源码Git仓库不包含这些全部大文件。
+
 本机工程位于 `D:\codex\AGI\AI视频三项目评估_20261111\06_本地部署\godot-video-lab`。引擎、缓存、临时文件、控制文件和成片均由便携启动器放在本工程所在盘。Godot 免费开源，本地运行不产生模型API费用。
 
 ## 立即使用
@@ -70,7 +72,7 @@ Godot 4.7.2 便携工程，现已实现独立工作台：**布置物体 → 真�
 
 请通过启动器运行；它会将 `APPDATA`、`LOCALAPPDATA`、`TEMP`、`TMP` 指向 `.runtime/`，引擎也启用了 `_sc_` 便携模式。直接双击引擎EXE可能绕过这些路径设置。工程可整体迁移到其他非系统盘；远程4080电脑沿用用户约束，另选非C/D盘目录，不在本次自动部署。
 
-`.runtime/`缺失时运行 `tools/setup.ps1` 恢复Godot；FFmpeg可用 `-FFmpegSource` 指向本地文件。Python可通过环境变量`VIDEO_LAB_PYTHON`指定，否则优先使用`.runtime/python/python.exe`，再使用同级`relaxing-physics/.venv/Scripts/python.exe`。当前机器复用同级环境，迁移时须提供Python及所需库。原有二维程序未改动。依赖来源见 [依赖来源](docs/依赖来源.md)。
+`.runtime/`缺失时运行 `tools/setup.ps1 -DevTools`，从锁定缓存或URL恢复Godot、独立CPython/Pillow、FFmpeg和可选MinGit。当前已经移除兄弟虚拟环境回退。四个工具路径可通过进程环境变量或工程`.env`覆盖，优先级为环境变量＞`.env`＞工程相对默认，见`.env.example`。安装档案及SHA在`config/runtime-lock.json`，依赖来源见[依赖来源](docs/依赖来源.md)。
 
 需要重新验收时，在工程目录运行以下命令；套件会检查每个进程退出码、Godot错误日志和本次新生成的报告，汇总到`outputs/workbench_suite.json`：
 

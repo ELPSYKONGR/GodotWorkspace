@@ -8,7 +8,7 @@ param(
 . "$PSScriptRoot\common.ps1"
 if ($Name -notmatch '^[a-zA-Z0-9_-]+$') { throw 'Name must contain letters, digits, _ or -.' }
 if (-not [IO.Path]::IsPathRooted($Config)) { $Config = Join-Path $LabRoot $Config }
-if ($FFmpeg -eq '') { $FFmpeg = Join-Path $LabRoot '.runtime\ffmpeg.exe' }
+if ($FFmpeg -eq '') { $FFmpeg = $FFmpegExecutable }
 if (-not (Test-Path -LiteralPath $FFmpeg)) { throw 'FFmpeg missing; supply -FFmpeg or see README.' }
 $destination = Join-Path $LabRoot "outputs\$Name"
 if (Test-Path -LiteralPath $destination) { throw "Output exists; choose a new -Name: $destination" }

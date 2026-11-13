@@ -16,6 +16,14 @@
 | `config/workbench_perspective.json` | 可运行v2透视三维场景 |
 | `config/demo_*.json` | 旧验证原型场景，只供旧入口使用 |
 | `README.md` / `CHANGELOG.md` | 项目入口说明、实际能力与改动记录 |
+| `AGENTS.md` / `.env.example` | 其它AI接手约束、配置覆盖模板 |
+| `LESSONS.md` | 主开发线、Take与便携包的决策、踩坑预防和项目约定 |
+| `config/runtime-lock.json` | Windows x64工具的版本、URL、SHA-256、校验来源和许可 |
+| `docs/AI交接.md` / `docs/需求与对话决策.md` | 当前目标、真实架构边界、已定语义、历史需求与下一步 |
+| `docs/视频研究交接.md` / `docs/reference_media_inventory.json` / `docs/reference_media_index.csv` | 视频内容、研究证据与相对路径/大小/SHA媒体盘点 |
+| `docs/迁移与打包说明.md` / `docs/迁移验收.md` | 离线恢复、配置、完整性、Git历史及异盘实际验证 |
+| `docs/standards/ENGINEERING_STANDARD_ENHANCED_v2.1.md` | 用户提供的通用工程标准原文 |
+| `docs/third_party/` | Godot、FFmpeg许可和附带声明正文 |
 | `docs/工作台使用说明.md` | 八个面板、录制/回放/生产、AI协议、代码调试与边界 |
 | `docs/破坏机制与参考渲染选项.md` | 三条本地参考抽帧证据、破坏/耐久/碎片/渲染选项及已实现与待新增边界；设计文档 |
 | `docs/工作台扩展方案.md` | 保留的整体目标方案；顶部说明已实现子集 |
@@ -58,7 +66,10 @@
 | 文件 | 职责 |
 |---|---|
 | `tools/common.ps1` | 项目盘路径和临时环境、Godot位置、错误日志检查 |
-| `tools/setup.ps1` | 恢复便携Godot与FFmpeg、导入工程 |
+| `tools/runtime_environment.ps1` | 环境变量＞.env＞项目默认的工具路径、当前盘临时/缓存设置 |
+| `tools/setup.ps1` | 用锁定SHA缓存/URL恢复Godot、独立Python/Pillow、FFmpeg和可选MinGit |
+| `tools/build_handoff.py` | 选择必要资料/源码/运行工具、导出Git历史、冻结初始场景、生成ZIP与内容清单和校验 |
+| `tools/inventory_reference_media.py` | 按作品ID盘点媒体副本、SHA与历史指标/证据，相对研究根路径 |
 | `tools/preview.ps1` | 默认新工作台、编辑器与显式Legacy启动 |
 | `tools/record_take.gd` | 命令行调用实际物理解算并录制Take |
 | `tools/produce_take.gd` | 校验已有Take、提交同一生产模块、等待真实结束状态 |
@@ -72,6 +83,8 @@
 | 文件 | 检查范围 |
 |---|---|
 | `tools/validate_workbench.ps1` | 新工作台统一验收入口；可加Legacy与实际WAV生产，检查新报告并汇总套件状态 |
+| `tools/validate_portable_runtime.ps1` | 独立Python、锁定工具SHA、.env优先级、空格路径及工程盘写入检查 |
+| `tools/validate_handoff.py` | 小夹具重打包、路径越界拒绝、内容选择、ZIP与篡改检测；不代替真实异盘运行 |
 | `tools/validate_worlds.gd` | 新二维/三维适配器、原生碰撞和机制行为 |
 | `tools/validate_split_inheritance.gd` | 默认48体拒绝诊断、二维/三维多代分裂开关、其它机制保留及布尔字段校验 |
 | `tools/validate_commands.gd` | 编辑事务、修订号冲突、幂等与撤销/重做 |

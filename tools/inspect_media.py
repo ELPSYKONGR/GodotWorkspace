@@ -1,6 +1,6 @@
 """Independently inspect rendered PNGs and decode the delivered videos.
 
-Run with the sibling relaxing-physics/.venv Python, which already includes Pillow.
+Run with the project portable Python, which includes the pinned Pillow wheel.
 All inputs and outputs resolve from --root (the project directory by default).
 """
 
@@ -117,7 +117,8 @@ def main() -> int:
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args()
     root = args.root.resolve()
-    ffmpeg = root / ".runtime" / "ffmpeg.exe"
+    ffmpeg = Path(os.environ.get('VIDEO_LAB_FFMPEG', '.runtime/ffmpeg.exe'))
+    if not ffmpeg.is_absolute(): ffmpeg = root / ffmpeg
     if not ffmpeg.is_file():
         raise FileNotFoundError(ffmpeg)
     results = []

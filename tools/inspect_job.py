@@ -7,6 +7,7 @@ from array import array
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -34,7 +35,8 @@ def audio_stats(samples: array) -> dict:
 def inspect(job_dir: Path) -> dict:
     """Read frozen inputs and verify both video and audio against their actual decoded data."""
     root = Path(__file__).resolve().parent.parent
-    ffmpeg = root / '.runtime/ffmpeg.exe'
+    ffmpeg = Path(os.environ.get('VIDEO_LAB_FFMPEG', '.runtime/ffmpeg.exe'))
+    if not ffmpeg.is_absolute(): ffmpeg = root / ffmpeg
     job = json.loads((job_dir / 'job.json').read_text(encoding='utf-8-sig'))
     scene = json.loads((job_dir / 'scene.snapshot.json').read_text(encoding='utf-8-sig'))
     mix = json.loads((job_dir / 'mix_report.json').read_text(encoding='utf-8-sig'))

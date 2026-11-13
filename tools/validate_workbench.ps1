@@ -77,14 +77,8 @@ function Invoke-GodotCheck([string]$Name, [string]$Script, [string]$Report, [int
 
 try {
     Save-Suite
-    if (-not [string]::IsNullOrWhiteSpace($env:VIDEO_LAB_PYTHON)) {
-        $Python = [IO.Path]::GetFullPath($env:VIDEO_LAB_PYTHON)
-        if (-not (Test-Path -LiteralPath $Python -PathType Leaf)) { throw 'VIDEO_LAB_PYTHON does not point to a Python executable.' }
-    } else {
-        $candidates = @((Join-Path $LabRoot '.runtime\python\python.exe'), (Join-Path (Split-Path -Parent $LabRoot) 'relaxing-physics\.venv\Scripts\python.exe'))
-        $Python = $candidates | Where-Object { Test-Path -LiteralPath $_ -PathType Leaf } | Select-Object -First 1
-        if ([string]::IsNullOrWhiteSpace($Python)) { throw 'Python missing. Set VIDEO_LAB_PYTHON or provide the portable runtime/neighboring venv.' }
-    }
+    $Python = $PythonExecutable
+    if (-not (Test-Path -LiteralPath $Python -PathType Leaf)) { throw 'Python missing. Run tools/setup.ps1 or set VIDEO_LAB_PYTHON.' }
     $suite.python_path = $Python
     Invoke-GodotCheck 'World' 'validate_worlds.gd' 'outputs\worlds_validation.json' 120 2400
     Invoke-GodotCheck 'SplitInheritance' 'validate_split_inheritance.gd' 'outputs\split_inheritance_validation.json' 120 12000
