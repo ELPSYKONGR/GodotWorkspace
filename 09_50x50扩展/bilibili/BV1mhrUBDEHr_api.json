@@ -1,0 +1,128 @@
+{
+  "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1mhrUBDEHr",
+  "data": {
+    "code": 0,
+    "message": "OK",
+    "ttl": 1,
+    "data": {
+      "bvid": "BV1mhrUBDEHr",
+      "aid": 115908685143825,
+      "videos": 1,
+      "tid": 201,
+      "tid_v2": 2027,
+      "tname": "",
+      "tname_v2": "",
+      "copyright": 1,
+      "pic": "http://i1.hdslb.com/bfs/archive/08e480e5b11a8ecb5ae06d301762dd19972af5da.jpg",
+      "title": "小球每次弹跳都会变大。#几何图形 #解压",
+      "pubdate": 1768626232,
+      "ctime": 1768626233,
+      "desc": "-",
+      "desc_v2": [
+        {
+          "raw_text": "-",
+          "type": 1,
+          "biz_id": 0
+        }
+      ],
+      "state": 0,
+      "duration": 64,
+      "rights": {
+        "bp": 0,
+        "elec": 0,
+        "download": 1,
+        "movie": 0,
+        "pay": 0,
+        "hd5": 0,
+        "no_reprint": 1,
+        "autoplay": 1,
+        "ugc_pay": 0,
+        "is_cooperation": 0,
+        "ugc_pay_preview": 0,
+        "no_background": 0,
+        "clean_mode": 0,
+        "is_stein_gate": 0,
+        "is_360": 0,
+        "no_share": 0,
+        "arc_pay": 0,
+        "free_watch": 0
+      },
+      "owner": {
+        "mid": 3493128698858291,
+        "name": "火星课堂i",
+        "face": "https://i2.hdslb.com/bfs/face/4b3c1282a6d2d38ca9067bfd37bd0f77934adcab.jpg"
+      },
+      "stat": {
+        "aid": 115908685143825,
+        "view": 2847423,
+        "danmaku": 942,
+        "reply": 706,
+        "favorite": 14497,
+        "coin": 511,
+        "share": 942,
+        "now_rank": 0,
+        "his_rank": 0,
+        "like": 58162,
+        "dislike": 0,
+        "evaluation": "",
+        "vt": 0
+      },
+      "argue_info": {
+        "argue_msg": "",
+        "argue_type": 0,
+        "argue_link": ""
+      },
+      "dynamic": "",
+      "cid": 35437153261,
+      "dimension": {
+        "width": 1080,
+        "height": 1920,
+        "rotate": 0
+      },
+      "premiere": null,
+      "teenage_mode": 1,
+      "is_chargeable_season": false,
+      "is_story": true,
+      "is_upower_exclusive": false,
+      "is_upower_play": false,
+      "is_upower_preview": false,
+      "enable_vt": 0,
+      "vt_display": "",
+      "is_upower_exclusive_with_qa": false,
+      "is_hua_sheng": false,
+      "no_cache": false,
+      "pages": [
+        {
+          "cid": 35437153261,
+          "page": 1,
+          "from": "vupload",
+          "part": "0b45c19e-839f-46b4-a01f-c407ab657e43",
+          "duration": 64,
+          "vid": "",
+          "weblink": "",
+          "dimension": {
+            "width": 1080,
+            "height": 1920,
+            "rotate": 0
+          },
+          "first_frame": "http://i0.hdslb.com/bfs/storyff/_00001qu0o8stfrgke2lerckdpt258ib_firsti.jpg",
+          "ctime": 1768626233
+        }
+      ],
+      "subtitle": {
+        "allow_submit": false,
+        "list": []
+      },
+      "is_season_display": false,
+      "user_garb": {
+        "url_image_ani_cut": ""
+      },
+      "honor_reply": {},
+      "like_icon": "",
+      "need_jump_bv": false,
+      "disable_show_up_info": false,
+      "is_story_play": 1,
+      "is_view_self": false
+    }
+  }
+}

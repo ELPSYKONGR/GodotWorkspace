@@ -1,0 +1,387 @@
+- banner:
+  - generic "国内版"
+  - generic "国际版"
+  - link "Back to Bing search":
+    - /url: /?FORM=Z9FD1
+    - heading "Back to Bing search" [level=1]
+  - search:
+    - button "Search"
+    - searchbox "Enter your search here - Search suggestions will show as you type": Mikan marble race youtube
+    - button "Search using voice"
+  - complementary "Account Rewards and Preferences":
+    - button "Microsoft Rewards":
+      - generic: "15"
+    - link "Sign in":
+      - /url: javascript:void(0)
+      - button "Sign in"
+    - button "Settings and quick links"
+  - navigation "Search Filter":
+    - list:
+      - link "All":
+        - /url: /search?q=Mikan+marble+race+youtube&FORM=HDRSC1
+      - link "Images":
+        - /url: /images/search?q=Mikan+marble+race+youtube&FORM=HDRSC2
+      - link "Videos":
+        - /url: /videos?FORM=HDRSC3
+      - list:
+        - link "Shorts":
+          - /url: /videos/search?view=shortvideo&qft=+filterui:filterhint-shortvideo&q=Mikan+marble+race+youtube&FORM=SVFBT
+          - text: Shorts
+    - list
+    - button "Filter":
+      - generic: Filter
+- main:
+  - navigation
+  - 'link "mikan/经典弹珠竞速 from bilibili · Duration: 6 minutes 3 seconds · 115.4K views · uploaded on Jul 6, 2023 · uploaded by 990191929 · Click to play."':
+    - /url: https://www.bilibili.com/video/BV1zP411C7HN/
+    - img "mikan/经典弹珠竞速"
+    - generic: 6:03
+    - generic "mikan/经典弹珠竞速":
+      - strong: mikan/经典弹珠竞速
+    - generic: 115.4K views
+    - generic: · Jul 6, 2023
+    - generic: bilibili
+    - generic: · 990191929
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "MIKAN 先入先出——球球的200关究极淘汰赛（Unity）（修改了音乐） from bilibili · Duration: 2 hours 56 minutes 31 seconds · 5.1K views · uploaded on 1 month ago · uploaded by 王者荣耀虎神 · Click to play."':
+    - /url: https://www.bilibili.com/video/BV1mheg6hEHk/
+    - img "MIKAN 先入先出——球球的200关究极淘汰赛（Unity）（修改了音乐）"
+    - generic: 2:56:31
+    - generic "MIKAN 先入先出——球球的200关究极淘汰赛（Unity）（修改了音乐）":
+      - strong: MIKAN 先入先出——球球的200关究极淘汰赛（Unity）（修改了音乐）
+    - generic: 5.1K views
+    - generic: · 1 month ago
+    - generic: bilibili
+    - generic: · 王者荣耀虎神
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "软弹弹珠淘汰赛 - MIKAN from bilibili · Duration: 22 minutes 3 seconds · 1.2K views · uploaded on 2 months ago · uploaded by 黑纹白斑马 · Click to play."':
+    - /url: https://www.bilibili.com/video/BV1pjtw67Eqq/
+    - img "软弹弹珠淘汰赛 - MIKAN"
+    - generic: 22:03
+    - generic "软弹弹珠淘汰赛 - MIKAN":
+      - strong: 软弹弹珠淘汰赛 - MIKAN
+    - generic: 1.2K views
+    - generic: · 2 months ago
+    - generic: bilibili
+    - generic: · 黑纹白斑马
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link "MIKAN 笔记本风格的小球淘汰赛（Unity） from bilibili · 951 views · uploaded on 9 months ago · uploaded by 王者荣耀虎神 · Click to play.":
+    - /url: https://www.bilibili.com/video/BV1ThkFBnEhE/
+    - img "MIKAN 笔记本风格的小球淘汰赛（Unity）"
+    - generic "MIKAN 笔记本风格的小球淘汰赛（Unity）":
+      - strong: MIKAN 笔记本风格的小球淘汰赛（Unity）
+    - generic: 951 views
+    - generic: · 9 months ago
+    - generic: bilibili
+    - generic: · 王者荣耀虎神
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "MIKAN 生存华容道（Algodoo） from bilibili · Duration: 2 minutes 55 seconds · 38.2K views · uploaded on 4 months ago · uploaded by 王者荣耀虎神 · Click to play."':
+    - /url: https://www.bilibili.com/video/BV1hYTs6GEY6/
+    - img "MIKAN 生存华容道（Algodoo）"
+    - generic: 2:55
+    - generic "MIKAN 生存华容道（Algodoo）":
+      - strong: MIKAN 生存华容道（Algodoo）
+    - generic: 38.2K views
+    - generic: · 4 months ago
+    - generic: bilibili
+    - generic: · 王者荣耀虎神
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "mikan/12次淘汰赛+载具竞赛 from bilibili · Duration: 16 minutes 16 seconds · 3.6K views · uploaded on Mar 31, 2023 · uploaded by 990191929 · Click to play."':
+    - /url: https://www.bilibili.com/video/BV11s4y177NR/
+    - img "mikan/12次淘汰赛+载具竞赛"
+    - generic: 16:16
+    - generic "mikan/12次淘汰赛+载具竞赛":
+      - strong: mikan/12次淘汰赛+载具竞赛
+    - generic: 3.6K views
+    - generic: · Mar 31, 2023
+    - generic: bilibili
+    - generic: · 990191929
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "mikan/软体坦克对战 from bilibili · Duration: 9 minutes 51 seconds · 277.6K views · uploaded on Feb 19, 2023 · uploaded by 990191929 · Click to play."':
+    - /url: https://www.bilibili.com/video/BV1Kv4y1s7uU/
+    - img "mikan/软体坦克对战"
+    - generic: 9:51
+    - generic "mikan/软体坦克对战":
+      - strong: mikan/软体坦克对战
+    - generic: 277.6K views
+    - generic: · Feb 19, 2023
+    - generic: bilibili
+    - generic: · 990191929
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "【MIKAN】柔软自行车竞赛 from bilibili · Duration: 10 minutes 30 seconds · 12.5K views · uploaded on 4 months ago · uploaded by XiaoGT_ · Click to play."':
+    - /url: https://www.bilibili.com/video/BV1inMh6BEZJ/
+    - img "【MIKAN】柔软自行车竞赛"
+    - generic: 10:30
+    - generic "【MIKAN】柔软自行车竞赛":
+      - strong: 【MIKAN】柔软自行车竞赛
+    - generic: 12.5K views
+    - generic: · 4 months ago
+    - generic: bilibili
+    - generic: · XiaoGT_
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "【中配】Algodoo弹珠团队竞速赛 - MIKAN sXPvICXExdY from bilibili · Duration: 15 minutes 49 seconds · 443 views · uploaded on 1 month ago · uploaded by 黑纹白斑马 · Click to play."':
+    - /url: https://www.bilibili.com/video/BV1gApj6RE98/
+    - img "【中配】Algodoo弹珠团队竞速赛 - MIKAN sXPvICXExdY"
+    - generic: 15:49
+    - generic "【中配】Algodoo弹珠团队竞速赛 - MIKAN sXPvICXExdY":
+      - strong: 【中配】Algodoo弹珠团队竞速赛 - MIKAN sXPvICXExdY
+    - generic: 443 views
+    - generic: · 1 month ago
+    - generic: bilibili
+    - generic: · 黑纹白斑马
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "解压视频：小球赛跑Marble race V14 from bilibili · Duration: 3 minutes 32 seconds · 225.3K views · uploaded on May 27, 2024 · uploaded by 小草漫游中国 · Click to play."':
+    - /url: https://www.bilibili.com/video/BV1Si421m7Jq/
+    - img "解压视频：小球赛跑Marble race V14"
+    - generic: 3:32
+    - generic "解压视频：小球赛跑Marble race V14":
+      - strong: 解压视频：小球赛跑Marble race V14
+    - generic: 225.3K views
+    - generic: · May 27, 2024
+    - generic: bilibili
+    - generic: · 小草漫游中国
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "mikan/21色团队竞赛 from bilibili · Duration: 18 minutes 5 seconds · 87.9K views · uploaded on Jul 24, 2022 · uploaded by bili_63444598895 · Click to play."':
+    - /url: https://www.bilibili.com/video/BV1734y1n7uR/
+    - img "mikan/21色团队竞赛"
+    - generic: 18:05
+    - generic "mikan/21色团队竞赛":
+      - strong: mikan/21色团队竞赛
+    - generic: 87.9K views
+    - generic: · Jul 24, 2022
+    - generic: bilibili
+    - generic: · bili_63444598895
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "【仿MIKAN】#2：逃离Marble 25！ from bilibili · Duration: 8 minutes 47 seconds · 7.4K views · uploaded on Apr 22, 2023 · uploaded by Marble25_ · Click to play."':
+    - /url: https://www.bilibili.com/video/BV17h411E7qR/
+    - img "【仿MIKAN】#2：逃离Marble 25！"
+    - generic: 8:47
+    - generic "【仿MIKAN】#2：逃离Marble 25！":
+      - strong: 【仿MIKAN】#2：逃离Marble 25！
+    - generic: 7.4K views
+    - generic: · Apr 22, 2023
+    - generic: bilibili
+    - generic: · Marble25_
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "【直播回放】制作小球比赛 2026年11月07日19点场 from bilibili · Duration: 53 minutes 6 seconds · uploaded on 3 days ago · uploaded by 波斯猫agd · Click to play."':
+    - /url: https://www.bilibili.com/video/BV1wC4H6qEht/
+    - img "【直播回放】制作小球比赛 2026年11月07日19点场"
+    - generic: 53:06
+    - generic "【直播回放】制作小球比赛 2026年11月07日19点场":
+      - strong: 【直播回放】制作小球比赛 2026年11月07日19点场
+    - generic: 3 days ago
+    - generic: bilibili
+    - generic: · 波斯猫agd
+  - button "Report an inappropriate content"
+  - 'link "I love watching marble races from MSN · Duration: 1 minutes 14 seconds · uploaded on 3 weeks ago · uploaded by itsmenicksmithy · Click to play."':
+    - /url: https://www.msn.com/en-us/gaming/general/i-love-watching-marble-races/vi-AA2fFzLo
+    - img "I love watching marble races"
+    - generic: 1:14
+    - generic "I love watching marble races":
+      - strong: I love watching marble races
+    - generic: 3 weeks ago
+    - generic: MSN
+    - generic: · itsmenicksmithy
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - 'link "The Legendary Sprunki Marble Race from bilibili · Duration: 4 minutes 49 seconds · 34.4K views · uploaded on Aug 24, 2025 · uploaded by 雪球是九年级初生 · Click to play."':
+    - /url: https://www.bilibili.com/video/BV1rNexzyE1S/
+    - img "The Legendary Sprunki Marble Race"
+    - generic: 4:49
+    - generic "The Legendary Sprunki Marble Race":
+      - strong: The Legendary Sprunki Marble Race
+    - generic: 34.4K views
+    - generic: · Aug 24, 2025
+    - generic: bilibili
+    - generic: · 雪球是九年级初生
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.youtubemultiplier.com/5a3dae463dc29-marble-race-superparison-3.php
+    - strong: "Mix of 8 videos from youtube : Marble Race Superparison 3"
+    - generic: Dec 22, 2017
+    - generic: youtubemultiplier.com
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bilibili.com/video/BV1ZY416hE9y/
+    - generic: 19:40
+    - strong: "20 Teams 200 Marbles: Team Marble Race"
+    - generic: 3.9K views
+    - generic: · 2 months ago
+    - generic: bilibili
+    - generic: · CarsonJayMarbles
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bilibili.com/video/BV1k34U6VEVe/
+    - generic: 8:48
+    - strong: 8 Colors, 4 Teams Multiply or Release - Defender and Attacker
+    - generic: 467 views
+    - generic: · 2 months ago
+    - generic: bilibili
+    - generic: · CarsonJayMarbles
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bilibili.com/video/BV1dJeG62EFE/
+    - generic: 0:54
+    - strong: Can my truck catch the marble guys?
+    - generic: 13 views
+    - generic: · 1 month ago
+    - generic: bilibili
+    - generic: · himzy-marble-run
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bilibili.com/video/BV1QtbL6gEdW/
+    - generic: 9:22
+    - strong: Multiply or Release Marble Race
+    - generic: 3K views
+    - generic: · 2 months ago
+    - generic: bilibili
+    - generic: · CarsonJayMarbles
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bilibili.com/video/BV1Zv416FELN/
+    - generic: 2:54
+    - strong: "Team Marble Race: 5 Lives"
+    - generic: 395 views
+    - generic: · 2 months ago
+    - generic: bilibili
+    - generic: · CarsonJayMarbles
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bilibili.com/video/BV1xzec6NEeL/
+    - generic: 0:52
+    - strong: Can mobil MBG catch the marbles kids??
+    - generic: 8 views
+    - generic: · 1 month ago
+    - generic: bilibili
+    - generic: · himzy-marble-run
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://algodoo.fandom.com/wiki/Marble_Races
+    - strong: Marble Race Tutorials Beginner - Marble-1
+    - generic: Mar 24, 2020
+    - generic: FANDOM
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bilibili.com/video/BV1cnti6CEJ1/
+    - generic: 5:10
+    - strong: 小球平台生存大战！谁会赢？
+    - generic: 3.9K views
+    - generic: · 2 months ago
+    - generic: bilibili
+    - generic: · Coloroll
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://poki.com/zh/g/marble-run-3d
+    - strong: Marble Run 3D - 免费在线玩! | Poki (宝玩)
+    - generic: Apr 30, 2024
+    - generic: poki.com
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bilibili.com/video/BV11vbp6UEpJ/
+    - generic: 8:47
+    - strong: 僵尸进化：霓虹僵尸生存大战【Marbles Battle/4K】
+    - generic: 5.8K views
+    - generic: · 2 months ago
+    - generic: bilibili
+    - generic: · bili_33115791347
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bilibili.com/video/BV1684y1M7Rc/
+    - generic: 2:58
+    - strong: 37 Williamson - The Blue Marble Race Part 3! | Algodoo
+    - generic: 211 views
+    - generic: · Apr 1, 2023
+    - generic: bilibili
+    - generic: · 一切-存在
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bilibili.com/video/BV15WzQBKEQa/
+    - generic: 4:50
+    - strong: 小球繁殖生存比赛：液压机碾压小球的ASMR解压视频
+    - generic: 48.1K views
+    - generic: · 9 months ago
+    - generic: bilibili
+    - generic: · Coloroll
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bilibili.com/video/BV1LL411D7Uo/
+    - generic: 4:21
+    - strong: 37 Williamson - The 100 Lives Marble Race Season 1! | Algodoo
+    - generic: 240 views
+    - generic: · Apr 1, 2023
+    - generic: bilibili
+    - generic: · 一切-存在
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - link:
+    - /url: https://www.bluestacks.com/apps/racing/marble-race-country-on-pc.html
+    - strong: Download & Play Marble Race Country on PC & Mac (Emulator)
+    - generic: Sep 4, 2025
+    - generic: bluestacks.com
+  - button "Report an inappropriate content"
+  - button "Save":
+    - generic "Save"
+  - button "See more"
+- button "Feedback":
+  - generic: Feedback
+- contentinfo:
+  - list:
+    - link "Privacy":
+      - /url: http://go.microsoft.com/fwlink/?LinkId=521839
+    - link "Terms":
+      - /url: http://go.microsoft.com/fwlink/?LinkID=246338
+- dialog "Quick Search"

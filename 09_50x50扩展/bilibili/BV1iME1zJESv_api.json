@@ -1,0 +1,137 @@
+{
+  "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1iME1zJESv",
+  "data": {
+    "code": 0,
+    "message": "OK",
+    "ttl": 1,
+    "data": {
+      "bvid": "BV1iME1zJESv",
+      "aid": 114510438340029,
+      "videos": 1,
+      "tid": 201,
+      "tid_v2": 2094,
+      "tname": "",
+      "tname_v2": "",
+      "copyright": 1,
+      "pic": "http://i2.hdslb.com/bfs/archive/40fe648268b9a426a975a24176fb92217213bc48.jpg",
+      "title": "小球能在1945道环形圆圈中逃离出去吗？#几何图形 #星球动画",
+      "pubdate": 1747291126,
+      "ctime": 1747291126,
+      "desc": "-",
+      "desc_v2": [
+        {
+          "raw_text": "-",
+          "type": 1,
+          "biz_id": 0
+        }
+      ],
+      "state": 0,
+      "duration": 61,
+      "rights": {
+        "bp": 0,
+        "elec": 0,
+        "download": 1,
+        "movie": 0,
+        "pay": 0,
+        "hd5": 1,
+        "no_reprint": 0,
+        "autoplay": 1,
+        "ugc_pay": 0,
+        "is_cooperation": 0,
+        "ugc_pay_preview": 0,
+        "no_background": 0,
+        "clean_mode": 0,
+        "is_stein_gate": 0,
+        "is_360": 0,
+        "no_share": 0,
+        "arc_pay": 0,
+        "free_watch": 0
+      },
+      "owner": {
+        "mid": 3493128698858291,
+        "name": "火星课堂i",
+        "face": "https://i2.hdslb.com/bfs/face/4b3c1282a6d2d38ca9067bfd37bd0f77934adcab.jpg"
+      },
+      "stat": {
+        "aid": 114510438340029,
+        "view": 5821035,
+        "danmaku": 874,
+        "reply": 764,
+        "favorite": 12859,
+        "coin": 2128,
+        "share": 705,
+        "now_rank": 0,
+        "his_rank": 0,
+        "like": 118799,
+        "dislike": 0,
+        "evaluation": "",
+        "vt": 0
+      },
+      "argue_info": {
+        "argue_msg": "",
+        "argue_type": 0,
+        "argue_link": ""
+      },
+      "dynamic": "",
+      "cid": 29969350960,
+      "dimension": {
+        "width": 1080,
+        "height": 1920,
+        "rotate": 0
+      },
+      "premiere": null,
+      "teenage_mode": 0,
+      "is_chargeable_season": false,
+      "is_story": true,
+      "is_upower_exclusive": false,
+      "is_upower_play": false,
+      "is_upower_preview": false,
+      "enable_vt": 0,
+      "vt_display": "",
+      "is_upower_exclusive_with_qa": false,
+      "is_hua_sheng": false,
+      "no_cache": false,
+      "pages": [
+        {
+          "cid": 29969350960,
+          "page": 1,
+          "from": "vupload",
+          "part": "b421518d-f153-459e-b5ec-9c0ba7293dc1",
+          "duration": 61,
+          "vid": "",
+          "weblink": "",
+          "dimension": {
+            "width": 1080,
+            "height": 1920,
+            "rotate": 0
+          },
+          "first_frame": "http://i0.hdslb.com/bfs/storyff/n250515sa77vjphrdfmqb5ehvtjdeu94_firsti.jpg",
+          "ctime": 1747291126
+        }
+      ],
+      "subtitle": {
+        "allow_submit": false,
+        "list": []
+      },
+      "is_season_display": false,
+      "user_garb": {
+        "url_image_ani_cut": ""
+      },
+      "honor_reply": {
+        "honor": [
+          {
+            "aid": 114510438340029,
+            "type": 7,
+            "desc": "热门收录",
+            "weekly_recommend_num": 0
+          }
+        ]
+      },
+      "like_icon": "",
+      "need_jump_bv": false,
+      "disable_show_up_info": false,
+      "is_story_play": 1,
+      "is_view_self": false
+    }
+  }
+}

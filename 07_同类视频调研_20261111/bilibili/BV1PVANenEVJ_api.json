@@ -1,0 +1,130 @@
+{
+  "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1PVANenEVJ",
+  "fetched_at": "2026-11-11T11:33:01.558370+08:00",
+  "http_status": 200,
+  "data": {
+    "code": 0,
+    "message": "OK",
+    "ttl": 1,
+    "data": {
+      "bvid": "BV1PVANenEVJ",
+      "aid": 114007205747518,
+      "videos": 1,
+      "tid": 21,
+      "tid_v2": 2079,
+      "tname": "",
+      "tname_v2": "",
+      "copyright": 1,
+      "pic": "http://i1.hdslb.com/bfs/archive/4aea9f7b8306e8a997cc6bf1e418bdf469d63579.jpg",
+      "title": "30秒，能否吃完10083个小球？",
+      "pubdate": 1739612000,
+      "ctime": 1739612001,
+      "desc": "30秒，能否吃完10083个小球？",
+      "desc_v2": [
+        {
+          "raw_text": "30秒，能否吃完10083个小球？",
+          "type": 1,
+          "biz_id": 0
+        }
+      ],
+      "state": 0,
+      "duration": 30,
+      "rights": {
+        "bp": 0,
+        "elec": 0,
+        "download": 1,
+        "movie": 0,
+        "pay": 0,
+        "hd5": 0,
+        "no_reprint": 1,
+        "autoplay": 1,
+        "ugc_pay": 0,
+        "is_cooperation": 0,
+        "ugc_pay_preview": 0,
+        "no_background": 0,
+        "clean_mode": 0,
+        "is_stein_gate": 0,
+        "is_360": 0,
+        "no_share": 0,
+        "arc_pay": 0,
+        "free_watch": 0
+      },
+      "owner": {
+        "mid": 19212398,
+        "name": "电动蛐蛐A",
+        "face": "https://i2.hdslb.com/bfs/face/f8b34dc47f24837b438cf0fbf792a4885fccc862.jpg"
+      },
+      "stat": {
+        "aid": 114007205747518,
+        "view": 658701,
+        "danmaku": 69,
+        "reply": 83,
+        "favorite": 515,
+        "coin": 100,
+        "share": 18,
+        "now_rank": 0,
+        "his_rank": 0,
+        "like": 3143,
+        "dislike": 0,
+        "evaluation": "",
+        "vt": 0
+      },
+      "argue_info": {
+        "argue_msg": "",
+        "argue_type": 0,
+        "argue_link": ""
+      },
+      "dynamic": "",
+      "cid": 25757750285,
+      "dimension": {
+        "width": 1080,
+        "height": 1920,
+        "rotate": 0
+      },
+      "premiere": null,
+      "teenage_mode": 0,
+      "is_chargeable_season": false,
+      "is_story": true,
+      "is_upower_exclusive": false,
+      "is_upower_play": false,
+      "is_upower_preview": false,
+      "enable_vt": 0,
+      "vt_display": "",
+      "is_upower_exclusive_with_qa": false,
+      "is_hua_sheng": false,
+      "no_cache": false,
+      "pages": [
+        {
+          "cid": 25757750285,
+          "page": 1,
+          "from": "vupload",
+          "part": "30秒，能否吃完10083个小球？",
+          "duration": 30,
+          "vid": "",
+          "weblink": "",
+          "dimension": {
+            "width": 1080,
+            "height": 1920,
+            "rotate": 0
+          },
+          "first_frame": "http://i1.hdslb.com/bfs/storyff/n250215sa33407c4q5hzdl2x2f694nyy_firsti.jpg",
+          "ctime": 1739612001
+        }
+      ],
+      "subtitle": {
+        "allow_submit": false,
+        "list": []
+      },
+      "is_season_display": false,
+      "user_garb": {
+        "url_image_ani_cut": ""
+      },
+      "honor_reply": {},
+      "like_icon": "",
+      "need_jump_bv": false,
+      "disable_show_up_info": false,
+      "is_story_play": 1,
+      "is_view_self": false
+    }
+  }
+}

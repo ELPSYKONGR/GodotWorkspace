@@ -1,0 +1,292 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link:
+  - /url: //www.douyin.com/jingxuan
+- link "精选":
+  - /url: https://www.douyin.com/jingxuan?from_nav=1
+  - generic: 精选
+- link "推荐":
+  - /url: https://www.douyin.com/?recommend=1&from_nav=1
+  - generic: 推荐
+- link "AI抖音":
+  - /url: https://www.douyin.com/aisearch?from_nav=1
+  - generic: AI抖音
+- link "关注":
+  - /url: https://www.douyin.com/follow?from_nav=1
+  - generic: 关注
+- link "朋友":
+  - /url: https://www.douyin.com/friend?from_nav=1
+  - generic: 朋友
+- link "我的":
+  - /url: https://www.douyin.com/user/self?from_nav=1
+  - generic: 我的
+- link "直播":
+  - /url: https://live.douyin.com/?from_nav=1
+  - generic: 直播
+- link "放映厅":
+  - /url: https://www.douyin.com/vs?from_nav=1
+  - generic: 放映厅
+- link "短剧":
+  - /url: https://www.douyin.com/series?from_nav=1
+  - generic: 短剧
+- link "小游戏":
+  - /url: https://www.douyin.com/microgame?from_nav=1
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+  - /url: https://beian.miit.gov.cn/
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - generic: 超大海水缸养海龟
+  - textbox
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: https://www.douyin.com/download/pc/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-downloader-v8.7.0-win32-ia32-douyincold.exe
+    - paragraph: 客户端
+  - link "下载电脑客户端":
+    - /url: https://www.douyin.com/download/pc/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-downloader-v8.7.0-win32-ia32-douyincold.exe
+    - text: 下载电脑客户端
+  - generic: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - button "登录":
+    - paragraph: 登录
+- main:
+  - generic: 因浏览器限制，当前为静音
+  - button "打开声音":
+    - generic: 打开声音
+  - generic: 3.3万
+  - generic: "4080"
+  - generic: "1970"
+  - generic: "1016"
+  - button
+  - link "作者声明：个人观点，仅供参考":
+    - /url: undefined
+    - generic: 作者声明：个人观点，仅供参考
+  - link "芃芃":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAgb33wc9K-aEHRJvGJgKScAiCXHP0cyt78kniDYiCwRxrK4xA3TvvL7X9UhYGRDLE
+    - img "芃芃"
+  - link "芃芃":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAgb33wc9K-aEHRJvGJgKScAiCXHP0cyt78kniDYiCwRxrK4xA3TvvL7X9UhYGRDLE
+    - generic: 芃芃
+  - paragraph: 粉丝2270获赞50.5万
+  - button "关注":
+    - generic: 关注
+  - generic: 你什么时候意识到自己没见过世面？
+  - link "#没见过世面":
+    - /url: //www.douyin.com/hashtag/1585027270584333
+  - link "#没见过世面的样子":
+    - /url: //www.douyin.com/hashtag/1585462594994190
+  - link "#见世面":
+    - /url: //www.douyin.com/hashtag/1593373485071374
+  - link "#摘自网络素材":
+    - /url: //www.douyin.com/hashtag/7504873050504955938
+  - link "#社科冷知识":
+    - /url: //www.douyin.com/hashtag/1770566033738779
+  - generic: 发布时间：2026-11-09 12:15:00
+  - generic: 相关推荐
+  - generic: 评论(4080)
+  - paragraph: 登录后查看更多评论
+  - img "二维码"
+  - paragraph: 打开「抖音APP」进行扫码登录
+  - paragraph: 登录其他账号
+  - generic: 继续看视频
+  - list:
+    - 'img "你什么时候意识到自己没见过世面？ #没见过世面 #没见过世面的样子#见世面 #摘自网络素材 #社科冷知识"'
+    - generic: 播放中
+    - 'heading "你什么时候意识到自己没见过世面？#没见过世面 #没见过世面的样子#见世面 #摘自网络素材 #社科冷知识" [level=3]':
+      - generic: "你什么时候意识到自己没见过世面？#没见过世面 #没见过世面的样子#见世面 #摘自网络素材 #社科冷知识"
+    - text: 3.3万
+    - generic: 芃芃
+    - 'img "谁能消灭黑洞 视频开头风格模仿@北沙特 #宇宙中的黑洞 #社科冷知识 #制作不易求流量 #制作视频不易 #穿越黑洞"'
+    - generic: 01:57
+    - 'heading "谁能消灭黑洞 视频开头风格模仿@北沙特 #宇宙中的黑洞 #社科冷知识 #制作不易求流量 #制作视频不易 #穿越黑洞" [level=3]':
+      - generic: "谁能消灭黑洞 视频开头风格模仿@北沙特 #宇宙中的黑洞 #社科冷知识 #制作不易求流量 #制作视频不易 #穿越黑洞"
+    - text: "5530"
+    - generic: 量子
+    - 'img "原来现在的中国是这样的？，又震惊又可怕。#硬核深度计划 #外网热评"'
+    - generic: 02:23
+    - 'heading "原来现在的中国是这样的？，又震惊又可怕。#硬核深度计划 #外网热评" [level=3]':
+      - generic: "原来现在的中国是这样的？，又震惊又可怕。#硬核深度计划 #外网热评"
+    - text: "3830"
+    - generic: 熊猫情报
+    - 'img "中国在国外被认为是列强吗？#列强 #每日话题"'
+    - generic: 04:00
+    - 'heading "中国在国外被认为是列强吗？#列强 #每日话题" [level=3]':
+      - generic: "中国在国外被认为是列强吗？#列强 #每日话题"
+    - text: "1036"
+    - generic: 每日话题故事
+    - 'img "为什么真正厉害的人往往看起来比较单纯？#单纯 #简单 #逻辑"'
+    - generic: 06:07
+    - 'heading "为什么真正厉害的人往往看起来比较单纯？#单纯 #简单 #逻辑" [level=3]':
+      - generic: "为什么真正厉害的人往往看起来比较单纯？#单纯 #简单 #逻辑"
+    - text: "8969"
+    - generic: 尚书谋略局
+    - 'img "今日社会热点信息差 #离谱 #逆天 #信息差"'
+    - generic: 03:05
+    - 'heading "今日社会热点信息差 #离谱 #逆天 #信息差" [level=3]':
+      - generic: "今日社会热点信息差 #离谱 #逆天 #信息差"
+    - text: 8.6万
+    - generic: 橘长观察
+    - 'img "这10种“低价值表达”，你可能每天都在说 #表达 #表达能力 #个人成长 #说话 #情商"'
+    - generic: 27:51
+    - 'heading "这10种“低价值表达”，你可能每天都在说 #表达 #表达能力 #个人成长 #说话 #情商" [level=3]':
+      - generic: "这10种“低价值表达”，你可能每天都在说 #表达 #表达能力 #个人成长 #说话 #情商"
+    - text: 13.0万
+    - generic: 咪惹
+    - img "哪种行为是化圈最逆天的中二操作？"
+    - generic: 00:26
+    - heading "哪种行为是化圈最逆天的中二操作？" [level=3]:
+      - generic: 哪种行为是化圈最逆天的中二操作？
+    - text: "8337"
+    - generic: 水虎化学实验室
+    - 'img "分享一些让别人更喜欢你的社交小tips #高情商 #聊天技巧 #社交技巧 #人际交往技巧 #干货分享"'
+    - generic: 02:07
+    - 'heading "分享一些让别人更喜欢你的社交小tips #高情商 #聊天技巧 #社交技巧 #人际交往技巧 #干货分享" [level=3]':
+      - generic: "分享一些让别人更喜欢你的社交小tips #高情商 #聊天技巧 #社交技巧 #人际交往技巧 #干货分享"
+    - text: 6.4万
+    - generic: 麦兜研究人类bot
+    - img "为什么要把异性恋罪犯造谣成同性恋？"
+    - generic: 02:12
+    - heading "为什么要把异性恋罪犯造谣成同性恋？" [level=3]:
+      - generic: 为什么要把异性恋罪犯造谣成同性恋？
+    - text: "2621"
+    - generic: 视奸大王（战损号求关注版）
+    - 'img "所有人都一味沉浸在自己的串商中 #高干文 #低干文学 #赵纪儒#搞笑 #恨海情天"'
+    - generic: 00:41
+    - 'heading "所有人都一味沉浸在自己的串商中 #高干文 #低干文学 #赵纪儒#搞笑 #恨海情天" [level=3]':
+      - generic: "所有人都一味沉浸在自己的串商中 #高干文 #低干文学 #赵纪儒#搞笑 #恨海情天"
+    - text: 1.4万
+    - generic: 小花营销号
+    - img "面试一位海归要月薪10万我问他楼下只有1个车位3个总监都要停"
+    - generic: 31:43
+    - heading "面试一位海归要月薪10万我问他楼下只有1个车位3个总监都要停" [level=3]:
+      - generic: 面试一位海归要月薪10万我问他楼下只有1个车位3个总监都要停
+    - text: 3.1万
+    - generic: 用户586872846580
+    - 'img "#调解工作现场 #每天学点法律知识 #多学点法律少走点弯路 @DOU+小助手 #基层办案实录"'
+    - generic: 31:43
+    - 'heading "#调解工作现场 #每天学点法律知识 #多学点法律少走点弯路 @DOU+小助手 #基层办案实录" [level=3]':
+      - generic: "#调解工作现场 #每天学点法律知识 #多学点法律少走点弯路 @DOU+小助手 #基层办案实录"
+    - text: 2.8万
+    - generic: 龙腾无忧
+    - 'img "大家在作文中有创造过什么神句嘛 #写作 #作文 #文学 #文字 #语文"'
+    - generic: 00:27
+    - 'heading "大家在作文中有创造过什么神句嘛 #写作 #作文 #文学 #文字 #语文" [level=3]':
+      - generic: "大家在作文中有创造过什么神句嘛 #写作 #作文 #文学 #文字 #语文"
+    - text: 7.6万
+    - generic: 一只小缘
+    - 'img "并不是全世界都把中国叫做“China”。#中国 #历史知识科普 #文化自信"'
+    - generic: 04:47
+    - 'heading "并不是全世界都把中国叫做“China”。#中国 #历史知识科普 #文化自信" [level=3]':
+      - generic: "并不是全世界都把中国叫做“China”。#中国 #历史知识科普 #文化自信"
+    - text: 6.7万
+    - generic: 都靓读书
+    - 'img "分享一些独来独往但人缘很好的小tips #人类一败涂地聊天技巧 #生活小技巧合集 #干货 #社交 #聊天"'
+    - generic: 02:07
+    - 'heading "分享一些独来独往但人缘很好的小tips #人类一败涂地聊天技巧 #生活小技巧合集 #干货 #社交 #聊天" [level=3]':
+      - generic: "分享一些独来独往但人缘很好的小tips #人类一败涂地聊天技巧 #生活小技巧合集 #干货 #社交 #聊天"
+    - text: 6.2万
+    - generic: 麦兜研究人类bot
+    - 'img "你有没有读到什么狠狠震撼过你的句子 #共鸣 #文案 #震撼 #文字的力量 #分享"'
+    - generic: 00:31
+    - 'heading "你有没有读到什么狠狠震撼过你的句子 #共鸣 #文案 #震撼 #文字的力量 #分享" [level=3]':
+      - generic: "你有没有读到什么狠狠震撼过你的句子 #共鸣 #文案 #震撼 #文字的力量 #分享"
+    - text: 24.0万
+    - generic: 皮皮星闻局
+    - 'img "有哪些学科里的句子适合写在同人文里 #地理 #学科 #浪漫 #同人 #文学"'
+    - generic: 00:37
+    - 'heading "有哪些学科里的句子适合写在同人文里 #地理 #学科 #浪漫 #同人 #文学" [level=3]':
+      - generic: "有哪些学科里的句子适合写在同人文里 #地理 #学科 #浪漫 #同人 #文学"
+    - text: 19.0万
+    - generic: 歪梨欧尼
+    - 'img "一分钟了解几个日本冷知识 #知识科普 #日本 #社科冷知识 #日本人"'
+    - generic: 01:36
+    - 'heading "一分钟了解几个日本冷知识 #知识科普 #日本 #社科冷知识 #日本人" [level=3]':
+      - generic: "一分钟了解几个日本冷知识 #知识科普 #日本 #社科冷知识 #日本人"
+    - text: 4.8万
+    - generic: 树枝
+    - 'img "为什么不能网恋 虚拟空间的加速亲密：网络环境下异性聊天中过度自我表露与\"假性亲密关系\"的形 成机制研究 #网恋 #假性亲密关系 #自我表露 #聊天 #研究生"'
+    - generic: 22:57
+    - 'heading "为什么不能网恋 虚拟空间的加速亲密：网络环境下异性聊天中过度自我表露与\"假性亲密关系\"的形 成机制研究 #网恋 #假性亲密关系 #自我表露 #聊天 #研究生" [level=3]':
+      - generic: "为什么不能网恋 虚拟空间的加速亲密：网络环境下异性聊天中过度自我表露与\"假性亲密关系\"的形 成机制研究 #网恋 #假性亲密关系 #自我表露 #聊天 #研究生"
+    - text: 1.4万
+    - generic: 御前侍卫不带刀
+    - 'img "【第109集】怎样在被怼的那一秒接住话 #回怼话术 #说话技巧 #实用生活小技巧 #高情商#播客"'
+    - generic: 03:04
+    - 'heading "【第109集】怎样在被怼的那一秒接住话 #回怼话术 #说话技巧 #实用生活小技巧 #高情商#播客" [level=3]':
+      - generic: "【第109集】怎样在被怼的那一秒接住话 #回怼话术 #说话技巧 #实用生活小技巧 #高情商#播客"
+    - text: 2.5万
+    - generic: 岛屿云播客
+- article:
+  - generic: 登录后免费畅享高清视频
+  - generic: 扫码登录
+  - generic: 如何扫码
+  - img "二维码"
+  - paragraph:
+    - paragraph: 打开「抖音APP」点击左上角
+    - paragraph: 扫一扫
+  - generic: 验证码登录
+  - generic: 密码登录
+  - combobox "国家/地区": "+86"
+  - textbox "请输入手机号"
+  - textbox "请输入验证码"
+  - generic: 获取验证码
+  - generic: 登录
+  - generic "登录即代表同意用户协议和隐私政策":
+    - text: 登录即代表同意
+    - link "用户协议":
+      - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+    - text: 和
+    - link "隐私政策":
+      - /url: https://www.douyin.com/agreements/?id=6773901168964798477

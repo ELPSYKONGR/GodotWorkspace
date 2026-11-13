@@ -1,0 +1,549 @@
+- link "首页":
+  - /url: //www.bilibili.com
+  - generic: 首页
+- link "番剧":
+  - /url: //www.bilibili.com/anime/
+  - generic: 番剧
+- link "直播":
+  - /url: //live.bilibili.com
+  - generic: 直播
+- link "游戏中心":
+  - /url: //game.bilibili.com/platform
+  - generic: 游戏中心
+- link "会员购":
+  - /url: //show.bilibili.com/platform/home.html?msource=pc_web
+  - generic: 会员购
+- link "漫画":
+  - /url: //manga.bilibili.com?from=bill_top_mnav
+  - generic: 漫画
+- link "赛事":
+  - /url: //www.bilibili.com/match/home/
+  - generic: 赛事
+- link "下载客户端":
+  - /url: //app.bilibili.com/
+  - generic: 下载客户端
+- generic: 登录
+- paragraph: "登录后你可以:"
+- generic: 免费看高清视频
+- generic: 多端同步播放记录
+- generic: 发表弹幕/评论
+- generic: 热门番剧影视看不停
+- generic: 立即登录
+- generic: 首次使用？点我注册
+- link "大会员":
+  - /url: //account.bilibili.com/big
+  - generic: 大会员
+- generic: 消息
+- generic: 动态
+- generic: 收藏
+- generic: 历史
+- generic: 创作中心
+- generic: 投稿
+- textbox "输入关键字搜索": 小球 碰撞 解压
+- button "搜索"
+- navigation:
+  - list:
+    - generic: 综合
+    - generic: 视频
+    - generic: 99+
+    - generic: 番剧
+    - generic: "0"
+    - generic: 影视
+    - generic: "0"
+    - generic: 直播
+    - generic: "0"
+    - generic: 专栏
+    - generic: 99+
+    - generic: 用户
+    - generic: "0"
+- separator
+- button "综合排序"
+- button "最多播放"
+- button "最新发布"
+- button "最多弹幕"
+- button "最多收藏"
+- button "更多筛选":
+  - text: 更多筛选
+- 'link "小球每次碰撞都会翻倍#解压小游戏 #星球动画 199.2万 616 01:01"':
+  - /url: //www.bilibili.com/video/BV192LazNEHW/
+  - 'img "小球每次碰撞都会翻倍#解压小游戏 #星球动画"'
+  - generic: 199.2万
+  - generic: "616"
+  - generic: 01:01
+- 'link "小球每次碰撞都会翻倍#解压小游戏 #星球动画"':
+  - /url: //www.bilibili.com/video/BV192LazNEHW/
+  - 'heading "小球每次碰撞都会翻倍#解压小游戏 #星球动画" [level=3]'
+- link "火星课堂i · 2025年4月24日":
+  - /url: //space.bilibili.com/3493128698858291
+  - generic: 火星课堂i
+  - generic: · 2025年4月24日
+- link "如果两个小球相撞 就会爆发1000000个小球 138.5万 1130 01:01":
+  - /url: //www.bilibili.com/video/BV13gwTeTE2v/
+  - img "如果两个小球相撞 就会爆发1000000个小球"
+  - generic: 138.5万
+  - generic: "1130"
+  - generic: 01:01
+- link "如果两个小球相撞 就会爆发1000000个小球":
+  - /url: //www.bilibili.com/video/BV13gwTeTE2v/
+  - heading "如果两个小球相撞 就会爆发1000000个小球" [level=3]
+- link "菠萝蜜欧皇 · 2025年1月19日":
+  - /url: //space.bilibili.com/438583636
+  - generic: 菠萝蜜欧皇
+  - generic: · 2025年1月19日
+- link "30秒，能否吃完10083个小球？ 65.9万 69 00:30":
+  - /url: //www.bilibili.com/video/BV1PVANenEVJ/
+  - img "30秒，能否吃完10083个小球？"
+  - generic: 65.9万
+  - generic: "69"
+  - generic: 00:30
+- link "30秒，能否吃完10083个小球？":
+  - /url: //www.bilibili.com/video/BV1PVANenEVJ/
+  - heading "30秒，能否吃完10083个小球？" [level=3]
+- link "电动蛐蛐A · 2025年2月15日":
+  - /url: //space.bilibili.com/19212398
+  - generic: 电动蛐蛐A
+  - generic: · 2025年2月15日
+- link "每条边都被激活后，边界就会多一条边 30万 103 00:56":
+  - /url: //www.bilibili.com/video/BV1VFWzeSEQJ/
+  - img "每条边都被激活后，边界就会多一条边"
+  - generic: 30万
+  - generic: "103"
+  - generic: 00:56
+- link "每条边都被激活后，边界就会多一条边":
+  - /url: //www.bilibili.com/video/BV1VFWzeSEQJ/
+  - heading "每条边都被激活后，边界就会多一条边" [level=3]
+- link "芝麻拍瓦 · 2024年8月25日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年8月25日
+- link "每个小球能活动2秒，谁能留到最后？ 29万 145 01:00":
+  - /url: //www.bilibili.com/video/BV1a4N1eDE9V/
+  - img "每个小球能活动2秒，谁能留到最后？"
+  - generic: 29万
+  - generic: "145"
+  - generic: 01:00
+- link "每个小球能活动2秒，谁能留到最后？":
+  - /url: //www.bilibili.com/video/BV1a4N1eDE9V/
+  - heading "每个小球能活动2秒，谁能留到最后？" [level=3]
+- link "芝麻拍瓦 · 2025年2月9日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2025年2月9日
+- link "小球连续击破圆环才有机会逃出 27万 83 00:36":
+  - /url: //www.bilibili.com/video/BV1ZPm8YBE3u/
+  - img "小球连续击破圆环才有机会逃出"
+  - generic: 27万
+  - generic: "83"
+  - generic: 00:36
+- link "小球连续击破圆环才有机会逃出":
+  - /url: //www.bilibili.com/video/BV1ZPm8YBE3u/
+  - heading "小球连续击破圆环才有机会逃出" [level=3]
+- link "芝麻拍瓦 · 2024年11月12日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年11月12日
+- link "小球每5秒就会冻结一次 直到出现混乱 24.7万 56 01:02":
+  - /url: //www.bilibili.com/video/BV1dW421976v/
+  - img "小球每5秒就会冻结一次 直到出现混乱"
+  - generic: 24.7万
+  - generic: "56"
+  - generic: 01:02
+- link "小球每5秒就会冻结一次 直到出现混乱":
+  - /url: //www.bilibili.com/video/BV1dW421976v/
+  - heading "小球每5秒就会冻结一次 直到出现混乱" [level=3]
+- link "菠萝蜜欧皇 · 2024年8月15日":
+  - /url: //space.bilibili.com/438583636
+  - generic: 菠萝蜜欧皇
+  - generic: · 2024年8月15日
+- link "每次三消会减少多边形边界的边数 24.4万 15 00:43":
+  - /url: //www.bilibili.com/video/BV1uAxLe7E99/
+  - img "每次三消会减少多边形边界的边数"
+  - generic: 24.4万
+  - generic: "15"
+  - generic: 00:43
+- link "每次三消会减少多边形边界的边数":
+  - /url: //www.bilibili.com/video/BV1uAxLe7E99/
+  - heading "每次三消会减少多边形边界的边数" [level=3]
+- link "芝麻拍瓦 · 2024年9月26日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年9月26日
+- link "小球碰到砖块会获得对应数量的小球 24万 46 00:36":
+  - /url: //www.bilibili.com/video/BV1VszzYBE7R/
+  - img "小球碰到砖块会获得对应数量的小球"
+  - generic: 24万
+  - generic: "46"
+  - generic: 00:36
+- link "小球碰到砖块会获得对应数量的小球":
+  - /url: //www.bilibili.com/video/BV1VszzYBE7R/
+  - heading "小球碰到砖块会获得对应数量的小球" [level=3]
+- link "芝麻拍瓦 · 2024年11月29日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年11月29日
+- link "只有一个小球能够逃出 23.7万 71 00:46":
+  - /url: //www.bilibili.com/video/BV13btHerEMN/
+  - img "只有一个小球能够逃出"
+  - generic: 23.7万
+  - generic: "71"
+  - generic: 00:46
+- link "只有一个小球能够逃出":
+  - /url: //www.bilibili.com/video/BV13btHerEMN/
+  - heading "只有一个小球能够逃出" [level=3]
+- link "芝麻拍瓦 · 2024年9月19日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年9月19日
+- link "白球碰撞到砖块会消灭同色小球 22.2万 24 00:54":
+  - /url: //www.bilibili.com/video/BV18nUsYjENb/
+  - img "白球碰撞到砖块会消灭同色小球"
+  - generic: 22.2万
+  - generic: "24"
+  - generic: 00:54
+- link "白球碰撞到砖块会消灭同色小球":
+  - /url: //www.bilibili.com/video/BV18nUsYjENb/
+  - heading "白球碰撞到砖块会消灭同色小球" [level=3]
+- link "芝麻拍瓦 · 2024年11月18日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年11月18日
+- 'link "小球每次相互碰撞都会增加1个球。#几何图形 #解压 20.5万 198 00:31"':
+  - /url: //www.bilibili.com/video/BV1D1KF6PEwV/
+  - 'img "小球每次相互碰撞都会增加1个球。#几何图形 #解压"'
+  - generic: 20.5万
+  - generic: "198"
+  - generic: 00:31
+- 'link "小球每次相互碰撞都会增加1个球。#几何图形 #解压"':
+  - /url: //www.bilibili.com/video/BV1D1KF6PEwV/
+  - 'heading "小球每次相互碰撞都会增加1个球。#几何图形 #解压" [level=3]'
+- link "火星课堂i · 7月18日":
+  - /url: //space.bilibili.com/3493128698858291
+  - generic: 火星课堂i
+  - generic: · 7月18日
+- link "只有一个小球处于回溯状态 19.2万 29 00:40":
+  - /url: //www.bilibili.com/video/BV18JS9YYEho/
+  - img "只有一个小球处于回溯状态"
+  - generic: 19.2万
+  - generic: "29"
+  - generic: 00:40
+- link "只有一个小球处于回溯状态":
+  - /url: //www.bilibili.com/video/BV18JS9YYEho/
+  - heading "只有一个小球处于回溯状态" [level=3]
+- link "芝麻拍瓦 · 2024年11月1日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年11月1日
+- link "小球要多快才能逃出 19.1万 70 00:37":
+  - /url: //www.bilibili.com/video/BV1jJD1YsEzi/
+  - img "小球要多快才能逃出"
+  - generic: 19.1万
+  - generic: "70"
+  - generic: 00:37
+- link "小球要多快才能逃出":
+  - /url: //www.bilibili.com/video/BV1jJD1YsEzi/
+  - heading "小球要多快才能逃出" [level=3]
+- link "芝麻拍瓦 · 2024年11月7日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年11月7日
+- link "小球们能逃出几波包围 16.2万 39 00:46":
+  - /url: //www.bilibili.com/video/BV1MytUeLEQE/
+  - img "小球们能逃出几波包围"
+  - generic: 16.2万
+  - generic: "39"
+  - generic: 00:46
+- link "小球们能逃出几波包围":
+  - /url: //www.bilibili.com/video/BV1MytUeLEQE/
+  - heading "小球们能逃出几波包围" [level=3]
+- link "芝麻拍瓦 · 2024年9月22日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年9月22日
+- link "小球最多能逃出几边形 14.3万 53 00:59":
+  - /url: //www.bilibili.com/video/BV1nXndeqExz/
+  - img "小球最多能逃出几边形"
+  - generic: 14.3万
+  - generic: "53"
+  - generic: 00:59
+- link "小球最多能逃出几边形":
+  - /url: //www.bilibili.com/video/BV1nXndeqExz/
+  - heading "小球最多能逃出几边形" [level=3]
+- link "芝麻拍瓦 · 2024年8月31日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年8月31日
+- link "白球碰撞多少次才能打进所有球？ 14.1万 91 01:21":
+  - /url: //www.bilibili.com/video/BV1NSKGeSERv/
+  - img "白球碰撞多少次才能打进所有球？"
+  - generic: 14.1万
+  - generic: "91"
+  - generic: 01:21
+- link "白球碰撞多少次才能打进所有球？":
+  - /url: //www.bilibili.com/video/BV1NSKGeSERv/
+  - heading "白球碰撞多少次才能打进所有球？" [level=3]
+- link "芝麻拍瓦 · 2025年2月12日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2025年2月12日
+- link "小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？ 14万 82 00:51":
+  - /url: //www.bilibili.com/video/BV1NBAJe8Ero/
+  - img "小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？"
+  - generic: 14万
+  - generic: "82"
+  - generic: 00:51
+- link "小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？":
+  - /url: //www.bilibili.com/video/BV1NBAJe8Ero/
+  - heading "小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？" [level=3]
+- link "芝麻拍瓦 · 2025年2月20日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2025年2月20日
+- link "小球每次碰撞会打开随机出口 13.3万 25 01:15":
+  - /url: //www.bilibili.com/video/BV1tWsbe7EYm/
+  - img "小球每次碰撞会打开随机出口"
+  - generic: 13.3万
+  - generic: "25"
+  - generic: 01:15
+- link "小球每次碰撞会打开随机出口":
+  - /url: //www.bilibili.com/video/BV1tWsbe7EYm/
+  - heading "小球每次碰撞会打开随机出口" [level=3]
+- link "芝麻拍瓦 · 2024年9月24日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年9月24日
+- 'link "小球每次被活塞碰撞都会翻倍。#几何图形 #解压 13万 38 00:33"':
+  - /url: //www.bilibili.com/video/BV16PopBMEHP/
+  - 'img "小球每次被活塞碰撞都会翻倍。#几何图形 #解压"'
+  - generic: 13万
+  - generic: "38"
+  - generic: 00:33
+- 'link "小球每次被活塞碰撞都会翻倍。#几何图形 #解压"':
+  - /url: //www.bilibili.com/video/BV16PopBMEHP/
+  - 'heading "小球每次被活塞碰撞都会翻倍。#几何图形 #解压" [level=3]'
+- link "火星课堂i · 4月22日":
+  - /url: //space.bilibili.com/3493128698858291
+  - generic: 火星课堂i
+  - generic: · 4月22日
+- link "每种颜色的小球轮流行动，谁能留到最后？ 12.8万 84 00:49":
+  - /url: //www.bilibili.com/video/BV1TnFfeeEN9/
+  - img "每种颜色的小球轮流行动，谁能留到最后？"
+  - generic: 12.8万
+  - generic: "84"
+  - generic: 00:49
+- link "每种颜色的小球轮流行动，谁能留到最后？":
+  - /url: //www.bilibili.com/video/BV1TnFfeeEN9/
+  - heading "每种颜色的小球轮流行动，谁能留到最后？" [level=3]
+- link "芝麻拍瓦 · 2025年2月1日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2025年2月1日
+- link "每次碰撞 黄球都有22%的概率分裂 12.2万 35 00:24":
+  - /url: //www.bilibili.com/video/BV1Hg9FYyEcR/
+  - img "每次碰撞 黄球都有22%的概率分裂"
+  - generic: 12.2万
+  - generic: "35"
+  - generic: 00:24
+- link "每次碰撞 黄球都有22%的概率分裂":
+  - /url: //www.bilibili.com/video/BV1Hg9FYyEcR/
+  - heading "每次碰撞 黄球都有22%的概率分裂" [level=3]
+- link "菠萝蜜欧皇 · 2025年3月2日":
+  - /url: //space.bilibili.com/438583636
+  - generic: 菠萝蜜欧皇
+  - generic: · 2025年3月2日
+- link "小球每打开一扇门，就会关闭另一扇门 11.4万 27 00:48":
+  - /url: //www.bilibili.com/video/BV1vqyAYnE3U/
+  - img "小球每打开一扇门，就会关闭另一扇门"
+  - generic: 11.4万
+  - generic: "27"
+  - generic: 00:48
+- link "小球每打开一扇门，就会关闭另一扇门":
+  - /url: //www.bilibili.com/video/BV1vqyAYnE3U/
+  - heading "小球每打开一扇门，就会关闭另一扇门" [level=3]
+- link "芝麻拍瓦 · 2024年10月17日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年10月17日
+- link "炸弹每次被碰撞都有可能爆炸 11.2万 71 00:58":
+  - /url: //www.bilibili.com/video/BV1fQ1HY2E9h/
+  - img "炸弹每次被碰撞都有可能爆炸"
+  - generic: 11.2万
+  - generic: "71"
+  - generic: 00:58
+- link "炸弹每次被碰撞都有可能爆炸":
+  - /url: //www.bilibili.com/video/BV1fQ1HY2E9h/
+  - heading "炸弹每次被碰撞都有可能爆炸" [level=3]
+- link "芝麻拍瓦 · 2024年10月26日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年10月26日
+- link "白球会摧毁行动中的小球 10.7万 60 00:41":
+  - /url: //www.bilibili.com/video/BV1TaSvYkE4K/
+  - img "白球会摧毁行动中的小球"
+  - generic: 10.7万
+  - generic: "60"
+  - generic: 00:41
+- link "白球会摧毁行动中的小球":
+  - /url: //www.bilibili.com/video/BV1TaSvYkE4K/
+  - heading "白球会摧毁行动中的小球" [level=3]
+- link "芝麻拍瓦 · 2024年10月30日":
+  - /url: //space.bilibili.com/29776799
+  - generic: 芝麻拍瓦
+  - generic: · 2024年10月30日
+- link "两个小羊球相撞 就会爆发25000个粒子 10.1万 104 01:04":
+  - /url: //www.bilibili.com/video/BV1pjyGYdEgG/
+  - img "两个小羊球相撞 就会爆发25000个粒子"
+  - generic: 10.1万
+  - generic: "104"
+  - generic: 01:04
+- link "两个小羊球相撞 就会爆发25000个粒子":
+  - /url: //www.bilibili.com/video/BV1pjyGYdEgG/
+  - heading "两个小羊球相撞 就会爆发25000个粒子" [level=3]
+- link "菠萝蜜欧皇 · 2024年10月18日":
+  - /url: //space.bilibili.com/438583636
+  - generic: 菠萝蜜欧皇
+  - generic: · 2024年10月18日
+- link "百家姓大挑战第二期！494个姓氏！哪个可以坚持到最后？ 9.6万 202 00:55":
+  - /url: //www.bilibili.com/video/BV1waAVegEaT/
+  - img "百家姓大挑战第二期！494个姓氏！哪个可以坚持到最后？"
+  - generic: 9.6万
+  - generic: "202"
+  - generic: 00:55
+- link "百家姓大挑战第二期！494个姓氏！哪个可以坚持到最后？":
+  - /url: //www.bilibili.com/video/BV1waAVegEaT/
+  - heading "百家姓大挑战第二期！494个姓氏！哪个可以坚持到最后？" [level=3]
+- link "电动蛐蛐A · 2025年2月16日":
+  - /url: //space.bilibili.com/19212398
+  - generic: 电动蛐蛐A
+  - generic: · 2025年2月16日
+- link "困在&quot;五角大楼&quot;的小球 最后能成功逃离吗？ 9.3万 81 00:55":
+  - /url: //www.bilibili.com/video/BV19M4m1y7Zm/
+  - img "困在&quot;五角大楼&quot;的小球 最后能成功逃离吗？"
+  - generic: 9.3万
+  - generic: "81"
+  - generic: 00:55
+- link "困在\"五角大楼\"的小球 最后能成功逃离吗？":
+  - /url: //www.bilibili.com/video/BV19M4m1y7Zm/
+  - heading "困在\"五角大楼\"的小球 最后能成功逃离吗？" [level=3]
+- link "菠萝蜜欧皇 · 2024年8月17日":
+  - /url: //space.bilibili.com/438583636
+  - generic: 菠萝蜜欧皇
+  - generic: · 2024年8月17日
+- link "如果两球碰撞 就爆发50000个小球 9.2万 74 00:48":
+  - /url: //www.bilibili.com/video/BV1s1VRz7EFY/
+  - img "如果两球碰撞 就爆发50000个小球"
+  - generic: 9.2万
+  - generic: "74"
+  - generic: 00:48
+- link "如果两球碰撞 就爆发50000个小球":
+  - /url: //www.bilibili.com/video/BV1s1VRz7EFY/
+  - heading "如果两球碰撞 就爆发50000个小球" [level=3]
+- link "菠萝蜜欧皇 · 2025年5月10日":
+  - /url: //space.bilibili.com/438583636
+  - generic: 菠萝蜜欧皇
+  - generic: · 2025年5月10日
+- link "百家姓大挑战，哪个姓氏可以坚持到最后？ 8.4万 493 00:44":
+  - /url: //www.bilibili.com/video/BV1haNfe9EiU/
+  - img "百家姓大挑战，哪个姓氏可以坚持到最后？"
+  - generic: 8.4万
+  - generic: "493"
+  - generic: 00:44
+- link "百家姓大挑战，哪个姓氏可以坚持到最后？":
+  - /url: //www.bilibili.com/video/BV1haNfe9EiU/
+  - heading "百家姓大挑战，哪个姓氏可以坚持到最后？" [level=3]
+- link "电动蛐蛐A · 2025年2月13日":
+  - /url: //space.bilibili.com/19212398
+  - generic: 电动蛐蛐A
+  - generic: · 2025年2月13日
+- navigation "分页":
+  - button "上一页" [disabled]
+  - button "第 1 页，当前页": "1"
+  - button "第 2 页": "2"
+  - button "第 3 页": "3"
+  - button "第 4 页": "4"
+  - button "第 5 页": "5"
+  - button "下一页"
+- generic: bilibili
+- link "关于我们":
+  - /url: //www.bilibili.com/blackboard/aboutUs.html
+- link "联系我们":
+  - /url: //www.bilibili.com/blackboard/contact.html
+- link "用户协议":
+  - /url: //www.bilibili.com/protocal/licence.html
+- link "加入我们":
+  - /url: //www.bilibili.com/blackboard/join.html
+- link "隐私协议":
+  - /url: //www.bilibili.com/blackboard/privacy-pc.html
+- link "bilibili认证":
+  - /url: //account.bilibili.com/account/official/home
+- link "Investor Relations":
+  - /url: //ir.bilibili.com/
+- generic: 传送门
+- link "协议汇总":
+  - /url: //www.bilibili.com/blackboard/topic/activity-cn8bxPLzz.html
+- link "活动中心":
+  - /url: //www.bilibili.com/blackboard/activity-list.html
+- link "活动专题页":
+  - /url: //www.bilibili.com/blackboard/topic_list.html
+- link "侵权申诉":
+  - /url: //www.bilibili.com/v/copyright/intro/
+- link "帮助中心":
+  - /url: //www.bilibili.com/blackboard/help.html
+- link "社区中心":
+  - /url: https://www.bilibili.com/blackboard/activity-5zJxM3spoS.html
+- link "壁纸站":
+  - /url: //space.bilibili.com/6823116#/album
+- link "广告合作":
+  - /url: //e.bilibili.com/
+- link "名人堂":
+  - /url: //www.bilibili.com/blackboard/activity-S1jfy69Jz.html
+- link "MCN管理中心":
+  - /url: //mcn.bilibili.com/studio/mcn/entry
+- link "高级弹幕":
+  - /url: //www.bilibili.com/video/BV1Xx411c7cH/
+- link "品牌号官网":
+  - /url: //b.bilibili.com/
+- link "下载APP":
+  - /url: //app.bilibili.com/
+  - paragraph: 下载APP
+- link "公益":
+  - /url: //love.bilibili.com/
+  - paragraph: 公益
+- link "官方微博":
+  - /url: //weibo.com/bilibiliweb
+  - paragraph: 官方微博
+- paragraph: 官方微信
+- link "营业执照":
+  - /url: //i0.hdslb.com/bfs/activity-plat/static/20240516/9ccf041718e5d6d6dfaebc91b85c791c/gd85E6tDco.jpg
+- text: 信息网络传播视听节目许可证：0910417
+- link "网络文化经营许可证 沪网文【2025】0258-085号":
+  - /url: //i0.hdslb.com/bfs/activity-plat/static/20260209/3b3c5705bda98d50983f6f47df360fef/K4t52YryBV.jpeg
+- text: 广播电视节目制作经营许可证：（沪）字第01248号增值电信业务经营许可证 沪B2-20100043
+- link "互联网ICP备案：沪ICP备13002172号-3":
+  - /url: //beian.miit.gov.cn/
+- link "出版物经营许可证 沪批字第U6699 号":
+  - /url: //i0.hdslb.com/bfs/activity-plat/static/20240516/9ccf041718e5d6d6dfaebc91b85c791c/4ainzbFKao.jpg
+- text: 互联网药品信息服务资格证 沪-非经营性-2022-0011营业性演出许可证 沪市文演（经）00-2253 |
+- link "不良信息举报邮箱：help@bilibili.com":
+  - /url: mailto:help@bilibili.com
+- link "涉未成年举报邮箱：teenprotect@bilibili.com":
+  - /url: mailto:teenprotect@bilibili.com
+- text: 不良信息举报电话：4006262233转3
+- link "上海互联网举报中心 |":
+  - /url: http://www.shjbzx.cn/
+- link "12345政务服务便民热线 |":
+  - /url: http://www.sh12345.gov.cn/
+- link "沪公网安备31011002002436号 |":
+  - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011002002436
+- link "儿童色情信息举报专区 |":
+  - /url: mailto:userreport@bilibili.com
+- link "扫黄打非举报":
+  - /url: https://bzpt.shdf.gov.cn/www/shouye/gzfw/wsjb/index.shtml
+- link "网信算备310110764385705230011号":
+  - /url: https://beian.cac.gov.cn/api/static/fileUpload/principalOrithm/additional/user_699bbd78-36f4-459c-aeb0-bf98a2a562d8_6185ea2c-c84c-404a-9280-c5465af05948.pdf
+- link "网信算备310110764385702230013号":
+  - /url: https://beian.cac.gov.cn/api/static/fileUpload/principalOrithm/additional/user_699bbd78-36f4-459c-aeb0-bf98a2a562d8_e03e6855-76a6-43fb-b799-d090e7fce25d.pdf
+- text: 网上有害信息举报专区：
+- link "中国互联网违法和不良信息举报中心":
+  - /url: https://www.12377.cn/
+- text: 亲爱的市民朋友，上海警方反诈劝阻电话"96110"系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。
+- generic: 公司名称：上海宽娱数码科技有限公司 |公司地址：上海市杨浦区政立路489号 |电话：021-25099888

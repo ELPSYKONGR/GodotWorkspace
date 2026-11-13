@@ -1,0 +1,208 @@
+{
+  "checked_date_Asia_Shanghai": "2026-11-11",
+  "repos": [
+    {
+      "repo": "Comfy-Org/ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "default_branch": "master",
+      "license": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0",
+        "node_id": "MDc6TGljZW5zZTk="
+      },
+      "archived": false,
+      "pushed_at": "2026-11-11T01:57:57Z",
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+      "readme_status": 200
+    },
+    {
+      "repo": "Wan-Video/Wan2.2",
+      "url": "https://github.com/Wan-Video/Wan2.2",
+      "default_branch": "main",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "archived": false,
+      "pushed_at": "2026-09-21T06:16:22Z",
+      "description": "Wan: Open and Advanced Large-Scale Video Generative Models",
+      "readme_status": 200
+    },
+    {
+      "repo": "QwenLM/Qwen-Image",
+      "url": "https://github.com/QwenLM/Qwen-Image",
+      "default_branch": "main",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "archived": false,
+      "pushed_at": "2026-02-10T07:37:37Z",
+      "description": "Qwen-Image is a powerful image generation foundation model capable of complex text rendering and precise image editing.",
+      "readme_status": 200
+    },
+    {
+      "repo": "SYSTRAN/faster-whisper",
+      "url": "https://github.com/SYSTRAN/faster-whisper",
+      "default_branch": "master",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "archived": false,
+      "pushed_at": "2026-11-10T10:13:08Z",
+      "description": "Faster Whisper transcription with CTranslate2",
+      "readme_status": 200
+    },
+    {
+      "repo": "FunAudioLLM/CosyVoice",
+      "url": "https://github.com/FunAudioLLM/CosyVoice",
+      "default_branch": "main",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "archived": false,
+      "pushed_at": "2026-05-25T18:15:40Z",
+      "description": "Multi-lingual large voice generation model, providing inference, training and deployment full-stack ability.",
+      "readme_status": 200
+    },
+    {
+      "repo": "hexgrad/kokoro",
+      "url": "https://github.com/hexgrad/kokoro",
+      "default_branch": "main",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "archived": false,
+      "pushed_at": "2025-08-06T22:28:53Z",
+      "description": "https://hf.co/hexgrad/Kokoro-82M",
+      "readme_status": 200
+    },
+    {
+      "repo": "FFmpeg/FFmpeg",
+      "url": "https://github.com/FFmpeg/FFmpeg",
+      "default_branch": "master",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "archived": false,
+      "pushed_at": "2026-11-11T02:08:11Z",
+      "description": "Mirror of https://git.ffmpeg.org/ffmpeg.git",
+      "readme_status": 200
+    },
+    {
+      "repo": "blender/blender",
+      "url": "https://github.com/blender/blender",
+      "default_branch": "main",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "archived": false,
+      "pushed_at": "2026-11-10T22:18:50Z",
+      "description": "Official mirror of Blender",
+      "readme_status": 200
+    },
+    {
+      "repo": "PrefectHQ/prefect",
+      "url": "https://github.com/PrefectHQ/prefect",
+      "default_branch": "main",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "archived": false,
+      "pushed_at": "2026-11-10T22:41:04Z",
+      "description": "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
+      "readme_status": 200
+    },
+    {
+      "repo": "harry0703/MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "default_branch": "main",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "archived": false,
+      "pushed_at": "2026-11-10T02:52:35Z",
+      "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+      "readme_status": 200
+    }
+  ],
+  "pages": [
+    {
+      "key": "runway_pricing",
+      "url": "https://docs.dev.runwayml.com/guides/pricing/",
+      "error": "HTTPSConnectionPool(host='docs.dev.runwayml.com', port=443): Read timed out. (read timeout=15)"
+    },
+    {
+      "key": "youtube_monetization",
+      "url": "https://support.google.com/youtube/answer/1311392?hl=en",
+      "error": "HTTPSConnectionPool(host='support.google.com', port=443): Max retries exceeded with url: /youtube/answer/1311392?hl=en (Caused by ConnectTimeoutError(<HTTPSConnection(host='support.google.com', port=443) at 0x20a1792a490>, 'Connection to support.google.com timed out. (connect timeout=15)'))"
+    },
+    {
+      "key": "youtube_ai_disclosure",
+      "url": "https://support.google.com/youtube/answer/14328491?hl=en",
+      "error": "HTTPSConnectionPool(host='support.google.com', port=443): Max retries exceeded with url: /youtube/answer/14328491?hl=en (Caused by ConnectTimeoutError(<HTTPSConnection(host='support.google.com', port=443) at 0x20a1792b750>, 'Connection to support.google.com timed out. (connect timeout=15)'))"
+    },
+    {
+      "key": "youtube_ypp",
+      "url": "https://support.google.com/youtube/answer/72851?hl=en",
+      "error": "HTTPSConnectionPool(host='support.google.com', port=443): Max retries exceeded with url: /youtube/answer/72851?hl=en (Caused by ConnectTimeoutError(<HTTPSConnection(host='support.google.com', port=443) at 0x20a17929950>, 'Connection to support.google.com timed out. (connect timeout=15)'))"
+    },
+    {
+      "key": "blender_license",
+      "url": "https://www.blender.org/about/license/",
+      "error": "HTTPSConnectionPool(host='www.blender.org', port=443): Read timed out. (read timeout=15)"
+    },
+    {
+      "key": "blender_cli",
+      "url": "https://docs.blender.org/manual/en/latest/advanced/command_line/render.html",
+      "error": "HTTPSConnectionPool(host='docs.blender.org', port=443): Read timed out. (read timeout=15)"
+    },
+    {
+      "key": "youtube_upload",
+      "url": "https://developers.google.com/youtube/v3/docs/videos/insert",
+      "error": "HTTPSConnectionPool(host='developers.google.com', port=443): Max retries exceeded with url: /youtube/v3/docs/videos/insert (Caused by ConnectTimeoutError(<HTTPSConnection(host='developers.google.com', port=443) at 0x20a17929090>, 'Connection to developers.google.com timed out. (connect timeout=15)'))"
+    },
+    {
+      "key": "douyin_open",
+      "url": "https://developer.open-douyin.com/",
+      "status": 200,
+      "final_url": "https://developer.open-douyin.com/"
+    }
+  ]
+}

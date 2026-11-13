@@ -1,0 +1,31 @@
+[
+  {
+    "id": "7705989678591395978",
+    "filename": "reference.webp",
+    "bytes": 134962,
+    "sha256": "fc2f3c5e872f5dc4f2677b6e4d02804069c273cb7298b014a5d6e60cd5d6da62",
+    "media_type": "single_image_story"
+  },
+  {
+    "id": "7706445540791209254",
+    "filename": "reference.mp4",
+    "bytes": 5574106,
+    "sha256": "7259cf6387b726994729ab33f08ee3711855bbab77cc6915e6f127199e77c97c",
+    "fps": 30.0,
+    "frame_count": 1445.0,
+    "duration": 48.166666666666664,
+    "width": 1282,
+    "height": 720
+  },
+  {
+    "id": "7705831565992955145",
+    "filename": "reference.mp4",
+    "bytes": 2882151,
+    "sha256": "72d56b5c1ca9ff9a105b0e204f460cc4954a04c3daa677ee0edf0d3544b2b8fa",
+    "fps": 30.0,
+    "frame_count": 1469.0,
+    "duration": 48.96666666666667,
+    "width": 576,
+    "height": 1024
+  }
+]

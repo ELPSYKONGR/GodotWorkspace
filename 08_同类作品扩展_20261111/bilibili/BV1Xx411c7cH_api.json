@@ -1,0 +1,208 @@
+{
+  "code": 0,
+  "message": "OK",
+  "ttl": 1,
+  "data": {
+    "bvid": "BV1Xx411c7cH",
+    "aid": 120040,
+    "videos": 6,
+    "tid": 27,
+    "tid_v2": 2207,
+    "tname": "",
+    "tname_v2": "",
+    "copyright": 2,
+    "pic": "http://i1.hdslb.com/bfs/archive/55a553659799d8a6fcb645d8f1f9df418ad6fe4e.jpg",
+    "title": "高级语言弹幕测试",
+    "pubdate": 1311616515,
+    "ctime": 1497344798,
+    "desc": "1P 2P为演示-所有视频均为黑屏，大家自己测试编码弹幕效果吧。点击TEST将显示基础语言下的演示代码效果。在里面进行修改将可以实现其他效果。代码详解-&gt;wiki.bilibili.cn-&gt;高级弹幕语言 字幕君以上可以发送储存，普通会员可以点击TEST测试但不能发送。所有视频都有互动弹幕，请自己观察哦！ 注：初步规定高级弹幕在蓝白中禁止使用！高级弹幕更多的在功能性上的使用。",
+    "desc_v2": [
+      {
+        "raw_text": "1P 2P为演示-所有视频均为黑屏，大家自己测试编码弹幕效果吧。点击TEST将显示基础语言下的演示代码效果。在里面进行修改将可以实现其他效果。代码详解-&gt;wiki.bilibili.cn-&gt;高级弹幕语言 字幕君以上可以发送储存，普通会员可以点击TEST测试但不能发送。所有视频都有互动弹幕，请自己观察哦！ 注：初步规定高级弹幕在蓝白中禁止使用！高级弹幕更多的在功能性上的使用。",
+        "type": 1,
+        "biz_id": 0
+      }
+    ],
+    "state": 0,
+    "duration": 911,
+    "rights": {
+      "bp": 0,
+      "elec": 0,
+      "download": 1,
+      "movie": 0,
+      "pay": 0,
+      "hd5": 0,
+      "no_reprint": 0,
+      "autoplay": 1,
+      "ugc_pay": 0,
+      "is_cooperation": 0,
+      "ugc_pay_preview": 0,
+      "no_background": 0,
+      "clean_mode": 0,
+      "is_stein_gate": 0,
+      "is_360": 0,
+      "no_share": 0,
+      "arc_pay": 0,
+      "free_watch": 0
+    },
+    "owner": {
+      "mid": 2,
+      "name": "碧诗",
+      "face": "https://i2.hdslb.com/bfs/face/ef0457addb24141e15dfac6fbf45293ccf1e32ab.jpg"
+    },
+    "stat": {
+      "aid": 120040,
+      "view": 3742067,
+      "danmaku": 568396,
+      "reply": 6636,
+      "favorite": 18620,
+      "coin": 6360,
+      "share": 5879,
+      "now_rank": 0,
+      "his_rank": 65,
+      "like": 24319,
+      "dislike": 0,
+      "evaluation": "",
+      "vt": 0
+    },
+    "argue_info": {
+      "argue_msg": "",
+      "argue_type": 0,
+      "argue_link": ""
+    },
+    "dynamic": "",
+    "cid": 201284,
+    "dimension": {
+      "width": 640,
+      "height": 360,
+      "rotate": 0
+    },
+    "premiere": null,
+    "teenage_mode": 0,
+    "is_chargeable_season": false,
+    "is_story": false,
+    "is_upower_exclusive": false,
+    "is_upower_play": false,
+    "is_upower_preview": false,
+    "enable_vt": 0,
+    "vt_display": "",
+    "is_upower_exclusive_with_qa": false,
+    "is_hua_sheng": false,
+    "no_cache": false,
+    "pages": [
+      {
+        "cid": 201284,
+        "page": 1,
+        "from": "vupload",
+        "part": "TIT互动弹幕演示",
+        "duration": 197,
+        "vid": "",
+        "weblink": "",
+        "dimension": {
+          "width": 640,
+          "height": 360,
+          "rotate": 0
+        },
+        "ctime": 1497344798
+      },
+      {
+        "cid": 199771,
+        "page": 2,
+        "from": "vupload",
+        "part": "基础代码演示",
+        "duration": 19,
+        "vid": "",
+        "weblink": "",
+        "dimension": {
+          "width": 480,
+          "height": 360,
+          "rotate": 0
+        },
+        "ctime": 1497344798
+      },
+      {
+        "cid": 199743,
+        "page": 3,
+        "from": "vupload",
+        "part": "IDOLMASTER",
+        "duration": 89,
+        "vid": "",
+        "weblink": "",
+        "dimension": {
+          "width": 480,
+          "height": 360,
+          "rotate": 0
+        },
+        "ctime": 1497344798
+      },
+      {
+        "cid": 199737,
+        "page": 4,
+        "from": "vupload",
+        "part": "魔法小圆OP",
+        "duration": 93,
+        "vid": "",
+        "weblink": "",
+        "dimension": {
+          "width": 480,
+          "height": 360,
+          "rotate": 0
+        },
+        "ctime": 1497344798
+      },
+      {
+        "cid": 199742,
+        "page": 5,
+        "from": "vupload",
+        "part": "キミとふたり",
+        "duration": 255,
+        "vid": "",
+        "weblink": "",
+        "dimension": {
+          "width": 480,
+          "height": 360,
+          "rotate": 0
+        },
+        "ctime": 1497344798
+      },
+      {
+        "cid": 199772,
+        "page": 6,
+        "from": "vupload",
+        "part": "いとうかなこ - Hacking to the Gate",
+        "duration": 258,
+        "vid": "",
+        "weblink": "",
+        "dimension": {
+          "width": 480,
+          "height": 360,
+          "rotate": 0
+        },
+        "ctime": 1497344798
+      }
+    ],
+    "subtitle": {
+      "allow_submit": false,
+      "list": []
+    },
+    "is_season_display": false,
+    "user_garb": {
+      "url_image_ani_cut": ""
+    },
+    "honor_reply": {
+      "honor": [
+        {
+          "aid": 120040,
+          "type": 3,
+          "desc": "全站排行榜最高第65名",
+          "weekly_recommend_num": 0
+        }
+      ]
+    },
+    "like_icon": "",
+    "need_jump_bv": false,
+    "disable_show_up_info": false,
+    "is_story_play": 0,
+    "is_view_self": false
+  }
+}

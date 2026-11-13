@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-11-11T11:38:17.115688+08:00",
+  "search_type_api": {
+    "url": "https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=%E5%B0%8F%E7%90%83%20%E7%A2%B0%E6%92%9E%20%E8%A7%A3%E5%8E%8B&order=click",
+    "first_http_status": 412,
+    "action": "未绕过；改用普通公开搜索页面读取可见搜索结果"
+  },
+  "public_search_page": "https://search.bilibili.com/all?keyword=%E5%B0%8F%E7%90%83%20%E7%A2%B0%E6%92%9E%20%E8%A7%A3%E5%8E%8B&order=click",
+  "video_view_api": "正常返回 code=0；精确指标见逐视频原始 JSON",
+  "browser_skill": "browser:control-in-app-browser"
+}

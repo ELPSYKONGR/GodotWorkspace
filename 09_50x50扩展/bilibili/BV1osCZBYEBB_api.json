@@ -1,0 +1,128 @@
+{
+  "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1osCZBYEBB",
+  "data": {
+    "code": 0,
+    "message": "OK",
+    "ttl": 1,
+    "data": {
+      "bvid": "BV1osCZBYEBB",
+      "aid": 115579549654296,
+      "videos": 1,
+      "tid": 201,
+      "tid_v2": 2079,
+      "tname": "",
+      "tname_v2": "",
+      "copyright": 1,
+      "pic": "http://i2.hdslb.com/bfs/archive/a4d2731f9b3e22928d0a7fc0b2b586c32082f844.jpg",
+      "title": "小球能从这1000道环形圈内逃离出去吗？#几何图形 #解压",
+      "pubdate": 1763604025,
+      "ctime": 1763604025,
+      "desc": "-",
+      "desc_v2": [
+        {
+          "raw_text": "-",
+          "type": 1,
+          "biz_id": 0
+        }
+      ],
+      "state": 0,
+      "duration": 33,
+      "rights": {
+        "bp": 0,
+        "elec": 0,
+        "download": 1,
+        "movie": 0,
+        "pay": 0,
+        "hd5": 0,
+        "no_reprint": 1,
+        "autoplay": 1,
+        "ugc_pay": 0,
+        "is_cooperation": 0,
+        "ugc_pay_preview": 0,
+        "no_background": 0,
+        "clean_mode": 0,
+        "is_stein_gate": 0,
+        "is_360": 0,
+        "no_share": 0,
+        "arc_pay": 0,
+        "free_watch": 0
+      },
+      "owner": {
+        "mid": 3493128698858291,
+        "name": "火星课堂i",
+        "face": "https://i2.hdslb.com/bfs/face/4b3c1282a6d2d38ca9067bfd37bd0f77934adcab.jpg"
+      },
+      "stat": {
+        "aid": 115579549654296,
+        "view": 849763,
+        "danmaku": 54,
+        "reply": 95,
+        "favorite": 1569,
+        "coin": 156,
+        "share": 39,
+        "now_rank": 0,
+        "his_rank": 0,
+        "like": 13237,
+        "dislike": 0,
+        "evaluation": "",
+        "vt": 0
+      },
+      "argue_info": {
+        "argue_msg": "",
+        "argue_type": 0,
+        "argue_link": ""
+      },
+      "dynamic": "",
+      "cid": 34122107187,
+      "dimension": {
+        "width": 720,
+        "height": 1280,
+        "rotate": 0
+      },
+      "premiere": null,
+      "teenage_mode": 1,
+      "is_chargeable_season": false,
+      "is_story": true,
+      "is_upower_exclusive": false,
+      "is_upower_play": false,
+      "is_upower_preview": false,
+      "enable_vt": 0,
+      "vt_display": "",
+      "is_upower_exclusive_with_qa": false,
+      "is_hua_sheng": false,
+      "no_cache": false,
+      "pages": [
+        {
+          "cid": 34122107187,
+          "page": 1,
+          "from": "vupload",
+          "part": "7cad4ede-18c6-4569-b40a-b0b7cdc02e5f",
+          "duration": 33,
+          "vid": "",
+          "weblink": "",
+          "dimension": {
+            "width": 720,
+            "height": 1280,
+            "rotate": 0
+          },
+          "first_frame": "http://i1.hdslb.com/bfs/storyff/_00000ae6o0meyuaja2h54sjanytx0gb_firsti.jpg",
+          "ctime": 1763604025
+        }
+      ],
+      "subtitle": {
+        "allow_submit": false,
+        "list": []
+      },
+      "is_season_display": false,
+      "user_garb": {
+        "url_image_ani_cut": ""
+      },
+      "honor_reply": {},
+      "like_icon": "",
+      "need_jump_bv": false,
+      "disable_show_up_info": false,
+      "is_story_play": 1,
+      "is_view_self": false
+    }
+  }
+}

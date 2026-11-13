@@ -1,0 +1,22 @@
+# The research handoff repository tracks text/project metadata, not runtime/media archives.
+.env
+**/.runtime/
+**/.venv/
+**/.godot/
+**/.cache/
+**/.ruff_cache/
+**/__pycache__/
+**/node_modules/
+**/scratch/
+06_本地部署/godot-video-lab/
+06_本地部署/relaxing-physics/
+*.mp4
+*.webm
+*.mkv
+*.zip
+*.bundle
+MANIFEST.json
+version_history/
+**/_dl_tmp/
+09_50x50扩展/_*.py
+09_50x50扩展/_*.txt

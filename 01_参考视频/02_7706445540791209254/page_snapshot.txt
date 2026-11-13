@@ -1,0 +1,474 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link:
+  - /url: //www.douyin.com/jingxuan
+- link "精选":
+  - /url: https://www.douyin.com/jingxuan?from_nav=1
+  - generic: 精选
+- link "推荐":
+  - /url: https://www.douyin.com/?recommend=1&from_nav=1
+  - generic: 推荐
+- link "AI抖音":
+  - /url: https://www.douyin.com/aisearch?from_nav=1
+  - generic: AI抖音
+- link "关注":
+  - /url: https://www.douyin.com/follow?from_nav=1
+  - generic: 关注
+- link "朋友":
+  - /url: https://www.douyin.com/friend?from_nav=1
+  - generic: 朋友
+- link "我的":
+  - /url: https://www.douyin.com/user/self?from_nav=1
+  - generic: 我的
+- link "直播":
+  - /url: https://live.douyin.com/?from_nav=1
+  - generic: 直播
+- link "放映厅":
+  - /url: https://www.douyin.com/vs?from_nav=1
+  - generic: 放映厅
+- link "短剧":
+  - /url: https://www.douyin.com/series?from_nav=1
+  - generic: 短剧
+- link "小游戏":
+  - /url: https://www.douyin.com/microgame?from_nav=1
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+  - /url: https://beian.miit.gov.cn/
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - generic: 武林外传
+  - textbox
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: https://www.douyin.com/download/pc/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-downloader-v8.7.0-win32-ia32-douyincold.exe
+    - paragraph: 客户端
+  - generic: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - button "登录":
+    - paragraph: 登录
+- generic: 00:31
+- generic: /
+- generic: 00:48
+- generic: 倍速
+- generic: 智能
+- button
+- generic: 清屏
+- button
+- generic: 连播
+- generic: 葵花点，sunflower tap哈哈哈哈哈
+- generic: 互为相反数哈哈！！合理合理！
+- generic: 英译中
+- generic: 严谨！秀才当时说的英文，这里应该翻译，太严谨了
+- generic: "13"
+- generic: 严谨
+- generic: 原著这段秀才说的洋文
+- generic: 严谨，太严谨了
+- generic: 因为这里原版是说英文听不懂
+- generic: 因为这里说的是英文
+- link "作者声明：内容由 AI 生成":
+  - /url: undefined
+  - generic: 作者声明：内容由 AI 生成
+- button "展开"
+- 'heading "葵花点穴手排山倒海这事儿抱我身上了嫂砸！！！ 我错了我真的错了我从一开始就不应该嫁过来我不嫁过来我的夫君也不会死我的夫君不死我也不会沦落到这么一个伤心的地方；这期放大招了朋友们#武林外传 #AI短片 #跳跃视界" [level=1]':
+  - generic: 葵花点穴手排山倒海这事儿抱我身上了嫂砸！！！ 我错了我真的错了我从一开始就不应该嫁过来我不嫁过来我的夫君也不会死我的夫君不死我也不会沦落到这么一个伤心的地方；这期放大招了朋友们
+  - link "#武林外传":
+    - /url: //www.douyin.com/search/%E6%AD%A6%E6%9E%97%E5%A4%96%E4%BC%A0?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#AI短片":
+    - /url: //www.douyin.com/search/AI%E7%9F%AD%E7%89%87?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#跳跃视界":
+    - /url: //www.douyin.com/search/%E8%B7%B3%E8%B7%83%E8%A7%86%E7%95%8C?enter_from=video_detail&source=pc_click_hashtag_feed
+- generic: "3249"
+- generic: "369"
+- generic: "284"
+- generic: "3600"
+- generic: 举报
+- generic: 发布时间：2026-11-10 15:44
+- generic: 全部评论
+- generic: 请先登录后发表评论
+- generic: 大家都在搜：
+- link "武林外传":
+  - /url: //www.douyin.com/search/%E6%AD%A6%E6%9E%97%E5%A4%96%E4%BC%A0?aweme_id=7706445540791209254&enter_from=video_detail&gid=7706445540791209254&source=comment_related_search
+  - generic: 武林外传
+- link "菩提树下都是宝":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAvL9vGvHoqWnm4f01I6RmWYq3K1LEU8LP0UzqPQdfBbEjTUovgBv1mmNKOCf4iHpD
+  - generic: 菩提树下都是宝
+- generic: ...
+- text: 细节 原著秀才用英文的 这里用中文
+- img "[捂脸]"
+- img "[捂脸]"
+- img "[捂脸]"
+- generic: 17小时前·浙江
+- paragraph:
+  - generic: "896"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- link "广不广告YZYX 作者":
+  - /url: //www.douyin.com/user/MS4wLjABAAAA8mObgKMYKIDxk7qZSa1KyVSzzjNzOsOZ0uejFVwTLQ8
+  - generic: 广不广告YZYX
+  - generic: 作者
+- generic: ...
+- text: 谢谢夸奖
+- img "[暗中观察]"
+- generic: 17小时前·河南
+- paragraph:
+  - generic: "101"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开15条回复":
+  - generic: 展开15条回复
+- link "不想翻身的咸鱼":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAOXgQvxJGbOYDAzUJbve1GX_jSDg35cqi7KRgtrefemw
+  - generic: 不想翻身的咸鱼
+- generic: ...
+- generic: 我听不懂他们在说啥，但我知道他们在说啥
+- generic: 10小时前·新疆
+- paragraph:
+  - generic: "6"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开1条回复":
+  - generic: 展开1条回复
+- link "饭饭ZX":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAlHslNs89WrtThis92SjIUx7JhvAqYZvTWuUlrbWGzu8
+  - generic: 饭饭ZX
+- generic: ...
+- text: 因为额这一段儿嘚不嘚不醉精典
+- img "[不失礼貌的微笑]"
+- generic: 作者赞过
+- generic: 18小时前·河南
+- paragraph:
+  - generic: "12"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- link "广不广告YZYX 作者":
+  - /url: //www.douyin.com/user/MS4wLjABAAAA8mObgKMYKIDxk7qZSa1KyVSzzjNzOsOZ0uejFVwTLQ8
+  - generic: 广不广告YZYX
+  - generic: 作者
+- generic: ...
+- generic: 不许发语音
+- generic: 17小时前·河南
+- paragraph:
+  - generic: "0"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- link "展卓起重吊装":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAflqlWWrGhi30rJEcuy8MeomFN4pSARlWzO8Os4SCmzvOV6Wu8lzNP_tfRCUztHH2
+  - generic: 展卓起重吊装
+- generic: ...
+- text: 白人黑人黄皮肤人拉丁裔！可以啊博主
+- img "[看]"
+- generic: 15小时前·浙江
+- paragraph:
+  - generic: "14"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- link "广不广告YZYX 作者":
+  - /url: //www.douyin.com/user/MS4wLjABAAAA8mObgKMYKIDxk7qZSa1KyVSzzjNzOsOZ0uejFVwTLQ8
+  - generic: 广不广告YZYX
+  - generic: 作者
+- generic: ...
+- generic: 明天去好莱坞找个活试试
+- generic: 15小时前·河南
+- paragraph:
+  - generic: "4"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- link "厨子和花儿匠（暂时不吃汉堡）":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAxFQLy7tqejjolzt6abCaX1xw8OlTf79f7OvQ46LXStjWDD1JGdwiE4kjS70w1laW
+  - generic: 厨子和花儿匠（暂时不吃汉堡）
+- generic: ...
+- generic: 诶？我刚从美国回来就又刷到了～那么～我将征战大不列颠～
+- generic: 16小时前·四川
+- paragraph:
+  - generic: "3"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- generic: 登录后即可参与互动讨论
+- button "立即登录":
+  - generic: 立即登录
+- link "广不广告YZYX":
+  - /url: //www.douyin.com/user/MS4wLjABAAAA8mObgKMYKIDxk7qZSa1KyVSzzjNzOsOZ0uejFVwTLQ8
+  - img "广不广告YZYX"
+- link "广不广告YZYX":
+  - /url: //www.douyin.com/user/MS4wLjABAAAA8mObgKMYKIDxk7qZSa1KyVSzzjNzOsOZ0uejFVwTLQ8
+  - generic: 广不广告YZYX
+- paragraph: 粉丝5314获赞5.2万
+- button "关注":
+  - generic: 关注
+- heading "推荐视频" [level=2]
+- list:
+  - 'link "《仿生狗》 ❗带回家一只诡异小狗，不断模仿人类的一举一动，同伴日渐昏沉疲惫，深夜黑屏电视前，狗狗发出人的声音……#ai短片 #都市传说 #恐怖 #灵异故事 04:44"':
+    - /url: //www.douyin.com/video/7696474090160344361
+    - 'img "《仿生狗》 ❗带回家一只诡异小狗，不断模仿人类的一举一动，同伴日渐昏沉疲惫，深夜黑屏电视前，狗狗发出人的声音……#ai短片 #都市传说 #恐怖 #灵异故事"'
+    - generic: 04:44
+  - 'heading "《仿生狗》 ❗带回家一只诡异小狗，不断模仿人类的一举一动，同伴日渐昏沉疲惫，深夜黑屏电视前，狗狗发出人的声音……#ai短片 #都市传说 #恐怖 #灵异故事" [level=3]':
+    - 'link "《仿生狗》 ❗带回家一只诡异小狗，不断模仿人类的一举一动，同伴日渐昏沉疲惫，深夜黑屏电视前，狗狗发出人的声音……#ai短片 #都市传说 #恐怖 #灵异故事"':
+      - /url: //www.douyin.com/video/7696474090160344361
+      - text: 《仿生狗》
+      - img "❗"
+      - text: "带回家一只诡异小狗，不断模仿人类的一举一动，同伴日渐昏沉疲惫，深夜黑屏电视前，狗狗发出人的声音……#ai短片 #都市传说 #恐怖 #灵异故事"
+  - text: 15.1万
+  - link "阿诚的灵异档案馆":
+    - /url: //www.douyin.com/user/MS4wLjABAAAA2gWL4Ukt5-un6P1UTe9-1yZL_vn_sbRvAEIIn9Y0LmlwErSpRcjOAtCoyflb0nhL?author_id=59075772206&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7706445540791209254&log_pb=%7B%22impr_id%22%3A%2220261111100438317A8DF1AC9B1217A140%22%7D&relation=0
+    - generic: 阿诚的灵异档案馆
+  - 'link "你我怎么两清 #顶级差距 #陆承月 #楚耀 02:32"':
+    - /url: //www.douyin.com/video/7703230167615966291
+    - 'img "你我怎么两清 #顶级差距 #陆承月 #楚耀"'
+    - generic: 02:32
+  - 'heading "你我怎么两清 #顶级差距 #陆承月 #楚耀" [level=3]':
+    - 'link "你我怎么两清 #顶级差距 #陆承月 #楚耀"':
+      - /url: //www.douyin.com/video/7703230167615966291
+      - generic: "你我怎么两清 #顶级差距 #陆承月 #楚耀"
+  - text: "5594"
+  - link "KE":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAUi0gGLHgVTsESayuwCft9h1cJs3C87uTFH1rYIi6o9f4s3Qxep-DB7gAX1TdTbbE?author_id=59075772206&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7706445540791209254&log_pb=%7B%22impr_id%22%3A%2220261111100438317A8DF1AC9B1217A140%22%7D&relation=0
+    - generic: KE
+  - 'link "《穿书后，我用东北话拿下高冷学霸》1-7纯享版 出演者@林大花花花 #ai创作浪潮计划 #即梦AI创作者成长计划 #校园 #cp #甜宠 28:00"':
+    - /url: //www.douyin.com/video/7690492089288658195
+    - 'img "《穿书后，我用东北话拿下高冷学霸》1-7纯享版 出演者@林大花花花 #ai创作浪潮计划 #即梦AI创作者成长计划 #校园 #cp #甜宠"'
+    - generic: 28:00
+  - 'heading "《穿书后，我用东北话拿下高冷学霸》1-7纯享版 出演者@林大花花花 #ai创作浪潮计划 #即梦AI创作者成长计划 #校园 #cp #甜宠" [level=3]':
+    - 'link "《穿书后，我用东北话拿下高冷学霸》1-7纯享版 出演者@林大花花花 #ai创作浪潮计划 #即梦AI创作者成长计划 #校园 #cp #甜宠"':
+      - /url: //www.douyin.com/video/7690492089288658195
+      - generic: "《穿书后，我用东北话拿下高冷学霸》1-7纯享版 出演者@林大花花花 #ai创作浪潮计划 #即梦AI创作者成长计划 #校园 #cp #甜宠"
+  - text: 2.4万
+  - link "浅野花织":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAqO-n7_CKCiSkCy4CXiMmGFumSdSf5Lrcf23leSxpMOnnSiBTHO0rwSylGhnIe19R?author_id=59075772206&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7706445540791209254&log_pb=%7B%22impr_id%22%3A%2220261111100438317A8DF1AC9B1217A140%22%7D&relation=0
+    - generic: 浅野花织
+  - 'link "《行野追妻》20min重制纯享版 #行野追妻 #女扮男 #一男一女 #情侣 20:44"':
+    - /url: //www.douyin.com/video/7694626587970407720
+    - 'img "《行野追妻》20min重制纯享版 #行野追妻 #女扮男 #一男一女 #情侣"'
+    - generic: 20:44
+  - 'heading "《行野追妻》20min重制纯享版 #行野追妻 #女扮男 #一男一女 #情侣" [level=3]':
+    - 'link "《行野追妻》20min重制纯享版 #行野追妻 #女扮男 #一男一女 #情侣"':
+      - /url: //www.douyin.com/video/7694626587970407720
+      - generic: "《行野追妻》20min重制纯享版 #行野追妻 #女扮男 #一男一女 #情侣"
+  - text: "5075"
+  - link "喵喵语花":
+    - /url: //www.douyin.com/user/MS4wLjABAAAALbgDNE3Oi3umhU5c7TwXawhaT87Sd1JySLPdSX-qc6j0uQcbMSBY5MAxeSpTs8KZ?author_id=59075772206&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7706445540791209254&log_pb=%7B%22impr_id%22%3A%2220261111100438317A8DF1AC9B1217A140%22%7D&relation=0
+    - generic: 喵喵语花
+  - 'link "EP03｜《落跑新娘Runaway Bride》 两位豪门继承人，各自逃婚却意外同行。Ellie还在没心没肺地享受自由，Max看她的眼神已经开始不一样了…… 全片由@即梦AI 制作#AI短剧创作计划 #即梦AI创作者成长计划 #即梦未来荧幕剧集片单 #AI创作浪潮计划 #美剧 03:09"':
+    - /url: //www.douyin.com/video/7700149552967421226
+    - 'img "EP03｜《落跑新娘Runaway Bride》 两位豪门继承人，各自逃婚却意外同行。Ellie还在没心没肺地享受自由，Max看她的眼神已经开始不一样了…… 全片由@即梦AI 制作#AI短剧创作计划 #即梦AI创作者成长计划 #即梦未来荧幕剧集片单 #AI创作浪潮计划 #美剧"'
+    - generic: 03:09
+  - 'heading "EP03｜《落跑新娘Runaway Bride》 两位豪门继承人，各自逃婚却意外同行。Ellie还在没心没肺地享受自由，Max看她的眼神已经开始不一样了…… 全片由@即梦AI 制作#AI短剧创作计划 #即梦AI创作者成长计划 #即梦未来荧幕剧集片单 #AI创作浪潮计划 #美剧" [level=3]':
+    - 'link "EP03｜《落跑新娘Runaway Bride》 两位豪门继承人，各自逃婚却意外同行。Ellie还在没心没肺地享受自由，Max看她的眼神已经开始不一样了…… 全片由@即梦AI 制作#AI短剧创作计划 #即梦AI创作者成长计划 #即梦未来荧幕剧集片单 #AI创作浪潮计划 #美剧"':
+      - /url: //www.douyin.com/video/7700149552967421226
+      - generic: EP03｜《落跑新娘Runaway Bride》 两位豪门继承人，各自逃婚却意外同行。Ellie还在没心没肺地享受自由，Max看她的眼神已经开始不一样了……
+      - generic: "全片由@即梦AI 制作#AI短剧创作计划 #即梦AI创作者成长计划 #即梦未来荧幕剧集片单 #AI创作浪潮计划 #美剧"
+  - text: 3.8万
+  - link "红烧鳕鱼堡":
+    - /url: //www.douyin.com/user/MS4wLjABAAAANg-UPCXXKEmRTGOJbcAOZ8AnJ-oWWLIi6v8j4c0NJzc?author_id=59075772206&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7706445540791209254&log_pb=%7B%22impr_id%22%3A%2220261111100438317A8DF1AC9B1217A140%22%7D&relation=0
+    - generic: 红烧鳕鱼堡
+  - link "谎言将她击溃 00:52":
+    - /url: //www.douyin.com/video/7695036930269908955
+    - img "谎言将她击溃"
+    - generic: 00:52
+  - heading "谎言将她击溃" [level=3]:
+    - link "谎言将她击溃":
+      - /url: //www.douyin.com/video/7695036930269908955
+      - generic: 谎言将她击溃
+  - text: 1.5万
+  - link "小羊_sheep":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAlHsigkFeiSl70p2QrD9O90c7KjRQ2z9uS5vEwBqwVno?author_id=59075772206&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7706445540791209254&log_pb=%7B%22impr_id%22%3A%2220261111100438317A8DF1AC9B1217A140%22%7D&relation=0
+    - generic: 小羊_sheep
+  - 'link "《泰囧仙儿》第一季「本作品使用 LibTV 制作」 东北半吊子女出马传人，泰国旅游撞上本地降头团，全团12人被打上印记，生命危在旦夕。别人都吓得腿软，她撸起袖子：来都来了，狠狠盘它。 #LibTV #LibTV创作者成长计划 #泰囧仙儿 #AI创作浪潮计划 #未来导演扶持计划 42:22"':
+    - /url: //www.douyin.com/video/7704887973044620570
+    - 'img "《泰囧仙儿》第一季「本作品使用 LibTV 制作」 东北半吊子女出马传人，泰国旅游撞上本地降头团，全团12人被打上印记，生命危在旦夕。别人都吓得腿软，她撸起袖子：来都来了，狠狠盘它。 #LibTV #LibTV创作者成长计划 #泰囧仙儿 #AI创作浪潮计划 #未来导演扶持计划"'
+    - generic: 42:22
+  - 'heading "《泰囧仙儿》第一季「本作品使用 LibTV 制作」 东北半吊子女出马传人，泰国旅游撞上本地降头团，全团12人被打上印记，生命危在旦夕。别人都吓得腿软，她撸起袖子：来都来了，狠狠盘它。 #LibTV #LibTV创作者成长计划 #泰囧仙儿 #AI创作浪潮计划 #未来导演扶持计划" [level=3]':
+    - 'link "《泰囧仙儿》第一季「本作品使用 LibTV 制作」 东北半吊子女出马传人，泰国旅游撞上本地降头团，全团12人被打上印记，生命危在旦夕。别人都吓得腿软，她撸起袖子：来都来了，狠狠盘它。 #LibTV #LibTV创作者成长计划 #泰囧仙儿 #AI创作浪潮计划 #未来导演扶持计划"':
+      - /url: //www.douyin.com/video/7704887973044620570
+      - generic: "《泰囧仙儿》第一季「本作品使用 LibTV 制作」 东北半吊子女出马传人，泰国旅游撞上本地降头团，全团12人被打上印记，生命危在旦夕。别人都吓得腿软，她撸起袖子：来都来了，狠狠盘它。 #LibTV #LibTV创作者成长计划 #泰囧仙儿 #AI创作浪潮计划 #未来导演扶持计划"
+  - text: 2.7万
+  - link "木南AIGC":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAeRTnajXFt7nbghO3bc6tt4TvUogVUewSQKrtRFWk9cM?author_id=59075772206&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7706445540791209254&log_pb=%7B%22impr_id%22%3A%2220261111100438317A8DF1AC9B1217A140%22%7D&relation=0
+    - generic: 木南AIGC
+  - 'link "。草短短29集把我刀的昏天黑地 #月鳞绮纪 #世界寄露 03:34"':
+    - /url: //www.douyin.com/video/7697677631177747194
+    - 'img "。草短短29集把我刀的昏天黑地 #月鳞绮纪 #世界寄露"'
+    - generic: 03:34
+  - 'heading "。草短短29集把我刀的昏天黑地 #月鳞绮纪 #世界寄露" [level=3]':
+    - 'link "。草短短29集把我刀的昏天黑地 #月鳞绮纪 #世界寄露"':
+      - /url: //www.douyin.com/video/7697677631177747194
+      - generic: "。草短短29集把我刀的昏天黑地 #月鳞绮纪 #世界寄露"
+  - text: 10.1万
+  - link "祎只芊芊瑞":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAaQSy0DBcUHUqBfnK_tAW2stmQNay9stdfzm2dHqB70d8LPkUlr5sDvfUOS_hg0Ss?author_id=59075772206&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7706445540791209254&log_pb=%7B%22impr_id%22%3A%2220261111100438317A8DF1AC9B1217A140%22%7D&relation=0
+    - generic: 祎只芊芊瑞
+  - 'link "一位年轻女子在冰封的山村里生下了一条龙。村民们称它为怪物，她却称它为自己的儿子。这是完整版电影。黎明时分，村民们带着石头和火把前来，想要结束它的生命。她挡在他们和她怀里的东西之间。他们没有杀她——而是把她赶进山里，锁上了大门，确信严寒会杀死它。然而，严寒并没有杀死它。#离谱 #AI短片 27:56"':
+    - /url: //www.douyin.com/video/7685629535336860971
+    - 'img "一位年轻女子在冰封的山村里生下了一条龙。村民们称它为怪物，她却称它为自己的儿子。这是完整版电影。黎明时分，村民们带着石头和火把前来，想要结束它的生命。她挡在他们和她怀里的东西之间。他们没有杀她——而是把她赶进山里，锁上了大门，确信严寒会杀死它。然而，严寒并没有杀死它。#离谱 #AI短片"'
+    - generic: 27:56
+  - 'heading "一位年轻女子在冰封的山村里生下了一条龙。村民们称它为怪物，她却称它为自己的儿子。这是完整版电影。黎明时分，村民们带着石头和火把前来，想要结束它的生命。她挡在他们和她怀里的东西之间。他们没有杀她——而是把她赶进山里，锁上了大门，确信严寒会杀死它。然而，严寒并没有杀死它。#离谱 #AI短片" [level=3]':
+    - 'link "一位年轻女子在冰封的山村里生下了一条龙。村民们称它为怪物，她却称它为自己的儿子。这是完整版电影。黎明时分，村民们带着石头和火把前来，想要结束它的生命。她挡在他们和她怀里的东西之间。他们没有杀她——而是把她赶进山里，锁上了大门，确信严寒会杀死它。然而，严寒并没有杀死它。#离谱 #AI短片"':
+      - /url: //www.douyin.com/video/7685629535336860971
+      - generic: "一位年轻女子在冰封的山村里生下了一条龙。村民们称它为怪物，她却称它为自己的儿子。这是完整版电影。黎明时分，村民们带着石头和火把前来，想要结束它的生命。她挡在他们和她怀里的东西之间。他们没有杀她——而是把她赶进山里，锁上了大门，确信严寒会杀死它。然而，严寒并没有杀死它。#离谱 #AI短片"
+  - text: 34.8万
+  - link "豆袋AI":
+    - /url: //www.douyin.com/user/MS4wLjABAAAApr0wSkeYOFDXAMJABui8yV8P6XDQLM5Y9jhVDN68myrU474RS1IY66eEtfXoqY85?author_id=59075772206&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7706445540791209254&log_pb=%7B%22impr_id%22%3A%2220261111100438317A8DF1AC9B1217A140%22%7D&relation=0
+    - generic: 豆袋AI
+  - link "23- 猎心游戏 女扮男装，短发女生系列，白色短发是女生是女主。正常男女感情线。 03:18":
+    - /url: //www.douyin.com/video/7701692161984695562
+    - img "23- 猎心游戏 女扮男装，短发女生系列，白色短发是女生是女主。正常男女感情线。"
+    - generic: 03:18
+  - heading "23- 猎心游戏 女扮男装，短发女生系列，白色短发是女生是女主。正常男女感情线。" [level=3]:
+    - link "23- 猎心游戏 女扮男装，短发女生系列，白色短发是女生是女主。正常男女感情线。":
+      - /url: //www.douyin.com/video/7701692161984695562
+      - generic: 23- 猎心游戏 女扮男装，短发女生系列，白色短发是女生是女主。正常男女感情线。
+  - text: 1.7万
+  - link "风间":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAKyztxWL6vonl36WEDtehEmhYD56OaM5I8qSs_Fk99EPnkdDHQbzcCwryLZXpFGGI?author_id=59075772206&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7706445540791209254&log_pb=%7B%22impr_id%22%3A%2220261111100438317A8DF1AC9B1217A140%22%7D&relation=0
+    - generic: 风间
+- contentinfo:
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+  - link "网络谣言曝光台 ｜":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: ｜ 违法和不良信息举报：400-140-2108 feedback@douyin.com ｜ 算法推荐专项举报：sfjubao@bytedance.com | 体育饭圈专项举报：tyfq@bytedance.com
+  - link "京ICP备16016397号-3":
+    - /url: https://beian.miit.gov.cn/
+  - generic: ｜ 信息网络传播视听节目许可证 0126733
+  - generic: ｜ 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: ｜ 增值电信业务经营许可证 京B2-20170846
+  - generic: ｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜
+  - img "icon"
+  - link "京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+  - generic: ｜ 互联网宗教信息服务许可证 京（2025）0000017 ｜
+  - img "icon"
+  - link "电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+  - link "｜（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - generic: 热门：
+  - link "抖音知识":
+    - /url: https://www.douyin.com/jingxuan/knowledge
+  - link "抖音网页版入口":
+    - /url: https://www.douyin.com/jingxuan
+  - link "乐喏家居生活":
+    - /url: https://www.douyin.com/user/MS4wLjABAAAALQTr_2sj5WYb8TpcpUj86CjgvYKixHfwDsyl7AqT_cg
+  - 'link "高中化学第3课｜一束光辨认胶体？丁达尔效 食盐水、胶体和泥水，都是混合物，为什么还要分成三类？一束光照过去，为什么能在胶体中看见光亮的通路？ 这节课从分散质粒子大小讲起，配合光路与散射示意图，带你分清溶液、胶体和浊液，理解丁达尔效应。结合高考真题选项和3道随堂练习，理清“分类依据”与“鉴别方法”的区别。 分类看粒径，鉴别看光路！ #高中化学 #高考化学 #胶体 #丁达尔效应"':
+    - /url: https://www.douyin.com/video/7706315309666232680
+  - link "太白高考复读学校":
+    - /url: https://www.douyin.com/topic/7509884537883838503
+  - link "难选择的时候该怎么选":
+    - /url: https://www.douyin.com/shipin/7509894530045593663
+  - link "高考后选专业好难":
+    - /url: https://www.douyin.com/search/%E9%AB%98%E8%80%83%E5%90%8E%E9%80%89%E4%B8%93%E4%B8%9A%E5%A5%BD%E9%9A%BE
+  - link "小米手环10Pro有哪些升级":
+    - /url: https://www.douyin.com/video/7642276080723725583?source=Baiduspider
+  - 'link "盗墓界的“祖师爷”，被捕之后口仍出狂言，饶我不死告诉你秦陵地宫入口 #历史 #古墓 #姚玉忠 #上热门"':
+    - /url: https://www.douyin.com/video/7216289665706380602?source=Baiduspider
+  - 'link "科学家如何暴力破解大脑的运作原理 #大脑 #神经科学 #神经元 #生物 #膜片钳"':
+    - /url: https://www.douyin.com/video/7253009468592639264?source=Baiduspider
+  - link:
+    - /url: https://www.douyin.com/video/7590483327996767951?source=Baiduspider-sdc
+  - 'link "马齿苋这样做太好吃了，我家夏天经常这样吃，味道鲜美，营养解馋 #马齿苋 #美食教程 #酥皮馅饼@抖音小助手"':
+    - /url: https://www.douyin.com/video/7117845914890423559?source=Baiduspider
+  - 'link "失去双小腿就不能滑雪吗？你还要给你的人生设限吗？#自由 #滑雪 #人生不设限 #雪场显眼包都来了"':
+    - /url: https://www.douyin.com/video/7474888501947862291?source=Baiduspider
+  - 'link "您的音响系统有噪声么？三个案例说明常见噪声原因及解决方法 #功放 #音响 #音响发烧友 #音箱 #功放音响 #科技 #专业音响 #电子爱好者 #发烧音响 #音响升级"':
+    - /url: https://www.douyin.com/video/7062546526270213380?source=Baiduspider-sdc
+- article:
+  - generic: 登录后免费畅享高清视频
+  - generic: 扫码登录
+  - generic: 如何扫码
+  - img "二维码"
+  - paragraph:
+    - paragraph: 打开「抖音APP」点击左上角
+    - paragraph: 扫一扫
+  - generic: 验证码登录
+  - generic: 密码登录
+  - combobox "国家/地区": "+86"
+  - textbox "请输入手机号"
+  - textbox "请输入验证码"
+  - generic: 获取验证码
+  - generic: 登录
+  - generic "登录即代表同意用户协议和隐私政策":
+    - text: 登录即代表同意
+    - link "用户协议":
+      - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+    - text: 和
+    - link "隐私政策":
+      - /url: https://www.douyin.com/agreements/?id=6773901168964798477

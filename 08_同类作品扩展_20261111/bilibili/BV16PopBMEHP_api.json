@@ -1,0 +1,125 @@
+{
+  "code": 0,
+  "message": "OK",
+  "ttl": 1,
+  "data": {
+    "bvid": "BV16PopBMEHP",
+    "aid": 116445287618585,
+    "videos": 1,
+    "tid": 201,
+    "tid_v2": 2094,
+    "tname": "",
+    "tname_v2": "",
+    "copyright": 1,
+    "pic": "http://i0.hdslb.com/bfs/archive/b9078386bedeeccc98cc0a3437fed9754d4a2fe9.jpg",
+    "title": "小球每次被活塞碰撞都会翻倍。#几何图形 #解压",
+    "pubdate": 1776814120,
+    "ctime": 1776814121,
+    "desc": "-",
+    "desc_v2": [
+      {
+        "raw_text": "-",
+        "type": 1,
+        "biz_id": 0
+      }
+    ],
+    "state": 0,
+    "duration": 33,
+    "rights": {
+      "bp": 0,
+      "elec": 0,
+      "download": 1,
+      "movie": 0,
+      "pay": 0,
+      "hd5": 0,
+      "no_reprint": 1,
+      "autoplay": 1,
+      "ugc_pay": 0,
+      "is_cooperation": 0,
+      "ugc_pay_preview": 0,
+      "no_background": 0,
+      "clean_mode": 0,
+      "is_stein_gate": 0,
+      "is_360": 0,
+      "no_share": 0,
+      "arc_pay": 0,
+      "free_watch": 0
+    },
+    "owner": {
+      "mid": 3493128698858291,
+      "name": "火星课堂i",
+      "face": "https://i2.hdslb.com/bfs/face/4b3c1282a6d2d38ca9067bfd37bd0f77934adcab.jpg"
+    },
+    "stat": {
+      "aid": 116445287618585,
+      "view": 129760,
+      "danmaku": 38,
+      "reply": 47,
+      "favorite": 368,
+      "coin": 11,
+      "share": 36,
+      "now_rank": 0,
+      "his_rank": 0,
+      "like": 2728,
+      "dislike": 0,
+      "evaluation": "",
+      "vt": 0
+    },
+    "argue_info": {
+      "argue_msg": "",
+      "argue_type": 0,
+      "argue_link": ""
+    },
+    "dynamic": "",
+    "cid": 37705615172,
+    "dimension": {
+      "width": 1080,
+      "height": 1920,
+      "rotate": 0
+    },
+    "premiere": null,
+    "teenage_mode": 1,
+    "is_chargeable_season": false,
+    "is_story": true,
+    "is_upower_exclusive": false,
+    "is_upower_play": false,
+    "is_upower_preview": false,
+    "enable_vt": 0,
+    "vt_display": "",
+    "is_upower_exclusive_with_qa": false,
+    "is_hua_sheng": false,
+    "no_cache": false,
+    "pages": [
+      {
+        "cid": 37705615172,
+        "page": 1,
+        "from": "vupload",
+        "part": "30aa2d36-e40a-47b4-ae49-1935442b75fb",
+        "duration": 33,
+        "vid": "",
+        "weblink": "",
+        "dimension": {
+          "width": 1080,
+          "height": 1920,
+          "rotate": 0
+        },
+        "first_frame": "http://i2.hdslb.com/bfs/storyff/_00000f7wsqxh9sb4h2ngpjr9fwbeaeb_firsti.jpg",
+        "ctime": 1776814121
+      }
+    ],
+    "subtitle": {
+      "allow_submit": false,
+      "list": []
+    },
+    "is_season_display": false,
+    "user_garb": {
+      "url_image_ani_cut": ""
+    },
+    "honor_reply": {},
+    "like_icon": "",
+    "need_jump_bv": false,
+    "disable_show_up_info": false,
+    "is_story_play": 1,
+    "is_view_self": false
+  }
+}

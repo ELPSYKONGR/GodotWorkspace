@@ -1,0 +1,339 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link:
+  - /url: //www.douyin.com/jingxuan
+- link "精选":
+  - /url: https://www.douyin.com/jingxuan?from_nav=1
+  - generic: 精选
+- link "推荐":
+  - /url: https://www.douyin.com/?recommend=1&from_nav=1
+  - generic: 推荐
+- link "AI抖音":
+  - /url: https://www.douyin.com/aisearch?from_nav=1
+  - generic: AI抖音
+- link "关注":
+  - /url: https://www.douyin.com/follow?from_nav=1
+  - generic: 关注
+- link "朋友":
+  - /url: https://www.douyin.com/friend?from_nav=1
+  - generic: 朋友
+- link "我的":
+  - /url: https://www.douyin.com/user/self?from_nav=1
+  - generic: 我的
+- link "直播":
+  - /url: https://live.douyin.com/?from_nav=1
+  - generic: 直播
+- link "放映厅":
+  - /url: https://www.douyin.com/vs?from_nav=1
+  - generic: 放映厅
+- link "短剧":
+  - /url: https://www.douyin.com/series?from_nav=1
+  - generic: 短剧
+- link "小游戏":
+  - /url: https://www.douyin.com/microgame?from_nav=1
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+  - /url: https://beian.miit.gov.cn/
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - generic: 解压小球小游戏
+  - textbox
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: https://www.douyin.com/download/pc/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-downloader-v8.7.0-win32-ia32-douyincold.exe
+    - paragraph: 客户端
+  - generic: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - button "登录":
+    - paragraph: 登录
+- generic: 00:00
+- generic: /
+- generic: 00:50
+- generic: 倍速
+- generic: 智能
+- button
+- generic: 清屏
+- button
+- generic: 连播
+- generic: 哥几个又来探索宇宙了
+- generic: 请问，红小球去哪了
+- link "作者声明：虚构演绎，仅供娱乐":
+  - /url: undefined
+  - generic: 作者声明：虚构演绎，仅供娱乐
+- 'heading "第619集 | 球每次被压缩后都会翻3倍。#几何图形 #解压" [level=1]':
+  - text: 第619集 |
+  - generic: 球每次被压缩后都会翻3倍。
+  - link "#几何图形":
+    - /url: //www.douyin.com/search/%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#解压":
+    - /url: //www.douyin.com/search/%E8%A7%A3%E5%8E%8B?enter_from=video_detail&source=pc_click_hashtag_feed
+- generic: "1205"
+- generic: "21"
+- generic: "358"
+- generic: "86"
+- generic: 举报
+- generic: 发布时间：2026-11-04 20:38
+- generic: 全部评论
+- generic: 请先登录后发表评论
+- generic: 大家都在搜：
+- link "解压小球小游戏":
+  - /url: //www.douyin.com/search/%E8%A7%A3%E5%8E%8B%E5%B0%8F%E7%90%83%E5%B0%8F%E6%B8%B8%E6%88%8F?aweme_id=7704294817710948795&enter_from=video_detail&gid=7704294817710948795&source=comment_related_search
+  - generic: 解压小球小游戏
+- link "星星有点辰":
+  - /url: //www.douyin.com/user/MS4wLjABAAAA9-iqnmtkM93bO-yESD4UAprYjyqbchPrfKMP_GAPUkY
+  - generic: 星星有点辰
+- generic: ...
+- generic: 其实我很好奇，主播到底探索的什么
+- link "宇宙":
+  - /url: //www.douyin.com/search/%E5%AE%87%E5%AE%99?aweme_id=7704294817710948795&enter_from=video_detail&gid=7704294817710948795&source=comment_named_entity_search
+  - text: 宇宙
+- generic: ？
+- generic: 6天前·河南
+- paragraph:
+  - generic: "46"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开1条回复":
+  - generic: 展开1条回复
+- link "鱿♚萧ギ":
+  - /url: //www.douyin.com/user/MS4wLjABAAAANkjfC7S0t703HbcQRrkReJyJ0vJNFR3gO5Fi0KyufH392qgU7Y58Ea3U16SOn-Bm
+  - generic: 鱿♚萧ギ
+- generic: ...
+- generic: 闲的没事，截个图，防止你们忘了最开始的这个小粉球在哪
+- generic: 4天前·山东
+- paragraph:
+  - generic: "2"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- link "Like someone":
+  - /url: //www.douyin.com/user/MS4wLjABAAAA__TlSAgjv-Ig5lVPymdQTz1znX4tlyJN3ay5r7MX1CW9X9Y81j9Aql5nS2vruuCE
+  - generic: Like someone
+- generic: ...
+- text: 我居然是第一个吗
+- img "[黑脸]"
+- img "[黑脸]"
+- img "[黑脸]"
+- generic: 6天前·浙江
+- paragraph:
+  - generic: "2"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开2条回复":
+  - generic: 展开2条回复
+- link "后来～":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAEyWACDS2weAKLFh_MCncbCSVam1nJdUcoMvBDOKbrhzcgVOCzrJXSD83UsPMRhAZ
+  - generic: 后来～
+- generic: ...
+- generic: 问：粉色是怎么出去的？
+- generic: 17小时前·内蒙古
+- paragraph:
+  - generic: "0"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- link "我要吃苹Go_(≧v≦)":
+  - /url: //www.douyin.com/user/MS4wLjABAAAACUwml3iasJ4WtMuW5ul8rD9D3EK7Hw7K71qcpgABprwSby9criTPAAzD3I8c071m
+  - generic: 我要吃苹Go_(≧v≦)
+- generic: ...
+- generic: 哥又探这小子终于凉了
+- generic: 6天前·贵州
+- paragraph:
+  - generic: "1"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- generic: 登录后即可参与互动讨论
+- button "立即登录":
+  - generic: 立即登录
+- link "探索宇宙":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe
+  - img "探索宇宙"
+- link "探索宇宙":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe
+  - generic: 探索宇宙
+- paragraph: 粉丝90.1万获赞3353.9万
+- button "关注":
+  - generic: 关注
+- heading "合集 · 球球大作战" [level=2]
+- list:
+  - link "合集 · 球球大作战第619集 播放中":
+    - /url: //www.douyin.com/video/7704294817710948795
+    - img "合集 · 球球大作战第619集"
+    - generic: 播放中
+  - 'heading "第619集 | 球每次被压缩后都会翻3倍。#几何图形 #解压" [level=3]':
+    - 'link "第619集 | 球每次被压缩后都会翻3倍。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7704294817710948795
+      - generic: "第619集 | 球每次被压缩后都会翻3倍。#几何图形 #解压"
+  - text: "1205"
+  - link "合集 · 球球大作战第620集 00:20":
+    - /url: //www.douyin.com/video/7704436390604788346
+    - img "合集 · 球球大作战第620集"
+    - generic: 00:20
+  - 'heading "第620集 | 球能逃离出去吗？#几何图形 #解压" [level=3]':
+    - 'link "第620集 | 球能逃离出去吗？#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7704436390604788346
+      - generic: "第620集 | 球能逃离出去吗？#几何图形 #解压"
+  - text: "944"
+  - link "合集 · 球球大作战第621集 00:28":
+    - /url: //www.douyin.com/video/7704445194561393329
+    - img "合集 · 球球大作战第621集"
+    - generic: 00:28
+  - 'heading "第621集 | 球每次被压缩后都会翻3倍。#几何图形 #解压" [level=3]':
+    - 'link "第621集 | 球每次被压缩后都会翻3倍。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7704445194561393329
+      - generic: "第621集 | 球每次被压缩后都会翻3倍。#几何图形 #解压"
+  - text: "836"
+  - link "合集 · 球球大作战第622集 00:48":
+    - /url: //www.douyin.com/video/7704675328098129571
+    - img "合集 · 球球大作战第622集"
+    - generic: 00:48
+  - 'heading "第622集 | 球能到达中心的位置吗？#几何图形 #解压" [level=3]':
+    - 'link "第622集 | 球能到达中心的位置吗？#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7704675328098129571
+      - generic: "第622集 | 球能到达中心的位置吗？#几何图形 #解压"
+  - text: "547"
+  - link "合集 · 球球大作战第623集 01:05":
+    - /url: //www.douyin.com/video/7704781461614983418
+    - img "合集 · 球球大作战第623集"
+    - generic: 01:05
+  - 'heading "第623集 | 球每次被压缩后都会翻倍变色。#几何图形 #解压" [level=3]':
+    - 'link "第623集 | 球每次被压缩后都会翻倍变色。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7704781461614983418
+      - generic: "第623集 | 球每次被压缩后都会翻倍变色。#几何图形 #解压"
+  - text: "451"
+  - link "00:20":
+    - /url: //www.douyin.com/video/7704783629138856689
+    - generic: 00:20
+  - 'heading "第624集 | 球每次被压缩后都会翻3倍。#几何图形 #解压" [level=3]':
+    - 'link "第624集 | 球每次被压缩后都会翻3倍。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7704783629138856689
+      - generic: "第624集 | 球每次被压缩后都会翻3倍。#几何图形 #解压"
+  - text: "4834"
+- button "点击加载更多"
+- heading "推荐视频" [level=2]
+- list
+- contentinfo:
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+  - link "网络谣言曝光台 ｜":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: ｜ 违法和不良信息举报：400-140-2108 feedback@douyin.com ｜ 算法推荐专项举报：sfjubao@bytedance.com | 体育饭圈专项举报：tyfq@bytedance.com
+  - link "京ICP备16016397号-3":
+    - /url: https://beian.miit.gov.cn/
+  - generic: ｜ 信息网络传播视听节目许可证 0126733
+  - generic: ｜ 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: ｜ 增值电信业务经营许可证 京B2-20170846
+  - generic: ｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜
+  - img "icon"
+  - link "京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+  - generic: ｜ 互联网宗教信息服务许可证 京（2025）0000017 ｜
+  - img "icon"
+  - link "电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+  - link "｜（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - generic: 热门：
+  - link "游戏解说":
+    - /url: https://www.douyin.com/jingxuan/game
+  - link "抖音网页版入口":
+    - /url: https://www.douyin.com/jingxuan
+  - link "布和":
+    - /url: https://www.douyin.com/user/MS4wLjABAAAA--bdbLHMgsta9ZTw0gjCPZP4EfnZe5GUcctZTKWx2uM
+  - 'link "2027年河北单招，女生最吃香的5大专业！家长必看！ #升学规划 #高考志愿 #单招志愿填报 #高三家长必看 #高考志愿填报"':
+    - /url: https://www.douyin.com/video/7706448393463287081
+  - link "清华强基笔试通过率":
+    - /url: https://www.douyin.com/topic/7509871368658372617
+  - link "弘爱复读学校":
+    - /url: https://www.douyin.com/shipin/7509917470753474594
+  - link "山西省公费农科生":
+    - /url: https://www.douyin.com/search/%E5%B1%B1%E8%A5%BF%E7%9C%81%E5%85%AC%E8%B4%B9%E5%86%9C%E7%A7%91%E7%94%9F
+  - link "车主下高速遇天价通行费":
+    - /url: https://www.douyin.com/video/7612923678757506314?source=Baiduspider
+  - link "【专注有价值的长视频】曹操为什么没有统一天下？主席给曹操翻案背后有何玄机？":
+    - /url: https://www.douyin.com/video/7280508350637362443?source=Baiduspider
+  - 'link "欠你们好久的化妆视频终于它来了 #原相机拍摄 #妆前妆后"':
+    - /url: https://www.douyin.com/video/7281983342575226146?source=Baiduspider
+  - link:
+    - /url: https://www.douyin.com/video/7551842206589160747?source=Baiduspider-sdc
+  - 'link "dnf3.27无尽妖谱攻略机制教学 #dnf超越者激励计划 #dnf #dnf我独自变身 #上DNF把兔女郎带回家 #无尽妖谱"':
+    - /url: https://www.douyin.com/video/7485779251774360871?source=Baiduspider
+  - 'link "后手大哥大屈头屏风马 他凭借其强大的实力稳坐后手第一把交椅 #象棋 #中国象棋布局技巧 #天天象棋 #中国象棋 #象棋高手 @抖音小助手 @DOU+小助手 @DOU+上热门"':
+    - /url: https://www.douyin.com/video/7529063118866091300?source=Baiduspider
+  - 'link "草鱼最好吃的做法，不油炸，不红烧，出锅全家流口水，香！ #家庭菜谱"':
+    - /url: https://www.douyin.com/video/6740449727533436171?source=Baiduspider-sdc

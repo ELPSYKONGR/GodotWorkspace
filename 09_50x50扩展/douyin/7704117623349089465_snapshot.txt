@@ -1,0 +1,206 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link:
+  - /url: //www.douyin.com/jingxuan
+- link "精选":
+  - /url: https://www.douyin.com/jingxuan?from_nav=1
+  - generic: 精选
+- link "推荐":
+  - /url: https://www.douyin.com/?recommend=1&from_nav=1
+  - generic: 推荐
+- link "AI抖音":
+  - /url: https://www.douyin.com/aisearch?from_nav=1
+  - generic: AI抖音
+- link "关注":
+  - /url: https://www.douyin.com/follow?from_nav=1
+  - generic: 关注
+- link "朋友":
+  - /url: https://www.douyin.com/friend?from_nav=1
+  - generic: 朋友
+- link "我的":
+  - /url: https://www.douyin.com/user/self?from_nav=1
+  - generic: 我的
+- link "直播":
+  - /url: https://live.douyin.com/?from_nav=1
+  - generic: 直播
+- link "放映厅":
+  - /url: https://www.douyin.com/vs?from_nav=1
+  - generic: 放映厅
+- link "短剧":
+  - /url: https://www.douyin.com/series?from_nav=1
+  - generic: 短剧
+- link "小游戏":
+  - /url: https://www.douyin.com/microgame?from_nav=1
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+  - /url: https://beian.miit.gov.cn/
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - textbox "搜索你感兴趣的内容"
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: ""
+    - paragraph: 客户端
+  - paragraph: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - button "登录":
+    - paragraph: 登录
+- generic: 00:00
+- generic: /
+- generic: 00:00
+- link "作者声明：虚构演绎，仅供娱乐":
+  - /url: undefined
+  - generic: 作者声明：虚构演绎，仅供娱乐
+- 'heading "喵🐱的堆积与进化。#几何图形 #解压" [level=1]':
+  - text: 喵
+  - img "🐱"
+  - text: 的堆积与进化。
+  - link "#几何图形":
+    - /url: //www.douyin.com/search/%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#解压":
+    - /url: //www.douyin.com/search/%E8%A7%A3%E5%8E%8B?enter_from=video_detail&source=pc_click_hashtag_feed
+- generic: "1443"
+- generic: "59"
+- generic: "285"
+- generic: "2462"
+- generic: 举报
+- generic: 发布时间：2026-11-04 09:26
+- generic: 全部评论
+- generic: 请先登录后发表评论
+- generic: 大家都在搜：
+- link "喵的堆积与进化":
+  - /url: //www.douyin.com/search/%E5%96%B5%E7%9A%84%E5%A0%86%E7%A7%AF%E4%B8%8E%E8%BF%9B%E5%8C%96?aweme_id=7704117623349089465&enter_from=video_detail&gid=7704117623349089465&source=comment_related_search
+  - generic: 喵的堆积与进化
+- link "探索宇宙":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe
+  - img "探索宇宙"
+- link "探索宇宙":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe
+  - generic: 探索宇宙
+- paragraph: 粉丝90.1万获赞3354.4万
+- button "关注":
+  - generic: 关注
+- heading "推荐视频" [level=2]
+- list
+- contentinfo:
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+  - link "网络谣言曝光台 ｜":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: ｜ 违法和不良信息举报：400-140-2108 feedback@douyin.com ｜ 算法推荐专项举报：sfjubao@bytedance.com | 体育饭圈专项举报：tyfq@bytedance.com
+  - link "京ICP备16016397号-3":
+    - /url: https://beian.miit.gov.cn/
+  - generic: ｜ 信息网络传播视听节目许可证 0126733
+  - generic: ｜ 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: ｜ 增值电信业务经营许可证 京B2-20170846
+  - generic: ｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜
+  - img "icon"
+  - link "京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+  - generic: ｜ 互联网宗教信息服务许可证 京（2025）0000017 ｜
+  - img "icon"
+  - link "电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+  - link "｜（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - generic: 热门：
+  - link "抖音美食推荐":
+    - /url: https://www.douyin.com/jingxuan/food
+  - link "抖音神曲":
+    - /url: https://www.douyin.com/jingxuan/music
+  - link "拉萨红人汇禅洗造型馆":
+    - /url: https://www.douyin.com/user/MS4wLjABAAAA-h0rpiiBuJc63jsQgbFnsbNdEYQEqT-3ys_bCLYq920
+  - 'link "不同分数段该咋选大学？ #高三 #高考 #吉林高考 #避雷"':
+    - /url: https://www.douyin.com/video/7706467397963697442
+  - link "西安交通大学国家专项":
+    - /url: https://www.douyin.com/topic/7509865509811341352
+  - link "监利县高考状元":
+    - /url: https://www.douyin.com/shipin/7509902593700988937
+  - link "成都化学卷":
+    - /url: https://www.douyin.com/search/%E6%88%90%E9%83%BD%E5%8C%96%E5%AD%A6%E5%8D%B7
+  - link "安全卧推从我做起":
+    - /url: https://www.douyin.com/video/7659352636830780706?source=Baiduspider
+  - link "转发分享美食":
+    - /url: https://www.douyin.com/video/7379195979523738917?source=Baiduspider
+  - 'link "神秘人来揭秘旅游黑幕！#老纪 #服务 #商业思维 #旅游 #云南旅游"':
+    - /url: https://www.douyin.com/video/7372562439931530547?source=Baiduspider
+  - 'link "相册设计教程，新手快速入门详细讲解。3分钟完成相册设计排版 相册设计教程，新手快速入门详细讲解。3分钟完成相册设计排版，用PS设计相册太麻烦，快速设计相册其实很简单，新手几分钟就可以学会的相册排版设计，相框排版设计比相册设计排版更简单哦。#相册设计 #相册排版 #相册制作 #影楼后期 #影集相册"':
+    - /url: https://www.douyin.com/video/7397734565470555442?source=Baiduspider-sdc
+  - 'link "这么搞，衡阳的投资商都要被吓跑了，咱得想想办法啊！#衡阳市 #实体经济 #周末不忙去趟衡阳 #创业"':
+    - /url: https://www.douyin.com/video/7424678774785985827?source=Baiduspider
+  - 'link "居然真的可以把废口红变成新口红💄#秃头口红 #口红修复 #化妆品修复 #治愈 #解压 @抖音小助手 @DOU+小助手"':
+    - /url: https://www.douyin.com/video/7520861510979554619?source=Baiduspider
+  - 'link "一啲都唔简单 （饮好酒，去首页橱窗） #生活 #粤语 #酒文化 #中国酒文化 #野山烧"':
+    - /url: https://www.douyin.com/video/7491238684717567269?source=Baiduspider-sdc

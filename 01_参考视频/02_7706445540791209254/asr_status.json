@@ -1,0 +1,4 @@
+{
+  "status": "unavailable",
+  "reason": "The cached snapshot for 'Systran/faster-whisper-base' (revision 'main', commit ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66) is incomplete: 1 file(s) are missing (model.bin). Outgoing traffic is disabled ('local_files_only=True'). Re-run the download with network access to complete the snapshot."
+}

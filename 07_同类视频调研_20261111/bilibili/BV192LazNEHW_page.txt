@@ -1,0 +1,364 @@
+- link "首页":
+  - /url: //www.bilibili.com
+  - generic: 首页
+- link "番剧":
+  - /url: //www.bilibili.com/anime/
+  - generic: 番剧
+- link "直播":
+  - /url: //live.bilibili.com
+  - generic: 直播
+- link "游戏中心":
+  - /url: //game.bilibili.com/platform
+  - generic: 游戏中心
+- link "会员购":
+  - /url: //show.bilibili.com/platform/home.html?msource=pc_web
+  - generic: 会员购
+- link "漫画":
+  - /url: //manga.bilibili.com?from=bill_top_mnav
+  - generic: 漫画
+- link "赛事":
+  - /url: //www.bilibili.com/match/home/
+  - generic: 赛事
+- link "下载客户端":
+  - /url: //app.bilibili.com/
+  - generic: 下载客户端
+- textbox "西雅图冰雨夜的万圣节"
+- generic: 登录
+- link "大会员":
+  - /url: //account.bilibili.com/big
+  - generic: 大会员
+- generic: 消息
+- generic: 动态
+- generic: 收藏
+- generic: 历史
+- generic: 创作中心
+- generic: 投稿
+- 'heading "小球每次碰撞都会翻倍#解压小游戏 #星球动画" [level=1]'
+- generic: 199.2万
+- generic: "616"
+- generic: 2025-04-24 07:02:30
+- generic "哔哩哔哩播放器":
+  - generic: 666还有引力
+  - generic: 布哩布哩
+  - generic: 大求生之吸引小球
+  - generic: 道生一，一生二，二生三，三生万物
+  - generic: 小球越多，小球越少。
+  - generic: 大球是黑洞，有引力也合理
+  - generic: 初见端倪
+  - generic: M87进食动画
+  - generic: 大球应该有引力
+  - emphasis: "+1"
+  - generic: 小球越多，小球越少
+  - generic: 球越多球越少
+  - generic: 指数爆炸。怎么可能吞得完
+  - generic: 大球好像是有吸引力
+  - generic: 好像金鱼吃饲料
+  - generic: 登录 免费享高清视频
+  - generic: 试看30秒
+  - button "播放/暂停":
+  - generic: 00:29 / 01:01
+  - button "清晰度":
+    - generic: 自动
+  - button "倍速":
+    - generic: 倍速
+  - button "音量":
+  - button "设置":
+  - button "画中画":
+  - button "宽屏":
+  - button "网页全屏":
+  - button "全屏":
+  - generic: 1人正在看
+  - generic "弹幕显示隐藏":
+    - checkbox [checked]
+  - text: 请先
+  - link "登录":
+    - /url: javascript:void(0);
+  - text: 或
+  - link "注册":
+    - /url: //passport.bilibili.com/login?register_page=1
+  - link "弹幕礼仪":
+    - /url: //www.bilibili.com/blackboard/help.html#/?qid=359&pid=357
+    - generic: 弹幕礼仪
+  - generic: 发送
+- generic "点赞（Q）":
+  - generic: 6.6万
+- generic "投币（W）":
+  - generic: "1295"
+- generic "收藏（E）":
+  - generic: "3951"
+- generic: "257"
+- generic: 稿件举报
+- generic: 记笔记
+- text: 
+- generic: "-"
+- link "几何":
+  - /url: //search.bilibili.com/all?keyword=%E5%87%A0%E4%BD%95&from_source=video_tag
+- link "解压":
+  - /url: //search.bilibili.com/all?keyword=%E8%A7%A3%E5%8E%8B&from_source=video_tag
+- link "图形":
+  - /url: //search.bilibili.com/all?keyword=%E5%9B%BE%E5%BD%A2&from_source=video_tag
+- link:
+- generic: 评论
+- generic: 正在玩命加载…
+- link:
+  - /url: //space.bilibili.com/3493128698858291/?spm_id_from=333.788.upinfo.head.click
+- link "火星课堂i":
+  - /url: //space.bilibili.com/3493128698858291/?spm_id_from=333.788.upinfo.detail.click
+- link " 发消息":
+  - /url: //message.bilibili.com/?spm_id_from=333.788.upinfo.detail.click#whisper/mid3493128698858291
+  - generic: 
+  - text: 发消息
+- generic: 充电
+- text: 关注 20.3万
+- text: 弹幕列表
+- link "广告 豆包AI助手，解决各种难题 豆包 2万人感兴趣":
+  - generic: 广告
+  - generic "豆包AI助手，解决各种难题"
+  - generic: 豆包
+  - generic: 2万人感兴趣
+- generic: 接下来播放
+- generic: 自动连播
+- link "小球每反弹5次 边界就变换图形":
+  - /url: /video/BV1Rw411G73J/?spm_id_from=333.788.recommend_more_video.-1&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - img "小球每反弹5次 边界就变换图形"
+- generic: 00:58
+- link "小球每反弹5次 边界就变换图形":
+  - /url: /video/BV1Rw411G73J/?spm_id_from=333.788.recommend_more_video.-1&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: 小球每反弹5次 边界就变换图形
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 187万
+- text: "245"
+- link "小球每次反弹都会增加一条线 并且加速":
+  - /url: /video/BV1Lp7szxEeE/?spm_id_from=333.788.recommend_more_video.0&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - img "小球每次反弹都会增加一条线 并且加速"
+- generic: 00:59
+- link "小球每次反弹都会增加一条线 并且加速":
+  - /url: /video/BV1Lp7szxEeE/?spm_id_from=333.788.recommend_more_video.0&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: 小球每次反弹都会增加一条线 并且加速
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 61.5万
+- text: "446"
+- link "小球每次反弹 都会增加一条线 直到无限接近圆":
+  - /url: /video/BV1vZ421T7up/?spm_id_from=333.788.recommend_more_video.1&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - img "小球每次反弹 都会增加一条线 直到无限接近圆"
+- generic: 01:01
+- link "小球每次反弹 都会增加一条线 直到无限接近圆":
+  - /url: /video/BV1vZ421T7up/?spm_id_from=333.788.recommend_more_video.1&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: 小球每次反弹 都会增加一条线 直到无限接近圆
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 15.2万
+- text: "126"
+- link "失去所有线条的小球被淘汰":
+  - /url: /video/BV1THU3YuEJA/?spm_id_from=333.788.recommend_more_video.2&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - img "失去所有线条的小球被淘汰"
+- generic: 00:38
+- link "失去所有线条的小球被淘汰":
+  - /url: /video/BV1THU3YuEJA/?spm_id_from=333.788.recommend_more_video.2&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: 失去所有线条的小球被淘汰
+- link "芝麻拍瓦":
+  - /url: //space.bilibili.com/29776799/
+  - generic: 芝麻拍瓦
+- text: 441.5万
+- text: "1709"
+- link "每次反弹都会增加一个小球但两个小球碰撞就会消失能猜到结局吗":
+  - /url: /video/BV1yw411E7tb/?spm_id_from=333.788.recommend_more_video.3&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - img "每次反弹都会增加一个小球但两个小球碰撞就会消失能猜到结局吗"
+- generic: 01:00
+- link "每次反弹都会增加一个小球但两个小球碰撞就会消失能猜到结局吗":
+  - /url: /video/BV1yw411E7tb/?spm_id_from=333.788.recommend_more_video.3&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: 每次反弹都会增加一个小球但两个小球碰撞就会消失能猜到结局吗
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 40.4万
+- text: "165"
+- 'link "球每次被压缩后都会翻4倍。#几何图形 #解压"':
+  - /url: /video/BV1RwxD6PEtC/?spm_id_from=333.788.recommend_more_video.4&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - 'img "球每次被压缩后都会翻4倍。#几何图形 #解压"'
+- generic: 00:45
+- 'link "球每次被压缩后都会翻4倍。#几何图形 #解压"':
+  - /url: /video/BV1RwxD6PEtC/?spm_id_from=333.788.recommend_more_video.4&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: "球每次被压缩后都会翻4倍。#几何图形 #解压"
+- link "探索宇宙122":
+  - /url: //space.bilibili.com/3747575601564813/
+  - generic: 探索宇宙122
+- text: 1.6万
+- text: "27"
+- link "如果两个小球相撞 就会爆发1000000个小球":
+  - /url: /video/BV13gwTeTE2v/?spm_id_from=333.788.recommend_more_video.5&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - img "如果两个小球相撞 就会爆发1000000个小球"
+- generic: 01:01
+- link "如果两个小球相撞 就会爆发1000000个小球":
+  - /url: /video/BV13gwTeTE2v/?spm_id_from=333.788.recommend_more_video.5&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: 如果两个小球相撞 就会爆发1000000个小球
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 138.5万
+- text: "1130"
+- link "每次反弹都有概率增加一个小球，或者减少一个小球 最后的结局你能猜到吗":
+  - /url: /video/BV1Lc411s7xE/?spm_id_from=333.788.recommend_more_video.6&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - img "每次反弹都有概率增加一个小球，或者减少一个小球 最后的结局你能猜到吗"
+- generic: 00:55
+- link "每次反弹都有概率增加一个小球，或者减少一个小球 最后的结局你能猜到吗":
+  - /url: /video/BV1Lc411s7xE/?spm_id_from=333.788.recommend_more_video.6&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: 每次反弹都有概率增加一个小球，或者减少一个小球 最后的结局你能猜到吗
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 67.4万
+- text: "158"
+- 'link "球每次被压缩后都会翻3倍。#几何图形 #解压"':
+  - /url: /video/BV1hV4P6PEFV/?spm_id_from=333.788.recommend_more_video.7&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - 'img "球每次被压缩后都会翻3倍。#几何图形 #解压"'
+- generic: 00:50
+- 'link "球每次被压缩后都会翻3倍。#几何图形 #解压"':
+  - /url: /video/BV1hV4P6PEFV/?spm_id_from=333.788.recommend_more_video.7&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: "球每次被压缩后都会翻3倍。#几何图形 #解压"
+- link "探索宇宙122":
+  - /url: //space.bilibili.com/3747575601564813/
+  - generic: 探索宇宙122
+- text: 2.5万
+- text: "18"
+- link "一串小球圆内反弹 但是圆圈自动缩小":
+  - /url: /video/BV11BppeREkB/?spm_id_from=333.788.recommend_more_video.8&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - img "一串小球圆内反弹 但是圆圈自动缩小"
+- generic: 01:02
+- link "一串小球圆内反弹 但是圆圈自动缩小":
+  - /url: /video/BV11BppeREkB/?spm_id_from=333.788.recommend_more_video.8&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: 一串小球圆内反弹 但是圆圈自动缩小
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 40.7万
+- text: "376"
+- 'link "球每次被压缩后都会翻3倍。#几何图形 #解压"':
+  - /url: /video/BV1pBxw6LEAZ/?spm_id_from=333.788.recommend_more_video.9&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - 'img "球每次被压缩后都会翻3倍。#几何图形 #解压"'
+- generic: 00:53
+- 'link "球每次被压缩后都会翻3倍。#几何图形 #解压"':
+  - /url: /video/BV1pBxw6LEAZ/?spm_id_from=333.788.recommend_more_video.9&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: "球每次被压缩后都会翻3倍。#几何图形 #解压"
+- link "探索宇宙122":
+  - /url: //space.bilibili.com/3747575601564813/
+  - generic: 探索宇宙122
+- text: 18.1万
+- text: "36"
+- link "小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？":
+  - /url: /video/BV1NBAJe8Ero/?spm_id_from=333.788.recommend_more_video.10&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - img "小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？"
+- generic: 00:51
+- link "小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？":
+  - /url: /video/BV1NBAJe8Ero/?spm_id_from=333.788.recommend_more_video.10&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: 小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？
+- link "芝麻拍瓦":
+  - /url: //space.bilibili.com/29776799/
+  - generic: 芝麻拍瓦
+- text: 14万
+- text: "82"
+- link "球每次被压缩后都会翻倍变颜色":
+  - /url: /video/BV1zwxR6DE6j/?spm_id_from=333.788.recommend_more_video.11&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - img "球每次被压缩后都会翻倍变颜色"
+- generic: 01:05
+- link "球每次被压缩后都会翻倍变颜色":
+  - /url: /video/BV1zwxR6DE6j/?spm_id_from=333.788.recommend_more_video.11&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: 球每次被压缩后都会翻倍变颜色
+- link "解压小球1":
+  - /url: //space.bilibili.com/3546848379800369/
+  - generic: 解压小球1
+- text: 83.1万
+- text: "189"
+- link "每次反弹都会增加一种颜色 会有多少种颜色呢？":
+  - /url: /video/BV1qGtheVEwh/?spm_id_from=333.788.recommend_more_video.12&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - img "每次反弹都会增加一种颜色 会有多少种颜色呢？"
+- generic: 01:06
+- link "每次反弹都会增加一种颜色 会有多少种颜色呢？":
+  - /url: /video/BV1qGtheVEwh/?spm_id_from=333.788.recommend_more_video.12&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: 每次反弹都会增加一种颜色 会有多少种颜色呢？
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 11.2万
+- text: "64"
+- 'link "球每次被压缩后都会翻倍变颜色。#几何图形 #解压"':
+  - /url: /video/BV1VJx46vEQZ/?spm_id_from=333.788.recommend_more_video.13&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - 'img "球每次被压缩后都会翻倍变颜色。#几何图形 #解压"'
+- generic: 01:05
+- 'link "球每次被压缩后都会翻倍变颜色。#几何图形 #解压"':
+  - /url: /video/BV1VJx46vEQZ/?spm_id_from=333.788.recommend_more_video.13&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: "球每次被压缩后都会翻倍变颜色。#几何图形 #解压"
+- link "探索宇宙122":
+  - /url: //space.bilibili.com/3747575601564813/
+  - generic: 探索宇宙122
+- text: 9.4万
+- text: "53"
+- 'link "混沌摆能把所有玻璃都切开吗？#解压 #几何图形"':
+  - /url: /video/BV1Fv4L6UEkG/?spm_id_from=333.788.recommend_more_video.14&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - 'img "混沌摆能把所有玻璃都切开吗？#解压 #几何图形"'
+- generic: 00:34
+- 'link "混沌摆能把所有玻璃都切开吗？#解压 #几何图形"':
+  - /url: /video/BV1Fv4L6UEkG/?spm_id_from=333.788.recommend_more_video.14&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: "混沌摆能把所有玻璃都切开吗？#解压 #几何图形"
+- link "探索宇宙122":
+  - /url: //space.bilibili.com/3747575601564813/
+  - generic: 探索宇宙122
+- text: 25.2万
+- text: "26"
+- 'link "球每次被压缩后都会翻4倍。#几何图形 #解压"':
+  - /url: /video/BV1ScxH6GEF5/?spm_id_from=333.788.recommend_more_video.15&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - 'img "球每次被压缩后都会翻4倍。#几何图形 #解压"'
+- generic: 00:50
+- 'link "球每次被压缩后都会翻4倍。#几何图形 #解压"':
+  - /url: /video/BV1ScxH6GEF5/?spm_id_from=333.788.recommend_more_video.15&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: "球每次被压缩后都会翻4倍。#几何图形 #解压"
+- link "探索宇宙122":
+  - /url: //space.bilibili.com/3747575601564813/
+  - generic: 探索宇宙122
+- text: 6.2万
+- text: "38"
+- 'link "哪个物品能到达中心的位置？#几何图形 #解压"':
+  - /url: /video/BV1Wc4G6LEoT/?spm_id_from=333.788.recommend_more_video.16&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - 'img "哪个物品能到达中心的位置？#几何图形 #解压"'
+- generic: 01:04
+- 'link "哪个物品能到达中心的位置？#几何图形 #解压"':
+  - /url: /video/BV1Wc4G6LEoT/?spm_id_from=333.788.recommend_more_video.16&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: "哪个物品能到达中心的位置？#几何图形 #解压"
+- link "探索宇宙122":
+  - /url: //space.bilibili.com/3747575601564813/
+  - generic: 探索宇宙122
+- text: 4万
+- text: "16"
+- 'link "体育用球的堆积与进化。#几何图形 #解压"':
+  - /url: /video/BV1g7h96JEVE/?spm_id_from=333.788.recommend_more_video.17&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - 'img "体育用球的堆积与进化。#几何图形 #解压"'
+- generic: 01:08
+- 'link "体育用球的堆积与进化。#几何图形 #解压"':
+  - /url: /video/BV1g7h96JEVE/?spm_id_from=333.788.recommend_more_video.17&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: "体育用球的堆积与进化。#几何图形 #解压"
+- link "Annqzz":
+  - /url: //space.bilibili.com/1681167123/
+  - generic: Annqzz
+- text: 2.2万
+- text: "9"
+- 'link "太阳系内行星的不断堆积与进化。#几何图形 #星球动画 #解压"':
+  - /url: /video/BV1gPhw6TEAv/?spm_id_from=333.788.recommend_more_video.18&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - 'img "太阳系内行星的不断堆积与进化。#几何图形 #星球动画 #解压"'
+- generic: 01:06
+- 'link "太阳系内行星的不断堆积与进化。#几何图形 #星球动画 #解压"':
+  - /url: /video/BV1gPhw6TEAv/?spm_id_from=333.788.recommend_more_video.18&trackid=web_related_0.router-related-2479604-fc7wt.1794367949969.381
+  - paragraph: "太阳系内行星的不断堆积与进化。#几何图形 #星球动画 #解压"
+- link "Annqzz":
+  - /url: //space.bilibili.com/1681167123/
+  - generic: Annqzz
+- text: 1.1万
+- text: "2"
+- generic: 展开
+- link "记录你家宝贝的成长高光！":
+  - /url: https://www.bilibili.com/blackboard/era/hmnf3rWhr7Ns1hp1.html?spm_id_from=333.788.right_bottom.adfloor-3038.click
+  - generic: 记录你家宝贝的成长高光！

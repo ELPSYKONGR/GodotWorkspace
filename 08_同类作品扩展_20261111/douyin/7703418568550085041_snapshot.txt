@@ -1,0 +1,276 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link:
+  - /url: //www.douyin.com/jingxuan
+- link "精选":
+  - /url: https://www.douyin.com/jingxuan?from_nav=1
+  - generic: 精选
+- link "推荐":
+  - /url: https://www.douyin.com/?recommend=1&from_nav=1
+  - generic: 推荐
+- link "AI抖音":
+  - /url: https://www.douyin.com/aisearch?from_nav=1
+  - generic: AI抖音
+- link "关注":
+  - /url: https://www.douyin.com/follow?from_nav=1
+  - generic: 关注
+- link "朋友":
+  - /url: https://www.douyin.com/friend?from_nav=1
+  - generic: 朋友
+- link "我的":
+  - /url: https://www.douyin.com/user/self?from_nav=1
+  - generic: 我的
+- link "直播":
+  - /url: https://live.douyin.com/?from_nav=1
+  - generic: 直播
+- link "放映厅":
+  - /url: https://www.douyin.com/vs?from_nav=1
+  - generic: 放映厅
+- link "短剧":
+  - /url: https://www.douyin.com/series?from_nav=1
+  - generic: 短剧
+- link "小游戏":
+  - /url: https://www.douyin.com/microgame?from_nav=1
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+  - /url: https://beian.miit.gov.cn/
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - generic: 几何图形动画推荐
+  - textbox
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: https://www.douyin.com/download/pc/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-downloader-v8.7.0-win32-ia32-douyincold.exe
+    - paragraph: 客户端
+  - generic: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - button "登录":
+    - paragraph: 登录
+- generic: 00:01
+- generic: /
+- generic: 01:00
+- generic: 倍速
+- generic: 智能
+- button
+- generic: 清屏
+- button
+- generic: 连播
+- generic: (探索宇宙）
+- link "作者声明：虚构演绎，仅供娱乐":
+  - /url: undefined
+  - generic: 作者声明：虚构演绎，仅供娱乐
+- 'heading "怪物史莱克的堆积与进化。#几何图形 #解压" [level=1]':
+  - generic: 怪物史莱克的堆积与进化。
+  - link "#几何图形":
+    - /url: //www.douyin.com/search/%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#解压":
+    - /url: //www.douyin.com/search/%E8%A7%A3%E5%8E%8B?enter_from=video_detail&source=pc_click_hashtag_feed
+- generic: "673"
+- generic: "58"
+- generic: "157"
+- generic: "1443"
+- generic: 举报
+- generic: 发布时间：2026-11-02 12:13
+- generic: 全部评论
+- generic: 请先登录后发表评论
+- generic: 大家都在搜：
+- link "几何图形动画推荐":
+  - /url: //www.douyin.com/search/%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2%E5%8A%A8%E7%94%BB%E6%8E%A8%E8%8D%90?aweme_id=7703418568550085041&enter_from=video_detail&gid=7703418568550085041&source=comment_related_search
+  - generic: 几何图形动画推荐
+- link "柒幺贰":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAgp2qDw7HJX1B2BOHy7v_0qcSSuNH5RKgvynhQKKOD0BiIFgTat-VXF61yV2abc6W
+  - generic: 柒幺贰
+- generic: ...
+- generic: 你到底什么时候探索宇宙
+- generic: 1周前·广东
+- paragraph:
+  - generic: "21"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开2条回复":
+  - generic: 展开2条回复
+- link "媛来如此":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAE8L_TuEgGGgwFEyyuBbC_0rlfN2-5mrIPwmw7NMr2xVq4-ZsnaxlHXiShd7GKy8M
+  - generic: 媛来如此
+- generic: ...
+- link "@晚安선선아":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAVH5t3z1IZwnNgYrRbJtTFlRNClXu4EotuPTeLOObSe7a_adhoKMCpk_kBBPgBzel
+- generic: 已经没有什么能让我睁眼了
+- generic: 3天前·山东
+- paragraph:
+  - generic: "0"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- link "立米":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAXU98yiVqrRWRmJE0J57w2othveOQNdirl_Jd80ugsb8
+  - generic: 立米
+- generic: ...
+- generic: 我爷曾经在后山打死过一只
+- generic: 1周前·广东
+- paragraph:
+  - generic: "7"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开2条回复":
+  - generic: 展开2条回复
+- link "『ℳ๓屿柠⁺♢』":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAs1IipQlbpRfKNfhaVATysLH1BbcLBGKE51Cf6bZwinY
+  - generic: 『ℳ๓屿柠⁺♢』
+- generic: ...
+- generic: “旋转跳跃，我闭着眼”
+- generic: 1周前·山西
+- paragraph:
+  - generic: "4"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- link "𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAGErdwrWg9LqOWYQVZB3PNw9SAvDRAoc-0QLDVRDkNoo
+  - generic: 𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭
+- generic: ...
+- generic: 可观测宇宙最嫩咪的声音
+- generic: 1周前·辽宁
+- paragraph:
+  - generic: "1"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- generic: 登录后即可参与互动讨论
+- button "立即登录":
+  - generic: 立即登录
+- link "探索宇宙":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe
+  - img "探索宇宙"
+- link "探索宇宙":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe
+  - generic: 探索宇宙
+- paragraph: 粉丝90.1万获赞3353.9万
+- button "关注":
+  - generic: 关注
+- heading "推荐视频" [level=2]
+- list
+- contentinfo:
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+  - link "网络谣言曝光台 ｜":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: ｜ 违法和不良信息举报：400-140-2108 feedback@douyin.com ｜ 算法推荐专项举报：sfjubao@bytedance.com | 体育饭圈专项举报：tyfq@bytedance.com
+  - link "京ICP备16016397号-3":
+    - /url: https://beian.miit.gov.cn/
+  - generic: ｜ 信息网络传播视听节目许可证 0126733
+  - generic: ｜ 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: ｜ 增值电信业务经营许可证 京B2-20170846
+  - generic: ｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜
+  - img "icon"
+  - link "京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+  - generic: ｜ 互联网宗教信息服务许可证 京（2025）0000017 ｜
+  - img "icon"
+  - link "电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+  - link "｜（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - generic: 热门：
+  - link "二次元视频大全":
+    - /url: https://www.douyin.com/jingxuan/acg
+  - link "抖音二次元":
+    - /url: https://www.douyin.com/jingxuan/acg
+  - link "中予知识产权":
+    - /url: https://www.douyin.com/user/MS4wLjABAAAA4T_WiYdM7pf-MtZq7MNYlgalDc78Nyo8AWgrRKlMQWM
+  - 'link "#八年级物理 不难，把#核心考点 记一记#初中物理 #家长必读 #学霸秘籍"':
+    - /url: https://www.douyin.com/video/7706721146808372523
+  - link "湖南体育生文化没过线能上什么学校":
+    - /url: https://www.douyin.com/topic/7509867776920684582
+  - link "一段线是本科线吗":
+    - /url: https://www.douyin.com/shipin/7509922178859993103
+  - link "濮阳高考状元2025":
+    - /url: https://www.douyin.com/search/%E6%BF%AE%E9%98%B3%E9%AB%98%E8%80%83%E7%8A%B6%E5%85%832025
+  - link "挑战去长春“刷冰锅”":
+    - /url: https://www.douyin.com/video/7600414348367973641?source=Baiduspider
+  - link "漫谈相对论（三）光速为何恒定不变？什么是相对性原理？（3）":
+    - /url: https://www.douyin.com/video/7115679759966702855?source=Baiduspider
+  - 'link "#游戏外设 #键盘 #机械键盘 #客制化键盘 #轴体 @DOU+小助手 @抖音小助手"':
+    - /url: https://www.douyin.com/video/6998082782912138532?source=Baiduspider
+  - link "赏菊花":
+    - /url: https://www.douyin.com/video/7573612345487757449?source=Baiduspider-sdc
+  - 'link "《醉过多少回》串烧！10/26号中山永宁中心公园广场舞交流活动现场！#广场舞 #潮流广场舞 @DOU+小助手"':
+    - /url: https://www.douyin.com/video/7433006486650932514?source=Baiduspider
+  - 'link "来到宁夏采荞麦花，具体情况分享与大家！ 今天是7月25日，蜂场来到宁夏来采荞麦花，今年荞麦花推迟了，具体情况分享与大家！#纯天然无添加 #我的乡村生活 #农村养蜂人 #荞麦花开 #"':
+    - /url: https://www.douyin.com/video/7530869191844449546?source=Baiduspider
+  - 'link "男人跟你说：做我女朋友吧。你会怎么回？ #恋爱技巧 #恋爱观 #女性成长"':
+    - /url: https://www.douyin.com/video/7542525871434927369?source=Baiduspider-sdc

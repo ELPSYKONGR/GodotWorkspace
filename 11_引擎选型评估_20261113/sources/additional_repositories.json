@@ -1,0 +1,203 @@
+{
+  "retrieved_at_utc": "2026-11-13T06:29:31.764185+00:00",
+  "repositories": [
+    {
+      "full_name": "4ian/GDevelop",
+      "html_url": "https://github.com/4ian/GDevelop",
+      "description": "🎮 Open-source, cross-platform 2D/3D/multiplayer game engine designed for everyone.",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "stargazers_count": 28793,
+      "pushed_at": "2026-11-12T18:29:54Z",
+      "updated_at": "2026-11-13T06:14:47Z",
+      "archived": false,
+      "default_branch": "master",
+      "homepage": "https://gdevelop.io",
+      "source": "https://api.github.com/repos/4ian/GDevelop",
+      "README.md": {
+        "url": "https://raw.githubusercontent.com/4ian/GDevelop/master/README.md",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/4ian/GDevelop/master/LICENSE",
+        "error": "<urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>"
+      }
+    },
+    {
+      "full_name": "phaserjs/phaser",
+      "html_url": "https://github.com/phaserjs/phaser",
+      "description": "Phaser is a fun, free and fast 2D game framework for making HTML5 games for desktop and mobile web browsers, supporting Canvas and WebGL rendering.",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "stargazers_count": 40706,
+      "pushed_at": "2026-08-21T06:56:13Z",
+      "updated_at": "2026-11-13T05:34:47Z",
+      "archived": false,
+      "default_branch": "master",
+      "homepage": "https://phaser.io",
+      "source": "https://api.github.com/repos/phaserjs/phaser",
+      "README.md": {
+        "url": "https://raw.githubusercontent.com/phaserjs/phaser/master/README.md",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/phaserjs/phaser/master/LICENSE",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      }
+    },
+    {
+      "full_name": "liabru/matter-tools",
+      "html_url": "https://github.com/liabru/matter-tools",
+      "description": "tools for creating, testing and debugging matter.js worlds",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "stargazers_count": 135,
+      "pushed_at": "2022-11-10T13:14:58Z",
+      "updated_at": "2026-11-05T09:33:49Z",
+      "archived": false,
+      "default_branch": "master",
+      "homepage": null,
+      "source": "https://api.github.com/repos/liabru/matter-tools",
+      "README.md": {
+        "url": "https://raw.githubusercontent.com/liabru/matter-tools/master/README.md",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/liabru/matter-tools/master/LICENSE",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      }
+    },
+    {
+      "full_name": "pmndrs/react-three-rapier",
+      "html_url": "https://github.com/pmndrs/react-three-rapier",
+      "description": "🤺 Rapier physics in React",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "stargazers_count": 1611,
+      "pushed_at": "2026-10-12T05:06:24Z",
+      "updated_at": "2026-11-13T05:29:45Z",
+      "archived": false,
+      "default_branch": "main",
+      "homepage": "https://react-three-rapier.pmnd.rs",
+      "source": "https://api.github.com/repos/pmndrs/react-three-rapier",
+      "README.md": {
+        "url": "https://raw.githubusercontent.com/pmndrs/react-three-rapier/main/README.md",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/pmndrs/react-three-rapier/main/LICENSE",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      }
+    },
+    {
+      "full_name": "JustLachin/ring-escape",
+      "html_url": "https://github.com/JustLachin/ring-escape",
+      "description": "A satisfying physics simulation where a glowing ball breaks free from concentric rings. Inspired by viral TikTok and Instagram Reels trends. Built with Matter.js.",
+      "license": null,
+      "stargazers_count": 1,
+      "pushed_at": "2026-03-21T13:11:12Z",
+      "updated_at": "2026-03-21T13:11:15Z",
+      "archived": false,
+      "default_branch": "main",
+      "homepage": "https://justlachin.github.io/ring-escape/",
+      "source": "https://api.github.com/repos/JustLachin/ring-escape",
+      "README.md": {
+        "url": "https://raw.githubusercontent.com/JustLachin/ring-escape/main/README.md",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/JustLachin/ring-escape/main/LICENSE",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      }
+    },
+    {
+      "full_name": "bikramadhikari001/engaging-animations",
+      "html_url": "https://github.com/bikramadhikari001/engaging-animations",
+      "description": "Satisfying physics simulations & AI pong — auto-generated TikTok videos via GitHub Actions",
+      "license": null,
+      "stargazers_count": 2,
+      "pushed_at": "2026-11-13T02:23:27Z",
+      "updated_at": "2026-11-12T13:10:31Z",
+      "archived": false,
+      "default_branch": "main",
+      "homepage": null,
+      "source": "https://api.github.com/repos/bikramadhikari001/engaging-animations",
+      "README.md": {
+        "url": "https://raw.githubusercontent.com/bikramadhikari001/engaging-animations/main/README.md",
+        "error": "<urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/bikramadhikari001/engaging-animations/main/LICENSE",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      }
+    },
+    {
+      "full_name": "QuantumZain/chaotic-system",
+      "html_url": "https://github.com/QuantumZain/chaotic-system",
+      "description": "Balls bouncing in a ring. This simulation outlines how chaos emerges from a simple ball bouncing around in a ring. This code was inspired by a numberphile video on chaos-theory.",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "stargazers_count": 22,
+      "pushed_at": "2024-02-13T10:26:01Z",
+      "updated_at": "2026-11-07T18:55:43Z",
+      "archived": false,
+      "default_branch": "master",
+      "homepage": "",
+      "source": "https://api.github.com/repos/QuantumZain/chaotic-system",
+      "README.md": {
+        "url": "https://raw.githubusercontent.com/QuantumZain/chaotic-system/master/README.md",
+        "error": "<urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/QuantumZain/chaotic-system/master/LICENSE",
+        "error": "<urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>"
+      }
+    },
+    {
+      "full_name": "Sarish002/BallSimulation",
+      "html_url": "https://github.com/Sarish002/BallSimulation",
+      "description": "Package to help you make Bouncing Ball Physics Simulations.",
+      "license": null,
+      "stargazers_count": 1,
+      "pushed_at": "2026-06-19T17:58:16Z",
+      "updated_at": "2026-06-19T17:26:22Z",
+      "archived": false,
+      "default_branch": "master",
+      "homepage": "",
+      "source": "https://api.github.com/repos/Sarish002/BallSimulation",
+      "README.md": {
+        "url": "https://raw.githubusercontent.com/Sarish002/BallSimulation/master/README.md",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/Sarish002/BallSimulation/master/LICENSE",
+        "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>"
+      }
+    }
+  ]
+}

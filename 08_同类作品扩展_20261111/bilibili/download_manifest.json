@@ -1,0 +1,277 @@
+{
+  "created_at": "2026-11-11T14:09:03.316584+08:00",
+  "count": 27,
+  "total_bytes": 46446301,
+  "items": [
+    {
+      "bvid": "BV1VFWzeSEQJ",
+      "file": "videos/BV1VFWzeSEQJ.mp4",
+      "bytes": 1696912,
+      "sha256": "b48b44331d0e2931da8eae401e41c339496e279b76606e59afdcc8c639e655dd",
+      "frame_file": "frames/BV1VFWzeSEQJ.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1VFWzeSEQJ&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1a4N1eDE9V",
+      "file": "videos/BV1a4N1eDE9V.mp4",
+      "bytes": 3109198,
+      "sha256": "cad60d2600ac5ff422b2d5ad73f49cf5393816b9f6111fbc458e8c60b9c3efbd",
+      "frame_file": "frames/BV1a4N1eDE9V.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1a4N1eDE9V&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1dW421976v",
+      "file": "videos/BV1dW421976v.mp4",
+      "bytes": 993946,
+      "sha256": "eff8b0722750fdda5d9e9ad8570c2602a3d7a20a8af49385e8bc0794f1c72d21",
+      "frame_file": "frames/BV1dW421976v.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1dW421976v&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1uAxLe7E99",
+      "file": "videos/BV1uAxLe7E99.mp4",
+      "bytes": 1627277,
+      "sha256": "10c6c35803d3d95e890a92f7932c4bc75af187e32c446691e3eb5c3d4fc4f947",
+      "frame_file": "frames/BV1uAxLe7E99.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1uAxLe7E99&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1VszzYBE7R",
+      "file": "videos/BV1VszzYBE7R.mp4",
+      "bytes": 1513374,
+      "sha256": "8d76ef03c00a85be334eddf39b0dfdf063d3aef5a574ebab2ac5679209a56545",
+      "frame_file": "frames/BV1VszzYBE7R.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1VszzYBE7R&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV13btHerEMN",
+      "file": "videos/BV13btHerEMN.mp4",
+      "bytes": 1144703,
+      "sha256": "e56b8e6ee8dc15cbc464e4a3bd7fe090e9b291ce93997218efdb9dea3290cfe7",
+      "frame_file": "frames/BV13btHerEMN.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV13btHerEMN&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV18nUsYjENb",
+      "file": "videos/BV18nUsYjENb.mp4",
+      "bytes": 3452776,
+      "sha256": "562039d29d14d5d08344f2fbdd85e258ea488c280ccf62e4579f0b2474ac041c",
+      "frame_file": "frames/BV18nUsYjENb.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV18nUsYjENb&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1D1KF6PEwV",
+      "file": "videos/BV1D1KF6PEwV.mp4",
+      "bytes": 1508750,
+      "sha256": "35f1fb1ea859bdcca83291d4d2dc86ff61dbb51d6c2ab366099f06acfb8e72c5",
+      "frame_file": "frames/BV1D1KF6PEwV.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1D1KF6PEwV&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV18JS9YYEho",
+      "file": "videos/BV18JS9YYEho.mp4",
+      "bytes": 583087,
+      "sha256": "e235e455128ca4dd93a969992b0e345c3171d262d39bc28861dcbe87c9fd5458",
+      "frame_file": "frames/BV18JS9YYEho.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV18JS9YYEho&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1jJD1YsEzi",
+      "file": "videos/BV1jJD1YsEzi.mp4",
+      "bytes": 508220,
+      "sha256": "166d0b8356945e90ff0ec17db942d2b27ba23a91277da362cde4b16cf2470c8b",
+      "frame_file": "frames/BV1jJD1YsEzi.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1jJD1YsEzi&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1MytUeLEQE",
+      "file": "videos/BV1MytUeLEQE.mp4",
+      "bytes": 2231908,
+      "sha256": "eb3a23dd4e3515b8e67bc4d259c5b3430c729fc11aff9c0ac9fa425eb29f6407",
+      "frame_file": "frames/BV1MytUeLEQE.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1MytUeLEQE&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1nXndeqExz",
+      "file": "videos/BV1nXndeqExz.mp4",
+      "bytes": 1304715,
+      "sha256": "f1ca284160118469752a027958b2bce73ae428b0fa427dfd55e5cf12691d9ce4",
+      "frame_file": "frames/BV1nXndeqExz.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1nXndeqExz&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1NSKGeSERv",
+      "file": "videos/BV1NSKGeSERv.mp4",
+      "bytes": 2569963,
+      "sha256": "81f41c1c627d072c5da6b85494666239f87f7f297abbad130245e6c320d90717",
+      "frame_file": "frames/BV1NSKGeSERv.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1NSKGeSERv&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1NBAJe8Ero",
+      "file": "videos/BV1NBAJe8Ero.mp4",
+      "bytes": 2843889,
+      "sha256": "7b8310a5b50ece6d43ee48568dc87417152f369b98ecc9539f6bed73d326fb93",
+      "frame_file": "frames/BV1NBAJe8Ero.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1NBAJe8Ero&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1tWsbe7EYm",
+      "file": "videos/BV1tWsbe7EYm.mp4",
+      "bytes": 2783046,
+      "sha256": "2f20c73444cb91c48eb67a0f97ab1e2b9ddc3dec843503f616bd6ad49a5d0e31",
+      "frame_file": "frames/BV1tWsbe7EYm.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1tWsbe7EYm&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV16PopBMEHP",
+      "file": "videos/BV16PopBMEHP.mp4",
+      "bytes": 1797865,
+      "sha256": "bde9bae67c70730230bec94451659c58a7288d13e8668bc9fc7caba211ad5a0a",
+      "frame_file": "frames/BV16PopBMEHP.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV16PopBMEHP&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1TnFfeeEN9",
+      "file": "videos/BV1TnFfeeEN9.mp4",
+      "bytes": 996639,
+      "sha256": "ee86e7883c26d5c09b8a3e5bbbe03d6e2945d875880c65f0a6c4c1d13d547dd4",
+      "frame_file": "frames/BV1TnFfeeEN9.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1TnFfeeEN9&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1Hg9FYyEcR",
+      "file": "videos/BV1Hg9FYyEcR.mp4",
+      "bytes": 1620956,
+      "sha256": "1545b188cdb45c84f1d2a7f239b53fdf02aee064335947ba306cff92f229ede6",
+      "frame_file": "frames/BV1Hg9FYyEcR.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1Hg9FYyEcR&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1vqyAYnE3U",
+      "file": "videos/BV1vqyAYnE3U.mp4",
+      "bytes": 3011419,
+      "sha256": "072d9c8e88c787cf3200d5e1e12b4467c03c875d7c797aa36a233a99a40c9a43",
+      "frame_file": "frames/BV1vqyAYnE3U.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1vqyAYnE3U&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1fQ1HY2E9h",
+      "file": "videos/BV1fQ1HY2E9h.mp4",
+      "bytes": 1590045,
+      "sha256": "b18fdfbd40991b10b3a1d656c3bdf92ff605d06ed31175a88b2c30dc03d8f65f",
+      "frame_file": "frames/BV1fQ1HY2E9h.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1fQ1HY2E9h&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1TaSvYkE4K",
+      "file": "videos/BV1TaSvYkE4K.mp4",
+      "bytes": 362848,
+      "sha256": "b5525efb4fa7b62ad2bebd119024192cb7bbb5b615a7ab1aa29cc90989adb7b8",
+      "frame_file": "frames/BV1TaSvYkE4K.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1TaSvYkE4K&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1pjyGYdEgG",
+      "file": "videos/BV1pjyGYdEgG.mp4",
+      "bytes": 1350274,
+      "sha256": "2c847c78e626017ab432b580818a25e09dfd6d919aa1686e545402eb5cca4cb3",
+      "frame_file": "frames/BV1pjyGYdEgG.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1pjyGYdEgG&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1waAVegEaT",
+      "file": "videos/BV1waAVegEaT.mp4",
+      "bytes": 2813063,
+      "sha256": "afb6facdd5a7dea36f0d0322cf90a9b9b4817ad658a978365ba5551f15f04962",
+      "frame_file": "frames/BV1waAVegEaT.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1waAVegEaT&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV19M4m1y7Zm",
+      "file": "videos/BV19M4m1y7Zm.mp4",
+      "bytes": 670085,
+      "sha256": "22c27bf2827a04c9f44b6690f9e64500dddd59297934170cf23afa5b50cdf28e",
+      "frame_file": "frames/BV19M4m1y7Zm.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV19M4m1y7Zm&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1s1VRz7EFY",
+      "file": "videos/BV1s1VRz7EFY.mp4",
+      "bytes": 1073506,
+      "sha256": "04f471dfe1b97f01d106bcdd38d1f2894a1d227eaebf05eb48624a91b8a45f2f",
+      "frame_file": "frames/BV1s1VRz7EFY.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1s1VRz7EFY&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1haNfe9EiU",
+      "file": "videos/BV1haNfe9EiU.mp4",
+      "bytes": 1287176,
+      "sha256": "357c2df56df90ff4bf751be23874d37b5943a4b8825132e7e11b07625f6c8608",
+      "frame_file": "frames/BV1haNfe9EiU.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1haNfe9EiU&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    },
+    {
+      "bvid": "BV1Xx411c7cH",
+      "file": "videos/BV1Xx411c7cH.mp4",
+      "bytes": 2000661,
+      "sha256": "24b05125cd5273a25b1907979a1c1986e59ad663af072c7b85e6b80ed5393ae0",
+      "frame_file": "frames/BV1Xx411c7cH.jpg",
+      "frame_exists": true,
+      "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1Xx411c7cH&jsonp=jsonp",
+      "download_note": "公开qn=16播放流（通常360p），不是创作者母版声明。"
+    }
+  ]
+}

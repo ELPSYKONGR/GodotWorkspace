@@ -1,0 +1,367 @@
+- link "首页":
+  - /url: //www.bilibili.com
+  - generic: 首页
+- link "番剧":
+  - /url: //www.bilibili.com/anime/
+  - generic: 番剧
+- link "直播":
+  - /url: //live.bilibili.com
+  - generic: 直播
+- link "游戏中心":
+  - /url: //game.bilibili.com/platform
+  - generic: 游戏中心
+- link "会员购":
+  - /url: //show.bilibili.com/platform/home.html?msource=pc_web
+  - generic: 会员购
+- link "漫画":
+  - /url: //manga.bilibili.com?from=bill_top_mnav
+  - generic: 漫画
+- link "赛事":
+  - /url: //www.bilibili.com/match/home/
+  - generic: 赛事
+- link "下载客户端":
+  - /url: //app.bilibili.com/
+  - generic: 下载客户端
+- textbox "牢A精选版·1小时前更新"
+- generic: 登录
+- link "大会员":
+  - /url: //account.bilibili.com/big
+  - generic: 大会员
+- generic: 消息
+- generic: 动态
+- generic: 收藏
+- generic: 历史
+- generic: 创作中心
+- generic: 投稿
+- heading "失去所有线条的小球被淘汰" [level=1]
+- generic: 441.5万
+- generic: "1709"
+- generic: 2024-11-14 12:03:28
+- generic: 未经作者授权，禁止转载
+- generic "哔哩哔哩播放器":
+  - generic: 三体运动！
+  - generic: 黄色不死鸟
+  - generic: 三体运动
+  - emphasis: "+1"
+  - generic: 绿黄合作
+  - generic: 红色，输了变猫娘
+  - generic: 《三体运动》
+  - generic: 这波红黄连着想干掉绿球
+  - generic: 岂不闻天无绝人之路之路
+  - generic: 红色，输了变猫娘
+  - generic: 接招吧迪奧！半徑20米的綠寶石水花！
+  - generic: 刚想压蓝色结果被秒了
+  - button "播放/暂停":
+  - generic: 00:16 / 00:37
+  - button "清晰度":
+    - generic: 自动
+  - button "倍速":
+    - generic: 倍速
+  - button "音量":
+  - button "设置":
+  - button "画中画":
+  - button "宽屏":
+  - button "网页全屏":
+  - button "全屏":
+  - generic: 1人正在看
+  - generic "弹幕显示隐藏":
+    - checkbox [checked]
+  - text: 请先
+  - link "登录":
+    - /url: javascript:void(0);
+  - text: 或
+  - link "注册":
+    - /url: //passport.bilibili.com/login?register_page=1
+  - link "弹幕礼仪":
+    - /url: //www.bilibili.com/blackboard/help.html#/?qid=359&pid=357
+    - generic: 弹幕礼仪
+  - generic: 发送
+- generic "点赞（Q）":
+  - generic: 12.8万
+- generic "投币（W）":
+  - generic: "1446"
+- generic "收藏（E）":
+  - generic: 1.6万
+- generic: "906"
+- generic: 稿件举报
+- generic: 记笔记
+- text: 
+- generic: 失去所有线条的小球被淘汰，小球可以抢夺碰到的线条
+- link "沙盒":
+  - /url: //search.bilibili.com/all?keyword=%E6%B2%99%E7%9B%92&from_source=video_tag
+- link "争夺":
+  - /url: //search.bilibili.com/all?keyword=%E4%BA%89%E5%A4%BA&from_source=video_tag
+- link "小球":
+  - /url: //search.bilibili.com/all?keyword=%E5%B0%8F%E7%90%83&from_source=video_tag
+- link "线条":
+  - /url: //search.bilibili.com/all?keyword=%E7%BA%BF%E6%9D%A1&from_source=video_tag
+- link "弹珠":
+  - /url: //search.bilibili.com/all?keyword=%E5%BC%B9%E7%8F%A0&from_source=video_tag
+- link "解压":
+  - /url: //search.bilibili.com/all?keyword=%E8%A7%A3%E5%8E%8B&from_source=video_tag
+- link:
+- generic: 评论
+- generic: 正在玩命加载…
+- link:
+  - /url: //space.bilibili.com/29776799/?spm_id_from=333.788.upinfo.head.click
+- link "芝麻拍瓦":
+  - /url: //space.bilibili.com/29776799/?spm_id_from=333.788.upinfo.detail.click
+- link " 发消息":
+  - /url: //message.bilibili.com/?spm_id_from=333.788.upinfo.detail.click#whisper/mid29776799
+  - generic: 
+  - text: 发消息
+- generic "~"
+- generic: 充电
+- text: 关注 9477
+- text: 弹幕列表
+- link "1招搞定猫咪毛球！吐毛少，主子更快乐 MeiMei奇思喵想 11万 18":
+  - generic "1招搞定猫咪毛球！吐毛少，主子更快乐"
+  - generic: MeiMei奇思喵想
+  - text: 11万
+  - text: "18"
+- generic: 接下来播放
+- generic: 自动连播
+- link "哪个小球会在变形中 活到最后？":
+  - /url: /video/BV1QVtxz2EBy/?spm_id_from=333.788.recommend_more_video.-1&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "哪个小球会在变形中 活到最后？"
+- generic: 00:21
+- link "哪个小球会在变形中 活到最后？":
+  - /url: /video/BV1QVtxz2EBy/?spm_id_from=333.788.recommend_more_video.-1&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 哪个小球会在变形中 活到最后？
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 17.3万
+- text: "83"
+- link "小球每反弹5次 边界就变换图形":
+  - /url: /video/BV1Rw411G73J/?spm_id_from=333.788.recommend_more_video.0&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "小球每反弹5次 边界就变换图形"
+- generic: 00:58
+- link "小球每反弹5次 边界就变换图形":
+  - /url: /video/BV1Rw411G73J/?spm_id_from=333.788.recommend_more_video.0&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 小球每反弹5次 边界就变换图形
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 187万
+- text: "245"
+- link "如果两个小球相撞 就会爆发1000000个小球":
+  - /url: /video/BV13gwTeTE2v/?spm_id_from=333.788.recommend_more_video.1&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "如果两个小球相撞 就会爆发1000000个小球"
+- generic: 01:01
+- link "如果两个小球相撞 就会爆发1000000个小球":
+  - /url: /video/BV13gwTeTE2v/?spm_id_from=333.788.recommend_more_video.1&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 如果两个小球相撞 就会爆发1000000个小球
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 138.5万
+- text: "1130"
+- link "小球能否逃离全部圆环？":
+  - /url: /video/BV16qYozFEBT/?spm_id_from=333.788.recommend_more_video.2&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "小球能否逃离全部圆环？"
+- generic: 00:19
+- link "小球能否逃离全部圆环？":
+  - /url: /video/BV16qYozFEBT/?spm_id_from=333.788.recommend_more_video.2&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 小球能否逃离全部圆环？
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 12.7万
+- text: "46"
+- link "黑洞吸引吞噬小球":
+  - /url: /video/BV1gSuLzqEKR/?spm_id_from=333.788.recommend_more_video.3&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "黑洞吸引吞噬小球"
+- generic: 01:04
+- link "黑洞吸引吞噬小球":
+  - /url: /video/BV1gSuLzqEKR/?spm_id_from=333.788.recommend_more_video.3&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 黑洞吸引吞噬小球
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 6.7万
+- text: "27"
+- link "镐子能否在视频结束前 升级为下界合金镐呢？":
+  - /url: /video/BV1wzczeCEZM/?spm_id_from=333.788.recommend_more_video.4&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "镐子能否在视频结束前 升级为下界合金镐呢？"
+- generic: 00:44
+- link "镐子能否在视频结束前 升级为下界合金镐呢？":
+  - /url: /video/BV1wzczeCEZM/?spm_id_from=333.788.recommend_more_video.4&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 镐子能否在视频结束前 升级为下界合金镐呢？
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 14.3万
+- text: "39"
+- link "小球每次反弹 都会添加超级细线":
+  - /url: /video/BV1PVgbzYEAb/?spm_id_from=333.788.recommend_more_video.5&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "小球每次反弹 都会添加超级细线"
+- generic: 01:28
+- link "小球每次反弹 都会添加超级细线":
+  - /url: /video/BV1PVgbzYEAb/?spm_id_from=333.788.recommend_more_video.5&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 小球每次反弹 都会添加超级细线
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 25.5万
+- text: "416"
+- link "白球被看着时不能行动，哪些小球可以逃出":
+  - /url: /video/BV1rzkJYTEzE/?spm_id_from=333.788.recommend_more_video.6&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "白球被看着时不能行动，哪些小球可以逃出"
+- generic: 00:36
+- link "白球被看着时不能行动，哪些小球可以逃出":
+  - /url: /video/BV1rzkJYTEzE/?spm_id_from=333.788.recommend_more_video.6&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 白球被看着时不能行动，哪些小球可以逃出
+- link "芝麻拍瓦":
+  - /url: //space.bilibili.com/29776799/
+  - generic: 芝麻拍瓦
+- text: 101.8万
+- text: "190"
+- link "小球每次反弹 都会加速5%":
+  - /url: /video/BV1YEd6YEE8o/?spm_id_from=333.788.recommend_more_video.7&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "小球每次反弹 都会加速5%"
+- generic: 00:59
+- link "小球每次反弹 都会加速5%":
+  - /url: /video/BV1YEd6YEE8o/?spm_id_from=333.788.recommend_more_video.7&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 小球每次反弹 都会加速5%
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 10.1万
+- text: "63"
+- link "斐波那契球 VS 分裂球 谁会获胜？":
+  - /url: /video/BV1A5Yqz5EUk/?spm_id_from=333.788.recommend_more_video.8&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "斐波那契球 VS 分裂球 谁会获胜？"
+- generic: 00:46
+- link "斐波那契球 VS 分裂球 谁会获胜？":
+  - /url: /video/BV1A5Yqz5EUk/?spm_id_from=333.788.recommend_more_video.8&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 斐波那契球 VS 分裂球 谁会获胜？
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 15.8万
+- text: "38"
+- link "国土面积排名弹弹弹":
+  - /url: /video/BV1jakeYMEU1/?spm_id_from=333.788.recommend_more_video.9&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "国土面积排名弹弹弹"
+- generic: 00:47
+- link "国土面积排名弹弹弹":
+  - /url: /video/BV1jakeYMEU1/?spm_id_from=333.788.recommend_more_video.9&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 国土面积排名弹弹弹
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 28.5万
+- text: "165"
+- link "小球每次反弹都会增加一条线 并且加速":
+  - /url: /video/BV1Lp7szxEeE/?spm_id_from=333.788.recommend_more_video.10&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "小球每次反弹都会增加一条线 并且加速"
+- generic: 00:59
+- link "小球每次反弹都会增加一条线 并且加速":
+  - /url: /video/BV1Lp7szxEeE/?spm_id_from=333.788.recommend_more_video.10&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 小球每次反弹都会增加一条线 并且加速
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 61.5万
+- text: "446"
+- link "小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？":
+  - /url: /video/BV1NBAJe8Ero/?spm_id_from=333.788.recommend_more_video.11&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？"
+- generic: 00:51
+- link "小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？":
+  - /url: /video/BV1NBAJe8Ero/?spm_id_from=333.788.recommend_more_video.11&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 小球碰撞到同色边界就会被摧毁，哪队小球能存活到最后？
+- link "芝麻拍瓦":
+  - /url: //space.bilibili.com/29776799/
+  - generic: 芝麻拍瓦
+- text: 14万
+- text: "82"
+- link "小球每次反弹 速度都会提升":
+  - /url: /video/BV1ZhaGzaEC9/?spm_id_from=333.788.recommend_more_video.12&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "小球每次反弹 速度都会提升"
+- generic: 00:41
+- link "小球每次反弹 速度都会提升":
+  - /url: /video/BV1ZhaGzaEC9/?spm_id_from=333.788.recommend_more_video.12&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 小球每次反弹 速度都会提升
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 12.4万
+- text: "69"
+- link "小球反弹分裂 但黑洞吞噬变大":
+  - /url: /video/BV13gubzrEL1/?spm_id_from=333.788.recommend_more_video.13&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "小球反弹分裂 但黑洞吞噬变大"
+- generic: 01:02
+- link "小球反弹分裂 但黑洞吞噬变大":
+  - /url: /video/BV13gubzrEL1/?spm_id_from=333.788.recommend_more_video.13&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 小球反弹分裂 但黑洞吞噬变大
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 10.2万
+- text: "46"
+- link "失去所有线条的小球被淘汰-战斗版":
+  - /url: /video/BV16hmZY9E5X/?spm_id_from=333.788.recommend_more_video.14&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "失去所有线条的小球被淘汰-战斗版"
+- generic: 01:05
+- link "失去所有线条的小球被淘汰-战斗版":
+  - /url: /video/BV16hmZY9E5X/?spm_id_from=333.788.recommend_more_video.14&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 失去所有线条的小球被淘汰-战斗版
+- link "瘤神月牙兔":
+  - /url: //space.bilibili.com/1736994467/
+  - generic: 瘤神月牙兔
+- text: 1.5万
+- text: "4"
+- link "小球能否到达漩涡中心？":
+  - /url: /video/BV1RRUzBZEZd/?spm_id_from=333.788.recommend_more_video.15&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "小球能否到达漩涡中心？"
+- generic: 00:22
+- link "小球能否到达漩涡中心？":
+  - /url: /video/BV1RRUzBZEZd/?spm_id_from=333.788.recommend_more_video.15&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 小球能否到达漩涡中心？
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 50.3万
+- text: "67"
+- link "小球每跳一次就是一年":
+  - /url: /video/BV1CpB9BDENS/?spm_id_from=333.788.recommend_more_video.16&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "小球每跳一次就是一年"
+- generic: 00:30
+- link "小球每跳一次就是一年":
+  - /url: /video/BV1CpB9BDENS/?spm_id_from=333.788.recommend_more_video.16&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 小球每跳一次就是一年
+- link "菠萝蜜欧皇":
+  - /url: //space.bilibili.com/438583636/
+  - generic: 菠萝蜜欧皇
+- text: 19.2万
+- text: "2832"
+- link "神级弹珠装置！视觉治愈！":
+  - /url: /video/BV19gkzBTEGh/?spm_id_from=333.788.recommend_more_video.17&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "神级弹珠装置！视觉治愈！"
+- generic: 00:35
+- link "神级弹珠装置！视觉治愈！":
+  - /url: /video/BV19gkzBTEGh/?spm_id_from=333.788.recommend_more_video.17&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 神级弹珠装置！视觉治愈！
+- link "Blender物理模拟":
+  - /url: //space.bilibili.com/486405080/
+  - generic: Blender物理模拟
+- text: 26.4万
+- text: "36"
+- link "水模拟之粘稠度（0-1000）":
+  - /url: /video/BV1Lhu3zPEou/?spm_id_from=333.788.recommend_more_video.18&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - img "水模拟之粘稠度（0-1000）"
+- generic: 00:26
+- link "水模拟之粘稠度（0-1000）":
+  - /url: /video/BV1Lhu3zPEou/?spm_id_from=333.788.recommend_more_video.18&trackid=web_related_0.router-related-2479604-6dnm7.1794367989338.208
+  - paragraph: 水模拟之粘稠度（0-1000）
+- link "拉Box的潘潘":
+  - /url: //space.bilibili.com/502450106/
+  - generic: 拉Box的潘潘
+- text: 18.4万
+- text: "37"
+- generic: 展开
+- link "【bilibili公考季】活动火热进行中>>":
+  - /url: https://www.bilibili.com/blackboard/era/4u3QvtcA9ZtEVbJp.html?spm_id_from=333.337.0.0&spm_id_from=333.788.right_bottom.adfloor-3038.click
+  - generic: 【bilibili公考季】活动火热进行中>>

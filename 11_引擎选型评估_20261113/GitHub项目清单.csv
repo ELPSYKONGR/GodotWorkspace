@@ -1,0 +1,26 @@
+﻿仓库,GitHub链接,定位,许可证核查结论,核查层级,最近推送_UTC,可借鉴部分,边界与限制,证据记录
+godotengine/godot,https://github.com/godotengine/godot,完整引擎与编辑器,MIT,API＋官方功能文档源码,2026-11-12,2D/3D、场景编辑、物理、GUI和MovieMaker,机制、回放与视频业务面板需开发,sources/native_research.md
+godotengine/godot-demo-projects,https://github.com/godotengine/godot-demo-projects,官方示例,MIT,API＋README,2026-10-08,物理、GUI和场景学习基准,不是现成视频工作台,sources/native_research.md
+godot-jolt/godot-jolt,https://github.com/godot-jolt/godot-jolt,独立3D物理扩展,MIT,API＋README,2026-03-16,Jolt接入参考,Godot4.4起内置；独立扩展维护模式,sources/native_research.md
+blender/blender,https://github.com/blender/blender,3D内容制作与渲染,GPL；已读COPYING及GPL文本,API＋官方源码,2026-11-12,摆物、材质、相机、文字、烘焙和离线渲染,不是现成自由碰撞分裂机制运行器,sources/native_research.md
+UPBGE/upbge,https://github.com/UPBGE/upbge,Blender衍生运行引擎,衍生授权完整范围本轮未核实,API＋README,2026-11-12,已有Blender/BGE经验团队的备选,逐帧视频与机制闭环未验证,sources/native_research.md
+bevyengine/bevy,https://github.com/bevyengine/bevy,Rust引擎,MIT / Apache-2.0双授权,API＋README,2026-11-13,2D/3D基础、UI、工具及运行时,完整所需编辑器和视频工作流仍需建设,sources/native_research.md
+o3de/o3de,https://github.com/o3de/o3de,3D引擎,README称Apache-2.0；多组件范围未完整核实,API＋README,2026-11-12,复杂3D工程备选,本需求下工具链和维护成本偏大,sources/native_research.md
+BabylonJS/Babylon.js,https://github.com/BabylonJS/Babylon.js,Web3D引擎,Apache-2.0,API＋README＋官方物理文档,2026-11-13T03:27:01Z,渲染、GUI、调试、Havok接入,真正2D需另接；不是独立视频软件,sources/web_research.md
+BabylonJS/Editor,https://github.com/BabylonJS/Editor,桌面3D编辑器,Apache-2.0,API＋README＋未截断源码树模块,2026-11-13T00:47:45Z,选择变换、撤销、材质及物理检查器,工程导出不等于逐帧MP4；模块未逐个运行验收,sources/web_research.md
+BabylonJS/havok,https://github.com/BabylonJS/havok,Havok Web运行时,packages/havok/LICENSE实文MIT,API＋README＋实际包内LICENSE,2026-07-27T10:10:31Z,Babylon官方3D物理接入,分发WASM/JS不等于完整Havok C++源码开放,sources/web_research.md
+dimforge/rapier,https://github.com/dimforge/rapier,2D/3D物理核心,Apache-2.0,API＋README＋官方CCD与确定性文档,2026-11-01T21:48:29Z,刚体、CCD、碰撞事件、快照,确定性有版本/数据/顺序条件；不是编辑器,sources/web_research.md
+dimforge/rapier.js,https://github.com/dimforge/rapier.js,旧JS绑定仓库,本轮未重新核对旧仓完整许可,API归档状态＋迁移说明,,仅用于追溯旧资料,已归档；选主仓当前bindings,sources/web_research.md
+mrdoob/three.js,https://github.com/mrdoob/three.js,3D渲染库,MIT,API＋README,2026-11-12T16:14:29Z,渲染与editor示例,不是完整物理和创作工作台,sources/web_research.md
+pmndrs/react-three-rapier,https://github.com/pmndrs/react-three-rapier,R3F的Rapier3D封装,MIT,API＋README,2026-10-12T05:06:24Z,碰撞事件、手动步进、快照与调试,独立2D后端和产品编辑器仍需开发,sources/web_research.md
+playcanvas/engine,https://github.com/playcanvas/engine,Web渲染/游戏引擎,MIT,API＋README,2026-11-13T02:13:06Z,2D/3D图形与3D物理接入,图形2D不等同独立2D刚体编辑器,sources/web_research.md
+playcanvas/editor,https://github.com/playcanvas/editor,浏览器编辑器前端,MIT,API＋实际README开发步骤,2026-11-12T12:05:28Z,可视场景编辑,本地开发依赖线上场景服务；完整离线后端未核实,sources/web_research.md
+playcanvas/editor-mcp-server,https://github.com/playcanvas/editor-mcp-server,编辑器AI接入,MIT,API＋Editor README链接,2026-11-11T21:29:50Z,AI检查修改编辑会话,未验收完整自动化协议与离线范围,sources/web_research.md
+liabru/matter-js,https://github.com/liabru/matter-js,2D物理,MIT,API＋README,2026-09-30T17:14:46Z,二维球、墙、约束与传感器,不提供通用3D,sources/web_research.md
+phaserjs/phaser,https://github.com/phaserjs/phaser,2D框架,MIT,API＋README,2026-08-21T06:56:13Z,二维内容与Arcade/Matter物理,不满足全3D目标,sources/web_research.md
+4ian/GDevelop,https://github.com/4ian/GDevelop,"🎮 Open-source, cross-platform 2D/3D/multiplayer game engine designed for everyone.",本轮未确认明确许可；API空值/NOASSERTION不等于无授权,仅公共元数据；raw正文读取失败已记录,2026-11-12T18:29:54Z,机制/工具候选，未运行,未完成完整编辑、机制与视频闭环核查,sources/additional_repositories.json
+liabru/matter-tools,https://github.com/liabru/matter-tools,"tools for creating, testing and debugging matter.js worlds",MIT,仅公共元数据；raw正文读取失败已记录,2022-11-10T13:14:58Z,机制/工具候选，未运行,未完成完整编辑、机制与视频闭环核查,sources/additional_repositories.json
+JustLachin/ring-escape,https://github.com/JustLachin/ring-escape,A satisfying physics simulation where a glowing ball breaks free from concentric rings. Inspired by viral TikTok and Instagram Reels trends. Built with Matter.js.,本轮未确认明确许可；API空值/NOASSERTION不等于无授权,仅公共元数据；raw正文读取失败已记录,2026-03-21T13:11:12Z,机制/工具候选，未运行,未完成完整编辑、机制与视频闭环核查,sources/additional_repositories.json
+bikramadhikari001/engaging-animations,https://github.com/bikramadhikari001/engaging-animations,Satisfying physics simulations & AI pong — auto-generated TikTok videos via GitHub Actions,本轮未确认明确许可；API空值/NOASSERTION不等于无授权,仅公共元数据；raw正文读取失败已记录,2026-11-13T02:23:27Z,机制/工具候选，未运行,未完成完整编辑、机制与视频闭环核查,sources/additional_repositories.json
+QuantumZain/chaotic-system,https://github.com/QuantumZain/chaotic-system,Balls bouncing in a ring. This simulation outlines how chaos emerges from a simple ball bouncing around in a ring. This code was inspired by a numberphile video on chaos-theory.,MIT,仅公共元数据；raw正文读取失败已记录,2024-02-13T10:26:01Z,机制/工具候选，未运行,未完成完整编辑、机制与视频闭环核查,sources/additional_repositories.json
+Sarish002/BallSimulation,https://github.com/Sarish002/BallSimulation,Package to help you make Bouncing Ball Physics Simulations.,本轮未确认明确许可；API空值/NOASSERTION不等于无授权,仅公共元数据；raw正文读取失败已记录,2026-06-19T17:58:16Z,机制/工具候选，未运行,未完成完整编辑、机制与视频闭环核查,sources/additional_repositories.json

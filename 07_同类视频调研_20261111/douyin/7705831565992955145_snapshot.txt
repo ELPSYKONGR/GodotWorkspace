@@ -1,0 +1,425 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link:
+  - /url: //www.douyin.com/jingxuan
+- link "精选":
+  - /url: https://www.douyin.com/jingxuan?from_nav=1
+  - generic: 精选
+- link "推荐":
+  - /url: https://www.douyin.com/?recommend=1&from_nav=1
+  - generic: 推荐
+- link "AI抖音":
+  - /url: https://www.douyin.com/aisearch?from_nav=1
+  - generic: AI抖音
+- link "关注":
+  - /url: https://www.douyin.com/follow?from_nav=1
+  - generic: 关注
+- link "朋友":
+  - /url: https://www.douyin.com/friend?from_nav=1
+  - generic: 朋友
+- link "我的":
+  - /url: https://www.douyin.com/user/self?from_nav=1
+  - generic: 我的
+- link "直播":
+  - /url: https://live.douyin.com/?from_nav=1
+  - generic: 直播
+- link "放映厅":
+  - /url: https://www.douyin.com/vs?from_nav=1
+  - generic: 放映厅
+- link "短剧":
+  - /url: https://www.douyin.com/series?from_nav=1
+  - generic: 短剧
+- link "小游戏":
+  - /url: https://www.douyin.com/microgame?from_nav=1
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+  - /url: https://beian.miit.gov.cn/
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - generic: 解压视频
+  - textbox
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: https://www.douyin.com/download/pc/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-downloader-v8.7.0-win32-ia32-douyincold.exe
+    - paragraph: 客户端
+  - generic: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - button "登录":
+    - paragraph: 登录
+- generic: 00:48
+- generic: /
+- generic: 00:49
+- generic: 倍速
+- generic: 智能
+- button
+- generic: 清屏
+- button
+- generic: 连播
+- generic: 我进辐射区了？
+- generic: 要来力
+- generic: 完了完了 这下好了
+- generic: 少了一个
+- generic: 享福了
+- generic: 哦出来了啊
+- generic: 爆米花
+- generic: 三级辐射
+- generic: "10"
+- generic: 我的耳朵
+- generic: 四战转折点
+- generic: 不要会坏掉的
+- generic: 链式反应
+- generic: 4级辐射50公里内快速撤离
+- generic: "15"
+- generic: 找出最开始的白球
+- generic: 癌细胞的速度
+- generic: 加快万亿倍就是核爆炸的瞬间了
+- generic: 像我以后的财运一样
+- generic: 兄弟完了，废了
+- generic: 1s 后循环播放当前视频
+- 'heading "Blender | 这个动画太有创意还解压！ #世界渲染大赛#3D#动画#CG#设计" [level=1]':
+  - generic: Blender | 这个动画太有创意还解压！
+  - link "#世界渲染大赛":
+    - /url: //www.douyin.com/search/%E4%B8%96%E7%95%8C%E6%B8%B2%E6%9F%93%E5%A4%A7%E8%B5%9B?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#3D":
+    - /url: //www.douyin.com/search/3D?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#动画":
+    - /url: //www.douyin.com/search/%E5%8A%A8%E7%94%BB?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#CG":
+    - /url: //www.douyin.com/search/CG?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#设计":
+    - /url: //www.douyin.com/search/%E8%AE%BE%E8%AE%A1?enter_from=video_detail&source=pc_click_hashtag_feed
+- generic: 2.5万
+- generic: "506"
+- generic: "1161"
+- generic: 1.6万
+- generic: 举报
+- generic: 发布时间：2026-11-09 00:02
+- generic: 全部评论
+- generic: 请先登录后发表评论
+- generic: 大家都在搜：
+- link "解压视频":
+  - /url: //www.douyin.com/search/%E8%A7%A3%E5%8E%8B%E8%A7%86%E9%A2%91?aweme_id=7705831565992955145&enter_from=video_detail&gid=7705831565992955145&source=comment_related_search
+  - generic: 解压视频
+- link "冷猫":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAL5KgjD6qJF_S2jqTVXje-SHkmhOLzj9OJoA1cGyKtd8
+  - generic: 冷猫
+- generic: ...
+- generic: 这声音像盖革计数器
+- generic: 2天前·四川
+- paragraph:
+  - generic: "35"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开2条回复":
+  - generic: 展开2条回复
+- link "朱無風":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAs4zf7umZDNKSrdBEHH5mQx_ERGAq6beCKK5BvgN8E8E
+  - generic: 朱無風
+- generic: ...
+- generic: 爆米花？
+- generic: 1天前·上海
+- paragraph:
+  - generic: "0"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开1条回复":
+  - generic: 展开1条回复
+- link "111":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAkWCE-vzt6zlLQba8icuY8prX7mcYpP5lOeps9xXZlF8
+  - generic: "111"
+- generic: ...
+- generic: 什么原理？
+- generic: 1天前·福建
+- paragraph:
+  - generic: "6"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开5条回复":
+  - generic: 展开5条回复
+- link "空空如也":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAO-Ph6zce-q_B4pRh2KwwDP4XxmmkOcH0LB1cgn8YtAM
+  - generic: 空空如也
+- generic: ...
+- generic: 找出最开始那颗球
+- generic: 1天前·浙江
+- paragraph:
+  - generic: "191"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开6条回复":
+  - generic: 展开6条回复
+- link "⚡️":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAYnIPUycOB_w3k4sL128ESVznbsVnCbxOWyqSscdz2QRyb5yMwnCwMicSHC0N2DaG
+  - img "⚡️"
+- generic: ...
+- text: 我的钱以后也这样
+- img "[捂脸]"
+- generic: 12小时前·湖南
+- paragraph:
+  - generic: "4"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开2条回复":
+  - generic: 展开2条回复
+- generic: 登录后即可参与互动讨论
+- button "立即登录":
+  - generic: 立即登录
+- link "AOV视觉科学":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAV3xkaFyXWHtTmbtMdfovk2tLNNbZucYRbJGQdL9zwJk
+  - img "AOV视觉科学"
+- link "AOV视觉科学":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAV3xkaFyXWHtTmbtMdfovk2tLNNbZucYRbJGQdL9zwJk
+  - generic: AOV视觉科学
+- paragraph: 粉丝2.8万获赞78.3万
+- button "关注":
+  - generic: 关注
+- heading "推荐视频" [level=2]
+- list:
+  - 'link "《你，拥有无限可能》 世界不止一种答案， 你也不必只活成一种样子。#原创动画 #艺术 #设计 #励志 00:15"':
+    - /url: //www.douyin.com/video/7701871068349455089
+    - 'img "《你，拥有无限可能》 世界不止一种答案， 你也不必只活成一种样子。#原创动画 #艺术 #设计 #励志"'
+    - generic: 00:15
+  - 'heading "《你，拥有无限可能》 世界不止一种答案， 你也不必只活成一种样子。#原创动画 #艺术 #设计 #励志" [level=3]':
+    - 'link "《你，拥有无限可能》 世界不止一种答案， 你也不必只活成一种样子。#原创动画 #艺术 #设计 #励志"':
+      - /url: //www.douyin.com/video/7701871068349455089
+      - generic: 《你，拥有无限可能》 世界不止一种答案，
+      - generic: "你也不必只活成一种样子。#原创动画 #艺术 #设计 #励志"
+  - text: 4.8万
+  - link "小张，Zyh":
+    - /url: //www.douyin.com/user/MS4wLjABAAAA6om4FstVHr-XKWJHCpkfDWr7gGM3XYDwViArNBrGs_o?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111113234CD4D142F316CD3750567%22%7D&relation=0
+    - generic: 小张，Zyh
+  - 'link "小球演奏《Verity》 #verity #我的世界 #minecraft #解压 #创意 00:18"':
+    - /url: //www.douyin.com/video/7681884889620254003
+    - 'img "小球演奏《Verity》 #verity #我的世界 #minecraft #解压 #创意"'
+    - generic: 00:18
+  - 'heading "小球演奏《Verity》 #verity #我的世界 #minecraft #解压 #创意" [level=3]':
+    - 'link "小球演奏《Verity》 #verity #我的世界 #minecraft #解压 #创意"':
+      - /url: //www.douyin.com/video/7681884889620254003
+      - generic: "小球演奏《Verity》 #verity #我的世界 #minecraft #解压 #创意"
+  - text: "5563"
+  - link "Anao小球":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAQ5bapI1TviN4eLtwL8wSL1VtOlwSKCvUahJz26l_cbmKFNvH8wsXrLmPtigxtwCD?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111113234CD4D142F316CD3750567%22%7D&relation=0
+    - generic: Anao小球
+  - 'link "小鳞和砂糖 精彩冒险一次看过瘾！#ai #原创动画#搞笑动画 #皮克斯 #动画 05:27"':
+    - /url: //www.douyin.com/video/7697919897032035618
+    - 'img "小鳞和砂糖 精彩冒险一次看过瘾！#ai #原创动画#搞笑动画 #皮克斯 #动画"'
+    - generic: 05:27
+  - 'heading "小鳞和砂糖 精彩冒险一次看过瘾！#ai #原创动画#搞笑动画 #皮克斯 #动画" [level=3]':
+    - 'link "小鳞和砂糖 精彩冒险一次看过瘾！#ai #原创动画#搞笑动画 #皮克斯 #动画"':
+      - /url: //www.douyin.com/video/7697919897032035618
+      - generic: "小鳞和砂糖 精彩冒险一次看过瘾！#ai #原创动画#搞笑动画 #皮克斯 #动画"
+  - text: 6.0万
+  - link "小鳞":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAXFc_Eap8zIDGn0ue90K3Ua0kKvuw8uDI7H-M8DIR-R5okpLbu9hRVrcNzCCCfwjy?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111113234CD4D142F316CD3750567%22%7D&relation=0
+    - generic: 小鳞
+  - 'link "拳击高手 VS 天气预报员 谁会获胜？ #解压 #polo小球 #视觉震撼 #星球动画 00:13"':
+    - /url: //www.douyin.com/video/7687232547730745851
+    - 'img "拳击高手 VS 天气预报员 谁会获胜？ #解压 #polo小球 #视觉震撼 #星球动画"'
+    - generic: 00:13
+  - 'heading "拳击高手 VS 天气预报员 谁会获胜？ #解压 #polo小球 #视觉震撼 #星球动画" [level=3]':
+    - 'link "拳击高手 VS 天气预报员 谁会获胜？ #解压 #polo小球 #视觉震撼 #星球动画"':
+      - /url: //www.douyin.com/video/7687232547730745851
+      - generic: "拳击高手 VS 天气预报员 谁会获胜？ #解压 #polo小球 #视觉震撼 #星球动画"
+  - text: 1.0万
+  - link "polo小球":
+    - /url: //www.douyin.com/user/MS4wLjABAAAA1mTkI8Zc35G4N19cfnGeHmaf3jsty707ZxFBhNEu8czUnMurY3F3UhQIjk7fhwT8?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111113234CD4D142F316CD3750567%22%7D&relation=0
+    - generic: polo小球
+  - 'link "sprunki节奏盒子音乐节奏！ #sprunki #节奏盒子 #动画#音乐节奏 04:28"':
+    - /url: //www.douyin.com/video/7686504598420426038
+    - 'img "sprunki节奏盒子音乐节奏！ #sprunki #节奏盒子 #动画#音乐节奏"'
+    - generic: 04:28
+  - 'heading "sprunki节奏盒子音乐节奏！ #sprunki #节奏盒子 #动画#音乐节奏" [level=3]':
+    - 'link "sprunki节奏盒子音乐节奏！ #sprunki #节奏盒子 #动画#音乐节奏"':
+      - /url: //www.douyin.com/video/7686504598420426038
+      - generic: "sprunki节奏盒子音乐节奏！ #sprunki #节奏盒子 #动画#音乐节奏"
+  - text: "1020"
+  - link "小光吖":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAG2TaQcad0V5LDfnSF2eeRpe8nkJvKzJYoYA8Bm-_J1gI2KWZWTnjELo3SLzFYeLU?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111113234CD4D142F316CD3750567%22%7D&relation=0
+    - generic: 小光吖
+  - 'link "AI的76年，91秒一镜到底。 画面由Opus5.5编写的代码实时渲染。迭代完善了几轮，一天内完成的视频制作。 #vibe知识大赏 01:31"':
+    - /url: //www.douyin.com/video/7690160210039622946
+    - 'img "AI的76年，91秒一镜到底。 画面由Opus5.5编写的代码实时渲染。迭代完善了几轮，一天内完成的视频制作。 #vibe知识大赏"'
+    - generic: 01:31
+  - 'heading "AI的76年，91秒一镜到底。 画面由Opus5.5编写的代码实时渲染。迭代完善了几轮，一天内完成的视频制作。 #vibe知识大赏" [level=3]':
+    - 'link "AI的76年，91秒一镜到底。 画面由Opus5.5编写的代码实时渲染。迭代完善了几轮，一天内完成的视频制作。 #vibe知识大赏"':
+      - /url: //www.douyin.com/video/7690160210039622946
+      - generic: "AI的76年，91秒一镜到底。 画面由Opus5.5编写的代码实时渲染。迭代完善了几轮，一天内完成的视频制作。 #vibe知识大赏"
+  - text: 2.0万
+  - link "YZ":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAK8v1NA6V9G1PYOiaX4jBNf6dDZROUnfv6_ehojgI5xw?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111113234CD4D142F316CD3750567%22%7D&relation=0
+    - generic: YZ
+  - 'link "球撞击到翻倍球便会相应数值翻倍。#几何图形 #解压 00:32"':
+    - /url: //www.douyin.com/video/7698341422738736059
+    - 'img "球撞击到翻倍球便会相应数值翻倍。#几何图形 #解压"'
+    - generic: 00:32
+  - 'heading "球撞击到翻倍球便会相应数值翻倍。#几何图形 #解压" [level=3]':
+    - 'link "球撞击到翻倍球便会相应数值翻倍。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7698341422738736059
+      - generic: "球撞击到翻倍球便会相应数值翻倍。#几何图形 #解压"
+  - text: "2380"
+  - link "探索宇宙":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111113234CD4D142F316CD3750567%22%7D&relation=0
+    - generic: 探索宇宙
+  - 'link "第十三届渲染大赛黑马作品 #第十三届世界渲染大赛 #渲染 #抽象 #秦始皇骑北极熊 #blender 00:08"':
+    - /url: //www.douyin.com/video/7673503700543130907
+    - 'img "第十三届渲染大赛黑马作品 #第十三届世界渲染大赛 #渲染 #抽象 #秦始皇骑北极熊 #blender"'
+    - generic: 00:08
+  - 'heading "第十三届渲染大赛黑马作品 #第十三届世界渲染大赛 #渲染 #抽象 #秦始皇骑北极熊 #blender" [level=3]':
+    - 'link "第十三届渲染大赛黑马作品 #第十三届世界渲染大赛 #渲染 #抽象 #秦始皇骑北极熊 #blender"':
+      - /url: //www.douyin.com/video/7673503700543130907
+      - generic: "第十三届渲染大赛黑马作品 #第十三届世界渲染大赛 #渲染 #抽象 #秦始皇骑北极熊 #blender"
+  - text: 5.7万
+  - link "古法建模":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAWIqiEH-kecETQIJT0rCfWjfJVzy-gA3gIJDWAwc9qEA?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111113234CD4D142F316CD3750567%22%7D&relation=0
+    - generic: 古法建模
+  - 'link "它们谁能获得胜利？#几何图形 #解压 01:07"':
+    - /url: //www.douyin.com/video/7684444900621264485
+    - 'img "它们谁能获得胜利？#几何图形 #解压"'
+    - generic: 01:07
+  - 'heading "它们谁能获得胜利？#几何图形 #解压" [level=3]':
+    - 'link "它们谁能获得胜利？#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7684444900621264485
+      - generic: "它们谁能获得胜利？#几何图形 #解压"
+  - text: 2.8万
+  - link "探索宇宙":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111113234CD4D142F316CD3750567%22%7D&relation=0
+    - generic: 探索宇宙
+  - 'link "NO.43 超燃战歌 Victory #音乐可视化#纯音乐#治愈音乐#解压视频#抖音创作者大会 05:21"':
+    - /url: //www.douyin.com/video/7675310865721167156
+    - 'img "NO.43 超燃战歌 Victory #音乐可视化#纯音乐#治愈音乐#解压视频#抖音创作者大会"'
+    - generic: 05:21
+  - 'heading "NO.43 超燃战歌 Victory #音乐可视化#纯音乐#治愈音乐#解压视频#抖音创作者大会" [level=3]':
+    - 'link "NO.43 超燃战歌 Victory #音乐可视化#纯音乐#治愈音乐#解压视频#抖音创作者大会"':
+      - /url: //www.douyin.com/video/7675310865721167156
+      - generic: "NO.43 超燃战歌 Victory #音乐可视化#纯音乐#治愈音乐#解压视频#抖音创作者大会"
+  - text: 1.8万
+  - link "音乐小球":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAgE_qOkZCmgClrU94giU5VbB2tgTevZw75EZ0jnjZtse2-o-WEcPbzjLL91J0IfK0?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111113234CD4D142F316CD3750567%22%7D&relation=0
+    - generic: 音乐小球
+- contentinfo:
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+  - link "网络谣言曝光台 ｜":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: ｜ 违法和不良信息举报：400-140-2108 feedback@douyin.com ｜ 算法推荐专项举报：sfjubao@bytedance.com | 体育饭圈专项举报：tyfq@bytedance.com
+  - link "京ICP备16016397号-3":
+    - /url: https://beian.miit.gov.cn/
+  - generic: ｜ 信息网络传播视听节目许可证 0126733
+  - generic: ｜ 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: ｜ 增值电信业务经营许可证 京B2-20170846
+  - generic: ｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜
+  - img "icon"
+  - link "京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+  - generic: ｜ 互联网宗教信息服务许可证 京（2025）0000017 ｜
+  - img "icon"
+  - link "电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+  - link "｜（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - generic: 热门：
+  - link "游戏攻略":
+    - /url: https://www.douyin.com/jingxuan/game
+  - link "抖音游戏":
+    - /url: https://www.douyin.com/jingxuan/game
+  - link "醒世恒言":
+    - /url: https://www.douyin.com/user/MS4wLjABAAAAMpYTlG_PgmAjvr74GzlKzpjeXMTu380zL5KNCpsl7uMKxi8FTMUGLk2OdrlxPIRG
+  - 'link "东营单招技能实操有哪些。东营单招技能实操有哪些。山东起航教育注重能力塑造。单招阶段性学习结束后要复盘目标完成进度，培训机构协助学员复盘学习成果，动态优化后续学习计划。老师拆解完整解题步骤，引导学生抓取题干关键信息，稳步提升解题能力。 #单招技能实操 #德州单招机构 #潍坊单招培训机构 #枣庄单招培训学校 #单招技能实操哪个好"':
+    - /url: https://www.douyin.com/note/7705837432054320447
+  - link "神农架高考":
+    - /url: https://www.douyin.com/topic/7509879072713902119
+  - link "2025高考物理考试时间":
+    - /url: https://www.douyin.com/shipin/7509900252867135551
+  - link "湖南高考成绩查询往届":
+    - /url: https://www.douyin.com/search/%E6%B9%96%E5%8D%97%E9%AB%98%E8%80%83%E6%88%90%E7%BB%A9%E6%9F%A5%E8%AF%A2%E5%BE%80%E5%B1%8A
+  - link "第十届阿里巴巴公益榜":
+    - /url: https://www.douyin.com/video/7618069286443426033?source=Baiduspider
+  - 'link "济宁中考志愿填报到底是什么逻辑？你可以不选，但是必须是在了解过之后再做决定！一中科技班，实验元培班，育才珠峰班到底该怎么选？#中考志愿填报 #经验分享 #孔老师聊升学 #孔老师小助理"':
+    - /url: https://www.douyin.com/video/7357010938915998988?source=Baiduspider
+  - 'link "母亲的智慧 是孩子道德发展的源泉 #木门 #无漆木门 #3D无漆木门全屋定制 #室内套装门 #做好自己 @冰淇淋宁哥"':
+    - /url: https://www.douyin.com/video/7341644011389717770?source=Baiduspider
+  - link:
+    - /url: https://www.douyin.com/video/7585788267578314033?source=Baiduspider-sdc
+  - link "鸽子新学的《除了你》太好听了，好治愈的声音！@音乐浪子🔥⁹²¹（收才艺新人）":
+    - /url: https://www.douyin.com/video/7483768640056102180?source=Baiduspider
+  - 'link "ug入门建模案例每日一练，异形水杯建模全流程讲解。 操作上有不懂的就问出来哈。#ug建模 #ug学习 #ug基础教学 #ug编程 #数控编程"':
+    - /url: https://www.douyin.com/video/7441572856166616361?source=Baiduspider
+  - 'link "专业歌手降维打击到底有多狠？郁可唯一开口，才知什么是差距！ #专业歌手翻唱网红歌曲 #吴碧霞 #郁可唯 #周深"':
+    - /url: https://www.douyin.com/video/7181076198858951996?source=Baiduspider-sdc

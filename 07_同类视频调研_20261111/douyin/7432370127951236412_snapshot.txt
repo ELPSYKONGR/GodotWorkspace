@@ -1,0 +1,507 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link:
+  - /url: //www.douyin.com/jingxuan
+- link "精选":
+  - /url: https://www.douyin.com/jingxuan?from_nav=1
+  - generic: 精选
+- link "推荐":
+  - /url: https://www.douyin.com/?recommend=1&from_nav=1
+  - generic: 推荐
+- link "AI抖音":
+  - /url: https://www.douyin.com/aisearch?from_nav=1
+  - generic: AI抖音
+- link "关注":
+  - /url: https://www.douyin.com/follow?from_nav=1
+  - generic: 关注
+- link "朋友":
+  - /url: https://www.douyin.com/friend?from_nav=1
+  - generic: 朋友
+- link "我的":
+  - /url: https://www.douyin.com/user/self?from_nav=1
+  - generic: 我的
+- link "直播":
+  - /url: https://live.douyin.com/?from_nav=1
+  - generic: 直播
+- link "放映厅":
+  - /url: https://www.douyin.com/vs?from_nav=1
+  - generic: 放映厅
+- link "短剧":
+  - /url: https://www.douyin.com/series?from_nav=1
+  - generic: 短剧
+- link "小游戏":
+  - /url: https://www.douyin.com/microgame?from_nav=1
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+  - /url: https://beian.miit.gov.cn/
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - generic: 星际穿越
+  - textbox
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: https://www.douyin.com/download/pc/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-downloader-v8.7.0-win32-ia32-douyincold.exe
+    - paragraph: 客户端
+  - generic: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - button "登录":
+    - paragraph: 登录
+- generic: 00:53
+- generic: /
+- generic: 01:01
+- generic: 倍速
+- generic: 智能
+- button
+- generic: 清屏
+- button
+- generic: 连播
+- generic: 幻术吗，什么时候
+- generic: "9861"
+- generic: 这回忆的漩涡快要把我吞没。
+- generic: 是时候来了 星际穿越！
+- generic: 这回忆的漩涡，快要把我吞没
+- generic: 影视飓风
+- generic: 神威!
+- generic: 《今年的台风》
+- generic: 初号机神化
+- generic: "3551"
+- generic: 坏了，中可恶的宇智波的幻术了
+- generic: "207"
+- generic: 虫洞开启
+- generic: 正在前往四维空间
+- generic: 马云你听我说。
+- generic: "9486"
+- generic: 奥特曼出场
+- generic: "897"
+- 'heading "第30集 | 吞噬完小球的圈圈是个无底洞吗？#星球动画 #几何图形" [level=1]':
+  - text: 第30集 |
+  - generic: 吞噬完小球的圈圈是个无底洞吗？
+  - link "#星球动画":
+    - /url: //www.douyin.com/search/%E6%98%9F%E7%90%83%E5%8A%A8%E7%94%BB?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#几何图形":
+    - /url: //www.douyin.com/search/%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2?enter_from=video_detail&source=pc_click_hashtag_feed
+- generic: 35.8万
+- generic: 1.2万
+- generic: 5.9万
+- generic: 5.1万
+- generic: 举报
+- generic: 发布时间：2024-11-02 01:53
+- generic: 全部评论
+- generic: 请先登录后发表评论
+- generic: 大家都在搜：
+- link "星际穿越":
+  - /url: //www.douyin.com/search/%E6%98%9F%E9%99%85%E7%A9%BF%E8%B6%8A?aweme_id=7432370127951236412&enter_from=video_detail&gid=7432370127951236412&source=comment_related_search
+  - generic: 星际穿越
+- link "下界合金":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAvThdm96yRuEy5PJCbbmJVVTWvdNQ_k21YTexpaqtfoRw_zQKQFVvu6EZb9_-ocA9
+  - generic: 下界合金
+- generic: ...
+- text: 完美的黄金回旋
+- img "[咒骂]"
+- generic: 1年前·广东
+- paragraph:
+  - generic: "299"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开9条回复":
+  - generic: 展开9条回复
+- link "Nanami":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAJ0MGXdM9Lt3-nMYUxRJ_bb_nKDbtOXntq13OlR84rGWCEP6l5QlMDqJOMz3fT3Ll
+  - generic: Nanami
+- generic: ...
+- generic: 出现了！完美的黄金回旋！！！
+- generic: 2年前·广东
+- paragraph:
+  - generic: "1388"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开26条回复":
+  - generic: 展开26条回复
+- link "落棠沉秋":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAtjjM4tGHbxCrRbDTzsWG6pH6I_Czvt7BqRqtax38qBw
+  - generic: 落棠沉秋
+- generic: ...
+- img "[黑脸]"
+- generic: 2年前·陕西
+- paragraph:
+  - generic: "222"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开5条回复":
+  - generic: 展开5条回复
+- link "用户6565430070920":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAKY5HtAR0Mra-f-bLX_UF_BF2BIndu2uvqO2zf5ky0j9-KtwbtKIY1-iinKcZKMTZ
+  - generic: 用户6565430070920
+- generic: ...
+- generic: 等一下蹦出个这个来就老实了
+- generic: 2年前·广东
+- paragraph:
+  - generic: 7.7万
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开834条回复":
+  - generic: 展开834条回复
+- link "🟢 🟢 🟢 🟢 🟢（私信被封）":
+  - /url: //www.douyin.com/user/MS4wLjABAAAApOZOdNS9PrdRZYzTM4t5BfwB5Bjx_TFH3K_gITd49Nw
+  - img "🟢"
+  - img "🟢"
+  - img "🟢"
+  - img "🟢"
+  - img "🟢"
+  - text: （私信被封）
+- generic: ...
+- text: 沉浸在万花筒的幻术中吧
+- img "[看]"
+- generic: 2年前·北京
+- paragraph:
+  - generic: "308"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开13条回复":
+  - generic: 展开13条回复
+- generic: 登录后即可参与互动讨论
+- button "立即登录":
+  - generic: 立即登录
+- link "探索宇宙":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe
+  - img "探索宇宙"
+- link "探索宇宙":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe
+  - generic: 探索宇宙
+- paragraph: 粉丝90.1万获赞3353.4万
+- button "关注":
+  - generic: 关注
+- heading "合集 · 球球大作战" [level=2]
+- list:
+  - link "合集 · 球球大作战第30集 播放中":
+    - /url: //www.douyin.com/video/7432370127951236412
+    - img "合集 · 球球大作战第30集"
+    - generic: 播放中
+  - 'heading "第30集 | 吞噬完小球的圈圈是个无底洞吗？#星球动画 #几何图形" [level=3]':
+    - 'link "第30集 | 吞噬完小球的圈圈是个无底洞吗？#星球动画 #几何图形"':
+      - /url: //www.douyin.com/video/7432370127951236412
+      - generic: "第30集 | 吞噬完小球的圈圈是个无底洞吗？#星球动画 #几何图形"
+  - text: 35.8万
+  - link "合集 · 球球大作战第31集 00:46":
+    - /url: //www.douyin.com/video/7454633814921448761
+    - img "合集 · 球球大作战第31集"
+    - generic: 00:46
+  - 'heading "第31集 | 球能逃脱所有缩小的圆圈吗？#星球动画 #几何图形" [level=3]':
+    - 'link "第31集 | 球能逃脱所有缩小的圆圈吗？#星球动画 #几何图形"':
+      - /url: //www.douyin.com/video/7454633814921448761
+      - generic: "第31集 | 球能逃脱所有缩小的圆圈吗？#星球动画 #几何图形"
+  - text: 38.0万
+  - link "合集 · 球球大作战第32集 00:55":
+    - /url: //www.douyin.com/video/7619824155924422001
+    - img "合集 · 球球大作战第32集"
+    - generic: 00:55
+  - 'heading "第32集 | 每个球有4秒的逃离时间。#几何图形 #解压" [level=3]':
+    - 'link "第32集 | 每个球有4秒的逃离时间。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7619824155924422001
+      - generic: "第32集 | 每个球有4秒的逃离时间。#几何图形 #解压"
+  - text: "754"
+  - link "合集 · 球球大作战第33集 01:02":
+    - /url: //www.douyin.com/video/7619827144823078821
+    - img "合集 · 球球大作战第33集"
+    - generic: 01:02
+  - 'heading "第33集 | 球若能到达中心点的位置，小球则翻倍数数翻。#几何图形 #解压" [level=3]':
+    - 'link "第33集 | 球若能到达中心点的位置，小球则翻倍数数翻。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7619827144823078821
+      - generic: "第33集 | 球若能到达中心点的位置，小球则翻倍数数翻。#几何图形 #解压"
+  - text: "1629"
+  - link "合集 · 球球大作战第34集 00:59":
+    - /url: //www.douyin.com/video/7620067242638881915
+    - img "合集 · 球球大作战第34集"
+    - generic: 00:59
+  - 'heading "第34集 | 小球每弹跳一次速度就会加快。#几何图形 #解压" [level=3]':
+    - 'link "第34集 | 小球每弹跳一次速度就会加快。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7620067242638881915
+      - generic: "第34集 | 小球每弹跳一次速度就会加快。#几何图形 #解压"
+  - text: "560"
+  - link "合集 · 球球大作战第35集 00:16":
+    - /url: //www.douyin.com/video/7620095118192613105
+    - img "合集 · 球球大作战第35集"
+    - generic: 00:16
+  - 'heading "第35集 | 一共能产生多少个球？#几何图形 #解压" [level=3]':
+    - 'link "第35集 | 一共能产生多少个球？#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7620095118192613105
+      - generic: "第35集 | 一共能产生多少个球？#几何图形 #解压"
+  - text: "167"
+- button "点击加载更多"
+- heading "推荐视频" [level=2]
+- list:
+  - 'link "太阳系vs开普勒90系但双方的支援… #太阳系行星 #星球动画 #星系对决 #北沙特 原创：@北沙特 05:02"':
+    - /url: //www.douyin.com/video/7678283221319386778
+    - 'img "太阳系vs开普勒90系但双方的支援… #太阳系行星 #星球动画 #星系对决 #北沙特 原创：@北沙特"'
+    - generic: 05:02
+  - 'heading "太阳系vs开普勒90系但双方的支援… #太阳系行星 #星球动画 #星系对决 #北沙特 原创：@北沙特" [level=3]':
+    - 'link "太阳系vs开普勒90系但双方的支援… #太阳系行星 #星球动画 #星系对决 #北沙特 原创：@北沙特"':
+      - /url: //www.douyin.com/video/7678283221319386778
+      - generic: "太阳系vs开普勒90系但双方的支援… #太阳系行星 #星球动画 #星系对决 #北沙特 原创：@北沙特"
+  - text: "7021"
+  - link "骄傲的特拉普派1-h":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAl7bTUpBMt7oGAsyfEw_PbeFlqmZPhrEkB0WeMfcbeab_WxrqRnVwnLfUltsGoyUD?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7432370127951236412&log_pb=%7B%22impr_id%22%3A%2220261111113856394E54B80AEE6007505F%22%7D&relation=0
+    - generic: 骄傲的特拉普派1-h
+  - 'link "太阳系+开普勒171系vs开普勒90糸+比邻星系 #星球动画 #科普#我要上热门🔥 06:18"':
+    - /url: //www.douyin.com/video/7673383089233638888
+    - 'img "太阳系+开普勒171系vs开普勒90糸+比邻星系 #星球动画 #科普#我要上热门🔥"'
+    - generic: 06:18
+  - 'heading "太阳系+开普勒171系vs开普勒90糸+比邻星系 #星球动画 #科普#我要上热门🔥" [level=3]':
+    - 'link "太阳系+开普勒171系vs开普勒90糸+比邻星系 #星球动画 #科普#我要上热门🔥"':
+      - /url: //www.douyin.com/video/7673383089233638888
+      - text: "太阳系+开普勒171系vs开普勒90糸+比邻星系 #星球动画 #科普#我要上热门"
+      - img "🔥"
+  - text: "8790"
+  - link "大只云辉":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAhlw9dHoz0CvOVEHYI7GBbmgLSK_cpn2m8evcPP9CKwgIK5p2VJfLeFggcQIvJmRr?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7432370127951236412&log_pb=%7B%22impr_id%22%3A%2220261111113856394E54B80AEE6007505F%22%7D&relation=0
+    - generic: 大只云辉
+  - link "#星球动画#我要上热门@DOU+小助手 00:46":
+    - /url: //www.douyin.com/video/7700597309956486010
+    - img "#星球动画#我要上热门@DOU+小助手"
+    - generic: 00:46
+  - heading "#星球动画#我要上热门@DOU+小助手" [level=3]:
+    - link "#星球动画#我要上热门@DOU+小助手":
+      - /url: //www.douyin.com/video/7700597309956486010
+      - generic: "#星球动画#我要上热门@DOU+小助手"
+  - text: 1.6万
+  - link "褐幻星球动画":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAsuP2__OPtxsKlVp5OwPMjHlfblGsAfqI7shP0qL7KbRh8xw-gixr5JT9-8fCybMi?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7432370127951236412&log_pb=%7B%22impr_id%22%3A%2220261111113856394E54B80AEE6007505F%22%7D&relation=0
+    - generic: 褐幻星球动画
+  - 'link "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⢔⣒⠂⣀⣀⣤⣄⣀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⣴⣿⠋⢠⣟⡼⣷⠼⣆⣼⢇⣿⣄⠱⣄ ⠀⠀⠀⠀⠀⠀⠀⠹⣿⡀⣆⠙⠢⠐⠉⠉⣴⣾⣽⢟⡰⠃ ⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣦⠀⠤⢴⣿⠿⢋⣴⡏⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡙⠻⣿⣶⣦⣭⣉⠁⣿⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠈⠉⠉⠉⠉⠇⡟⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⣘⣦⣀⠀⠀⣀⡴⠊⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⢻⣿⣿⣿⣿⠻⣧⡀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠫⣿⠉⠻⣇⠘⠓⠂⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⢶⣾⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣧⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠈⠙⠻⢿⣿⣿⠿⠛⣄⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣷⠂⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠀⠀⠀⠀⠀⠀⠀ #爱意久久礼物特效 #真实生活分享计划#这也能开播 #真爱系列礼物特效 #白首之约礼物特效 @DOU+小助手 @抖音小助手 @抖音礼物 00:09"':
+    - /url: //www.douyin.com/video/7682649093832182459
+    - 'img "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⢔⣒⠂⣀⣀⣤⣄⣀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⣴⣿⠋⢠⣟⡼⣷⠼⣆⣼⢇⣿⣄⠱⣄ ⠀⠀⠀⠀⠀⠀⠀⠹⣿⡀⣆⠙⠢⠐⠉⠉⣴⣾⣽⢟⡰⠃ ⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣦⠀⠤⢴⣿⠿⢋⣴⡏⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡙⠻⣿⣶⣦⣭⣉⠁⣿⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠈⠉⠉⠉⠉⠇⡟⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⣘⣦⣀⠀⠀⣀⡴⠊⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⢻⣿⣿⣿⣿⠻⣧⡀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠫⣿⠉⠻⣇⠘⠓⠂⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⢶⣾⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣧⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠈⠙⠻⢿⣿⣿⠿⠛⣄⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣷⠂⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠀⠀⠀⠀⠀⠀⠀ #爱意久久礼物特效 #真实生活分享计划#这也能开播 #真爱系列礼物特效 #白首之约礼物特效 @DOU+小助手 @抖音小助手 @抖音礼物"'
+    - generic: 00:09
+  - 'heading "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⢔⣒⠂⣀⣀⣤⣄⣀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⣴⣿⠋⢠⣟⡼⣷⠼⣆⣼⢇⣿⣄⠱⣄ ⠀⠀⠀⠀⠀⠀⠀⠹⣿⡀⣆⠙⠢⠐⠉⠉⣴⣾⣽⢟⡰⠃ ⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣦⠀⠤⢴⣿⠿⢋⣴⡏⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡙⠻⣿⣶⣦⣭⣉⠁⣿⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠈⠉⠉⠉⠉⠇⡟⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⣘⣦⣀⠀⠀⣀⡴⠊⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⢻⣿⣿⣿⣿⠻⣧⡀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠫⣿⠉⠻⣇⠘⠓⠂⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⢶⣾⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣧⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠈⠙⠻⢿⣿⣿⠿⠛⣄⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣷⠂⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠀⠀⠀⠀⠀⠀⠀ #爱意久久礼物特效 #真实生活分享计划#这也能开播 #真爱系列礼物特效 #白首之约礼物特效 @DOU+小助手 @抖音小助手 @抖音礼物" [level=3]':
+    - 'link "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⢔⣒⠂⣀⣀⣤⣄⣀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⣴⣿⠋⢠⣟⡼⣷⠼⣆⣼⢇⣿⣄⠱⣄ ⠀⠀⠀⠀⠀⠀⠀⠹⣿⡀⣆⠙⠢⠐⠉⠉⣴⣾⣽⢟⡰⠃ ⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣦⠀⠤⢴⣿⠿⢋⣴⡏⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡙⠻⣿⣶⣦⣭⣉⠁⣿⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠈⠉⠉⠉⠉⠇⡟⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⣘⣦⣀⠀⠀⣀⡴⠊⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⢻⣿⣿⣿⣿⠻⣧⡀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠫⣿⠉⠻⣇⠘⠓⠂⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⢶⣾⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣧⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠈⠙⠻⢿⣿⣿⠿⠛⣄⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣷⠂⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠀⠀⠀⠀⠀⠀⠀ #爱意久久礼物特效 #真实生活分享计划#这也能开播 #真爱系列礼物特效 #白首之约礼物特效 @DOU+小助手 @抖音小助手 @抖音礼物"':
+      - /url: //www.douyin.com/video/7682649093832182459
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⢔⣒⠂⣀⣀⣤⣄⣀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⣴⣿⠋⢠⣟⡼⣷⠼⣆⣼⢇⣿⣄⠱⣄
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠹⣿⡀⣆⠙⠢⠐⠉⠉⣴⣾⣽⢟⡰⠃
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣦⠀⠤⢴⣿⠿⢋⣴⡏⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡙⠻⣿⣶⣦⣭⣉⠁⣿⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠈⠉⠉⠉⠉⠇⡟⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⣘⣦⣀⠀⠀⣀⡴⠊⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⢻⣿⣿⣿⣿⠻⣧⡀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠫⣿⠉⠻⣇⠘⠓⠂⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⢶⣾⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣧⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠈⠙⠻⢿⣿⣿⠿⠛⣄⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣷⠂⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡀⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀
+      - generic: ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠀⠀⠀⠀⠀⠀⠀
+      - generic: "#爱意久久礼物特效 #真实生活分享计划#这也能开播 #真爱系列礼物特效 #白首之约礼物特效 @DOU+小助手 @抖音小助手 @抖音礼物"
+  - text: "6094"
+  - link "🎋楠依吖～":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAIO-Og24I1X3kQxQMyNlhODe4zQ3JXAlIcY8J5MfRS14C2t9c4Dx3HWxp91yI4EuR?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7432370127951236412&log_pb=%7B%22impr_id%22%3A%2220261111113856394E54B80AEE6007505F%22%7D&relation=0
+    - img "🎋"
+    - text: 楠依吖～
+  - 'link "太阳系+半人马座avs巨蟹座55+HD3 4445#科普 #星球动画 #我要上热门🔥 03:17"':
+    - /url: //www.douyin.com/video/7684613450434450024
+    - 'img "太阳系+半人马座avs巨蟹座55+HD3 4445#科普 #星球动画 #我要上热门🔥"'
+    - generic: 03:17
+  - 'heading "太阳系+半人马座avs巨蟹座55+HD3 4445#科普 #星球动画 #我要上热门🔥" [level=3]':
+    - 'link "太阳系+半人马座avs巨蟹座55+HD3 4445#科普 #星球动画 #我要上热门🔥"':
+      - /url: //www.douyin.com/video/7684613450434450024
+      - text: "太阳系+半人马座avs巨蟹座55+HD3 4445#科普 #星球动画 #我要上热门"
+      - img "🔥"
+  - text: "4430"
+  - link "大只云辉":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAhlw9dHoz0CvOVEHYI7GBbmgLSK_cpn2m8evcPP9CKwgIK5p2VJfLeFggcQIvJmRr?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7432370127951236412&log_pb=%7B%22impr_id%22%3A%2220261111113856394E54B80AEE6007505F%22%7D&relation=0
+    - generic: 大只云辉
+  - link "#爱因斯坦同款 没事，学学物理 02:02":
+    - /url: //www.douyin.com/video/7705255513215651200
+    - img "#爱因斯坦同款 没事，学学物理"
+    - generic: 02:02
+  - heading "#爱因斯坦同款 没事，学学物理" [level=3]:
+    - link "#爱因斯坦同款 没事，学学物理":
+      - /url: //www.douyin.com/video/7705255513215651200
+      - generic: "#爱因斯坦同款 没事，学学物理"
+  - text: 3.3万
+  - link "泪花不是花吗、":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAkkHKFBTULZt7Ay7wGcelKuBDpU4dDfEu_Wvtz0nOWR0?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7432370127951236412&log_pb=%7B%22impr_id%22%3A%2220261111113856394E54B80AEE6007505F%22%7D&relation=0
+    - generic: 泪花不是花吗、
+  - 'link "地球：专治各种不服 #星球动画 #二次元原创 #动画 01:00"':
+    - /url: //www.douyin.com/video/7699817032631602475
+    - 'img "地球：专治各种不服 #星球动画 #二次元原创 #动画"'
+    - generic: 01:00
+  - 'heading "地球：专治各种不服 #星球动画 #二次元原创 #动画" [level=3]':
+    - 'link "地球：专治各种不服 #星球动画 #二次元原创 #动画"':
+      - /url: //www.douyin.com/video/7699817032631602475
+      - generic: "地球：专治各种不服 #星球动画 #二次元原创 #动画"
+  - text: 1.4万
+  - link "瑶光动画":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAlC-tPFKSGNOkfcVKcxnuOiwT-NH4rEdslizVAD4eSa8?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7432370127951236412&log_pb=%7B%22impr_id%22%3A%2220261111113856394E54B80AEE6007505F%22%7D&relation=0
+    - generic: 瑶光动画
+  - 'link "#星球动画 #二次元 #宇宙 #动漫 #太阳系 00:25"':
+    - /url: //www.douyin.com/video/7699777328227255921
+    - 'img "#星球动画 #二次元 #宇宙 #动漫 #太阳系"'
+    - generic: 00:25
+  - 'heading "#星球动画 #二次元 #宇宙 #动漫 #太阳系" [level=3]':
+    - 'link "#星球动画 #二次元 #宇宙 #动漫 #太阳系"':
+      - /url: //www.douyin.com/video/7699777328227255921
+      - generic: "#星球动画 #二次元 #宇宙 #动漫 #太阳系"
+  - text: 2.3万
+  - link "星球动画":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAAkvFJBjebO8OA00Fxni5TvQDj7CdibIeGms1UB1wxd-UY5tRvYDyvf6MDof5F-Sk?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7432370127951236412&log_pb=%7B%22impr_id%22%3A%2220261111113856394E54B80AEE6007505F%22%7D&relation=0
+    - generic: 星球动画
+  - 'link "初中数学必会：一线三等角 #三角形 #几何图形 #初中数学 #数学思维 #数学 03:01"':
+    - /url: //www.douyin.com/video/7690491368568802610
+    - 'img "初中数学必会：一线三等角 #三角形 #几何图形 #初中数学 #数学思维 #数学"'
+    - generic: 03:01
+  - 'heading "初中数学必会：一线三等角 #三角形 #几何图形 #初中数学 #数学思维 #数学" [level=3]':
+    - 'link "初中数学必会：一线三等角 #三角形 #几何图形 #初中数学 #数学思维 #数学"':
+      - /url: //www.douyin.com/video/7690491368568802610
+      - generic: "初中数学必会：一线三等角 #三角形 #几何图形 #初中数学 #数学思维 #数学"
+  - text: 3.3万
+  - link "理学-亮亮聊思维":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAvPaakxj4gCukcf6b4u-UJADuMRqcGnMANGbRWuoIUHAlKE8ESUUVWmxB8OmwknTZ?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7432370127951236412&log_pb=%7B%22impr_id%22%3A%2220261111113856394E54B80AEE6007505F%22%7D&relation=0
+    - generic: 理学-亮亮聊思维
+  - link "雷霆星球拼好梗#大牙顽顽崽#星球动画#动画#剪映#冰冰冰 00:25":
+    - /url: //www.douyin.com/video/7697544280482833065
+    - img "雷霆星球拼好梗#大牙顽顽崽#星球动画#动画#剪映#冰冰冰"
+    - generic: 00:25
+  - heading "雷霆星球拼好梗#大牙顽顽崽#星球动画#动画#剪映#冰冰冰" [level=3]:
+    - link "雷霆星球拼好梗#大牙顽顽崽#星球动画#动画#剪映#冰冰冰":
+      - /url: //www.douyin.com/video/7697544280482833065
+      - generic: 雷霆星球拼好梗#大牙顽顽崽#星球动画#动画#剪映#冰冰冰
+  - text: 4.2万
+  - link "奇观动画":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAtEdnUerpy9tzry-ZQiK3GriJelwPtmSYFHWQq-fgx4g?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7432370127951236412&log_pb=%7B%22impr_id%22%3A%2220261111113856394E54B80AEE6007505F%22%7D&relation=0
+    - generic: 奇观动画
+- contentinfo:
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+  - link "网络谣言曝光台 ｜":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: ｜ 违法和不良信息举报：400-140-2108 feedback@douyin.com ｜ 算法推荐专项举报：sfjubao@bytedance.com | 体育饭圈专项举报：tyfq@bytedance.com
+  - link "京ICP备16016397号-3":
+    - /url: https://beian.miit.gov.cn/
+  - generic: ｜ 信息网络传播视听节目许可证 0126733
+  - generic: ｜ 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: ｜ 增值电信业务经营许可证 京B2-20170846
+  - generic: ｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜
+  - img "icon"
+  - link "京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+  - generic: ｜ 互联网宗教信息服务许可证 京（2025）0000017 ｜
+  - img "icon"
+  - link "电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+  - link "｜（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - generic: 热门：
+  - link "抖音美食":
+    - /url: https://www.douyin.com/jingxuan/food
+  - link "抖音网页版":
+    - /url: https://www.douyin.com/jingxuan
+  - link "昆明创艺装饰":
+    - /url: https://www.douyin.com/user/MS4wLjABAAAAfhylfZ4HqngZdHOviDNTT_bEGNDJFPbQjX5k7kpV2FM
+  - link "召我进宫，说有要事商议，特此前来觐见，今日幸得入朝面圣机会，共商国之栋梁之事，请我宫中详谈，特此垂帘听政#学校家长会 吾女出息 ，幸得赏赐":
+    - /url: https://www.douyin.com/note/7706426821949334243
+  - link "考生档案袋表面填错了可以修改吗":
+    - /url: https://www.douyin.com/topic/7509890552335370250
+  - link "林州2025年一分一段表":
+    - /url: https://www.douyin.com/shipin/7509907144792164404
+  - link "新课乙甲复读学校":
+    - /url: https://www.douyin.com/search/%E6%96%B0%E8%AF%BE%E4%B9%99%E7%94%B2%E5%A4%8D%E8%AF%BB%E5%AD%A6%E6%A0%A1
+  - link "2026全球经济增速预期下调至2.8%":
+    - /url: https://www.douyin.com/video/7647089935274544430?source=Baiduspider
+  - 'link "卖花！是花店最大的谎言，花店想挣钱就要多元化经营。 #花店加盟 #开花店 #花店运营 #花店创业 #花店知识"':
+    - /url: https://www.douyin.com/video/7385137700296199459?source=Baiduspider
+  - 'link "#苹果手机维修 12Pro Max更换后壳总成屏幕总成#手机换屏 #手机维修 #修手机 #西安手机维修中心"':
+    - /url: https://www.douyin.com/video/7385874593820478759?source=Baiduspider
+  - link:
+    - /url: https://www.douyin.com/video/7547575194706316602?source=Baiduspider-sdc
+  - 'link "#惠州大南山 #大南山 #惠州大南山攻略 #惠州网红打卡地 #抖音汽车 #去越野 #硬派越野 #封闭路段 #无兄弟不越野 2.7霸道开出了4.0霸道的感觉"':
+    - /url: https://www.douyin.com/video/7069761119220501791?source=Baiduspider
+  - 'link "深度解读，三分钟，慎入❗️ 海南自贸港要成为下一个香港❓#海南自贸港 #海南封关如何影响普通人 #海南 #海南"':
+    - /url: https://www.douyin.com/video/7531732166419270975?source=Baiduspider
+  - 'link "周杰伦最好的作品给了蔡依林 #周杰伦 #周杰伦蔡依林 #倒带"':
+    - /url: https://www.douyin.com/video/7431493968799583488?source=Baiduspider-sdc

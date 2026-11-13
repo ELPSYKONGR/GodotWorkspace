@@ -1,0 +1,417 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link:
+  - /url: //www.douyin.com/jingxuan
+- link "精选":
+  - /url: https://www.douyin.com/jingxuan?from_nav=1
+  - generic: 精选
+- link "推荐":
+  - /url: https://www.douyin.com/?recommend=1&from_nav=1
+  - generic: 推荐
+- link "AI抖音":
+  - /url: https://www.douyin.com/aisearch?from_nav=1
+  - generic: AI抖音
+- link "关注":
+  - /url: https://www.douyin.com/follow?from_nav=1
+  - generic: 关注
+- link "朋友":
+  - /url: https://www.douyin.com/friend?from_nav=1
+  - generic: 朋友
+- link "我的":
+  - /url: https://www.douyin.com/user/self?from_nav=1
+  - generic: 我的
+- link "直播":
+  - /url: https://live.douyin.com/?from_nav=1
+  - generic: 直播
+- link "放映厅":
+  - /url: https://www.douyin.com/vs?from_nav=1
+  - generic: 放映厅
+- link "短剧":
+  - /url: https://www.douyin.com/series?from_nav=1
+  - generic: 短剧
+- link "小游戏":
+  - /url: https://www.douyin.com/microgame?from_nav=1
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+  - /url: https://beian.miit.gov.cn/
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - generic: 解压视频
+  - textbox
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: https://www.douyin.com/download/pc/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-downloader-v8.7.0-win32-ia32-douyincold.exe
+    - paragraph: 客户端
+  - generic: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - button "登录":
+    - paragraph: 登录
+- generic: 00:29
+- generic: /
+- generic: 00:49
+- generic: 倍速
+- generic: 智能
+- button
+- generic: 清屏
+- button
+- generic: 连播
+- generic: 二战转折点
+- generic: "74"
+- generic: 盖革计数器
+- generic: "10"
+- generic: 有种熟悉的感觉
+- generic: 兄弟你玩切尔诺比利呢？
+- generic: "36"
+- generic: 球越少，球越多
+- generic: 寒武纪生命大爆发
+- generic: 寒武纪生物大爆发
+- generic: "63"
+- generic: 要被填满了
+- generic: "29"
+- generic: 切尔诺贝利
+- generic: 第1颗是什么颜色的球
+- generic: 齁齁齁齁齁齁～好爽啊
+- generic: 三战转折点
+- generic: 要满了～
+- generic: "26"
+- generic: 盖伦计数器
+- generic: "14"
+- 'heading "Blender | 这个动画太有创意还解压！ #世界渲染大赛#3D#动画#CG#设计" [level=1]':
+  - generic: Blender | 这个动画太有创意还解压！
+  - link "#世界渲染大赛":
+    - /url: //www.douyin.com/search/%E4%B8%96%E7%95%8C%E6%B8%B2%E6%9F%93%E5%A4%A7%E8%B5%9B?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#3D":
+    - /url: //www.douyin.com/search/3D?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#动画":
+    - /url: //www.douyin.com/search/%E5%8A%A8%E7%94%BB?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#CG":
+    - /url: //www.douyin.com/search/CG?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#设计":
+    - /url: //www.douyin.com/search/%E8%AE%BE%E8%AE%A1?enter_from=video_detail&source=pc_click_hashtag_feed
+- generic: 2.5万
+- generic: "497"
+- generic: "1153"
+- generic: 1.6万
+- generic: 举报
+- generic: 发布时间：2026-11-09 00:02
+- generic: 全部评论
+- generic: 请先登录后发表评论
+- generic: 大家都在搜：
+- link "解压视频":
+  - /url: //www.douyin.com/search/%E8%A7%A3%E5%8E%8B%E8%A7%86%E9%A2%91?aweme_id=7705831565992955145&enter_from=video_detail&gid=7705831565992955145&source=comment_related_search
+  - generic: 解压视频
+- link "朱無風":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAs4zf7umZDNKSrdBEHH5mQx_ERGAq6beCKK5BvgN8E8E
+  - generic: 朱無風
+- generic: ...
+- generic: 爆米花？
+- generic: 1天前·上海
+- paragraph:
+  - generic: "0"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开1条回复":
+  - generic: 展开1条回复
+- link "冷猫":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAL5KgjD6qJF_S2jqTVXje-SHkmhOLzj9OJoA1cGyKtd8
+  - generic: 冷猫
+- generic: ...
+- generic: 这声音像盖革计数器
+- generic: 2天前·四川
+- paragraph:
+  - generic: "35"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开2条回复":
+  - generic: 展开2条回复
+- link "不努力的音乐人":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAjFuPFvvgcuZWxBdZs0dBCkxX3eRWLZrwgN-n0fFO7oQ
+  - generic: 不努力的音乐人
+- generic: ...
+- generic: 核裂变
+- generic: 1天前·辽宁
+- paragraph:
+  - generic: "2"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- link "礼帽":
+  - /url: //www.douyin.com/user/MS4wLjABAAAA-Y-YEwxUW48zAwHW2AYwNmyF6I4p8HL_ZXtH3vO-SzE
+  - generic: 礼帽
+- generic: ...
+- generic: 水多了加面面多了加水
+- generic: 19小时前·江西
+- paragraph:
+  - generic: "0"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- link "铁乌龟……":
+  - /url: //www.douyin.com/user/MS4wLjABAAAASqBMlguLy5nJ4ENYkL_Q7w2MsFyenUged3bd26oj9fgYX8iqRVpQjbVqP3_Md0ie
+  - generic: 铁乌龟……
+- generic: ...
+- generic: 一生二，二生三，三生万物？
+- generic: 7分钟前·浙江
+- paragraph:
+  - generic: "0"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- generic: 登录后即可参与互动讨论
+- button "立即登录":
+  - generic: 立即登录
+- link "AOV视觉科学":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAV3xkaFyXWHtTmbtMdfovk2tLNNbZucYRbJGQdL9zwJk
+  - img "AOV视觉科学"
+- link "AOV视觉科学":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAV3xkaFyXWHtTmbtMdfovk2tLNNbZucYRbJGQdL9zwJk
+  - generic: AOV视觉科学
+- paragraph: 粉丝2.8万获赞78.2万
+- button "关注":
+  - generic: 关注
+- heading "推荐视频" [level=2]
+- list:
+  - 'link "《小猪佩奇》2026最新第11季高清国语配音版全集！ 《小猪佩奇》2026最新第11季高清国语配音版全集！#小猪佩奇 #小猪佩奇动画片 #动画 #动画片 #儿童动画 38:53"':
+    - /url: //www.douyin.com/video/7696146562983972115
+    - 'img "《小猪佩奇》2026最新第11季高清国语配音版全集！ 《小猪佩奇》2026最新第11季高清国语配音版全集！#小猪佩奇 #小猪佩奇动画片 #动画 #动画片 #儿童动画"'
+    - generic: 38:53
+  - 'heading "《小猪佩奇》2026最新第11季高清国语配音版全集！ 《小猪佩奇》2026最新第11季高清国语配音版全集！#小猪佩奇 #小猪佩奇动画片 #动画 #动画片 #儿童动画" [level=3]':
+    - 'link "《小猪佩奇》2026最新第11季高清国语配音版全集！ 《小猪佩奇》2026最新第11季高清国语配音版全集！#小猪佩奇 #小猪佩奇动画片 #动画 #动画片 #儿童动画"':
+      - /url: //www.douyin.com/video/7696146562983972115
+      - generic: "《小猪佩奇》2026最新第11季高清国语配音版全集！ 《小猪佩奇》2026最新第11季高清国语配音版全集！#小猪佩奇 #小猪佩奇动画片 #动画 #动画片 #儿童动画"
+  - text: 3.0万
+  - link "小猪佩奇最新高清动画":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAMltc1sdVmPBg54B4RZ5lboBVJzfbGSNjXdh9ebhRY1Y?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111100440E8BF11E9F3A747FFD2C6%22%7D&relation=0
+    - generic: 小猪佩奇最新高清动画
+  - 'link "红蓝军团全线开战，两大巨人首领巅峰对决！#热门 #动画 #解说 #火柴人战争遗产 06:27"':
+    - /url: //www.douyin.com/video/7676482278507879355
+    - 'img "红蓝军团全线开战，两大巨人首领巅峰对决！#热门 #动画 #解说 #火柴人战争遗产"'
+    - generic: 06:27
+  - 'heading "红蓝军团全线开战，两大巨人首领巅峰对决！#热门 #动画 #解说 #火柴人战争遗产" [level=3]':
+    - 'link "红蓝军团全线开战，两大巨人首领巅峰对决！#热门 #动画 #解说 #火柴人战争遗产"':
+      - /url: //www.douyin.com/video/7676482278507879355
+      - generic: "红蓝军团全线开战，两大巨人首领巅峰对决！#热门 #动画 #解说 #火柴人战争遗产"
+  - text: "1588"
+  - link "旺仔游戏":
+    - /url: //www.douyin.com/user/MS4wLjABAAAA5uK8vlD86_TelUkYLqrG4C6jwBReIciaKew1ksqBaCDQ_NEgWHuQiE06FM5md7ry?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111100440E8BF11E9F3A747FFD2C6%22%7D&relation=0
+    - generic: 旺仔游戏
+  - 'link "巴迪的黑暗秘密……#动画 #我的世界福气王 08:22"':
+    - /url: //www.douyin.com/video/7704106095173700907
+    - 'img "巴迪的黑暗秘密……#动画 #我的世界福气王"'
+    - generic: 08:22
+  - 'heading "巴迪的黑暗秘密……#动画 #我的世界福气王" [level=3]':
+    - 'link "巴迪的黑暗秘密……#动画 #我的世界福气王"':
+      - /url: //www.douyin.com/video/7704106095173700907
+      - generic: "巴迪的黑暗秘密……#动画 #我的世界福气王"
+  - text: 2.3万
+  - link "我的世界福气王":
+    - /url: //www.douyin.com/user/MS4wLjABAAAA9bMJ_1sl9AhbvxDl6XNJifyu2PIjtPOoczG3xBzxyG_r7U56C7cD9Xi4G1ZpioBo?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111100440E8BF11E9F3A747FFD2C6%22%7D&relation=0
+    - generic: 我的世界福气王
+  - link "2026最新《小猪佩奇》第12季第11集《新生宝宝》 2026最新《小猪佩奇》高清国语配音版全集！#小猪佩奇#动画#小猪佩奇动画片#动画片#早教益智 13:20":
+    - /url: //www.douyin.com/video/7701183337242578227
+    - img "2026最新《小猪佩奇》第12季第11集《新生宝宝》 2026最新《小猪佩奇》高清国语配音版全集！#小猪佩奇#动画#小猪佩奇动画片#动画片#早教益智"
+    - generic: 13:20
+  - heading "2026最新《小猪佩奇》第12季第11集《新生宝宝》 2026最新《小猪佩奇》高清国语配音版全集！#小猪佩奇#动画#小猪佩奇动画片#动画片#早教益智" [level=3]:
+    - link "2026最新《小猪佩奇》第12季第11集《新生宝宝》 2026最新《小猪佩奇》高清国语配音版全集！#小猪佩奇#动画#小猪佩奇动画片#动画片#早教益智":
+      - /url: //www.douyin.com/video/7701183337242578227
+      - generic: 2026最新《小猪佩奇》第12季第11集《新生宝宝》 2026最新《小猪佩奇》高清国语配音版全集！#小猪佩奇#动画#小猪佩奇动画片#动画片#早教益智
+  - text: "1478"
+  - link "小猪佩奇最新高清动画":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAMltc1sdVmPBg54B4RZ5lboBVJzfbGSNjXdh9ebhRY1Y?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111100440E8BF11E9F3A747FFD2C6%22%7D&relation=0
+    - generic: 小猪佩奇最新高清动画
+  - 'link "不同角色音乐#sprunki #节奏盒子 #音乐小球 00:46"':
+    - /url: //www.douyin.com/video/7685686077445145587
+    - 'img "不同角色音乐#sprunki #节奏盒子 #音乐小球"'
+    - generic: 00:46
+  - 'heading "不同角色音乐#sprunki #节奏盒子 #音乐小球" [level=3]':
+    - 'link "不同角色音乐#sprunki #节奏盒子 #音乐小球"':
+      - /url: //www.douyin.com/video/7685686077445145587
+      - generic: "不同角色音乐#sprunki #节奏盒子 #音乐小球"
+  - text: "1054"
+  - link "3Dball":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAgpzd7razYFCaoQCbuSKciE5JhjvZufo3NZz7UktW0pNdLr1KJGuBsADhfv8mguUC?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111100440E8BF11E9F3A747FFD2C6%22%7D&relation=0
+    - generic: 3Dball
+  - 'link "一口气看完2026当下最火的动画电影《牛来》剧情详解！ #动画 #牛来 #动画片 #电影推荐 #了不起的精讲团 07:59"':
+    - /url: //www.douyin.com/video/7675118859363405097
+    - 'img "一口气看完2026当下最火的动画电影《牛来》剧情详解！ #动画 #牛来 #动画片 #电影推荐 #了不起的精讲团"'
+    - generic: 07:59
+  - 'heading "一口气看完2026当下最火的动画电影《牛来》剧情详解！ #动画 #牛来 #动画片 #电影推荐 #了不起的精讲团" [level=3]':
+    - 'link "一口气看完2026当下最火的动画电影《牛来》剧情详解！ #动画 #牛来 #动画片 #电影推荐 #了不起的精讲团"':
+      - /url: //www.douyin.com/video/7675118859363405097
+      - generic: "一口气看完2026当下最火的动画电影《牛来》剧情详解！ #动画 #牛来 #动画片 #电影推荐 #了不起的精讲团"
+  - text: 5.0万
+  - link "小天说影":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAdU1dH-wV8W2wJpUaPMJRdacj9bxmuEzvtz1BqcuX1_kivtMuu9wiL8lZGPQUJxsh?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111100440E8BF11E9F3A747FFD2C6%22%7D&relation=0
+    - generic: 小天说影
+  - 'link "拳击高手 VS 天气预报员 谁会获胜？ #解压 #polo小球 #视觉震撼 #星球动画 00:13"':
+    - /url: //www.douyin.com/video/7687232547730745851
+    - 'img "拳击高手 VS 天气预报员 谁会获胜？ #解压 #polo小球 #视觉震撼 #星球动画"'
+    - generic: 00:13
+  - 'heading "拳击高手 VS 天气预报员 谁会获胜？ #解压 #polo小球 #视觉震撼 #星球动画" [level=3]':
+    - 'link "拳击高手 VS 天气预报员 谁会获胜？ #解压 #polo小球 #视觉震撼 #星球动画"':
+      - /url: //www.douyin.com/video/7687232547730745851
+      - generic: "拳击高手 VS 天气预报员 谁会获胜？ #解压 #polo小球 #视觉震撼 #星球动画"
+  - text: 1.0万
+  - link "polo小球":
+    - /url: //www.douyin.com/user/MS4wLjABAAAA1mTkI8Zc35G4N19cfnGeHmaf3jsty707ZxFBhNEu8czUnMurY3F3UhQIjk7fhwT8?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111100440E8BF11E9F3A747FFD2C6%22%7D&relation=0
+    - generic: polo小球
+  - 'link "小球演奏《Verity》 #verity #我的世界 #minecraft #解压 #创意 00:18"':
+    - /url: //www.douyin.com/video/7681884889620254003
+    - 'img "小球演奏《Verity》 #verity #我的世界 #minecraft #解压 #创意"'
+    - generic: 00:18
+  - 'heading "小球演奏《Verity》 #verity #我的世界 #minecraft #解压 #创意" [level=3]':
+    - 'link "小球演奏《Verity》 #verity #我的世界 #minecraft #解压 #创意"':
+      - /url: //www.douyin.com/video/7681884889620254003
+      - generic: "小球演奏《Verity》 #verity #我的世界 #minecraft #解压 #创意"
+  - text: "5563"
+  - link "Anao小球":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAQ5bapI1TviN4eLtwL8wSL1VtOlwSKCvUahJz26l_cbmKFNvH8wsXrLmPtigxtwCD?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111100440E8BF11E9F3A747FFD2C6%22%7D&relation=0
+    - generic: Anao小球
+  - 'link "碎纸方块 vs 立方体#动画 #3D动画 #循环视频 00:10"':
+    - /url: //www.douyin.com/video/7700885383098006243
+    - 'img "碎纸方块 vs 立方体#动画 #3D动画 #循环视频"'
+    - generic: 00:10
+  - 'heading "碎纸方块 vs 立方体#动画 #3D动画 #循环视频" [level=3]':
+    - 'link "碎纸方块 vs 立方体#动画 #3D动画 #循环视频"':
+      - /url: //www.douyin.com/video/7700885383098006243
+      - generic: "碎纸方块 vs 立方体#动画 #3D动画 #循环视频"
+  - text: "9987"
+  - link "爱情恐怖表演":
+    - /url: //www.douyin.com/user/MS4wLjABAAAA4W0qcj5gCkpWue1DtyId_sChmQG-d5dgLjvdbpGOjGw?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111100440E8BF11E9F3A747FFD2C6%22%7D&relation=0
+    - generic: 爱情恐怖表演
+  - 'link "超进化新哥斯拉VS超进化戴魔！居然强到了这种地步！ #动画 #哥斯拉 #怪兽 10:48"':
+    - /url: //www.douyin.com/video/7694194754615004451
+    - 'img "超进化新哥斯拉VS超进化戴魔！居然强到了这种地步！ #动画 #哥斯拉 #怪兽"'
+    - generic: 10:48
+  - 'heading "超进化新哥斯拉VS超进化戴魔！居然强到了这种地步！ #动画 #哥斯拉 #怪兽" [level=3]':
+    - 'link "超进化新哥斯拉VS超进化戴魔！居然强到了这种地步！ #动画 #哥斯拉 #怪兽"':
+      - /url: //www.douyin.com/video/7694194754615004451
+      - generic: "超进化新哥斯拉VS超进化戴魔！居然强到了这种地步！ #动画 #哥斯拉 #怪兽"
+  - text: 4.5万
+  - link "小刚哥解说":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAdVQJPxt81Tihkb2mlbX7llrwTLzMXWgjDAULLRC8TuI?author_id=587553305270368&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7705831565992955145&log_pb=%7B%22impr_id%22%3A%2220261111100440E8BF11E9F3A747FFD2C6%22%7D&relation=0
+    - generic: 小刚哥解说
+- contentinfo:
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+  - link "网络谣言曝光台 ｜":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: ｜ 违法和不良信息举报：400-140-2108 feedback@douyin.com ｜ 算法推荐专项举报：sfjubao@bytedance.com | 体育饭圈专项举报：tyfq@bytedance.com
+  - link "京ICP备16016397号-3":
+    - /url: https://beian.miit.gov.cn/
+  - generic: ｜ 信息网络传播视听节目许可证 0126733
+  - generic: ｜ 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: ｜ 增值电信业务经营许可证 京B2-20170846
+  - generic: ｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜
+  - img "icon"
+  - link "京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+  - generic: ｜ 互联网宗教信息服务许可证 京（2025）0000017 ｜
+  - img "icon"
+  - link "电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+  - link "｜（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - generic: 热门：
+  - link "抖音电脑版":
+    - /url: https://www.douyin.com/jingxuan
+  - link "抖音":
+    - /url: https://www.douyin.com/jingxuan
+  - link "DEEPBANG园艺旗舰店":
+    - /url: https://www.douyin.com/user/MS4wLjABAAAASbifkUU7PvrQgqQFIXebsUHSkUpECeFbrZ0I1td5iY4
+  - link "淄博广电老年大学":
+    - /url: https://www.douyin.com/video/7706717285053997247
+  - link "2025文理分科政策还有吗":
+    - /url: https://www.douyin.com/topic/7509861725241198603
+  - link "体育生志愿填报卡2025官方正版":
+    - /url: https://www.douyin.com/shipin/7509924992260327459
+  - link "乌鲁木齐本科分数线":
+    - /url: https://www.douyin.com/search/%E4%B9%8C%E9%B2%81%E6%9C%A8%E9%BD%90%E6%9C%AC%E7%A7%91%E5%88%86%E6%95%B0%E7%BA%BF
+  - link "深圳一巨型水箱凌晨从14楼坠落":
+    - /url: https://www.douyin.com/video/7637831631805491584?source=Baiduspider
+  - 'link "MF1报站+景点介绍(缺索菲亚广场，兆麟公园，防洪纪念塔)#公交车 #公共交通 #哈尔滨公交 #宇通客车"':
+    - /url: https://www.douyin.com/video/7336061630217735458?source=Baiduspider
+  - 'link "西班牙语基础对话！西班牙语入门！西班牙语口语学习 #基础西班牙语 #西班牙语入门 #少儿西班牙语 #深圳西班牙语 #西班牙语学习"':
+    - /url: https://www.douyin.com/video/7143129202353523981?source=Baiduspider
+  - 'link "ADV350仪表太单调，来贴上这款装饰贴，点缀一下更加个性好看#ADV350 #本田ADV350 #摩托车 #踏板 #踏板摩托车"':
+    - /url: https://www.douyin.com/video/7554318677303217418?source=Baiduspider-sdc
+  - 'link "今生爱的就是你#车载音乐 #dj打碟 #dj旋律 #老歌带dj嗨到爆 #开车必备音乐 @DOU+小助手"':
+    - /url: https://www.douyin.com/video/7472580125456895290?source=Baiduspider
+  - 'link "《共和国的歌》李佳容演唱MV完整版#爱国的歌曲 #唱响中国心 #天佑中华"':
+    - /url: https://www.douyin.com/video/7330070153603960090?source=Baiduspider
+  - 'link "102岁爷爷说过几天一定要去给奶奶扫墓，他说有一年多没见过奶奶了，奶奶跟爷爷是青梅竹马成婚的，一起生活了八十多年#记录真实生活 #清明节 #扫墓 #抖音记录美好生活"':
+    - /url: https://www.douyin.com/video/7488326105607245108?source=Baiduspider-sdc

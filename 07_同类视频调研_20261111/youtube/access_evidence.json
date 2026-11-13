@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-11T03:35:56.719Z",
+  "youtube_official": {
+    "url": "https://www.youtube.com/results?search_query=satisfying+physics+balls+escape+circle",
+    "terminal_error": "URLError WinError 10054: connection closed by remote host",
+    "browser_error": "Page.navigate timed out; site unreachable ERR_CONNECTION_TIMED_OUT",
+    "authentication_not_attempted": true
+  },
+  "fallback": {
+    "engine": "Bing CN, international mode",
+    "queries": [
+      "site:youtube.com/shorts \"ball\" \"circle\" \"satisfying\"",
+      "Mikan marble race youtube"
+    ],
+    "result": "first query no results; adjacent-category video query returned primarily Bilibili mirrors, not directly verifiable YouTube statistics"
+  },
+  "verified_youtube_cases": 0
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "status": "fulfilled",
+    "value": "e:\\Users\\LI\\Downloads\\download (1).mp4"
+  },
+  {
+    "status": "fulfilled",
+    "value": "e:\\Users\\LI\\Downloads\\download.mp4"
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "assets": [
+        {
+          "contentType": "image/webp",
+          "id": "3b4d6d48ac53b593",
+          "kind": "image",
+          "name": "osxSAIiISQoExsBAijAvLLahuADAdIvvaEPGM~tplv-dy-aweme-images:q75.webp",
+          "path": "C:\\Users\\LI\\AppData\\Local\\Temp/browser-use/assets/67ff6b92-98d2-462d-aa39-5de97d70af00/3b4d6d48ac53b593.webp",
+          "url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/osxSAIiISQoExsBAijAvLLahuADAdIvvaEPGM~tplv-dy-aweme-images:q75.webp?biz_tag=aweme_images&from=327834062&lk3s=138a59ce&s=PackSourceEnum_AWEME_DETAIL&sc=image&se=false&x-expires=1796954400&x-signature=plzbbv9H8WDghvTsYmxC%2FlRpcRQ%3D"
+        }
+      ],
+      "directoryPath": "C:\\Users\\LI\\AppData\\Local\\Temp/browser-use/assets/67ff6b92-98d2-462d-aa39-5de97d70af00",
+      "failures": [],
+      "manifestPath": "C:\\Users\\LI\\AppData\\Local\\Temp/browser-use/assets/67ff6b92-98d2-462d-aa39-5de97d70af00/manifest.json",
+      "summary": {
+        "downloadedCount": 1,
+        "elapsedMs": 121.22250000000348,
+        "failedCount": 0,
+        "requestedCount": 1
+      }
+    }
+  }
+]

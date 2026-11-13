@@ -1,0 +1,330 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link:
+  - /url: //www.douyin.com/jingxuan
+- link "精选":
+  - /url: https://www.douyin.com/jingxuan?from_nav=1
+  - generic: 精选
+- link "推荐":
+  - /url: https://www.douyin.com/?recommend=1&from_nav=1
+  - generic: 推荐
+- link "AI抖音":
+  - /url: https://www.douyin.com/aisearch?from_nav=1
+  - generic: AI抖音
+- link "关注":
+  - /url: https://www.douyin.com/follow?from_nav=1
+  - generic: 关注
+- link "朋友":
+  - /url: https://www.douyin.com/friend?from_nav=1
+  - generic: 朋友
+- link "我的":
+  - /url: https://www.douyin.com/user/self?from_nav=1
+  - generic: 我的
+- link "直播":
+  - /url: https://live.douyin.com/?from_nav=1
+  - generic: 直播
+- link "放映厅":
+  - /url: https://www.douyin.com/vs?from_nav=1
+  - generic: 放映厅
+- link "短剧":
+  - /url: https://www.douyin.com/series?from_nav=1
+  - generic: 短剧
+- link "小游戏":
+  - /url: https://www.douyin.com/microgame?from_nav=1
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+  - /url: https://beian.miit.gov.cn/
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - textbox "搜索你感兴趣的内容"
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: https://www.douyin.com/download/pc/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-downloader-v8.7.0-win32-ia32-douyincold.exe
+    - paragraph: 客户端
+  - generic: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - button "登录":
+    - paragraph: 登录
+- img "探索宇宙头像"
+- heading "探索宇宙" [level=1]:
+  - generic: 探索宇宙
+- generic: 关注
+- generic: "9"
+- generic: 粉丝
+- generic: 90.1万
+- generic: 获赞
+- generic: 3353.4万
+- paragraph:
+  - generic: 抖音号：23259319244
+  - generic: IP属地：江西
+  - generic: 27岁
+- generic: 有理想才有未来，祝福一切在奋斗的你我。
+- button:
+- button "分享主页":
+  - generic: 分享主页
+- button "私信":
+  - generic: 私信
+- button "关注":
+  - generic: 关注
+- tablist:
+  - tab "作品 5850" [selected]:
+    - heading "作品 5850" [level=2]:
+      - generic: 作品
+      - generic: "5850"
+  - tab "推荐":
+    - generic: 推荐
+  - tab "喜欢":
+    - generic: 喜欢
+- tabpanel "作品 5850"
+- tablist:
+  - tab "作品" [selected]:
+    - generic: 作品
+  - tab "合集":
+    - generic: 合集
+  - tab "短剧":
+    - generic: 短剧
+- tabpanel "作品"
+- generic: 搜索 Ta 的作品
+- textbox "搜索 Ta 的作品"
+- generic: 日期筛选
+- list:
+  - generic: 看更多
+  - generic: 最新作品
+  - generic: 登录
+  - paragraph
+  - 'link "探索宇宙：游戏化视力训练。#几何图形 #解压 #星球动画 Tag: 置顶 47.0万 游戏化视力训练。#几何图形 #解压 #星球动画"':
+    - /url: /video/7547536054669299004
+    - 'img "探索宇宙：游戏化视力训练。#几何图形 #解压 #星球动画"'
+    - 'generic "Tag: 置顶"':
+      - generic: 置顶
+    - generic: 47.0万
+    - paragraph: "游戏化视力训练。#几何图形 #解压 #星球动画"
+  - 'link "探索宇宙：吞噬完小球的圈圈是个无底洞吗？#星球动画 #几何图形 Tag: 置顶 35.8万 吞噬完小球的圈圈是个无底洞吗？#星球动画 #几何图形"':
+    - /url: /video/7432370127951236412
+    - 'img "探索宇宙：吞噬完小球的圈圈是个无底洞吗？#星球动画 #几何图形"'
+    - 'generic "Tag: 置顶"':
+      - generic: 置顶
+    - generic: 35.8万
+    - paragraph: "吞噬完小球的圈圈是个无底洞吗？#星球动画 #几何图形"
+  - 'link "探索宇宙：球能逃脱所有缩小的圆圈吗？#星球动画 #几何图形 Tag: 置顶 38.0万 球能逃脱所有缩小的圆圈吗？#星球动画 #几何图形"':
+    - /url: /video/7454633814921448761
+    - 'img "探索宇宙：球能逃脱所有缩小的圆圈吗？#星球动画 #几何图形"'
+    - 'generic "Tag: 置顶"':
+      - generic: 置顶
+    - generic: 38.0万
+    - paragraph: "球能逃脱所有缩小的圆圈吗？#星球动画 #几何图形"
+  - 'link "探索宇宙：球每次被压缩后都会翻3倍。#几何图形 #解压 1203 球每次被压缩后都会翻3倍。#几何图形 #解压"':
+    - /url: /video/7704294817710948795
+    - 'img "探索宇宙：球每次被压缩后都会翻3倍。#几何图形 #解压"'
+    - generic: "1203"
+    - paragraph: "球每次被压缩后都会翻3倍。#几何图形 #解压"
+  - 'link "探索宇宙：表情包每次都会被翻倍分割。#几何图形 #解压 672 表情包每次都会被翻倍分割。#几何图形 #解压"':
+    - /url: /video/7704145272251040680
+    - 'img "探索宇宙：表情包每次都会被翻倍分割。#几何图形 #解压"'
+    - generic: "672"
+    - paragraph: "表情包每次都会被翻倍分割。#几何图形 #解压"
+  - 'link "探索宇宙：球每次被压缩后都会翻4倍。#几何图形 #解压 5.5万 球每次被压缩后都会翻4倍。#几何图形 #解压"':
+    - /url: /video/7704133249187461051
+    - 'img "探索宇宙：球每次被压缩后都会翻4倍。#几何图形 #解压"'
+    - generic: 5.5万
+    - paragraph: "球每次被压缩后都会翻4倍。#几何图形 #解压"
+  - 'link "探索宇宙：喵🐱的堆积与进化。#几何图形 #解压 1434 喵🐱的堆积与进化。#几何图形 #解压"':
+    - /url: /video/7704117623349089465
+    - 'img "探索宇宙：喵🐱的堆积与进化。#几何图形 #解压"'
+    - generic: "1434"
+    - paragraph: "喵🐱的堆积与进化。#几何图形 #解压"
+  - 'link "探索宇宙：皮卡（卡车）堆积与进化。#几何图形 #解压 1186 皮卡（卡车）堆积与进化。#几何图形 #解压"':
+    - /url: /video/7704085678627427697
+    - 'img "探索宇宙：皮卡（卡车）堆积与进化。#几何图形 #解压"'
+    - generic: "1186"
+    - paragraph: "皮卡（卡车）堆积与进化。#几何图形 #解压"
+  - 'link "探索宇宙：铁球能打碎所有玻璃小球吗？#几何图形 #解压 243 铁球能打碎所有玻璃小球吗？#几何图形 #解压"':
+    - /url: /video/7704067395716158693
+    - 'img "探索宇宙：铁球能打碎所有玻璃小球吗？#几何图形 #解压"'
+    - generic: "243"
+    - paragraph: "铁球能打碎所有玻璃小球吗？#几何图形 #解压"
+  - 'link "探索宇宙：球每次被压缩后都会变颜色。#几何图形 #解压 282 球每次被压缩后都会变颜色。#几何图形 #解压"':
+    - /url: /video/7704043782224893861
+    - 'img "探索宇宙：球每次被压缩后都会变颜色。#几何图形 #解压"'
+    - generic: "282"
+    - paragraph: "球每次被压缩后都会变颜色。#几何图形 #解压"
+  - 'link "探索宇宙：哪个物品能到达中心的位置？#几何图形 #解压 3048 哪个物品能到达中心的位置？#几何图形 #解压"':
+    - /url: /video/7703934578733991345
+    - 'img "探索宇宙：哪个物品能到达中心的位置？#几何图形 #解压"'
+    - generic: "3048"
+    - paragraph: "哪个物品能到达中心的位置？#几何图形 #解压"
+  - 'link "探索宇宙：喵🐱的堆积与进化。#几何图形 #解压 775 喵🐱的堆积与进化。#几何图形 #解压"':
+    - /url: /video/7703852757962354362
+    - 'img "探索宇宙：喵🐱的堆积与进化。#几何图形 #解压"'
+    - generic: "775"
+    - paragraph: "喵🐱的堆积与进化。#几何图形 #解压"
+  - 'link "探索宇宙：蛋糕🍰的堆积与进化。#几何图形 #解压 8893 蛋糕🍰的堆积与进化。#几何图形 #解压"':
+    - /url: /video/7703835368122956411
+    - 'img "探索宇宙：蛋糕🍰的堆积与进化。#几何图形 #解压"'
+    - generic: "8893"
+    - paragraph: "蛋糕🍰的堆积与进化。#几何图形 #解压"
+  - 'link "探索宇宙：喵🐱的堆积与进化。#几何图形 #解压 4744 喵🐱的堆积与进化。#几何图形 #解压"':
+    - /url: /video/7703805394473694138
+    - 'img "探索宇宙：喵🐱的堆积与进化。#几何图形 #解压"'
+    - generic: "4744"
+    - paragraph: "喵🐱的堆积与进化。#几何图形 #解压"
+  - 'link "探索宇宙：球每次被压缩后都会翻2倍。#几何图形 #解压 444 球每次被压缩后都会翻2倍。#几何图形 #解压"':
+    - /url: /video/7703797806046459899
+    - 'img "探索宇宙：球每次被压缩后都会翻2倍。#几何图形 #解压"'
+    - generic: "444"
+    - paragraph: "球每次被压缩后都会翻2倍。#几何图形 #解压"
+  - 'link "探索宇宙：电影公司的堆积与集合。#几何图形 #解压 299 电影公司的堆积与集合。#几何图形 #解压"':
+    - /url: /video/7703794674121584207
+    - 'img "探索宇宙：电影公司的堆积与集合。#几何图形 #解压"'
+    - generic: "299"
+    - paragraph: "电影公司的堆积与集合。#几何图形 #解压"
+  - 'link "探索宇宙：零售超市的堆积与集合。#几何图形 #解压 305 零售超市的堆积与集合。#几何图形 #解压"':
+    - /url: /video/7703715847228043002
+    - 'img "探索宇宙：零售超市的堆积与集合。#几何图形 #解压"'
+    - generic: "305"
+    - paragraph: "零售超市的堆积与集合。#几何图形 #解压"
+  - 'link "探索宇宙：球每次被压缩后都会翻3倍。#几何图形 #解压 2316 球每次被压缩后都会翻3倍。#几何图形 #解压"':
+    - /url: /video/7703566975012019323
+    - 'img "探索宇宙：球每次被压缩后都会翻3倍。#几何图形 #解压"'
+    - generic: "2316"
+    - paragraph: "球每次被压缩后都会翻3倍。#几何图形 #解压"
+  - 'link "探索宇宙：球每次被压缩后都会翻2倍。#几何图形 #解压 651 球每次被压缩后都会翻2倍。#几何图形 #解压"':
+    - /url: /video/7703458551977786809
+    - 'img "探索宇宙：球每次被压缩后都会翻2倍。#几何图形 #解压"'
+    - generic: "651"
+    - paragraph: "球每次被压缩后都会翻2倍。#几何图形 #解压"
+  - 'link "探索宇宙：球每次被压缩后都会翻2倍。#几何图形 #解压 326 球每次被压缩后都会翻2倍。#几何图形 #解压"':
+    - /url: /video/7703445198211466937
+    - 'img "探索宇宙：球每次被压缩后都会翻2倍。#几何图形 #解压"'
+    - generic: "326"
+    - paragraph: "球每次被压缩后都会翻2倍。#几何图形 #解压"
+  - 'link "探索宇宙：怪物史莱克的堆积与进化。#几何图形 #解压 672 怪物史莱克的堆积与进化。#几何图形 #解压"':
+    - /url: /video/7703418568550085041
+    - 'img "探索宇宙：怪物史莱克的堆积与进化。#几何图形 #解压"'
+    - generic: "672"
+    - paragraph: "怪物史莱克的堆积与进化。#几何图形 #解压"
+- generic: 登录后查看更多作品
+- button "立即登录":
+  - generic: 立即登录
+- contentinfo:
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+  - link "网络谣言曝光台 ｜":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: ｜ 违法和不良信息举报：400-140-2108 feedback@douyin.com ｜ 算法推荐专项举报：sfjubao@bytedance.com | 体育饭圈专项举报：tyfq@bytedance.com
+  - link "京ICP备16016397号-3":
+    - /url: https://beian.miit.gov.cn/
+  - generic: ｜ 信息网络传播视听节目许可证 0126733
+  - generic: ｜ 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: ｜ 增值电信业务经营许可证 京B2-20170846
+  - generic: ｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜
+  - img "icon"
+  - link "京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+  - generic: ｜ 互联网宗教信息服务许可证 京（2025）0000017 ｜
+  - img "icon"
+  - link "电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+  - link "｜（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - generic: 热门：
+  - link "抖音二次元":
+    - /url: https://www.douyin.com/jingxuan/acg
+  - link "抖音官网":
+    - /url: https://www.douyin.com/jingxuan
+  - link "郑州科畅机械设备有限公司":
+    - /url: https://www.douyin.com/user/MS4wLjABAAAAfG9etAINYIQe3N8g6cH5TZi8Q080cnvQuS3cDq6vuBp3EbgAmBXWDngIRZOesBTK
+  - 'link "并联分流｜电流和电阻成反比，电学比例题稳稳拿分 串联分压、并联分流是电学两大核心比例规律。本节课讲解并联分流原理和四步解题法，搭配三道梯度例题，帮你区分分压和分流，搞定期中电学比例考题。##初中物理#并联分流 #分流原理 #欧姆定律 #物理期中复习"':
+    - /url: https://www.douyin.com/video/7706532981506387818
+  - link "2025年985最低录取分数线":
+    - /url: https://www.douyin.com/topic/7509866257022306342
+  - link "贵州志愿填报模拟演练":
+    - /url: https://www.douyin.com/shipin/7509898571156637722
+  - link "老家女孩不能参加高考":
+    - /url: https://www.douyin.com/search/%E8%80%81%E5%AE%B6%E5%A5%B3%E5%AD%A9%E4%B8%8D%E8%83%BD%E5%8F%82%E5%8A%A0%E9%AB%98%E8%80%83
+  - link "杭州非法试管婴儿事件多人被刑拘":
+    - /url: https://www.douyin.com/video/7647882514379443502?source=Baiduspider
+  - 'link "中国第一大钟在哪？ #永乐大钟 #新年钟声 #泛知识 #寒山寺钟声 #吉祥钟 #华西村大钟 #北京钟楼大钟"':
+    - /url: https://www.douyin.com/video/7192217964727291148?source=Baiduspider
+  - link "花钱也学不到的知识，12伏转5伏车充电路工作原理，新手也能学会#拆解#电路#电子电路#电子知识分享#电子爱好者":
+    - /url: https://www.douyin.com/video/7190678576482602277?source=Baiduspider
+  - 'link "自带bmg的一条视频 #雪花飘飘 #汉堡车库 #车衣 #隐形车衣"':
+    - /url: https://www.douyin.com/video/7562428199980895540?source=Baiduspider-sdc
+  - 'link "衡阳鱼汤粉，只有吃过的人才知道，那味道，非一般的感觉，鲜掉眉毛。#衡阳鱼粉 #衡阳早餐 #早餐吃什么 #早餐"':
+    - /url: https://www.douyin.com/video/7513516052065504569?source=Baiduspider
+  - link "女子火锅配冰奶茶上吐下泻碱中毒！碱中毒有多毒？跟腹泻啥关系？#夏日科普星探企划":
+    - /url: https://www.douyin.com/video/7137293798698208525?source=Baiduspider
+  - 'link "今天奶奶解锁浆水的新吃法！浆水饺子！你们吃过吗？#农村美食记录生活 #我的乡村生活 #农村生活 #新农人计划2025"':
+    - /url: https://www.douyin.com/video/7500500081632759050?source=Baiduspider-sdc

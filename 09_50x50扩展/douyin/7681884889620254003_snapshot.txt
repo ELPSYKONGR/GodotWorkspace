@@ -1,0 +1,207 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link:
+  - /url: //www.douyin.com/jingxuan
+- link "精选":
+  - /url: https://www.douyin.com/jingxuan?from_nav=1
+  - generic: 精选
+- link "推荐":
+  - /url: https://www.douyin.com/?recommend=1&from_nav=1
+  - generic: 推荐
+- link "AI抖音":
+  - /url: https://www.douyin.com/aisearch?from_nav=1
+  - generic: AI抖音
+- link "关注":
+  - /url: https://www.douyin.com/follow?from_nav=1
+  - generic: 关注
+- link "朋友":
+  - /url: https://www.douyin.com/friend?from_nav=1
+  - generic: 朋友
+- link "我的":
+  - /url: https://www.douyin.com/user/self?from_nav=1
+  - generic: 我的
+- link "直播":
+  - /url: https://live.douyin.com/?from_nav=1
+  - generic: 直播
+- link "放映厅":
+  - /url: https://www.douyin.com/vs?from_nav=1
+  - generic: 放映厅
+- link "短剧":
+  - /url: https://www.douyin.com/series?from_nav=1
+  - generic: 短剧
+- link "小游戏":
+  - /url: https://www.douyin.com/microgame?from_nav=1
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+  - /url: https://beian.miit.gov.cn/
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - textbox "搜索你感兴趣的内容"
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: ""
+    - paragraph: 客户端
+  - paragraph: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - button "登录":
+    - paragraph: 登录
+- generic: 00:00
+- generic: /
+- generic: 00:00
+- 'heading "小球演奏《Verity》 #verity #我的世界 #minecraft #解压 #创意" [level=1]':
+  - generic: 小球演奏《Verity》
+  - link "#verity":
+    - /url: //www.douyin.com/search/verity?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#我的世界":
+    - /url: //www.douyin.com/search/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#minecraft":
+    - /url: //www.douyin.com/search/minecraft?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#解压":
+    - /url: //www.douyin.com/search/%E8%A7%A3%E5%8E%8B?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#创意":
+    - /url: //www.douyin.com/search/%E5%88%9B%E6%84%8F?enter_from=video_detail&source=pc_click_hashtag_feed
+- generic: "5563"
+- generic: "649"
+- generic: "3068"
+- generic: "701"
+- generic: 举报
+- generic: 发布时间：2026-09-05 11:16
+- generic: 全部评论
+- generic: 请先登录后发表评论
+- generic: 大家都在搜：
+- link "verity":
+  - /url: //www.douyin.com/search/verity?aweme_id=7681884889620254003&enter_from=video_detail&gid=7681884889620254003&source=comment_related_search
+  - generic: verity
+- link "Anao小球":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAQ5bapI1TviN4eLtwL8wSL1VtOlwSKCvUahJz26l_cbmKFNvH8wsXrLmPtigxtwCD
+  - img "Anao小球"
+- link "Anao小球":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAQ5bapI1TviN4eLtwL8wSL1VtOlwSKCvUahJz26l_cbmKFNvH8wsXrLmPtigxtwCD
+  - generic: Anao小球
+- paragraph: 粉丝80.2万获赞534.5万
+- button "关注":
+  - generic: 关注
+- heading "推荐视频" [level=2]
+- list
+- contentinfo:
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+  - link "网络谣言曝光台 ｜":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: ｜ 违法和不良信息举报：400-140-2108 feedback@douyin.com ｜ 算法推荐专项举报：sfjubao@bytedance.com | 体育饭圈专项举报：tyfq@bytedance.com
+  - link "京ICP备16016397号-3":
+    - /url: https://beian.miit.gov.cn/
+  - generic: ｜ 信息网络传播视听节目许可证 0126733
+  - generic: ｜ 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: ｜ 增值电信业务经营许可证 京B2-20170846
+  - generic: ｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜
+  - img "icon"
+  - link "京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+  - generic: ｜ 互联网宗教信息服务许可证 京（2025）0000017 ｜
+  - img "icon"
+  - link "电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+  - link "｜（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - generic: 热门：
+  - link "抖音知识":
+    - /url: https://www.douyin.com/jingxuan/knowledge
+  - link "抖音美食":
+    - /url: https://www.douyin.com/jingxuan/food
+  - link "陈宥维":
+    - /url: https://www.douyin.com/user/MS4wLjABAAAA1AcFlBY-M5ZXTopRz4IL8wzYmeObzadGF9gXd3FfFYU
+  - 'link "《石榴红了》第二次演出打卡～ #北京航空航天大学 #北京航空航天大学合肥创新研究院 #大学表演节目 #高校大学生风采展示 #演出瞬间"':
+    - /url: https://www.douyin.com/note/7706781015063493978
+  - link "提前批院校和专业在哪里找":
+    - /url: https://www.douyin.com/topic/7509864186114099238
+  - link "单县高考状元第一名":
+    - /url: https://www.douyin.com/shipin/7509895681209862196
+  - link "贵州高考语文解析":
+    - /url: https://www.douyin.com/search/%E8%B4%B5%E5%B7%9E%E9%AB%98%E8%80%83%E8%AF%AD%E6%96%87%E8%A7%A3%E6%9E%90
+  - link "乘风节目组回应王濛遭辱骂":
+    - /url: https://www.douyin.com/video/7648200955720240394?source=Baiduspider
+  - 'link "自驾到法国🇫🇷中国新能源来巴黎走秀第二期 #自驾游 #自驾 #环欧旅行 #纯电车 #旅行vlog"':
+    - /url: https://www.douyin.com/video/7421485982408527156?source=Baiduspider
+  - 'link "#我要上热门 #文荒推荐 #已完结小说 #每日推书 #我在抖音看漫画 狩猎万界"':
+    - /url: https://www.douyin.com/video/7416737997367840019?source=Baiduspider
+  - 'link "#传统文化 #古书古籍 #一本好书"':
+    - /url: https://www.douyin.com/video/7591069595432258879?source=Baiduspider-sdc
+  - 'link "如果马里奥玩roblox 会怎么样？#roblox国际服 #这个音乐从来不会让人失望 #精神状态belike"':
+    - /url: https://www.douyin.com/video/7234518591037558031?source=Baiduspider
+  - 'link "压窖酒的控制细节#白酒 #酒文化 #传统工艺酿酒 #知识分享"':
+    - /url: https://www.douyin.com/video/7110212682183118092?source=Baiduspider
+  - 'link "【明末：渊虚之羽】全成就攻略｜全玉佩（上）成就：玉佩藏家 【明末：渊虚之羽】全成就攻略｜全玉佩（上）成就：玉佩藏家 #明末渊虚之羽 #游戏攻略 #明末渊虚之羽攻略 #steam游戏 #创作者扶持计划"':
+    - /url: https://www.douyin.com/video/7536556567047540004?source=Baiduspider-sdc

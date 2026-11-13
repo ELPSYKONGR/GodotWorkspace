@@ -1,0 +1,149 @@
+﻿{
+    "checked_at":  "2026-11-12T00:00:00+08:00",
+    "source":  "https://api.github.com/repos/{owner}/{repo}",
+    "repositories":  [
+                         {
+                             "repo":  "viblo/pymunk",
+                             "url":  "https://github.com/viblo/pymunk",
+                             "stars":  1082,
+                             "forks":  201,
+                             "license":  "MIT",
+                             "updated":  "2026-11-10T21:34:53Z",
+                             "archived":  false,
+                             "language":  "Python",
+                             "description":  "Pymunk is a easy-to-use pythonic 2d physics library that can be used whenever  you need 2d rigid body physics from Python"
+                         },
+                         {
+                             "repo":  "liabru/matter-js",
+                             "url":  "https://github.com/liabru/matter-js",
+                             "stars":  18618,
+                             "forks":  2001,
+                             "license":  "MIT",
+                             "updated":  "2026-11-11T06:10:06Z",
+                             "archived":  false,
+                             "language":  "JavaScript",
+                             "description":  "a 2D rigid body physics engine for the web ▲● ■"
+                         },
+                         {
+                             "repo":  "pmndrs/react-three-rapier",
+                             "url":  "https://github.com/pmndrs/react-three-rapier",
+                             "stars":  1592,
+                             "forks":  104,
+                             "license":  "MIT",
+                             "updated":  "2026-11-12T00:50:25Z",
+                             "archived":  false,
+                             "language":  "TypeScript",
+                             "description":  "🤺 Rapier physics in React"
+                         },
+                         {
+                             "repo":  "blender/blender",
+                             "url":  "https://github.com/blender/blender",
+                             "stars":  21889,
+                             "forks":  3561,
+                             "license":  "NOASSERTION",
+                             "updated":  "2026-11-12T01:40:12Z",
+                             "archived":  false,
+                             "language":  "C++",
+                             "description":  "Official mirror of Blender"
+                         },
+                         {
+                             "repo":  "ManimCommunity/manim",
+                             "url":  "https://github.com/ManimCommunity/manim",
+                             "stars":  42424,
+                             "forks":  3327,
+                             "license":  "MIT",
+                             "updated":  "2026-11-12T00:26:22Z",
+                             "archived":  false,
+                             "language":  "Python",
+                             "description":  "A community-maintained Python framework for creating mathematical animations. "
+                         },
+                         {
+                             "repo":  "remotion-dev/remotion",
+                             "url":  "https://github.com/remotion-dev/remotion",
+                             "stars":  72556,
+                             "forks":  6063,
+                             "license":  "NOASSERTION",
+                             "updated":  "2026-11-12T02:02:27Z",
+                             "archived":  false,
+                             "language":  "TypeScript",
+                             "description":  "🎥      Make videos programmatically with React"
+                         },
+                         {
+                             "repo":  "Comfy-Org/ComfyUI",
+                             "url":  "https://github.com/Comfy-Org/ComfyUI",
+                             "stars":  146374,
+                             "forks":  17435,
+                             "license":  "GPL-3.0",
+                             "updated":  "2026-11-12T01:58:52Z",
+                             "archived":  false,
+                             "language":  "Python",
+                             "description":  "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world."
+                         },
+                         {
+                             "repo":  "Wan-Video/Wan2.2",
+                             "url":  "https://github.com/Wan-Video/Wan2.2",
+                             "stars":  18555,
+                             "forks":  2466,
+                             "license":  "Apache-2.0",
+                             "updated":  "2026-11-12T01:09:34Z",
+                             "archived":  false,
+                             "language":  "Python",
+                             "description":  "Wan: Open and Advanced Large-Scale Video Generative Models"
+                         },
+                         {
+                             "repo":  "QwenLM/Qwen-Image",
+                             "url":  "https://github.com/QwenLM/Qwen-Image",
+                             "stars":  8475,
+                             "forks":  569,
+                             "license":  "Apache-2.0",
+                             "updated":  "2026-11-11T13:51:28Z",
+                             "archived":  false,
+                             "language":  "Python",
+                             "description":  "Qwen-Image is a powerful image generation foundation model capable of complex text rendering and precise image editing."
+                         },
+                         {
+                             "repo":  "harry0703/MoneyPrinterTurbo",
+                             "url":  "https://github.com/harry0703/MoneyPrinterTurbo",
+                             "stars":  142614,
+                             "forks":  22808,
+                             "license":  "MIT",
+                             "updated":  "2026-11-12T02:02:59Z",
+                             "archived":  false,
+                             "language":  "Python",
+                             "description":  "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow."
+                         },
+                         {
+                             "repo":  "SYSTRAN/faster-whisper",
+                             "url":  "https://github.com/SYSTRAN/faster-whisper",
+                             "stars":  26677,
+                             "forks":  2234,
+                             "license":  "MIT",
+                             "updated":  "2026-11-12T01:36:35Z",
+                             "archived":  false,
+                             "language":  "Python",
+                             "description":  "Faster Whisper transcription with CTranslate2"
+                         },
+                         {
+                             "repo":  "FunAudioLLM/CosyVoice",
+                             "url":  "https://github.com/QwenAudio/CosyVoice",
+                             "stars":  24368,
+                             "forks":  2778,
+                             "license":  "Apache-2.0",
+                             "updated":  "2026-11-12T00:21:16Z",
+                             "archived":  false,
+                             "language":  "Python",
+                             "description":  "Multi-lingual large voice generation model, providing inference, training and deployment full-stack ability."
+                         },
+                         {
+                             "repo":  "PrefectHQ/prefect",
+                             "url":  "https://github.com/PrefectHQ/prefect",
+                             "stars":  24151,
+                             "forks":  2656,
+                             "license":  "Apache-2.0",
+                             "updated":  "2026-11-12T00:27:10Z",
+                             "archived":  false,
+                             "language":  "Python",
+                             "description":  "Prefect is a workflow orchestration framework for building resilient data pipelines in Python."
+                         }
+                     ]
+}

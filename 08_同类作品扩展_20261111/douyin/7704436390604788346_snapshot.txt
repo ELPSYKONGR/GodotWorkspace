@@ -1,0 +1,459 @@
+- button "开启读屏标签"
+- generic: 读屏标签已关闭
+- link:
+  - /url: //www.douyin.com/jingxuan
+- link "精选":
+  - /url: https://www.douyin.com/jingxuan?from_nav=1
+  - generic: 精选
+- link "推荐":
+  - /url: https://www.douyin.com/?recommend=1&from_nav=1
+  - generic: 推荐
+- link "AI抖音":
+  - /url: https://www.douyin.com/aisearch?from_nav=1
+  - generic: AI抖音
+- link "关注":
+  - /url: https://www.douyin.com/follow?from_nav=1
+  - generic: 关注
+- link "朋友":
+  - /url: https://www.douyin.com/friend?from_nav=1
+  - generic: 朋友
+- link "我的":
+  - /url: https://www.douyin.com/user/self?from_nav=1
+  - generic: 我的
+- link "直播":
+  - /url: https://live.douyin.com/?from_nav=1
+  - generic: 直播
+- link "放映厅":
+  - /url: https://www.douyin.com/vs?from_nav=1
+  - generic: 放映厅
+- link "短剧":
+  - /url: https://www.douyin.com/series?from_nav=1
+  - generic: 短剧
+- link "小游戏":
+  - /url: https://www.douyin.com/microgame?from_nav=1
+  - generic: 小游戏
+- generic: 下载抖音精选
+- generic: 2026 © 抖音
+- link "京ICP备16016397号-3":
+  - /url: https://beian.miit.gov.cn/
+- contentinfo:
+  - link "icon京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+    - img "icon"
+    - text: 京公网安备11010802050006号
+  - link "icon电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+    - img "icon"
+    - text: 电子营业执照
+  - generic: 信息网络传播视听节目许可证 0126733
+  - generic: 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: 增值电信业务经营许可证 京B2-20170846
+  - generic: 网络文化经营许可证 京网文〔2025〕0181-061号
+  - generic: 互联网宗教信息服务许可证 京（2025）0000017
+  - generic: 药品医疗器械网络信息服务备案 （京）网药械信息备字（2023）第00570号
+  - generic: 互联网新闻信息服务许可证 11220230001
+  - link "（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - link "网络谣言曝光台":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: 违法和不良信息举报 400-140-2108 feedback@douyin.com
+  - generic: 算法推荐专项举报 sfjubao@bytedance.com
+  - generic: 体育饭圈专项举报 tyfq@bytedance.com
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+- banner:
+  - generic: 贯穿星辰一击
+  - textbox
+  - button "搜索":
+    - generic: 搜索
+  - paragraph: 充钻石
+  - link "客户端":
+    - /url: https://www.douyin.com/download/pc/obj/douyin-pc-web/douyin-pc-client/7044145585217083655/releases/495279540/8.7.0/win32-ia32/douyin-downloader-v8.7.0-win32-ia32-douyincold.exe
+    - paragraph: 客户端
+  - generic: 壁纸
+  - list:
+    - paragraph: 通知
+  - list:
+    - paragraph: 消息
+  - paragraph: 投稿
+  - button "登录":
+    - paragraph: 登录
+- generic: 00:01
+- generic: /
+- generic: 00:20
+- generic: 倍速
+- generic: 智能
+- button
+- generic: 清屏
+- button
+- generic: 连播
+- generic: 骂我250
+- link "作者声明：虚构演绎，仅供娱乐":
+  - /url: undefined
+  - generic: 作者声明：虚构演绎，仅供娱乐
+- 'heading "第620集 | 球能逃离出去吗？#几何图形 #解压" [level=1]':
+  - text: 第620集 |
+  - generic: 球能逃离出去吗？
+  - link "#几何图形":
+    - /url: //www.douyin.com/search/%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2?enter_from=video_detail&source=pc_click_hashtag_feed
+  - link "#解压":
+    - /url: //www.douyin.com/search/%E8%A7%A3%E5%8E%8B?enter_from=video_detail&source=pc_click_hashtag_feed
+- generic: "944"
+- generic: "41"
+- generic: "276"
+- generic: "124"
+- generic: 举报
+- generic: 发布时间：2026-11-05 05:48
+- generic: 全部评论
+- generic: 请先登录后发表评论
+- generic: 大家都在搜：
+- link "贯穿星辰一击":
+  - /url: //www.douyin.com/search/%E8%B4%AF%E7%A9%BF%E6%98%9F%E8%BE%B0%E4%B8%80%E5%87%BB?aweme_id=7704436390604788346&enter_from=video_detail&gid=7704436390604788346&source=comment_related_search
+  - generic: 贯穿星辰一击
+- link "读白":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAUKLHIUVQADyDJtCojko1anewc3PzHoStnjwSu4ogwaLAbILCjKQwBShyHcUHeO_i
+  - generic: 读白
+- generic: ...
+- generic: 还是忘不了
+- link "贯穿星辰一击":
+  - /url: //www.douyin.com/search/%E8%B4%AF%E7%A9%BF%E6%98%9F%E8%BE%B0%E4%B8%80%E5%87%BB?aweme_id=7704436390604788346&enter_from=video_detail&gid=7704436390604788346&source=comment_named_entity_search
+  - text: 贯穿星辰一击
+- generic: 6天前·陕西
+- paragraph:
+  - generic: "18"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开6条回复":
+  - generic: 展开6条回复
+- link "兴哥（冲3000粉）":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAWeuX_owOnxyvIeiQldAAiM_UJbsnwSs9InD9hohBleY
+  - generic: 兴哥（冲3000粉）
+- generic: ...
+- generic: 什么？居然是
+- link "传说之下":
+  - /url: //www.douyin.com/search/%E4%BC%A0%E8%AF%B4%E4%B9%8B%E4%B8%8B?aweme_id=7704436390604788346&enter_from=video_detail&gid=7704436390604788346&source=comment_named_entity_search
+  - text: 传说之下
+- generic: ？
+- generic: 4天前·陕西
+- paragraph:
+  - generic: "0"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开2条回复":
+  - generic: 展开2条回复
+- link "用户1306861973537":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAX6HsGSaWFavkAinIPKtndWbqjHM6kO4ZCO6eHwBq4Po
+  - generic: 用户1306861973537
+- generic: ...
+- generic: 声音怎么有点耳熟？
+- generic: 3天前·辽宁
+- paragraph:
+  - generic: "1"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开1条回复":
+  - generic: 展开1条回复
+- link "『ℳₒ爱吃雪媚娘的宝宝˖✧』":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAEDZM5t6gHgslGCRBPRGXfyY-7EGHQr8Br9y5NqGlgCs
+  - generic: 『ℳₒ爱吃雪媚娘的宝宝˖✧』
+- generic: ...
+- generic: 感觉这首歌有点熟悉啊
+- generic: 6天前·江苏
+- paragraph:
+  - generic: "4"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- button "展开1条回复":
+  - generic: 展开1条回复
+- link "溪木.":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAreBD67V72AWqCV4UjljptNiD9cV2JtKFxr3enqqX-eE
+  - generic: 溪木.
+- generic: ...
+- generic: 已经忘了那
+- link "贯穿星辰的一击":
+  - /url: //www.douyin.com/search/%E8%B4%AF%E7%A9%BF%E6%98%9F%E8%BE%B0%E7%9A%84%E4%B8%80%E5%87%BB?aweme_id=7704436390604788346&enter_from=video_detail&gid=7704436390604788346&source=comment_named_entity_search
+  - text: 贯穿星辰的一击
+- generic: 6天前·日本
+- paragraph:
+  - generic: "8"
+- paragraph:
+- generic: 分享
+- generic: 回复
+- generic: 登录后即可参与互动讨论
+- button "立即登录":
+  - generic: 立即登录
+- link "探索宇宙":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe
+  - img "探索宇宙"
+- link "探索宇宙":
+  - /url: //www.douyin.com/user/MS4wLjABAAAAihvSaQbG1H4P56Q5bA_WP5FFJW9NO7OLiP0dIpmPWaYDJBbf90lVWPj5ib6SJAbe
+  - generic: 探索宇宙
+- paragraph: 粉丝90.1万获赞3353.9万
+- button "关注":
+  - generic: 关注
+- heading "合集 · 球球大作战" [level=2]
+- list:
+  - link "播放中":
+    - /url: //www.douyin.com/video/7704436390604788346
+    - generic: 播放中
+  - 'heading "第620集 | 球能逃离出去吗？#几何图形 #解压" [level=3]':
+    - 'link "第620集 | 球能逃离出去吗？#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7704436390604788346
+      - generic: "第620集 | 球能逃离出去吗？#几何图形 #解压"
+  - text: "944"
+  - link "合集 · 球球大作战第621集 00:28":
+    - /url: //www.douyin.com/video/7704445194561393329
+    - img "合集 · 球球大作战第621集"
+    - generic: 00:28
+  - 'heading "第621集 | 球每次被压缩后都会翻3倍。#几何图形 #解压" [level=3]':
+    - 'link "第621集 | 球每次被压缩后都会翻3倍。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7704445194561393329
+      - generic: "第621集 | 球每次被压缩后都会翻3倍。#几何图形 #解压"
+  - text: "836"
+  - link "合集 · 球球大作战第622集 00:48":
+    - /url: //www.douyin.com/video/7704675328098129571
+    - img "合集 · 球球大作战第622集"
+    - generic: 00:48
+  - 'heading "第622集 | 球能到达中心的位置吗？#几何图形 #解压" [level=3]':
+    - 'link "第622集 | 球能到达中心的位置吗？#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7704675328098129571
+      - generic: "第622集 | 球能到达中心的位置吗？#几何图形 #解压"
+  - text: "547"
+  - link "合集 · 球球大作战第623集 01:05":
+    - /url: //www.douyin.com/video/7704781461614983418
+    - img "合集 · 球球大作战第623集"
+    - generic: 01:05
+  - 'heading "第623集 | 球每次被压缩后都会翻倍变色。#几何图形 #解压" [level=3]':
+    - 'link "第623集 | 球每次被压缩后都会翻倍变色。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7704781461614983418
+      - generic: "第623集 | 球每次被压缩后都会翻倍变色。#几何图形 #解压"
+  - text: "451"
+  - link "合集 · 球球大作战第624集 00:20":
+    - /url: //www.douyin.com/video/7704783629138856689
+    - img "合集 · 球球大作战第624集"
+    - generic: 00:20
+  - 'heading "第624集 | 球每次被压缩后都会翻3倍。#几何图形 #解压" [level=3]':
+    - 'link "第624集 | 球每次被压缩后都会翻3倍。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7704783629138856689
+      - generic: "第624集 | 球每次被压缩后都会翻3倍。#几何图形 #解压"
+  - text: "4834"
+  - link "01:05":
+    - /url: //www.douyin.com/video/7705534719039149497
+    - generic: 01:05
+  - 'heading "第625集 | 球每次被压缩后都会增加数量且变色。#几何图形 #解压" [level=3]':
+    - 'link "第625集 | 球每次被压缩后都会增加数量且变色。#几何图形 #解压"':
+      - /url: //www.douyin.com/video/7705534719039149497
+      - generic: "第625集 | 球每次被压缩后都会增加数量且变色。#几何图形 #解压"
+  - text: "186"
+- button "点击加载更多"
+- heading "推荐视频" [level=2]
+- list:
+  - link "01:01":
+    - /url: //www.douyin.com/video/7703777473604404986
+    - generic: 01:01
+  - 'heading "小球能否在60s内填满整个圆盘 #解压 #polo小球 #视觉震撼 #星球动画" [level=3]':
+    - 'link "小球能否在60s内填满整个圆盘 #解压 #polo小球 #视觉震撼 #星球动画"':
+      - /url: //www.douyin.com/video/7703777473604404986
+      - generic: "小球能否在60s内填满整个圆盘 #解压 #polo小球 #视觉震撼 #星球动画"
+  - text: "1562"
+  - link "polo小球":
+    - /url: //www.douyin.com/user/MS4wLjABAAAA1mTkI8Zc35G4N19cfnGeHmaf3jsty707ZxFBhNEu8czUnMurY3F3UhQIjk7fhwT8?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7704436390604788346&log_pb=%7B%22impr_id%22%3A%2220261111135325F0895BAC75257A4A8D4C%22%7D&relation=0
+    - generic: polo小球
+  - link "00:26":
+    - /url: //www.douyin.com/video/7693399785868643619
+    - generic: 00:26
+  - 'heading "小球版《山风山风等等我》，你会唱吗？ #山风山风等等我 #解压 #创意 #音乐小球" [level=3]':
+    - 'link "小球版《山风山风等等我》，你会唱吗？ #山风山风等等我 #解压 #创意 #音乐小球"':
+      - /url: //www.douyin.com/video/7693399785868643619
+      - generic: "小球版《山风山风等等我》，你会唱吗？ #山风山风等等我 #解压 #创意 #音乐小球"
+  - text: "6099"
+  - link "Anao小球":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAQ5bapI1TviN4eLtwL8wSL1VtOlwSKCvUahJz26l_cbmKFNvH8wsXrLmPtigxtwCD?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7704436390604788346&log_pb=%7B%22impr_id%22%3A%2220261111135325F0895BAC75257A4A8D4C%22%7D&relation=0
+    - generic: Anao小球
+  - link "01:49":
+    - /url: //www.douyin.com/video/7684527500576671049
+    - generic: 01:49
+  - 'heading "小球能到达终点吗？ #几何图形 #解压" [level=3]':
+    - 'link "小球能到达终点吗？ #几何图形 #解压"':
+      - /url: //www.douyin.com/video/7684527500576671049
+      - generic: "小球能到达终点吗？ #几何图形 #解压"
+  - text: "4084"
+  - link "GeoMath":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAxWAwZOJ57oo8SkexuVI_cwUH300NHgeU97x9W5sAQaE?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7704436390604788346&log_pb=%7B%22impr_id%22%3A%2220261111135325F0895BAC75257A4A8D4C%22%7D&relation=0
+    - generic: GeoMath
+  - link "00:23":
+    - /url: //www.douyin.com/video/7694225359239314917
+    - generic: 00:23
+  - 'heading "小球能否逃离全部圆环？ #解压 #polo小球 #视觉震撼 #星球动画" [level=3]':
+    - 'link "小球能否逃离全部圆环？ #解压 #polo小球 #视觉震撼 #星球动画"':
+      - /url: //www.douyin.com/video/7694225359239314917
+      - generic: "小球能否逃离全部圆环？ #解压 #polo小球 #视觉震撼 #星球动画"
+  - text: 8.5万
+  - link "polo小球":
+    - /url: //www.douyin.com/user/MS4wLjABAAAA1mTkI8Zc35G4N19cfnGeHmaf3jsty707ZxFBhNEu8czUnMurY3F3UhQIjk7fhwT8?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7704436390604788346&log_pb=%7B%22impr_id%22%3A%2220261111135325F0895BAC75257A4A8D4C%22%7D&relation=0
+    - generic: polo小球
+  - link "00:51":
+    - /url: //www.douyin.com/video/7685942231861054758
+    - generic: 00:51
+  - 'heading "不断丢下更大的球😈 15层玻璃地板能救小球吗？ #热点 #试试你的反应力吧" [level=3]':
+    - 'link "不断丢下更大的球😈 15层玻璃地板能救小球吗？ #热点 #试试你的反应力吧"':
+      - /url: //www.douyin.com/video/7685942231861054758
+      - text: 不断丢下更大的球
+      - img "😈"
+      - text: "15层玻璃地板能救小球吗？ #热点 #试试你的反应力吧"
+  - text: "3206"
+  - link "随机漫步的游戏达人":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAQ0HhcYPV-FEp_WqkRsvcvH8cAUsEzK4_yA4FmiCY6wU?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7704436390604788346&log_pb=%7B%22impr_id%22%3A%2220261111135325F0895BAC75257A4A8D4C%22%7D&relation=0
+    - generic: 随机漫步的游戏达人
+  - link "00:06":
+    - /url: //www.douyin.com/video/7686485372154514739
+    - generic: 00:06
+  - 'heading "无限六边形骰子层层叠 🎲 #恢复视力#一心二用消消乐小游戏 #哈哈消消除乐游戏" [level=3]':
+    - 'link "无限六边形骰子层层叠 🎲 #恢复视力#一心二用消消乐小游戏 #哈哈消消除乐游戏"':
+      - /url: //www.douyin.com/video/7686485372154514739
+      - text: 无限六边形骰子层层叠
+      - img "🎲"
+      - text: "#恢复视力#一心二用消消乐小游戏 #哈哈消消除乐游戏"
+  - text: "2562"
+  - link "风中西林":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAo4wq0_oP53KwSzE73yMdj-i-hLkBEVTtSIw9GK_OsyU?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7704436390604788346&log_pb=%7B%22impr_id%22%3A%2220261111135325F0895BAC75257A4A8D4C%22%7D&relation=0
+    - generic: 风中西林
+  - link "00:43":
+    - /url: //www.douyin.com/video/7686438974571180005
+    - generic: 00:43
+  - 'heading "小球能否合成黑洞？ #解压 #polo小球 #视觉震撼 #星球动画" [level=3]':
+    - 'link "小球能否合成黑洞？ #解压 #polo小球 #视觉震撼 #星球动画"':
+      - /url: //www.douyin.com/video/7686438974571180005
+      - generic: "小球能否合成黑洞？ #解压 #polo小球 #视觉震撼 #星球动画"
+  - text: "6409"
+  - link "polo小球":
+    - /url: //www.douyin.com/user/MS4wLjABAAAA1mTkI8Zc35G4N19cfnGeHmaf3jsty707ZxFBhNEu8czUnMurY3F3UhQIjk7fhwT8?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7704436390604788346&log_pb=%7B%22impr_id%22%3A%2220261111135325F0895BAC75257A4A8D4C%22%7D&relation=0
+    - generic: polo小球
+  - link "00:30":
+    - /url: //www.douyin.com/video/7700100045576780130
+    - generic: 00:30
+  - 'heading "《球球Ricolab来了》#球球Ricolab #球球大作战 #视觉震撼#解压" [level=3]':
+    - 'link "《球球Ricolab来了》#球球Ricolab #球球大作战 #视觉震撼#解压"':
+      - /url: //www.douyin.com/video/7700100045576780130
+      - generic: "《球球Ricolab来了》#球球Ricolab #球球大作战 #视觉震撼#解压"
+  - text: 1.2万
+  - link "球球Ricolab":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAvHTV2uPf_ysBXYLA4mj-PQGiAup-M4H9r3JrvIwb8rM0m4UppyFmBzc-1DhFugZ2?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7704436390604788346&log_pb=%7B%22impr_id%22%3A%2220261111135325F0895BAC75257A4A8D4C%22%7D&relation=0
+    - generic: 球球Ricolab
+  - link "00:44":
+    - /url: //www.douyin.com/video/7701690931448693413
+    - generic: 00:44
+  - 'heading "每次挤压鸡蛋 都会变成两个 #解压 #polo小球 #视觉震撼 #星球动画" [level=3]':
+    - 'link "每次挤压鸡蛋 都会变成两个 #解压 #polo小球 #视觉震撼 #星球动画"':
+      - /url: //www.douyin.com/video/7701690931448693413
+      - generic: "每次挤压鸡蛋 都会变成两个 #解压 #polo小球 #视觉震撼 #星球动画"
+  - text: 2.6万
+  - link "polo小球":
+    - /url: //www.douyin.com/user/MS4wLjABAAAA1mTkI8Zc35G4N19cfnGeHmaf3jsty707ZxFBhNEu8czUnMurY3F3UhQIjk7fhwT8?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7704436390604788346&log_pb=%7B%22impr_id%22%3A%2220261111135325F0895BAC75257A4A8D4C%22%7D&relation=0
+    - generic: polo小球
+  - link "00:10":
+    - /url: //www.douyin.com/video/7698661313001950537
+    - generic: 00:10
+  - 'heading "#三角洲行动 #难不倒我游戏 #通关是不可能的 #抖音玩法合伙人计划" [level=3]':
+    - 'link "#三角洲行动 #难不倒我游戏 #通关是不可能的 #抖音玩法合伙人计划"':
+      - /url: //www.douyin.com/video/7698661313001950537
+      - generic: "#三角洲行动 #难不倒我游戏 #通关是不可能的 #抖音玩法合伙人计划"
+  - text: "679"
+  - link "佐罗❤️":
+    - /url: //www.douyin.com/user/MS4wLjABAAAAQpuLlcXK1WNDNp3dUa69yhqQcqYLnEqhoMwceCURjhhHbF2vRQOLy85GFom_rjz3?author_id=1992776031681613&enter_from=video_detail&enter_method=video_cover_title&from_tab_name=main&group_id=7704436390604788346&log_pb=%7B%22impr_id%22%3A%2220261111135325F0895BAC75257A4A8D4C%22%7D&relation=0
+    - text: 佐罗
+    - img "❤️"
+- contentinfo:
+  - link "广告投放":
+    - /url: https://www.oceanengine.com/resource/douyin
+  - link "用户服务协议":
+    - /url: https://www.douyin.com/agreements/?id=6773906068725565448
+  - link "隐私政策":
+    - /url: https://www.douyin.com/agreements/?id=6773901168964798477
+  - link "账号找回":
+    - /url: https://www.douyin.com/recovery_account/
+  - link "联系我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "加入我们":
+    - /url: https://www.douyin.com/aboutus/
+  - link "友情链接":
+    - /url: https://www.douyin.com/friend_links
+  - link "站点地图":
+    - /url: https://www.douyin.com/htmlmap/hotauthor_0_1
+  - link "下载抖音":
+    - /url: https://www.douyin.com/downloadpage/pc
+  - link "抖音电商":
+    - /url: https://mix.jinritemai.com/falcon/mix_page/index.html
+  - link "网络谣言曝光台 ｜":
+    - /url: https://www.piyao.org.cn/yybgt/index.htm
+  - link "网上有害信息举报":
+    - /url: https://www.12377.cn/
+  - generic: ｜ 违法和不良信息举报：400-140-2108 feedback@douyin.com ｜ 算法推荐专项举报：sfjubao@bytedance.com | 体育饭圈专项举报：tyfq@bytedance.com
+  - link "京ICP备16016397号-3":
+    - /url: https://beian.miit.gov.cn/
+  - generic: ｜ 信息网络传播视听节目许可证 0126733
+  - generic: ｜ 广播电视节目制作经营许可证 （京）字第11313号
+  - generic: ｜ 增值电信业务经营许可证 京B2-20170846
+  - generic: ｜ 网络文化经营许可证 京网文〔2025〕0181-061号 ｜
+  - img "icon"
+  - link "京公网安备11010802050006号":
+    - /url: https://beian.mps.gov.cn/
+  - generic: ｜ 互联网宗教信息服务许可证 京（2025）0000017 ｜
+  - img "icon"
+  - link "电子营业执照":
+    - /url: https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do
+  - link "｜（京）人服证字〔2026〕第0600005023号":
+    - /url: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/d1cb34abe8ebb5600b51bac36ce3247f.jpg
+  - generic: 热门：
+  - link "抖音网页版入口":
+    - /url: https://www.douyin.com/jingxuan
+  - link "抖音":
+    - /url: https://www.douyin.com/jingxuan
+  - link "卢熠翎":
+    - /url: https://www.douyin.com/user/MS4wLjABAAAAMxRPM_1jci5I_z1CswIfFZSKFQg0eE59VfKcv4lNxUKkWr_6Usi7rl1wc4wLXGOv
+  - 'link "提前批和征集志愿是什么 #教育 #高考 #志愿 #滑档 #提前批"':
+    - /url: https://www.douyin.com/video/7706680247026044187
+  - link "怎么转换位次":
+    - /url: https://www.douyin.com/topic/7509888731717961780
+  - link "河南免费医学生报考流程":
+    - /url: https://www.douyin.com/shipin/7509903346577360934
+  - link "广西理科486分能上哪些大学":
+    - /url: https://www.douyin.com/search/%E5%B9%BF%E8%A5%BF%E7%90%86%E7%A7%91486%E5%88%86%E8%83%BD%E4%B8%8A%E5%93%AA%E4%BA%9B%E5%A4%A7%E5%AD%A6
+  - link "普京宣布将停火32小时":
+    - /url: https://www.douyin.com/video/7626924449807322377?source=Baiduspider
+  - 'link "高能数造推出新一代电池3D打印机T0P.E M20 #高能数造 #电池3D打印 #3D打印固态电池"':
+    - /url: https://www.douyin.com/video/7213011338459712824?source=Baiduspider
+  - 'link "炖老母鸡汤，直接下锅炖大错！教你饭店不外传秘诀，汤不腥肉不柴#老母鸡汤 #为你煲汤 #鸡汤 #老母鸡 #炖鸡汤 #抖音美食创作人"':
+    - /url: https://www.douyin.com/video/7228128217520033085?source=Baiduspider
+  - 'link "《新大学法语2》汉译法练习Unité 8 #法语#考研二外法语#新大学法语#法语学习"':
+    - /url: https://www.douyin.com/video/7579107082125806858?source=Baiduspider-sdc
+  - link "#团队精神风采展示#每一个精彩瞬间都值得记录 恭喜我们团队获得一等奖，真是惊喜呀，这四天喊破嗓子也值了😜😜":
+    - /url: https://www.douyin.com/video/7206670853868735779?source=Baiduspider
+  - link "猪油到底是好是坏？四川55岁阿姨长期吃猪油炒菜，不用吃罐装油了#猪油#养生#饮食":
+    - /url: https://www.douyin.com/video/7415027603393891647?source=Baiduspider
+  - 'link "当林伟翔混入姿态刚子犬嘴班节目效果爆炸#zz1tai姿态 #kryst4l水晶哥 #林伟翔"':
+    - /url: https://www.douyin.com/video/7234537367497968908?source=Baiduspider-sdc
