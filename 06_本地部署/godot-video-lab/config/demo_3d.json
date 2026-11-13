@@ -1,0 +1,13 @@
+{
+  "mode": "3d",
+  "title": "真实三维碰撞",
+  "subtitle": "球、长方体与斜坡 · Godot 3D 刚体",
+  "seed": 20261113,
+  "count": 12,
+  "gravity": 9.8,
+  "restitution": 0.65,
+  "projection": "orthogonal",
+  "camera_size": 23.0,
+  "ramp": true,
+  "palette": ["#2ed5ab", "#ffb45c", "#77aaff", "#d98eff"]
+}

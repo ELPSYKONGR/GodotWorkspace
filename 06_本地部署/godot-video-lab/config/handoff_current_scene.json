@@ -1,0 +1,361 @@
+{
+  "export_preset": {
+    "audio_codec": "aac",
+    "duration_seconds": 12.0,
+    "fps": 60.0,
+    "resolution": [
+      1080.0,
+      1920.0
+    ],
+    "source": "recorded_take",
+    "video_codec": "h264"
+  },
+  "mechanisms": [
+    {
+      "conditions": {
+        "newborn_guard_seconds": 0.08,
+        "other_tags_any": [
+          "ball",
+          "boundary"
+        ],
+        "require_minimum_impact": false
+      },
+      "enabled": true,
+      "id": "split_ball",
+      "params": {
+        "capacity_policy": "skip_whole_split",
+        "children_total": 2.0,
+        "placement_failure": "skip_and_report",
+        "remove_parent": true,
+        "size_policy": "same_size_gameplay"
+      },
+      "priority": 100.0,
+      "trigger": {
+        "phases": [
+          "enter",
+          "stay"
+        ],
+        "recheck_active_after_birth_guard": true,
+        "type": "contact"
+      },
+      "type": "split_on_contact"
+    },
+    {
+      "enabled": true,
+      "id": "split_hitstop",
+      "params": {
+        "same_batch_policy": "maximum",
+        "seconds": 0.06
+      },
+      "scope": "global",
+      "trigger": {
+        "type": "split.committed"
+      },
+      "type": "hit_stop_on_event"
+    }
+  ],
+  "metadata": {
+    "status": "implemented_workbench_v1"
+  },
+  "objects": [
+    {
+      "appearance": {
+        "color": "#22c55e",
+        "generation_color": {
+          "fade": 0.2,
+          "mode": "lighten_same_hue"
+        }
+      },
+      "editor": {
+        "group": "initial_balls",
+        "locked": false
+      },
+      "id": "ball_A",
+      "mechanisms": [
+        "split_ball"
+      ],
+      "name": "绿色初始球A",
+      "physics": {
+        "angular_velocity": 0.0,
+        "ccd": true,
+        "collision_layer": 1.0,
+        "collision_mask": 3.0,
+        "mass": 1.0,
+        "material": {
+          "friction": 0.03,
+          "restitution": 0.88
+        },
+        "mode": "dynamic",
+        "velocity": [
+          175.0,
+          65.0
+        ]
+      },
+      "shape": {
+        "primitive": "circle",
+        "radius": 18.0
+      },
+      "tags": [
+        "ball",
+        "splitter"
+      ],
+      "transform": {
+        "position": [
+          240.0,
+          420.0
+        ],
+        "rotation_degrees": 0.0
+      }
+    },
+    {
+      "appearance": {
+        "color": "#22c55e",
+        "generation_color": {
+          "fade": 0.2,
+          "mode": "lighten_same_hue"
+        }
+      },
+      "editor": {
+        "group": "initial_balls",
+        "locked": false
+      },
+      "id": "ball_B",
+      "mechanisms": [
+        "split_ball"
+      ],
+      "name": "绿色初始球B",
+      "physics": {
+        "angular_velocity": 0.0,
+        "ccd": true,
+        "collision_layer": 1.0,
+        "collision_mask": 3.0,
+        "mass": 1.0,
+        "material": {
+          "friction": 0.03,
+          "restitution": 0.88
+        },
+        "mode": "dynamic",
+        "velocity": [
+          -175.0,
+          65.0
+        ]
+      },
+      "shape": {
+        "primitive": "circle",
+        "radius": 18.0
+      },
+      "tags": [
+        "ball",
+        "splitter"
+      ],
+      "transform": {
+        "position": [
+          480.0,
+          420.0
+        ],
+        "rotation_degrees": 0.0
+      }
+    },
+    {
+      "appearance": {
+        "color": "#42667d"
+      },
+      "id": "floor",
+      "name": "地面",
+      "physics": {
+        "collision_layer": 2.0,
+        "collision_mask": 1.0,
+        "mode": "static"
+      },
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          646.0,
+          14.0
+        ]
+      },
+      "tags": [
+        "boundary",
+        "floor"
+      ],
+      "transform": {
+        "position": [
+          360.0,
+          1136.0
+        ],
+        "rotation_degrees": 0.0
+      }
+    },
+    {
+      "appearance": {
+        "color": "#42667d"
+      },
+      "id": "wall_left",
+      "name": "左墙",
+      "physics": {
+        "collision_layer": 2.0,
+        "collision_mask": 1.0,
+        "mode": "static"
+      },
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          14.0,
+          890.0
+        ]
+      },
+      "tags": [
+        "boundary",
+        "wall"
+      ],
+      "transform": {
+        "position": [
+          44.0,
+          691.0
+        ],
+        "rotation_degrees": 0.0
+      }
+    },
+    {
+      "appearance": {
+        "color": "#42667d"
+      },
+      "id": "wall_right",
+      "name": "右墙",
+      "physics": {
+        "collision_layer": 2.0,
+        "collision_mask": 1.0,
+        "mode": "static"
+      },
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          14.0,
+          890.0
+        ]
+      },
+      "tags": [
+        "boundary",
+        "wall"
+      ],
+      "transform": {
+        "position": [
+          676.0,
+          691.0
+        ],
+        "rotation_degrees": 0.0
+      }
+    },
+    {
+      "appearance": {
+        "color": "#42667d"
+      },
+      "id": "ceiling",
+      "name": "顶墙",
+      "physics": {
+        "collision_layer": 2.0,
+        "collision_mask": 1.0,
+        "mode": "static"
+      },
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          646.0,
+          14.0
+        ]
+      },
+      "tags": [
+        "boundary",
+        "wall"
+      ],
+      "transform": {
+        "position": [
+          360.0,
+          246.0
+        ],
+        "rotation_degrees": 0.0
+      }
+    }
+  ],
+  "presentation": {
+    "audio": {
+      "enabled": true,
+      "max_voices": 16.0,
+      "min_interval": 0.035,
+      "pitch": 1.0,
+      "preset": "wood",
+      "sample_rate": 48000.0,
+      "volume_db": -12.0
+    },
+    "captions": [
+      {
+        "color": "#edf5ff",
+        "font_family": "Microsoft YaHei",
+        "font_size": 44.0,
+        "id": "main_title",
+        "position": [
+          44.0,
+          54.0
+        ],
+        "text": "碰撞之后，一变二"
+      },
+      {
+        "color": "#9cb2cc",
+        "font_family": "Microsoft YaHei",
+        "font_size": 23.0,
+        "id": "subtitle",
+        "position": [
+          44.0,
+          130.0
+        ],
+        "text": "真实碰撞 · 分裂音效 · 可回放特效"
+      }
+    ],
+    "effects": {
+      "count": 12.0,
+      "enabled": true,
+      "flash": true,
+      "lifetime": 0.35,
+      "ring": true,
+      "speed": 140.0,
+      "time_domain": "simulation",
+      "trail_enabled": true,
+      "trail_seconds": 0.2
+    },
+    "render": {
+      "backend": "compatibility",
+      "background": "#0c1722",
+      "camera": {
+        "projection": "canvas"
+      },
+      "debug": true,
+      "debug_overlay_in_export": false,
+      "metallic": 0.15,
+      "roughness": 0.35,
+      "shadows": true
+    }
+  },
+  "revision": 33,
+  "scene_id": "split_contact_lab",
+  "schema_version": 2.0,
+  "take_settings": {
+    "chunk_seconds": 1.0,
+    "duration_seconds": 12.0,
+    "record_every_physics_tick": true
+  },
+  "world": {
+    "dimension": "2d",
+    "gravity": [
+      0.0,
+      450.0
+    ],
+    "logical_size": [
+      720.0,
+      1280.0
+    ],
+    "max_dynamic_bodies": 48.0,
+    "physics_hz": 240.0,
+    "seed": 20261113.0,
+    "units": "logical_px"
+  }
+}

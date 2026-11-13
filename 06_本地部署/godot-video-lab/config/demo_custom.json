@@ -1,0 +1,53 @@
+{
+    "seed":  20261113,
+    "gravity":  450,
+    "restitution":  0.88,
+    "radius":  18,
+    "split_children":  2,
+    "max_balls":  48,
+    "protection":  0.08,
+    "generation_fade":  0.2,
+    "color":  "#3b82f6",
+    "debug_colliders":  false,
+    "spawns":  [
+                   {
+                       "position":  [
+                                        240,
+                                        420
+                                    ],
+                       "velocity":  [
+                                        175,
+                                        65
+                                    ]
+                   },
+                   {
+                       "position":  [
+                                        480,
+                                        420
+                                    ],
+                       "velocity":  [
+                                        -175,
+                                        65
+                                    ]
+                   },
+                   {
+                       "position":  [
+                                        180,
+                                        1000
+                                    ],
+                       "velocity":  [
+                                        140,
+                                        120
+                                    ]
+                   }
+               ],
+    "mode":  "2d",
+    "title":  "由想法生成场景",
+    "subtitle":  "配置修改验证 · 标题52px · 蓝色球 · 60fps",
+    "title_size":  52,
+    "subtitle_size":  23,
+    "font_family":  "Microsoft YaHei",
+    "physics_hz":  240,
+    "preview_fps":  60,
+    "hitstop_seconds":  0.06
+}

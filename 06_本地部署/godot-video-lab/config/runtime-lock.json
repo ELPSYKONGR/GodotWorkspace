@@ -1,0 +1,58 @@
+{
+  "lock_version": 1,
+  "platform": "windows-x86_64",
+  "godot": {
+    "version": "4.7.2-stable",
+    "filename": "Godot_v4.7.2-stable_win64.exe.zip",
+    "url": "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_win64.exe.zip",
+    "sha256": "731980f9608d61333e5baf54a2ef17210acc7a538446c0cb9969f002aca1e953",
+    "gui_sha256": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424",
+    "console_sha256": "c8f0a6bc45a19b33541501e57f6f7cd972ab18453743266339d495cbbe846643",
+    "license": "MIT and bundled third-party notices",
+    "license_url": "https://godotengine.org/license/",
+    "hash_provenance": "Downloaded official release archive and measured local SHA256; not independently signature-verified"
+  },
+  "python": {
+    "version": "3.12.10",
+    "filename": "python-3.12.10-embed-amd64.zip",
+    "url": "https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip",
+    "sha256": "4acbed6dd1c744b0376e3b1cf57ce906f9dc9e95e68824584c8099a63025a3c3",
+    "license": "PSF License Version 2 and included third-party notices",
+    "license_url": "https://docs.python.org/3.12/license.html",
+    "hash_provenance": "Downloaded official CPython archive and measured local SHA256"
+  },
+  "pillow": {
+    "version": "11.3.0",
+    "filename": "pillow-11.3.0-cp312-cp312-win_amd64.whl",
+    "url": "https://files.pythonhosted.org/packages/8c/ce/e7dfc873bdd9828f3b6e5c2bbb74e47a98ec23cc5c74fc4e54462f0d9204/pillow-11.3.0-cp312-cp312-win_amd64.whl",
+    "sha256": "a6444696fce635783440b7f7a9fc24b3ad10a9ea3f0ab66c5905be1c19ccf17d",
+    "license": "MIT-CMU and bundled third-party notices",
+    "license_url": "https://github.com/python-pillow/Pillow/blob/11.3.0/LICENSE",
+    "hash_provenance": "PyPI release JSON SHA256, matched after download",
+    "purpose": "Legacy PNG/contact-sheet inspection only; current audio/production tools use Python standard library"
+  },
+  "mingit": {
+    "version": "2.56.1.windows.1",
+    "filename": "MinGit-2.56.1-64-bit.zip",
+    "url": "https://github.com/git-for-windows/git/releases/download/v2.56.1.windows.1/MinGit-2.56.1-64-bit.zip",
+    "sha256": "4a92850b6e917da4fd010669b614b55dccf5b0ec333a534cc4be4700dfefdafd",
+    "license": "GPL-2.0 and bundled third-party notices",
+    "license_url": "https://github.com/git-for-windows/git/blob/v2.56.1.windows.1/COPYING",
+    "purpose": "Optional local source-control/development tool; not needed for rendering",
+    "hash_provenance": "Official GitHub release asset SHA256 digest, matched after download"
+  },
+  "ffmpeg": {
+    "version": "7.1-essentials_build-www.gyan.dev",
+    "package": "imageio-ffmpeg==0.6.0",
+    "filename": "imageio_ffmpeg-0.6.0-py3-none-win_amd64.whl",
+    "url": "https://files.pythonhosted.org/packages/2c/c6/fa760e12a2483469e2bf5058c5faff664acf66cadb4df2ad6205b016a73d/imageio_ffmpeg-0.6.0-py3-none-win_amd64.whl",
+    "sha256": "02fa47c83703c37df6bfe4896aab339013f62bf02c5ebf2dce6da56af04ffc0a",
+    "member": "imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+    "binary_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+    "license": "FFmpeg binary: GPL-3.0-or-later with enabled libraries; imageio-ffmpeg wrapper: BSD-2-Clause",
+    "license_url": "https://ffmpeg.org/legal.html",
+    "source_url": "https://www.gyan.dev/ffmpeg/builds/",
+    "source_note": "Retain upstream build configuration and corresponding-source obligations for binary redistribution; wrapper license does not relicense FFmpeg",
+    "hash_provenance": "PyPI release JSON SHA256 for wheel; extracted executable matches previously validated project binary"
+  }
+}

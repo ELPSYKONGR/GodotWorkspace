@@ -5,8 +5,10 @@
 | 路径 | 职责 |
 |---|---|
 | `START_HERE.md` / `AGENTS.md` | 接手阅读顺序、运行入口、目标和约束 |
-| `START_WORKBENCH.cmd` / `OPEN_EDITOR.cmd` / `VERIFY_PACKAGE.cmd` | 双击启动、源码编辑、包完整性检查 |
-| `tools/start_project.ps1` | 从当前目录定位部署工程，不依赖旧盘符 |
+| `VERSION` / `docs/仓库与版本管理.md` | 1.0版本标识、唯一仓库、单仓库开发与Release资料边界 |
+| `docs/发布验收.md` | 本轮单仓库/部署入口实际检查、最终发布证据位置与验证范围 |
+| `SETUP_WORKBENCH.cmd` / `START_WORKBENCH.cmd` / `OPEN_EDITOR.cmd` / `VERIFY_PACKAGE.cmd` | 源码首次恢复工具、双击启动、源码编辑、完整包校验 |
+| `tools/start_project.ps1` | 从当前目录定位部署工程，支持Setup/启动/编辑/校验，不依赖旧盘符 |
 | `README.md` / `CHANGELOG.md` / `SKILLS_USED.md` | 研究入口、交接改动、工具依赖说明 |
 | `00_项目评估总报告.md` / `.docx` | 原三个项目的内容、商业与技术评估 |
 | `01_参考视频/` | 三条原始链接的实际原图/视频及证据 |

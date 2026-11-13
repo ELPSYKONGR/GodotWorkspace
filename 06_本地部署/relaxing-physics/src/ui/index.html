@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>解压动画工作台</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101725;--panel:#182338;--line:#35445d;--ink:#e8eef8;--muted:#9aa9bf;--accent:#74eabf;--danger:#ff9d9d}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1100px;margin:0 auto;padding:24px}h1,h2{margin:0 0 10px}h1{font-size:24px}h2{font-size:16px}.layout{display:grid;grid-template-columns:minmax(320px,420px) 1fr;gap:18px;margin-top:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}.field{display:grid;grid-template-columns:120px 1fr;align-items:center;gap:8px;margin:9px 0}.field label{color:var(--muted)}input,select,textarea,button{font:inherit}input,select,textarea{width:100%;border:1px solid var(--line);background:#101725;color:var(--ink);border-radius:6px;padding:7px}textarea{min-height:60px;resize:vertical}.row{display:flex;gap:8px;flex-wrap:wrap}.button{border:1px solid var(--line);background:#22314a;color:var(--ink);padding:8px 12px;border-radius:6px;cursor:pointer}.button.primary{background:#287e70;border-color:#48b99f}.button:disabled{opacity:.5;cursor:not-allowed}.status{min-height:24px;color:var(--muted);margin-top:10px}.error{color:var(--danger)}video{display:block;width:min(100%,380px);aspect-ratio:9/16;background:#080d17;margin:0 auto;border-radius:8px}.preview-meta{margin-top:10px;color:var(--muted);font-size:12px}.text-row{border-top:1px solid var(--line);padding-top:8px;margin-top:8px}.text-row .field{grid-template-columns:72px 1fr}.small{font-size:12px;color:var(--muted)}.actions{margin:12px 0}.text-row[hidden]{display:none}.inline-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.inline-fields .field{grid-template-columns:1fr}@media(max-width:760px){main{padding:14px}.layout{grid-template-columns:1fr}.field{grid-template-columns:100px 1fr}}.param-title{font-size:13px;color:var(--muted);letter-spacing:.05em;margin:16px 0 2px;padding-top:10px;border-top:1px solid var(--line);font-weight:600}.param-title:first-child{margin-top:4px;padding-top:0;border-top:0}.hint{grid-column:2;margin:-4px 0 6px;font-size:11px;line-height:1.45;color:#71849d}.switch{display:flex;align-items:center;gap:8px}.switch input{width:auto}.num-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.num-row .field{grid-template-columns:1fr;margin:6px 0}
+  </style>
+  <style>
+    .preview-panel{align-self:start;position:sticky;top:16px}#liveImage{display:block;width:min(100%,360px);aspect-ratio:9/16;object-fit:contain;background:#080d17;margin:0 auto 12px;border-radius:8px}.transport{align-items:center;justify-content:center}.transport label{display:flex;gap:6px;align-items:center}.transport input{width:auto}#liveSeek{padding:0;accent-color:var(--accent)}#liveClock{font-variant-numeric:tabular-nums}#liveFps{text-align:center;margin:8px 0}details{margin-top:16px}summary{cursor:pointer;margin-bottom:12px}@media(max-width:760px){.preview-panel{position:static}}
+  </style>
+</head>
+<body>
+<main>
+  <h1>解压动画工作台</h1><div class="small">数据层生成并缓存运动轨迹；渲染层读取轨迹，文字、字体、画面和帧率可独立调整。</div>
+  <div class="layout">
+    <section class="panel" aria-label="配置编辑">
+      <h2>方案与输出</h2>
+      <div class="field"><label for="preset">方案</label><select id="preset"></select></div>
+      <div class="field"><label for="mode">机制</label><select id="mode"><option value="multiply">碰撞增殖</option><option value="escape">旋转逃逸</option><option value="rain">小球雨释放</option><option value="ring_escape">环形缺口逃逸</option><option value="stack_domino">机械闸门破碎多米诺</option><option value="versus">双通道指数赛</option></select></div>
+      <div class="field"><label for="width">输出尺寸</label><select id="width"><option value="360">360 × 640</option><option value="540">540 × 960</option><option value="720">720 × 1280</option><option value="1080">1080 × 1920</option></select></div>
+      <div class="field"><label for="fps">帧率</label><select id="fps"><option>24</option><option>25</option><option>30</option><option>50</option><option>60</option></select></div>
+      <div class="field"><label for="duration">时长（秒）</label><input id="duration" type="number" min="1" max="60" step="0.5"></div>
+      <div class="field"><label for="release">释放时间</label><input id="release" type="number" min="0.1" max="59.9" step="0.1"></div>
+      <div class="field"><label for="seed">随机种子</label><input id="seed" type="number" min="0" max="2147483647" step="1"></div>
+      <div id="modeParams"></div>
+      <div class="row actions"><button class="button" id="save">保存配置</button><button class="button" id="preview">高清单帧</button><button class="button primary" id="render">导出视频</button></div>
+      <h2>画面文字</h2><div class="small">占位符会按当前参数自动填数：{left} {right} {capacity} {seed_balls} {left_burst} {right_burst} {margin} {winner} {time}</div><div class="field"><label for="textLayer">编辑文字层</label><select id="textLayer"></select></div><div id="texts"></div>
+      <button class="button" id="addText">增加文字</button>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </section>
+    <section class="panel preview-panel" aria-label="预览">
+      <h2>实时画面预览</h2>
+      <img id="liveImage" alt="物理动画实时预览">
+      <div class="row transport"><button class="button primary" id="livePlay" aria-pressed="false">播放预览</button><button class="button" id="liveRestart">回到开头</button><label><input id="liveLoop" type="checkbox" checked>循环</label></div>
+      <div class="field"><label for="liveSeek">播放进度</label><input id="liveSeek" type="range" min="0" max="24" value="0" step="0.01"></div>
+      <div id="liveClock" class="small">0.00 / 24.00 秒</div>
+      <div class="field"><label for="previewTime">预览时刻（秒）</label><input type="number" id="previewTime" value="0" min="0" max="24" step="0.1"></div>
+      <div id="liveFps" class="small">实时画面预览无声，导出视频包含声音。</div>
+      <div id="previewMeta" class="preview-meta" role="status" aria-live="polite">准备预览后即可播放；修改文字和参数会自动更新。</div>
+      <details id="exportSection" hidden><summary>已导出视频（含声音）</summary><video id="video" controls playsinline></video></details>
+    </section>
+  </div>
+</main><script type="module" src="/app.js"></script>
+</body></html>

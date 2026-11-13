@@ -1,0 +1,87 @@
+{
+  "name": "双通道指数赛",
+  "output": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "duration": 18
+  },
+  "simulation": {
+    "mode": "versus",
+    "seed": 20261112,
+    "sample_rate": 60,
+    "release_at": 16.6,
+    "initial_balls": 1,
+    "max_balls": 1400,
+    "ball_radius": 5.5,
+    "rotation_speed": 0,
+    "birth_cooldown": 0.4,
+    "gravity": 260
+  },
+  "versus": {
+    "lane_capacity": 640,
+    "seed_balls": 70,
+    "left_burst": 4,
+    "right_burst": 2,
+    "left_cooldown": 0.05,
+    "right_cooldown": 0.05,
+    "first_split_at": 0,
+    "hold_after_decide": 1.8,
+    "split_hitstop": 0.06,
+    "split_hitstop_interval": 0.25
+  },
+  "appearance": {
+    "generation_fade": 0.2,
+    "background_top": "#04060a",
+    "background_bottom": "#080d14",
+    "ring_color": "#1b2b3d",
+    "rotor_color": "#243547",
+    "palette": [
+      "#22c55e",
+      "#ff7a33",
+      "#6ee7b7",
+      "#f472b6",
+      "#facc15",
+      "#a78bfa"
+    ]
+  },
+  "texts": [
+    {
+      "id": "title",
+      "text": "1 颗，能追上 {seed_balls} 颗吗？",
+      "x": 360,
+      "y": 96,
+      "size": 40,
+      "font": "auto",
+      "color": "#f2f6ff",
+      "is_visible": true
+    },
+    {
+      "id": "subtitle",
+      "text": "同尺寸通道 · 先到 {capacity} 颗的一侧获胜",
+      "x": 360,
+      "y": 150,
+      "size": 20,
+      "font": "auto",
+      "color": "#7d90a8",
+      "is_visible": true
+    },
+    {
+      "id": "rule",
+      "text": "左侧1→{left_burst}颗 · 右侧1→{right_burst}颗 · 原球移除",
+      "x": 360,
+      "y": 1222,
+      "size": 21,
+      "font": "auto",
+      "color": "#8fa3bb",
+      "is_visible": true
+    }
+  ],
+  "audio": {
+    "is_enabled": true,
+    "volume": 1.0,
+    "bgm": true,
+    "bgm_level": 0.7,
+    "gain": 3.2
+  }
+}

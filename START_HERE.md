@@ -2,6 +2,10 @@
 
 交接日期：2026-11-13。这是同一任务的完整资料目录：前期三个AI视频项目评估、原始参考素材、同类视频研究、早期原型和当前Godot工作台。**当前开发主线是 `06_本地部署/godot-video-lab/`。**
 
+当前正式版本为**1.0**，唯一远端为[GodotWorkspace](https://github.com/ELPSYKONGR/GodotWorkspace.git)。本目录已作为整个项目的单一Git工作区；历史三个仓库的bundle仅作归档，不用于日常开发初始化。版本与发布规则见[仓库与版本管理](docs/仓库与版本管理.md)。
+
+如果通过Git克隆获得源码，先运行`SETUP_WORKBENCH.cmd`联网恢复锁定工具，再启动工作台。原片、Take、成片、历史bundle及MANIFEST在[v1.0完整发布包](https://github.com/ELPSYKONGR/GodotWorkspace/releases/tag/v1.0)内，`VERIFY_PACKAGE.cmd`用于完整包，不用于缺少MANIFEST的源码克隆。下面的离线步骤针对完整发布包。
+
 ## 在另一台电脑使用
 
 1. 将整个交接包解压到Windows x64电脑的非系统盘，例如`E:\AIProjects\RelaxVideo`，保留内部目录结构。用户指定的远程4080 SUPER电脑不能放C盘或D盘。本次没有登录或部署远程电脑。
@@ -43,6 +47,6 @@
 
 `MANIFEST.json`记录本包每个文件的相对路径、大小、SHA-256、源码提交和场景来源；清单自身不自哈希。压缩包旁的`.zip.sha256`用于核对整个压缩包。校验后开始编辑/运行，部分生成文件或源码会改变，再次校验会如实报告变化。
 
-`version_history/`保留研究交接、Godot和旧Python仓库的Git bundle；存在未提交历史改动时另带patch。可用随包MinGit恢复历史，具体命令见迁移说明。当前工作目录已经包含对应源码，不需要先克隆才能运行。
+完整包`version_history/`保留归档bundle和必要patch；新打包器从当前单根仓库导出最新历史，旧Godot/Python bundle继续作原始历史证据。日常开发只用根仓库，具体迁移见说明。当前工作目录已经包含对应源码，不需要恢复历史仓库才能运行。
 
 工程标准原文随包保存：[ENGINEERING_STANDARD_ENHANCED_v2.1.md](06_本地部署/godot-video-lab/docs/standards/ENGINEERING_STANDARD_ENHANCED_v2.1.md)。后续改动必须同步索引、CHANGELOG和有意义的验证，区分已实现、设计和历史记录。

@@ -1,4 +1,4 @@
-# The research handoff repository tracks text/project metadata, not runtime/media archives.
+# Single repository: track both engines and research; store portable binaries/media in Releases.
 .env
 **/.runtime/
 **/.venv/
@@ -8,8 +8,6 @@
 **/__pycache__/
 **/node_modules/
 **/scratch/
-06_本地部署/godot-video-lab/
-06_本地部署/relaxing-physics/
 *.mp4
 *.webm
 *.mkv

@@ -1,0 +1,8 @@
+{
+  "name": "小球雨释放",
+  "output": {"width": 720, "height": 1280, "fps": 30, "duration": 24},
+  "simulation": {"mode": "rain", "seed": 103, "sample_rate": 60, "release_at": 20, "initial_balls": 4, "max_balls": 420, "ball_radius": 9.4, "rotation_speed": 0.75, "birth_cooldown": 1.1, "gravity": 720},
+  "appearance": {"background_top": "#0c1322", "background_bottom": "#182338", "ring_color": "#849dbc", "rotor_color": "#7890b2", "palette": ["#74eabf", "#ffb46f", "#f5809f", "#80baff", "#cca5ff", "#f8e188"]},
+  "texts": [{"id": "title", "text": "小球雨，接得住吗？", "x": 360, "y": 172, "size": 46, "font": "auto", "color": "#ebf0f8", "is_visible": true}, {"id": "subtitle", "text": "落下多少颗，才会溢出？", "x": 360, "y": 235, "size": 24, "font": "auto", "color": "#9baec3", "is_visible": true}, {"id": "status", "text": "{phase}", "x": 360, "y": 1030, "size": 24, "font": "auto", "color": "#bbccdf", "is_visible": true}, {"id": "count", "text": "{count}", "x": 360, "y": 1094, "size": 48, "font": "auto", "color": "#ebf0f8", "is_visible": true}, {"id": "count_label", "text": "颗小球", "x": 360, "y": 1150, "size": 20, "font": "auto", "color": "#8a9eb8", "is_visible": true}],
+  "audio": {"is_enabled": true, "volume": 1.0}
+}

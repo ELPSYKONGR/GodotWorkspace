@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://du0aratxrl1o8"
+
+[deps]
+
+files=["res://docs/reference_media_index.id.translation", "res://docs/reference_media_index.title.translation", "res://docs/reference_media_index.uploader.translation", "res://docs/reference_media_index.url.translation", "res://docs/reference_media_index.selected.translation", "res://docs/reference_media_index.current.translation", "res://docs/reference_media_index.mechanism.translation", "res://docs/reference_media_index.review.translation", "res://docs/reference_media_index.copies.translation", "res://docs/reference_media_index.page.translation", "res://docs/reference_media_index.metadata.translation", "res://docs/reference_media_index.metric.translation"]
+
+source_file="res://docs/reference_media_index.csv"
+dest_files=["res://docs/reference_media_index.id.translation", "res://docs/reference_media_index.title.translation", "res://docs/reference_media_index.uploader.translation", "res://docs/reference_media_index.url.translation", "res://docs/reference_media_index.selected.translation", "res://docs/reference_media_index.current.translation", "res://docs/reference_media_index.mechanism.translation", "res://docs/reference_media_index.review.translation", "res://docs/reference_media_index.copies.translation", "res://docs/reference_media_index.page.translation", "res://docs/reference_media_index.metadata.translation", "res://docs/reference_media_index.metric.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

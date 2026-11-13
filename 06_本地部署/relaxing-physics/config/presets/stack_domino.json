@@ -1,0 +1,40 @@
+{
+  "name": "机械闸门·预装球·破碎多米诺",
+  "output": {"width": 720, "height": 1280, "fps": 30, "duration": 18},
+  "simulation": {
+    "mode": "stack_domino",
+    "seed": 260811,
+    "sample_rate": 60,
+    "release_at": 17.2,
+    "initial_balls": 1,
+    "max_balls": 48,
+    "ball_radius": 10,
+    "rotation_speed": 0,
+    "birth_cooldown": 0.55,
+    "gravity": 920
+  },
+  "stack_domino": {
+    "multiplier_values": [4, 4],
+    "max_live_balls": 48,
+    "domino_count": 32,
+    "domino_trigger_delay": 0.11,
+    "glass_count": 24,
+    "domino_start": 6.2,
+    "glass_start": 9.4
+  },
+  "appearance": {
+    "background_top": "#111827",
+    "background_bottom": "#1f2937",
+    "ring_color": "#93c5fd",
+    "rotor_color": "#64748b",
+    "palette": ["#22d3ee", "#fb923c", "#f472b6", "#a78bfa", "#facc15", "#f8fafc"]
+  },
+  "texts": [
+    {"id": "title", "text": "1颗球，能击碎24块玻璃吗？", "x": 360, "y": 120, "size": 38, "font": "auto", "color": "#f8fafc", "is_visible": true},
+    {"id": "subtitle", "text": "闸门 → 释放预装球 → 多米诺", "x": 360, "y": 178, "size": 23, "font": "auto", "color": "#cbd5e1", "is_visible": true},
+    {"id": "status", "text": "{phase}", "x": 360, "y": 1060, "size": 24, "font": "auto", "color": "#cbd5e1", "is_visible": true},
+    {"id": "count", "text": "{escaped}", "x": 360, "y": 1120, "size": 48, "font": "auto", "color": "#f8fafc", "is_visible": true},
+    {"id": "count_label", "text": "颗已完成", "x": 360, "y": 1170, "size": 20, "font": "auto", "color": "#94a3b8", "is_visible": true}
+  ],
+  "audio": {"is_enabled": true, "volume": 1.0}
+}

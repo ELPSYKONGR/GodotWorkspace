@@ -1,4 +1,18 @@
-# AI 视频三项目评估
+# GodotWorkspace
+
+当前版本：**1.0**（Git标签`v1.0`）。正式仓库：[ELPSYKONGR/GodotWorkspace](https://github.com/ELPSYKONGR/GodotWorkspace)。正式本地工作目录为`D:\codex\deliveries\RelaxVideo_Handoff_20261113`，运行脚本按自身位置定位，迁移无需使用相同盘符。
+
+这是由AI控制的2D/2.5D/3D解压物理视频工作台，包含前期视频研究、参考素材索引及历史原型。主工程是`06_本地部署/godot-video-lab/`。1.0表示当前已验收基线，待开发的真实碎裂/耐久和严格四层解耦仍以交接文档为准。
+
+## 下载与开发
+
+- **直接离线运行**：从[v1.0发布页](https://github.com/ELPSYKONGR/GodotWorkspace/releases/tag/v1.0)下载完整Windows x64 ZIP及SHA文件；完整解压，先运行`VERIFY_PACKAGE.cmd`，再运行`START_WORKBENCH.cmd`。
+- **克隆开发**：`git clone https://github.com/ELPSYKONGR/GodotWorkspace.git`，首次运行`SETUP_WORKBENCH.cmd`恢复锁定工具，再启动工作台或`OPEN_EDITOR.cmd`。源码仓库不附带原视频、运行二进制、Take和成片；这些在完整Release包内。
+- **AI接手**：先读[START_HERE.md](START_HERE.md)、[AGENTS.md](AGENTS.md)和[仓库与版本管理](docs/仓库与版本管理.md)。两个子工程作为普通目录由根仓库统一管理，不建立嵌套Git仓库。
+
+普通电脑将工程放非C盘；用户指定的4080 SUPER电脑放非C/D盘。当前完整运行包针对Windows x64，远程电脑尚未实测。
+
+## 前期研究资料
 
 当前交接与运行入口见[START_HERE.md](START_HERE.md)。主开发工程现为`06_本地部署/godot-video-lab/`；下面保留前期研究资料导读，历史进度以新交接和媒体清单校正。
 

@@ -1,0 +1,21 @@
+{
+  "deployed_on": "2026-11-11",
+  "paths": {
+    "project": "D:\\codex\\AGI\\AI视频三项目评估_20261111\\06_本地部署\\relaxing-physics",
+    "python": "D:\\codex\\AGI\\AI视频三项目评估_20261111\\06_本地部署\\relaxing-physics\\.venv\\Scripts\\python.exe",
+    "base_python": "D:\\codex\\AGI\\AI视频三项目评估_20261111\\06_本地部署\\relaxing-physics\\.runtime\\python\\cpython-3.12-windows-x86_64-none",
+    "ffmpeg": "D:\\codex\\AGI\\AI视频三项目评估_20261111\\06_本地部署\\relaxing-physics\\.venv\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+    "venv": "D:\\codex\\AGI\\AI视频三项目评估_20261111\\06_本地部署\\relaxing-physics\\.venv",
+    "cache": "D:\\codex\\AGI\\AI视频三项目评估_20261111\\06_本地部署\\relaxing-physics\\.cache",
+    "outputs": "D:\\codex\\AGI\\AI视频三项目评估_20261111\\06_本地部署\\relaxing-physics\\outputs"
+  },
+  "media": [
+    "Duration: 00:00:24.00, start: 0.000000, bitrate: 1865 kb/s",
+    "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1920, 1684 kb/s, 30 fps, 30 tbr, 15360 tbn (default)",
+    "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 172 kb/s (default)"
+  ],
+  "bytes": 5597447,
+  "sample_sha256": "e5f12886650643d254860466d1f6a9a61e3cefd778cf755cfd69cea39bc4da7a",
+  "gpu_required": false,
+  "remote_machine_used": false
+}
