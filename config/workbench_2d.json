@@ -273,7 +273,7 @@
     {
       "id": "split_hitstop",
       "type": "hit_stop_on_event",
-      "enabled": true,
+      "enabled": false,
       "scope": "global",
       "trigger": {
         "type": "split.committed"

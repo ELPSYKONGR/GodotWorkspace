@@ -202,7 +202,9 @@ func update_runtime(info: Dictionary) -> void:
 	var active := int(info.get("active", 0))
 	var capacity := int(F.value(document, "world.max_dynamic_bodies", 48))
 	var capacity_status := "（已达上限）" if active >= capacity else ""
-	runtime_label.text = "%s%s  |  物体 %d/%d%s  碰撞 %d  分裂 %d  |  %.0f FPS  |  %s" % [str(info.get("mode", "编辑")), " · 录制中" if info.get("recording", false) else "", active, capacity, capacity_status, int(info.get("contacts", 0)), int(info.get("splits", 0)), float(info.get("fps", 0)), take_status]
+	runtime_label.text = "%s%s  |  物体 %d/%d%s  碰撞 %d  分裂 %d  |  渲染 %.0f FPS  |  %s" % [str(info.get("mode", "编辑")), " · 录制中" if info.get("recording", false) else "", active, capacity, capacity_status, int(info.get("contacts", 0)), int(info.get("splits", 0)), float(info.get("fps", 0)), take_status]
+	if info.get("hit_stop_active", false): runtime_label.text += " · 分裂顿帧中：物理暂停"
+	if float(info.get("hit_stop_elapsed_seconds", 0)) > 0.001: runtime_label.text += " · 累计顿帧 %.2fs" % float(info["hit_stop_elapsed_seconds"])
 	job_status_label.text = "生产任务：" + str(info.get("job_status", "空闲"))
 	var lines: PackedStringArray = PackedStringArray()
 	lines.append("生产任务：" + str(info.get("job_status", "空闲")))

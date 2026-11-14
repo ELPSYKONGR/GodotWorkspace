@@ -43,6 +43,9 @@ func _run() -> void:
 	for frame in 8: await process_frame
 	results.append({"name": "paused_pose_and_clocks", "passed": pause_pose == _pose() and session.time == pause_time})
 	var split_doc: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://config/workbench_2d.json"))
+	# Hit-stop is opt-in; explicitly enable it when verifying the optional hold clocks.
+	for rule in split_doc["mechanisms"]:
+		if rule.get("type", "") == "hit_stop_on_event": rule["enabled"] = true
 	split_doc["presentation"]["audio"]["enabled"] = false
 	split_doc["objects"][0]["transform"]["position"] = [220, 1060]
 	split_doc["objects"][0]["physics"]["velocity"] = [0, 180]

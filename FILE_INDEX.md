@@ -126,6 +126,8 @@
 | `tools/validate_ui.gd` | 面板命令、原值保持、相机/声音/碰撞过滤、锁定、预览坐标与错误展示 |
 | `tools/validate_effect_switches.gd` | 特效独立开关、碰撞喷溅上限、即时面板控制、保存与回退确定性 |
 | `tools/validate_speed_apply.gd` | 二维/三维原生速度门槛、多物体/跨页原子应用、撤销与失败保护 |
+| `tools/diagnose_motion.gd` / `tools/validate_motion.gd` | 渲染/模拟推进对照时间线、连续运动默认值与可选顿帧回归 |
+| `docs/碰撞停顿排查与修复.md` | FPS正常但运动冻结的根因、当前场景开/关对照与修复证据 |
 | `docs/性能与批量应用验收.md` | 最低速度/统一应用用法、回放修复与原始GPU性能证据 |
 | `tools/validate_scene_workspace.gd` | 四类型真实世界保存重开、中文路径、未保存提示、失败保护与布局保存 |
 | `tools/validate_media.gd` | 程序化表现、预览声音与资源格式 |

@@ -8,7 +8,7 @@ static func mechanisms(parent: Node, doc: Dictionary, send: Callable, pending: R
 	F.text(parent, "真实接触驱动规则。分裂移除原球，数量表示子球总数。容量或出生空间不足时在调试页显示拒绝原因。")
 	var rules: Array = doc.get("mechanisms", []).duplicate(true)
 	var split: Dictionary = {"id": "split_ball", "type": "split_on_contact", "enabled": true, "conditions": {}, "params": {}}
-	var hit: Dictionary = {"id": "split_hitstop", "type": "hit_stop_on_event", "enabled": true, "params": {}}
+	var hit: Dictionary = {"id": "split_hitstop", "type": "hit_stop_on_event", "enabled": false, "params": {}}
 	for rule in rules:
 		if rule.get("type", "") == "split_on_contact": split = rule
 		elif rule.get("type", "") == "hit_stop_on_event": hit = rule
@@ -24,7 +24,8 @@ static func mechanisms(parent: Node, doc: Dictionary, send: Callable, pending: R
 	var targets: Array = F.value(split, "conditions.other_tags_any", ["ball", "boundary"])
 	var walls := F.check(parent, "撞地面/墙壁触发", "boundary" in targets)
 	var balls := F.check(parent, "撞其他球触发", "ball" in targets)
-	var hold := F.check(parent, "启用分裂顿帧", bool(hit.get("enabled", true)))
+	var hold := F.check(parent, "启用分裂顿帧", bool(hit.get("enabled", false)))
+	F.text(parent, "连续运动建议关闭。开启后每次分裂会刻意暂停物理运动，渲染FPS仍可能保持60；这不是提高性能的选项。")
 	var seconds := F.number(parent, "顿帧（秒）", float(F.value(hit, "params.seconds", 0.06)), 0, 0.5, 0.01)
 	var hz := F.number(parent, "物理频率（Hz）", float(F.value(doc, "world.physics_hz", 120)), 60, 480, 30)
 	var gravity: Array = F.value(doc, "world.gravity", [0, 450])

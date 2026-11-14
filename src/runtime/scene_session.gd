@@ -156,6 +156,9 @@ func get_info() -> Dictionary:
 	report["audio"] = audio.get_report() if is_instance_valid(audio) else {}
 	report["last_error"] = last_error
 	report["running"] = replay_playing if mode == "replay" else mode in ["playing", "recording"]
+	report["hit_stop_active"] = mode in ["playing", "recording"] and _last_hold
+	report["hit_stop_elapsed_seconds"] = maxf(0, time - sim_time)
+	report["hit_stop_remaining_seconds"] = _hold_ticks / float(Engine.physics_ticks_per_second) if mode in ["playing", "recording"] else 0.0
 	report.merge({"mode": mode, "time": time, "sim_time": sim_time, "duration": take.get_duration(), "recording": mode == "recording", "events": events.slice(maxi(0, events.size() - 30)), "fps": Engine.get_frames_per_second(), "take_stale": not take.is_empty() and Document.simulation_hash(document) != Document.simulation_hash(take.get_data()["scene"]), "has_take": not take.is_empty()}, true)
 	return report
 
