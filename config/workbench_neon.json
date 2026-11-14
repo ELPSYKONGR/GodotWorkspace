@@ -1,0 +1,6096 @@
+{
+  "schema_version": 2,
+  "scene_id": "neon_impact_lab",
+  "revision": 1,
+  "metadata": {
+    "title": "NEON / IMPACT LAB",
+    "status": "implemented_workbench_v1"
+  },
+  "world": {
+    "dimension": "2d",
+    "units": "logical_px",
+    "logical_size": [
+      720,
+      1280
+    ],
+    "physics_hz": 120,
+    "gravity": [
+      0,
+      320
+    ],
+    "seed": 20261113,
+    "max_dynamic_bodies": 128
+  },
+  "objects": [
+    {
+      "id": "rail_0_-1",
+      "name": "rail_0_-1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          4,
+          860
+        ]
+      },
+      "transform": {
+        "position": [
+          64,
+          690
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "rail_0_1",
+      "name": "rail_0_1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          4,
+          860
+        ]
+      },
+      "transform": {
+        "position": [
+          336,
+          690
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "bottom_0",
+      "name": "bottom_0",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          272,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          200,
+          1120
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "top_0",
+      "name": "top_0",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          272,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          200,
+          260
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_0_0_-1",
+      "name": "floor_0_0_-1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          117,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_0_0_1",
+      "name": "floor_0_0_1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          283,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_0_1_-1",
+      "name": "floor_0_1_-1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          117,
+          800
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_0_1_1",
+      "name": "floor_0_1_1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          283,
+          800
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_0_2_-1",
+      "name": "floor_0_2_-1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          117,
+          960
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_0_2_1",
+      "name": "floor_0_2_1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          283,
+          960
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_000",
+      "name": "ball_0_000",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          137.0,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -40,
+          -15
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_001",
+      "name": "ball_0_001",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          179.0,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -3,
+          4
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_002",
+      "name": "ball_0_002",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          221.0,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          34,
+          -8
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_003",
+      "name": "ball_0_003",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          263.0,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -10,
+          11
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_004",
+      "name": "ball_0_004",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          137.0,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          27,
+          -1
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_005",
+      "name": "ball_0_005",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          179.0,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -17,
+          -13
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_006",
+      "name": "ball_0_006",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          221.0,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          20,
+          6
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_007",
+      "name": "ball_0_007",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          263.0,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -24,
+          -6
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_008",
+      "name": "ball_0_008",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          137.0,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          13,
+          13
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_009",
+      "name": "ball_0_009",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          179.0,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -31,
+          1
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_010",
+      "name": "ball_0_010",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          221.0,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          6,
+          -11
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_011",
+      "name": "ball_0_011",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          263.0,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -38,
+          8
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_012",
+      "name": "ball_0_012",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          137.0,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -1,
+          -4
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_013",
+      "name": "ball_0_013",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          179.0,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          36,
+          15
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_014",
+      "name": "ball_0_014",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          221.0,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -8,
+          3
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_015",
+      "name": "ball_0_015",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          263.0,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          29,
+          -9
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_016",
+      "name": "ball_0_016",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          137.0,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -15,
+          10
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_017",
+      "name": "ball_0_017",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          179.0,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          22,
+          -2
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_018",
+      "name": "ball_0_018",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          221.0,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -22,
+          -14
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_019",
+      "name": "ball_0_019",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          263.0,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          15,
+          5
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_020",
+      "name": "ball_0_020",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          137.0,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -29,
+          -7
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_021",
+      "name": "ball_0_021",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          179.0,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          8,
+          12
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_022",
+      "name": "ball_0_022",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          221.0,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -36,
+          0
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_023",
+      "name": "ball_0_023",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          263.0,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          1,
+          -12
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_024",
+      "name": "ball_0_024",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          137.0,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          38,
+          7
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_025",
+      "name": "ball_0_025",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          179.0,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -6,
+          -5
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_026",
+      "name": "ball_0_026",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          221.0,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          31,
+          14
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_027",
+      "name": "ball_0_027",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          263.0,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -13,
+          2
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_028",
+      "name": "ball_0_028",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          137.0,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          24,
+          -10
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_029",
+      "name": "ball_0_029",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          179.0,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -20,
+          9
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_030",
+      "name": "ball_0_030",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          221.0,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          17,
+          -3
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_0_031",
+      "name": "ball_0_031",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 10
+      },
+      "transform": {
+        "position": [
+          263.0,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -27,
+          -15
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#18dfff"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "rail_1_-1",
+      "name": "rail_1_-1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          4,
+          860
+        ]
+      },
+      "transform": {
+        "position": [
+          384,
+          690
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "rail_1_1",
+      "name": "rail_1_1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          4,
+          860
+        ]
+      },
+      "transform": {
+        "position": [
+          656,
+          690
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "bottom_1",
+      "name": "bottom_1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          272,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          520,
+          1120
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "top_1",
+      "name": "top_1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          272,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          520,
+          260
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_1_0_-1",
+      "name": "floor_1_0_-1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          437,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_1_0_1",
+      "name": "floor_1_0_1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          603,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_1_1_-1",
+      "name": "floor_1_1_-1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          437,
+          800
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_1_1_1",
+      "name": "floor_1_1_1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          603,
+          800
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_1_2_-1",
+      "name": "floor_1_2_-1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          437,
+          960
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "floor_1_2_1",
+      "name": "floor_1_2_1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          106,
+          4
+        ]
+      },
+      "transform": {
+        "position": [
+          603,
+          960
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "ccd": false,
+        "collision_layer": 2,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": true
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_000",
+      "name": "ball_1_000",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -40,
+          -15
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_001",
+      "name": "ball_1_001",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -3,
+          4
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_002",
+      "name": "ball_1_002",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          34,
+          -8
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_003",
+      "name": "ball_1_003",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -10,
+          11
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_004",
+      "name": "ball_1_004",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          27,
+          -1
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_005",
+      "name": "ball_1_005",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -17,
+          -13
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_006",
+      "name": "ball_1_006",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          20,
+          6
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_007",
+      "name": "ball_1_007",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          310
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -24,
+          -6
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_008",
+      "name": "ball_1_008",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          13,
+          13
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_009",
+      "name": "ball_1_009",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -31,
+          1
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_010",
+      "name": "ball_1_010",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          6,
+          -11
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_011",
+      "name": "ball_1_011",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -38,
+          8
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_012",
+      "name": "ball_1_012",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -1,
+          -4
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_013",
+      "name": "ball_1_013",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          36,
+          15
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_014",
+      "name": "ball_1_014",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -8,
+          3
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_015",
+      "name": "ball_1_015",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          334
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          29,
+          -9
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_016",
+      "name": "ball_1_016",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -15,
+          10
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_017",
+      "name": "ball_1_017",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          22,
+          -2
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_018",
+      "name": "ball_1_018",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -22,
+          -14
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_019",
+      "name": "ball_1_019",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          15,
+          5
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_020",
+      "name": "ball_1_020",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -29,
+          -7
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_021",
+      "name": "ball_1_021",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          8,
+          12
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_022",
+      "name": "ball_1_022",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -36,
+          0
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_023",
+      "name": "ball_1_023",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          358
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          1,
+          -12
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_024",
+      "name": "ball_1_024",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          38,
+          7
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_025",
+      "name": "ball_1_025",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -6,
+          -5
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_026",
+      "name": "ball_1_026",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          31,
+          14
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_027",
+      "name": "ball_1_027",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -13,
+          2
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_028",
+      "name": "ball_1_028",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          24,
+          -10
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_029",
+      "name": "ball_1_029",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -20,
+          9
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_030",
+      "name": "ball_1_030",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          17,
+          -3
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_031",
+      "name": "ball_1_031",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          382
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -27,
+          -15
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_032",
+      "name": "ball_1_032",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          10,
+          4
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_033",
+      "name": "ball_1_033",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -34,
+          -8
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_034",
+      "name": "ball_1_034",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          3,
+          11
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_035",
+      "name": "ball_1_035",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          40,
+          -1
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_036",
+      "name": "ball_1_036",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -4,
+          -13
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_037",
+      "name": "ball_1_037",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          33,
+          6
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_038",
+      "name": "ball_1_038",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -11,
+          -6
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_039",
+      "name": "ball_1_039",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          406
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          26,
+          13
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_040",
+      "name": "ball_1_040",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -18,
+          1
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_041",
+      "name": "ball_1_041",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          19,
+          -11
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_042",
+      "name": "ball_1_042",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -25,
+          8
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_043",
+      "name": "ball_1_043",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          12,
+          -4
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_044",
+      "name": "ball_1_044",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -32,
+          15
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_045",
+      "name": "ball_1_045",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          5,
+          3
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_046",
+      "name": "ball_1_046",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -39,
+          -9
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_047",
+      "name": "ball_1_047",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          430
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -2,
+          10
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_048",
+      "name": "ball_1_048",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          35,
+          -2
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_049",
+      "name": "ball_1_049",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -9,
+          -14
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_050",
+      "name": "ball_1_050",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          28,
+          5
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_051",
+      "name": "ball_1_051",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -16,
+          -7
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_052",
+      "name": "ball_1_052",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          21,
+          12
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_053",
+      "name": "ball_1_053",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -23,
+          0
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_054",
+      "name": "ball_1_054",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          14,
+          -12
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_055",
+      "name": "ball_1_055",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          454
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -30,
+          7
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_056",
+      "name": "ball_1_056",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          7,
+          -5
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_057",
+      "name": "ball_1_057",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -37,
+          14
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_058",
+      "name": "ball_1_058",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          2
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_059",
+      "name": "ball_1_059",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          37,
+          -10
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_060",
+      "name": "ball_1_060",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -7,
+          9
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_061",
+      "name": "ball_1_061",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          30,
+          -3
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_062",
+      "name": "ball_1_062",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -14,
+          -15
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_063",
+      "name": "ball_1_063",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          478
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          23,
+          4
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_064",
+      "name": "ball_1_064",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          502
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -21,
+          -8
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_065",
+      "name": "ball_1_065",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          502
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          16,
+          11
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_066",
+      "name": "ball_1_066",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          502
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -28,
+          -1
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_067",
+      "name": "ball_1_067",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          502
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          9,
+          -13
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_068",
+      "name": "ball_1_068",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          502
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -35,
+          6
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_069",
+      "name": "ball_1_069",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          502
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          2,
+          -6
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_070",
+      "name": "ball_1_070",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          502
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          39,
+          13
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_071",
+      "name": "ball_1_071",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          502
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -5,
+          1
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_072",
+      "name": "ball_1_072",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          526
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          32,
+          -11
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_073",
+      "name": "ball_1_073",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          526
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -12,
+          8
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_074",
+      "name": "ball_1_074",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          526
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          25,
+          -4
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_075",
+      "name": "ball_1_075",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          526
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -19,
+          15
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_076",
+      "name": "ball_1_076",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          526
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          18,
+          3
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_077",
+      "name": "ball_1_077",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          526
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -26,
+          -9
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_078",
+      "name": "ball_1_078",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          526
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          11,
+          10
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_079",
+      "name": "ball_1_079",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          526
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -33,
+          -2
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_080",
+      "name": "ball_1_080",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          550
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          4,
+          -14
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_081",
+      "name": "ball_1_081",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          550
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -40,
+          5
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_082",
+      "name": "ball_1_082",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          550
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -3,
+          -7
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_083",
+      "name": "ball_1_083",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          550
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          34,
+          12
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_084",
+      "name": "ball_1_084",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          550
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -10,
+          0
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_085",
+      "name": "ball_1_085",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          550
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          27,
+          -12
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_086",
+      "name": "ball_1_086",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          550
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -17,
+          7
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_087",
+      "name": "ball_1_087",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          550
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          20,
+          -5
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_088",
+      "name": "ball_1_088",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          425.5,
+          574
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -24,
+          14
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_089",
+      "name": "ball_1_089",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          452.5,
+          574
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          13,
+          2
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_090",
+      "name": "ball_1_090",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          479.5,
+          574
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -31,
+          -10
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_091",
+      "name": "ball_1_091",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          506.5,
+          574
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          6,
+          9
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_092",
+      "name": "ball_1_092",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          533.5,
+          574
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -38,
+          -3
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_093",
+      "name": "ball_1_093",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          560.5,
+          574
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -1,
+          -15
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_094",
+      "name": "ball_1_094",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          587.5,
+          574
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          36,
+          4
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "ball_1_095",
+      "name": "ball_1_095",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 6.8
+      },
+      "transform": {
+        "position": [
+          614.5,
+          574
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          -8,
+          -8
+        ],
+        "ccd": true,
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "material": {
+          "friction": 0.04,
+          "restitution": 0.85
+        }
+      },
+      "appearance": {
+        "color": "#ff36c8"
+      },
+      "editor": {
+        "locked": false
+      },
+      "mechanisms": []
+    }
+  ],
+  "mechanisms": [],
+  "presentation": {
+    "render": {
+      "backend": "compatibility",
+      "background": "#010409",
+      "camera": {
+        "projection": "canvas"
+      },
+      "debug_overlay_in_export": false,
+      "roughness": 0.35,
+      "metallic": 0.15,
+      "shadows": true,
+      "debug": false,
+      "neon": {
+        "enabled": true,
+        "glow_width": 22,
+        "glow_strength": 1.2,
+        "highlight_size": 0.25,
+        "highlight_strength": 1.35
+      }
+    },
+    "captions": [
+      {
+        "text": "NEON / IMPACT LAB",
+        "position": [
+          52,
+          70
+        ],
+        "font_size": 38,
+        "font_family": "Bahnschrift",
+        "color": "#d8efff"
+      },
+      {
+        "text": "32 CYAN         96 MAGENTA",
+        "position": [
+          70,
+          164
+        ],
+        "font_size": 27,
+        "font_family": "Bahnschrift",
+        "color": "#d1dbe7"
+      },
+      {
+        "text": "SPHERE HIGHLIGHTS  /  SOFT GLOW",
+        "position": [
+          72,
+          1180
+        ],
+        "font_size": 23,
+        "font_family": "Bahnschrift",
+        "color": "#7693aa"
+      }
+    ],
+    "audio": {
+      "enabled": true,
+      "preset": "bell",
+      "volume_db": -22,
+      "pitch": 1.0,
+      "min_interval": 0.07,
+      "max_voices": 8,
+      "sample_rate": 48000
+    },
+    "effects": {
+      "enabled": true,
+      "count": 3,
+      "lifetime": 0.22,
+      "speed": 140,
+      "trail_enabled": false,
+      "trail_seconds": 0.2,
+      "ring": false,
+      "flash": false,
+      "time_domain": "simulation"
+    }
+  },
+  "take_settings": {
+    "duration_seconds": 8,
+    "record_every_physics_tick": true,
+    "chunk_seconds": 1
+  },
+  "export_preset": {
+    "resolution": [
+      720,
+      1280
+    ],
+    "fps": 60,
+    "duration_seconds": 8,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "source": "recorded_take"
+  }
+}

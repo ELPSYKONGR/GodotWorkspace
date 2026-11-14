@@ -93,6 +93,19 @@ static func validate(doc: Dictionary) -> PackedStringArray:
 			var size: Variant = caption.get("font_size", 44)
 			if not _positive(size) or float(size) < 8 or float(size) > 256: errors.append("文字字号需要8～256")
 	if presentation.get("render", {}) is Dictionary and not presentation.get("render", {}).get("camera", {}) is Dictionary: errors.append("相机需要对象数据")
+	if presentation.get("render", {}) is Dictionary: errors.append_array(_validate_neon(presentation.get("render", {}).get("neon", {})))
+	return errors
+
+## Bounded, finite visual parameters keep malformed scene files out of shader uniforms.
+static func _validate_neon(value: Variant) -> PackedStringArray:
+	if not value is Dictionary: return PackedStringArray(["荧光设置需要对象数据"])
+	var errors := PackedStringArray()
+	if not value.get("enabled", false) is bool: errors.append("荧光开关需要布尔值")
+	var ranges := {"glow_width": [1, 64], "glow_strength": [0, 2], "highlight_size": [0, 1], "highlight_strength": [0, 3]}
+	for key in ranges:
+		if not value.has(key): continue
+		var number: Variant = value[key]
+		if not (number is int or number is float) or not is_finite(float(number)) or float(number) < ranges[key][0] or float(number) > ranges[key][1]: errors.append("荧光参数范围无效：" + key)
 	return errors
 
 ## Only simulation-affecting data invalidates a recorded take.

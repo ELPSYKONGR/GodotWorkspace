@@ -34,7 +34,7 @@ func _ready() -> void:
 	type_choice = F.choice(form, "场景类型", Workspace.TYPES.values(), "二维")
 	examples = F.check(form, "包含示例物体（取消则创建空场景）", true)
 	# A single-line hint avoids an oversized minimum height before dialog layout.
-	F.text(form, "四种类型共用物体编辑、录制、回放和视频生产。").autowrap_mode = TextServer.AUTOWRAP_OFF
+	F.text(form, "所有类型共用物体编辑、录制、回放和视频生产。").autowrap_mode = TextServer.AUTOWRAP_OFF
 	new_dialog.confirmed.connect(func():
 		new_dialog.hide()
 		request_replace("scene.new", {"name": Workspace.TYPES.keys()[type_choice.selected], "blank": not examples.button_pressed}))
@@ -67,6 +67,7 @@ func sync(path: String, changed: bool, doc: Dictionary) -> void:
 	var name := path.get_file() if not path.is_empty() else str(doc.get("metadata", {}).get("title", "未命名场景"))
 	var mode := "二维" if doc.get("world", {}).get("dimension", "2d") == "2d" else ("透视三维" if F.value(doc, "presentation.render.camera.projection", "orthogonal") == "perspective" else "正交三维")
 	if doc.get("objects", []).any(func(spec: Dictionary): return spec.has("glass")): mode = "玻璃演示 · 二维"
+	if mode == "二维" and F.value(doc, "presentation.render.neon.enabled", false): mode = "荧光 · 二维"
 	title.text = "%s%s  |  %s  |  %s" % ["* " if dirty else "", name, mode, path if not path.is_empty() else "未保存到文件"]
 	title.tooltip_text = title.text
 

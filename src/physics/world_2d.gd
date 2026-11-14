@@ -12,12 +12,14 @@ var dimensions := 2
 var runner: Node
 var debug_enabled := false
 var selected_id := ""
+var initial_appearances: Dictionary = {}
 var initial_dynamic := 0
 const GlassRecording=preload("res://src/glass/recording.gd")
 const GlassGeometry=preload("res://src/glass/geometry.gd")
 var glass_damage=preload("res://src/glass/damage.gd").new()
 var glass_view: Node2D
 var ball_batch: MultiMeshInstance2D
+var neon: Node2D
 var birth_space = preload("res://src/physics/birth_space_2d.gd").new()
 var birth_space_ready := false
 var native_contacts = preload("res://src/physics/native_contacts_2d.gd").new()
@@ -26,6 +28,7 @@ var native_contacts = preload("res://src/physics/native_contacts_2d.gd").new()
 ## Accept immutable initial scene data before entering the scene tree.
 func setup(doc: Dictionary, replay: bool = false) -> void:
 	document = doc.duplicate(true)
+	_cache_appearances()
 	playback = replay
 
 
@@ -41,6 +44,9 @@ func _ready() -> void:
 	ball_batch=load("res://src/presentation/effect_batch.gd").new()
 	ball_batch.z_index=1
 	add_child(ball_batch)
+	neon = load("res://src/presentation/neon_2d.gd").new()
+	add_child(neon)
+	neon.configure(document.get("presentation", {}).get("render", {}).get("neon", {}))
 	glass_view=load("res://src/glass/view.gd").new()
 	glass_view.world=self
 	add_child(glass_view)
@@ -195,6 +201,8 @@ func apply_state(states: Array, all_definitions: Dictionary) -> void:
 func apply_presentation(doc: Dictionary) -> void:
 	document["presentation"] = doc.get("presentation", {}).duplicate(true)
 	document["objects"] = doc.get("objects", []).duplicate(true)
+	_cache_appearances()
+	if is_instance_valid(neon): neon.configure(document["presentation"].get("render", {}).get("neon", {}))
 	for incoming in doc.get("objects", []):
 		for id in records:
 			if records[id]["spec"].get("root_id", id) == incoming["id"]:
@@ -289,6 +297,8 @@ func _draw() -> void:
 	var render: Dictionary = document.get("presentation", {}).get("render", {})
 	draw_rect(Rect2(0, 0, 720, 1280), Color(str(render.get("background", "#0c1722"))))
 	var instances: Array=[]
+	var wall_instances: Array = []
+	var glowing: bool = is_instance_valid(neon) and neon.enabled
 	for id in records:
 		var spec: Dictionary = records[id]["spec"]
 		if spec.has("glass"): continue
@@ -296,13 +306,17 @@ func _draw() -> void:
 		var circle: bool = spec.get("shape", {}).get("primitive", "") == "circle"
 		if circle: instances.append({"position":_position(id),"size":float(spec["shape"].get("radius",18)),"color":_color(spec)})
 		elif spec.get("shape",{}).get("primitive","")=="arc": draw_colored_polygon(GlassGeometry.polygon(spec["shape"]),_color(spec))
+		elif glowing: wall_instances.append({"position": _position(id), "rotation": _rotation(id), "half_size": _size(spec) / 2, "color": _color(spec)})
 		else: draw_rect(Rect2(-_size(spec) / 2, _size(spec)), _color(spec))
 		if debug_enabled or id == selected_id or bool(render.get("outline", false)):
 			var tint := Color("fbbf24") if id == selected_id else Color(1, 1, 1, 0.5)
 			if circle: draw_circle(Vector2.ZERO, float(spec["shape"].get("radius", 18)), tint, false, 2)
 			else: draw_rect(Rect2(-_size(spec) / 2, _size(spec)), tint, false, 2)
 	draw_set_transform(Vector2.ZERO)
-	if is_instance_valid(ball_batch): ball_batch.update_circles(instances,"ball")
+	if is_instance_valid(ball_batch):
+		ball_batch.visible = not glowing
+		if not glowing: ball_batch.update_circles(instances,"ball")
+	if glowing: neon.present(instances, wall_instances)
 
 
 ## Small adapter helpers expose a dimension-neutral interface to the rule component.
@@ -341,9 +355,12 @@ func _size(spec: Dictionary) -> Vector2: # Read the rectangle extent from scene 
 	var size: Array = spec.get("shape", {}).get("size", [60, 20])
 	return Vector2(maxf(1, float(size[0])), maxf(1, float(size[1])))
 func _color(spec: Dictionary) -> Color: # Apply the current generation's appearance.
-	var appearance: Dictionary = spec.get("appearance", {})
-	for initial in document.get("objects", []):
-		if initial["id"] == spec.get("root_id", spec["id"]): appearance = initial.get("appearance", {})
+	var appearance: Dictionary = initial_appearances.get(spec.get("root_id", spec["id"]), spec.get("appearance", {}))
 	var color := Color(str(appearance.get("color", "#22c55e")))
 	var fade := float(appearance.get("generation_color", {}).get("fade", 0.2))
 	return color.lerp(Color.WHITE, 0.85 * (1 - pow(1 - clampf(fade, 0, 0.6), int(spec.get("generation", 0)))))
+
+## Many initial balls need constant-time color lookup, including descendants and replay.
+func _cache_appearances() -> void:
+	initial_appearances.clear()
+	for spec in document.get("objects", []): initial_appearances[spec["id"]] = spec.get("appearance", {})

@@ -1,7 +1,7 @@
 extends RefCounted
 ## User scene identity and safe persistence; built-in examples remain reusable templates.
 const Document = preload("res://src/document/scene_document.gd")
-const TYPES := {"2d": "二维", "3d": "正交三维", "perspective": "透视三维", "glass": "玻璃演示"}
+const TYPES := {"2d": "二维", "3d": "正交三维", "perspective": "透视三维", "glass": "玻璃演示", "neon": "荧光演示"}
 var path := ""
 var saved_signature := ""
 

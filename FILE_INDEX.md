@@ -12,6 +12,8 @@
 | `editor.cmd` | 便携环境下启动原生Godot编辑器，F5运行工作台 |
 | `render.cmd` | 保留的旧版无声渲染入口 |
 | `config/workbench_glass.json` / `glass.cmd` | 8扇区二维玻璃演示与便携入口 |
+| `config/workbench_neon.json` / `neon.cmd` | 128球青蓝/粉色荧光场景与便携入口 |
+| `docs/二维荧光使用与验收.md` | 二维荧光、高光、性能与样片证据 |
 | `docs/玻璃使用与验收.md` | 使用方法、实例化边界、专项和样片证据 |
 | `config/workbench_2d.json` | 可运行v2二维碰撞分裂场景 |
 | `config/workbench_3d.json` | 可运行v2真实三维刚体＋正交相机场景 |
@@ -56,6 +58,7 @@
 | `src/mechanisms/contact_rules.gd` | 接触episode、保护期重试、子球继续分裂开关、批次分裂/移除、容量与空间拒绝原因 |
 | `src/presentation/stage.gd` | 共享的干净Stage、世界/特效/文字组合、三维投影与输出缩放 |
 | `src/presentation/effect_batch.gd` / `effect_circle.gdshader` | 圆形特效的实例批量与像素抗锯齿 |
+| `src/presentation/neon_2d.gd` / `neon_ball.gdshader` / `neon_wall.gdshader` | 两个实例批次的球面高光、边框亮线与解析光晕 |
 | `src/presentation/effects.gd` | 按事件/年龄恢复的屏幕粒子、圆环、闪光、Take拖尾 |
 | `src/presentation/audio.gd` | 合成短音、本地PCM WAV、试听、限流和预览声部 |
 | `src/takes/take_store.gd` | 有界完整JSON轨迹、生命周期定义、校验、二分寻帧与过期依据 |
@@ -82,6 +85,7 @@
 | `src/glass/shards.gd` / `shard.gdshader` | 确定性三角视觉碎屑的MultiMesh实例化 |
 | `src/glass/recording.gd` | 损伤姿态序列化、回放输入校验 |
 | `tools/validate_glass.gd` | 真实撞击、反向寻帧、UI事务及非法状态回归 |
+| `tools/validate_neon.gd` | 荧光参数校验、真实面板应用、物理不重置、保存与Take恢复 |
 
 ## 启动与生产工具
 
