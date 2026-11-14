@@ -11,6 +11,11 @@ func _run() -> void:
 	var host = load("res://src/ui/workbench.gd").new()
 	root.add_child(host)
 	await process_frame
+	host.panel.play_button.pressed.emit()
+	var started: bool = host.session.mode == "playing" and host.panel.play_button.text == "暂停"
+	host.panel.play_button.pressed.emit()
+	_check("one_button_starts_and_pauses_immediately", started and host.session.mode == "paused" and host.panel.play_button.text == "运行")
+	host.service.execute({"op": "simulation.reset"})
 	var result: Dictionary = host.service.execute({"op": "object.add", "args": {"kind": "box"}})
 	_check("command_updates_host_world", result.get("ok", false) and host.session.stage.world.records.size() == host.service.document["objects"].size())
 	result = host.service.execute({"op": "history.undo"})
@@ -39,6 +44,10 @@ func _run() -> void:
 	result = host.service.execute({"op": "take.stop", "args": {"path": "res://outputs/takes/integration_2d.json"}})
 	_check("record_save_native_take", result.get("ok", false) and host.session.take.get_duration() >= 8 and host.session.stage.world.get_report()["splits"] > 0)
 	host.service.execute({"op": "take.seek", "args": {"time": 1.0}})
+	host.panel.play_button.pressed.emit()
+	var replay_started: bool = host.session.replay_playing and host.panel.play_button.text == "暂停"
+	host.panel.play_button.pressed.emit()
+	_check("one_button_starts_and_pauses_replay", replay_started and not host.session.replay_playing and host.panel.play_button.text == "运行")
 	var expected := JSON.stringify(host.session.stage.world.capture_state())
 	var before: int = host.session.take.get_data()["events"].size()
 	host.service.execute({"op": "take.seek", "args": {"time": 3.0}})

@@ -151,6 +151,7 @@ func get_info() -> Dictionary:
 	var report: Dictionary = stage.world.get_report() if is_instance_valid(stage) else {}
 	report["audio"] = audio.get_report() if is_instance_valid(audio) else {}
 	report["last_error"] = last_error
+	report["running"] = replay_playing if mode == "replay" else mode in ["playing", "recording"]
 	report.merge({"mode": mode, "time": time, "sim_time": sim_time, "duration": take.get_duration(), "recording": mode == "recording", "events": events.slice(maxi(0, events.size() - 30)), "fps": Engine.get_frames_per_second(), "take_stale": not take.is_empty() and Document.simulation_hash(document) != Document.simulation_hash(take.get_data()["scene"]), "has_take": not take.is_empty()}, true)
 	return report
 

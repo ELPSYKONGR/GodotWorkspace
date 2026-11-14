@@ -92,6 +92,7 @@ func _after_command(result: Dictionary) -> void:
 	elif result.get("refresh_document", false): panel.sync_document(service.document, selected_id)
 	panel.show_message(message, not result.get("ok", false))
 	_sync_scene_file()
+	panel.update_play_button(session.get_info())
 	panel.scene_bar.operation_finished(result)
 
 ## File identity belongs to the document workspace, not the simulation or its Take.
@@ -127,6 +128,9 @@ func _runtime_command(op: String, args: Dictionary) -> Dictionary:
 			selected_id = str(args.get("id", ""))
 			session.stage.world.set_debug(true, selected_id)
 			return {"ok": true, "message": "选中：" + selected_id}
+		"simulation.toggle":
+			if session.get_info()["running"]: session.pause()
+			else: session.play()
 		"simulation.play": session.play()
 		"simulation.pause": session.pause()
 		"simulation.step": session.step_once()

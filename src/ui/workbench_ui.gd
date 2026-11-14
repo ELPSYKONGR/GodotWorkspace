@@ -26,6 +26,7 @@ var pages: Dictionary = {}
 var timeline: HSlider
 var clock_label: Label
 var runtime_label: Label
+var play_button: Button
 var message_label: Label
 var debug_text: TextEdit
 var job_status_label: Label
@@ -118,7 +119,9 @@ func _build_toolbar(parent: Node) -> void:
 	parent.add_child(scene_bar)
 	var bar := HFlowContainer.new()
 	parent.add_child(bar)
-	for command in [["编辑布置", "simulation.edit"], ["运行", "simulation.play"], ["暂停", "simulation.pause"], ["单物理步", "simulation.step"], ["重置", "simulation.reset"], ["录制", "take.record"], ["停止录制", "take.stop"], ["撤销", "history.undo"], ["重做", "history.redo"]]:
+	F.button(bar, "编辑布置", func(): _send("simulation.edit", {}))
+	play_button = F.button(bar, "运行", func(): _send("simulation.toggle", {}))
+	for command in [["单物理步", "simulation.step"], ["重置", "simulation.reset"], ["录制", "take.record"], ["停止录制", "take.stop"], ["撤销", "history.undo"], ["重做", "history.redo"]]:
 		F.button(bar, command[0], func(): _send(command[1], {}))
 
 
@@ -163,9 +166,15 @@ func sync_document(doc: Dictionary, selected_id: String = "") -> void:
 	pages["调试"].add_child(debug_text)
 
 
+# Reflect actual playback state, including a replay reaching its end.
+func update_play_button(info: Dictionary) -> void:
+	if is_instance_valid(play_button): play_button.text = "暂停" if info.get("running", false) else "运行"
+
+
 # Update counters without issuing commands or overwriting fields being edited.
 func update_runtime(info: Dictionary) -> void:
 	if not built: return
+	update_play_button(info)
 	current_time = float(info.get("time", 0))
 	current_fps = maxf(1, float(info.get("output_fps", 30)))
 	var duration := float(info.get("duration", 0))
