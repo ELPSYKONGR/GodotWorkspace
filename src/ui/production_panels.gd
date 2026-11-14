@@ -4,7 +4,7 @@ const F = preload("res://src/ui/form_helpers.gd")
 
 
 # Edit presentation-only fields without touching the physical scene data.
-static func rendering(parent: Node, doc: Dictionary, send: Callable) -> void:
+static func rendering(parent: Node, doc: Dictionary, send: Callable, pending: RefCounted = null) -> void:
 	F.text(parent, "表现参数可复用已有轨迹；保存后立即预览。高级渲染后端在生产页选择。")
 	var captions: Array = F.value(doc, "presentation.captions", [])
 	var title: Dictionary = captions[0] if not captions.is_empty() else {"id": "main_title", "position": [44, 54]}
@@ -24,9 +24,11 @@ static func rendering(parent: Node, doc: Dictionary, send: Callable) -> void:
 	var glow_strength := F.number(parent, "光晕强度", float(neon.get("glow_strength", 0.9)), 0, 2, 0.05)
 	var highlight_size := F.number(parent, "小球高光大小", float(neon.get("highlight_size", 0.3)), 0, 1, 0.05)
 	var highlight_strength := F.number(parent, "小球高光强度", float(neon.get("highlight_strength", 1.1)), 0, 3, 0.05)
-	F.button(parent, "应用二维荧光材质", func():
+	var apply_neon := func():
 		for field in [glow_width, glow_strength, highlight_size, highlight_strength]: field.apply()
-		send.call("scene.patch", {"changes": {"presentation.render.neon": {"enabled": neon_enabled.button_pressed, "glow_width": glow_width.value, "glow_strength": glow_strength.value, "highlight_size": highlight_size.value, "highlight_strength": highlight_strength.value}}}))
+		send.call("scene.patch", {"changes": {"presentation.render.neon": {"enabled": neon_enabled.button_pressed, "glow_width": glow_width.value, "glow_strength": glow_strength.value, "highlight_size": highlight_size.value, "highlight_strength": highlight_strength.value}}})
+	F.button(parent, "应用二维荧光材质", apply_neon)
+	if pending != null: pending.register("neon", [neon_enabled, glow_width, glow_strength, highlight_size, highlight_strength], apply_neon)
 	var roughness := F.number(parent, "三维粗糙度", float(data.get("roughness", 0.35)), 0, 1, 0.01)
 	var metallic := F.number(parent, "三维金属度", float(data.get("metallic", 0.15)), 0, 1, 0.01)
 	var shadows := F.check(parent, "三维阴影", bool(data.get("shadows", true)))
@@ -43,7 +45,7 @@ static func rendering(parent: Node, doc: Dictionary, send: Callable) -> void:
 		position_fields.append(F.number(parent, "相机位置 " + ["X", "Y", "Z"][index], float(camera_position[index]), -1000, 1000, 0.1))
 		target_fields.append(F.number(parent, "相机目标 " + ["X", "Y", "Z"][index], float(camera_target[index]), -1000, 1000, 0.1))
 	var debug := F.check(parent, "调试高亮/碰撞辅助（不导出）", bool(data.get("debug", false)))
-	F.button(parent, "应用渲染与文字", func():
+	var caption_changes := func() -> Dictionary:
 		var updated: Array = captions.duplicate(true)
 		var a: Dictionary = title.duplicate(true)
 		var b: Dictionary = subtitle.duplicate(true)
@@ -53,13 +55,25 @@ static func rendering(parent: Node, doc: Dictionary, send: Callable) -> void:
 		else: updated[0] = a
 		if updated.size() < 2: updated.append(b)
 		else: updated[1] = b
+		return {"presentation.captions": updated}
+	var visual_changes := func() -> Dictionary:
 		var position: Array = []
 		var target: Array = []
 		for index in 3:
 			position.append(position_fields[index].value)
 			target.append(target_fields[index].value)
-		send.call("scene.patch", {"changes": {"presentation.captions": updated, "presentation.render.background": "#" + background.color.to_html(), "presentation.render.roughness": roughness.value, "presentation.render.metallic": metallic.value, "presentation.render.shadows": shadows.button_pressed, "presentation.render.light_energy": light_energy.value, "presentation.render.camera.projection": F.selected(projection), "presentation.render.camera.size": camera_size.value, "presentation.render.camera.fov": fov.value, "presentation.render.camera.position": position, "presentation.render.camera.target": target, "presentation.render.debug": debug.button_pressed}})
-	)
+		return {"presentation.render.background": "#" + background.color.to_html(), "presentation.render.roughness": roughness.value, "presentation.render.metallic": metallic.value, "presentation.render.shadows": shadows.button_pressed, "presentation.render.light_energy": light_energy.value, "presentation.render.camera.projection": F.selected(projection), "presentation.render.camera.size": camera_size.value, "presentation.render.camera.fov": fov.value, "presentation.render.camera.position": position, "presentation.render.camera.target": target, "presentation.render.debug": debug.button_pressed}
+	var caption_controls: Array = [title_text, subtitle_text, font, title_size, subtitle_size, text_color]
+	var visual_controls: Array = [background, roughness, metallic, shadows, light_energy, projection, camera_size, fov, debug] + position_fields + target_fields
+	F.button(parent, "应用渲染与文字", func():
+		for field in caption_controls + visual_controls:
+			if field is SpinBox: field.apply()
+		var changes: Dictionary = caption_changes.call()
+		changes.merge(visual_changes.call())
+		send.call("scene.patch", {"changes": changes}))
+	if pending != null:
+		pending.register("captions", caption_controls, func(): send.call("scene.patch", {"changes": caption_changes.call()}))
+		pending.register("render", visual_controls, func(): send.call("scene.patch", {"changes": visual_changes.call()}))
 
 
 # Provide explicit take recording, file and seek actions.
@@ -75,13 +89,22 @@ static func replay(parent: Node, send: Callable) -> void:
 
 
 # Create an independent production request with explicit dimensions and backend.
-static func production(parent: Node, send: Callable) -> void:
+static func production(parent: Node, send: Callable, doc: Dictionary = {}, pending: RefCounted = null) -> void:
 	F.text(parent, "从已录制的轨迹生产干净画面＋离线混音。独立任务不会改变当前预览。名称不可与已有任务重复。")
 	var name := F.line(parent, "任务名称", "video_" + str(int(Time.get_unix_time_from_system())))
-	var fps := F.choice(parent, "输出FPS", ["30", "60"], "30")
-	var frames := F.number(parent, "输出帧数", 240, 1, 3600, 1)
-	var resolution := F.choice(parent, "竖屏尺寸", ["720x1280", "1080x1920"], "720x1280")
-	var backend := F.choice(parent, "渲染后端", ["gl_compatibility", "forward_plus"], "gl_compatibility")
+	var preset: Dictionary = doc.get("export_preset", {})
+	var initial_fps := int(preset.get("fps", 30))
+	var size: Array = preset.get("resolution", [720, 1280])
+	var fps := F.choice(parent, "输出FPS", ["30", "60"], str(initial_fps))
+	var frames := F.number(parent, "输出帧数", float(preset.get("frames", float(preset.get("duration_seconds", 8)) * initial_fps)), 1, 3600, 1)
+	var resolution := F.choice(parent, "竖屏尺寸", ["720x1280", "1080x1920"], "%dx%d" % [int(size[0]), int(size[1])])
+	var backend := F.choice(parent, "渲染后端", ["gl_compatibility", "forward_plus"], str(preset.get("backend", "gl_compatibility")))
+	if pending != null:
+		pending.register("export", [fps, frames, resolution, backend], func():
+			var dimensions: PackedStringArray = F.selected(resolution).split("x")
+			var updated := preset.duplicate(true)
+			updated.merge({"fps": int(F.selected(fps)), "frames": int(frames.value), "resolution": [int(dimensions[0]), int(dimensions[1])], "duration_seconds": frames.value / int(F.selected(fps)), "backend": F.selected(backend)}, true)
+			send.call("scene.patch", {"changes": {"export_preset": updated}}))
 	F.text(parent, "gl_compatibility为已验证的OpenGL；forward_plus使用Vulkan，需显卡与驱动支持。帧数÷FPS为输出时长，不能超出轨迹。")
 	F.button(parent, "提交视频生产任务", func():
 		var dimensions: PackedStringArray = F.selected(resolution).split("x")

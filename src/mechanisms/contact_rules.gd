@@ -19,6 +19,8 @@ var child_serial := 0
 var flush_queued := false
 var placement_retry_after: Dictionary = {}
 var active_dynamics := 0
+var speed_filter_active := false
+var previous_velocities: Dictionary = {}
 const CONTACT_GRACE_SECONDS := 1.0 / 30.0
 
 
@@ -28,6 +30,7 @@ func setup(owner_world: Node, doc: Dictionary) -> void:
 	document = doc
 	for rule in doc.get("mechanisms", []):
 		rules[str(rule.get("id", ""))] = rule
+		if rule.get("type", "") == "split_on_contact" and float(rule.get("conditions", {}).get("minimum_collision_speed", 0)) > 0: speed_filter_active = true
 
 
 ## Poll actual current engine contacts; signals alone miss protection-expiry contacts.
@@ -45,6 +48,7 @@ func step() -> void:
 			episode += 1
 			pair["episode"] = episode
 			contacts += 1
+			if speed_filter_active: pair["relative_speed"] = _relative_speed(pair)
 			_contact_event(pair, "enter")
 			pair["phase"] = "enter"
 		else:
@@ -54,6 +58,7 @@ func step() -> void:
 			pair["position_source"] = previous_pairs[key].get("position_source", "body_centers_estimate")
 			pair["episode"] = previous_pairs[key]["episode"]
 			pair["phase"] = "stay"
+			pair["relative_speed"] = previous_pairs[key].get("relative_speed", 0.0)
 		_evaluate(str(pair["a"]), str(pair["b"]), pair)
 		_evaluate(str(pair["b"]), str(pair["a"]), pair)
 	for key in previous_pairs:
@@ -64,6 +69,9 @@ func step() -> void:
 				current[key] = previous_pairs[key]
 			else: _contact_event(previous_pairs[key], "exit")
 	previous_pairs = current
+	if speed_filter_active:
+		previous_velocities.clear()
+		for id in world.records: previous_velocities[id] = world.object_velocity(id)
 	if not pending.is_empty() and not flush_queued:
 		flush_queued = true
 		_commit.call_deferred()
@@ -124,6 +132,8 @@ func _evaluate(id: String, other_id: String, pair: Dictionary) -> void:
 			reason = "newborn_guard"
 		elif bool(conditions.get("require_minimum_impact", false)):
 			reason = "impact_metric_unavailable"
+		elif kind == "split_on_contact" and float(conditions.get("minimum_collision_speed", 0)) > 0 and float(pair.get("relative_speed", 0)) < float(conditions["minimum_collision_speed"]):
+			reason = "collision_speed_below_threshold"
 		elif kind == "split_on_contact" and spec.get("shape", {}).get("primitive", "") not in ["circle", "sphere"]:
 			reason = "split_requires_ball"
 		if not reason.is_empty():
@@ -151,7 +161,18 @@ func _reject(id: String, rule_id: String, reason: String, pair: Dictionary) -> v
 	_update_anchor(pair)
 	rejections += 1
 	world.emit_event({"type": "rule_rejected", "id": id, "body_id": id, "rule_id": rule_id,
-		"reason": reason, "position": pair.get("position", []), "time": elapsed, "sim_tick": physics_tick})
+		"reason": reason, "collision_speed": pair.get("relative_speed"), "position": pair.get("position", []), "time": elapsed, "sim_tick": physics_tick})
+
+## Approximate incoming relative translation using the prior solver step, not rebound speed.
+func _relative_speed(pair: Dictionary) -> float:
+	var velocities: Array = []
+	for id in [pair["a"], pair["b"]]:
+		var spec: Dictionary = world.records[id]["spec"]
+		var fallback: Array = spec.get("physics", {}).get("velocity", [0, 0, 0])
+		velocities.append(previous_velocities.get(id, fallback) if spec.get("physics", {}).get("mode", "dynamic") == "dynamic" else [0, 0, 0])
+	var squared := 0.0
+	for axis in world.dimensions: squared += pow(float(velocities[0][axis]) - float(velocities[1][axis]), 2)
+	return sqrt(squared)
 
 ## Keep lazy 2D anchors current while preserving the existing 3D adapter interface.
 func _update_anchor(pair: Dictionary) -> void:

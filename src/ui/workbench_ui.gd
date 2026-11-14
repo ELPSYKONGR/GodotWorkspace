@@ -8,6 +8,11 @@ const ObjectPanel = preload("res://src/ui/object_panel.gd")
 const Components = preload("res://src/ui/component_panels.gd")
 const Production = preload("res://src/ui/production_panels.gd")
 const SceneBar = preload("res://src/ui/scene_bar.gd")
+var pending_edits = preload("res://src/ui/pending_edits.gd").new()
+var collecting_edits := false
+var collected_edits: Array = []
+var synced_revision := -1
+var synced_document: Dictionary = {}
 const REJECTION_LABELS := {
 	"capacity_limit": "动态物体容量不足，可在机制页调整上限",
 	"birth_space_blocked": "子球出生空间不足",
@@ -16,7 +21,8 @@ const REJECTION_LABELS := {
 	"minimum_radius": "子球尺寸已达物理最小值",
 	"tag_mismatch": "碰撞对象标签不符合规则",
 	"split_requires_ball": "此分裂规则只适用于球",
-	"impact_metric_unavailable": "尚无可用的真实碰撞强度数据"
+	"impact_metric_unavailable": "尚无可用的真实碰撞强度数据",
+	"collision_speed_below_threshold": "碰撞相对速度低于分裂阈值"
 }
 var document: Dictionary = {}
 var preview_texture: Texture2D
@@ -105,6 +111,7 @@ func _build() -> void:
 		scroll.add_child(page)
 		pages[caption] = page
 	object_panel = ObjectPanel.new()
+	object_panel.pending_edits = pending_edits
 	object_panel.command_requested.connect(_send)
 	pages["物体"].add_child(object_panel)
 	_build_timeline(layout)
@@ -121,6 +128,7 @@ func _build_toolbar(parent: Node) -> void:
 	parent.add_child(bar)
 	F.button(bar, "编辑布置", func(): _send("simulation.edit", {}))
 	play_button = F.button(bar, "运行", func(): _send("simulation.toggle", {}))
+	F.button(bar, "应用更改并运行", _apply_all_and_run).tooltip_text = "统一校验所有已修改设置，成功后从初始布局重新运行；未修改项保持原样。"
 	for command in [["单物理步", "simulation.step"], ["重置", "simulation.reset"], ["录制", "take.record"], ["停止录制", "take.stop"], ["撤销", "history.undo"], ["重做", "history.redo"]]:
 		F.button(bar, command[0], func(): _send(command[1], {}))
 
@@ -146,16 +154,23 @@ func _build_timeline(parent: Node) -> void:
 
 # Refresh controls only when their underlying document or selection changes.
 func sync_document(doc: Dictionary, selected_id: String = "") -> void:
+	pending_edits.capture()
+	if synced_document.get("scene_id", "") != doc.get("scene_id", ""):
+		pending_edits.drafts.clear()
+		pending_edits.groups.clear()
 	document = doc
 	if not built: return
 	object_panel.sync_document(doc, selected_id)
+	if synced_revision == int(doc.get("revision", 0)) and synced_document == doc: return
+	synced_revision = int(doc.get("revision", 0))
+	synced_document = doc.duplicate(true)
 	for caption in ["机制", "渲染", "声音", "特效", "回放", "生产", "调试"]: F.clear(pages[caption])
-	Components.mechanisms(pages["机制"], doc, _send)
-	Production.rendering(pages["渲染"], doc, _send)
-	Components.audio(pages["声音"], doc, _send)
-	Components.effects(pages["特效"], doc, _send)
+	Components.mechanisms(pages["机制"], doc, _send, pending_edits)
+	Production.rendering(pages["渲染"], doc, _send, pending_edits)
+	Components.audio(pages["声音"], doc, _send, pending_edits)
+	Components.effects(pages["特效"], doc, _send, pending_edits)
 	Production.replay(pages["回放"], _send)
-	Production.production(pages["生产"], _send)
+	Production.production(pages["生产"], _send, doc, pending_edits)
 	job_status_label = F.text(pages["生产"], "生产任务：空闲")
 	F.text(pages["调试"], "接触事件来源于物理引擎。rule_rejected显示机制未执行的原因；无法获取真实接触点时来源标为估算。")
 	debug_text = TextEdit.new()
@@ -241,4 +256,16 @@ func get_preview_rect() -> Rect2:
 
 # All panel actions share this signal contract with the host.
 func _send(op: String, args: Dictionary) -> void:
+	if collecting_edits:
+		collected_edits.append({"op": op, "args": args})
+		return
 	command_requested.emit(op, args)
+
+## Collect before committing, so a panel rebuild cannot discard another tab's pending inputs.
+func _apply_all_and_run() -> void:
+	collected_edits = []
+	collecting_edits = true
+	var inactive: Array = pending_edits.collect()
+	collected_edits.append_array(inactive)
+	collecting_edits = false
+	_send("scene.apply_run", {"edits": collected_edits})

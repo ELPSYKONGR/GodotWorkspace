@@ -46,7 +46,7 @@
 |---|---|
 | `src/document/scene_document.gd` | v2场景校验、稳定ID、字段路径更新、simulation_hash、对象初始规格 |
 | `src/document/scene_workspace.gd` | 四种新建模板、保存基线、文件身份、示例保护与原子保存 |
-| `src/commands/command_service.gd` | AI/面板统一修订号命令、校验、回执、50步初始数据撤销/重做 |
+| `src/commands/command_service.gd` | AI/面板统一修订号命令、原子批量应用、校验、回执与50步初始数据撤销/重做 |
 | `src/commands/file_bridge.gd` | JSON收件箱、已处理文件、结果回执、原子发布场景/运行状态 |
 | `src/runtime/scene_session.gd` | 编辑/模拟/录制/回放状态、双时间、实际物理启停、音效消费 |
 | `src/physics/world_2d.gd` | 原生二维刚体与传感器、拾取/布置、接触、状态采样/恢复 |
@@ -70,6 +70,7 @@
 | `docs/场景管理验收.md` | 场景管理范围、操作和实测证据 |
 | `scenes/` | 用户保存场景的默认目录，不纳入源码Git |
 | `src/ui/form_helpers.gd` | 表单控件、选项和字段读取辅助 |
+| `src/ui/pending_edits.gd` | 待应用表单组、草稿恢复、多物体修改快照与统一提交收集 |
 | `src/ui/object_panel.gd` | 初始对象列表、布置/物理/外观属性、锁定与增删复制 |
 | `src/ui/component_panels.gd` | 机制、声音、屏幕特效参数面板 |
 | `src/ui/production_panels.gd` | 渲染/相机/文字、Take回放与视频生产面板 |
@@ -124,6 +125,8 @@
 | `tools/validate_workbench.gd` | 原生工作台与统一命令集成 |
 | `tools/validate_ui.gd` | 面板命令、原值保持、相机/声音/碰撞过滤、锁定、预览坐标与错误展示 |
 | `tools/validate_effect_switches.gd` | 特效独立开关、碰撞喷溅上限、即时面板控制、保存与回退确定性 |
+| `tools/validate_speed_apply.gd` | 二维/三维原生速度门槛、多物体/跨页原子应用、撤销与失败保护 |
+| `docs/性能与批量应用验收.md` | 最低速度/统一应用用法、回放修复与原始GPU性能证据 |
 | `tools/validate_scene_workspace.gd` | 四类型真实世界保存重开、中文路径、未保存提示、失败保护与布局保存 |
 | `tools/validate_media.gd` | 程序化表现、预览声音与资源格式 |
 | `tools/validate_mixer.py` | 离线混音、声部/限流与事件时间对齐 |

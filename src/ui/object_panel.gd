@@ -9,6 +9,7 @@ var listing: ItemList
 var form: VBoxContainer
 var fields: Dictionary = {}
 var selected_spec: Dictionary = {}
+var pending_edits: RefCounted
 
 
 # Build placement actions and the initial-object list once.
@@ -52,6 +53,10 @@ func _select(index: int) -> void:
 
 # Expose dimension-specific shape and physics fields for one object.
 func _build_form() -> void:
+	if pending_edits != null:
+		pending_edits.capture()
+		for key in pending_edits.groups.keys():
+			if str(key).begins_with("object_"): pending_edits.groups.erase(key)
 	F.clear(form)
 	fields.clear()
 	selected_spec = {}
@@ -113,6 +118,15 @@ func _build_form() -> void:
 		if control is LineEdit or control is SpinBox: control.editable = not locked
 		elif control is BaseButton: control.disabled = locked
 	F.button(form, "应用物体参数并重置", _apply).disabled = locked
+	if pending_edits != null:
+		var parameters: Array = []
+		for key in fields:
+			if key != "locked": parameters.append(fields[key])
+		var captured_fields := fields.duplicate()
+		var captured_spec := selected_spec.duplicate(true)
+		var captured_doc := document
+		pending_edits.register("object_parameters:" + selected_id, parameters, _apply, func() -> Dictionary: return {"op": "object.update", "args": {"id": captured_spec["id"], "changes": _changes(captured_fields, captured_spec, captured_doc)}})
+		pending_edits.register("object_lock:" + selected_id, [fields["locked"]], func(): command_requested.emit("object.update", {"id": selected_id, "changes": {"editor.locked": fields["locked"].button_pressed}}), func() -> Dictionary: return {"op": "object.update", "args": {"id": captured_spec["id"], "changes": {"editor.locked": captured_fields["locked"].button_pressed}}})
 	var actions := HFlowContainer.new()
 	form.add_child(actions)
 	F.button(actions, "复制物体", func(): command_requested.emit("object.duplicate", {"id": selected_id}))
@@ -121,39 +135,43 @@ func _build_form() -> void:
 
 # Commit one object edit instead of rebuilding on every spinbox change.
 func _apply() -> void:
-	if selected_spec.is_empty():
-		return
-	var is_3d: bool = F.value(document, "world.dimension", "2d") == "3d"
+	var changes := _changes(fields, selected_spec, document)
+	if not changes.is_empty(): command_requested.emit("object.update", {"id": selected_id, "changes": changes})
+
+## Build a draft without mutating the document, including fields of an object being deselected.
+func _changes(controls: Dictionary, spec: Dictionary, doc: Dictionary) -> Dictionary:
+	if spec.is_empty(): return {}
+	var is_3d: bool = F.value(doc, "world.dimension", "2d") == "3d"
 	var count := 3 if is_3d else 2
 	var position: Array = []
-	for field in fields.values():
+	for field in controls.values():
 		if field is SpinBox: field.apply()
 	var velocity: Array = []
 	var rotation: Array = []
 	var dimensions: Array = []
 	for index in count:
-		position.append(fields["p%d" % index].value)
-		velocity.append(fields["v%d" % index].value)
-		rotation.append(fields["r%d" % index].value if fields.has("r%d" % index) else 0)
-		if fields.has("s%d" % index): dimensions.append(fields["s%d" % index].value)
+		position.append(controls["p%d" % index].value)
+		velocity.append(controls["v%d" % index].value)
+		rotation.append(controls["r%d" % index].value if controls.has("r%d" % index) else 0)
+		if controls.has("s%d" % index): dimensions.append(controls["s%d" % index].value)
 	var tags: Array = []
-	for tag in str(fields["tags"].text).split(","):
+	for tag in str(controls["tags"].text).split(","):
 		if not tag.strip_edges().is_empty(): tags.append(tag.strip_edges())
-	var rules: Array = selected_spec.get("mechanisms", []).duplicate()
+	var rules: Array = spec.get("mechanisms", []).duplicate()
 	rules.erase("split_ball")
-	if fields["split"].button_pressed: rules.append("split_ball")
-	var changes := {"name": fields["name"].text, "tags": tags, "transform.position": position,
+	if controls["split"].button_pressed: rules.append("split_ball")
+	var changes := {"name": controls["name"].text, "tags": tags, "transform.position": position,
 		"transform.rotation_degrees": rotation if is_3d else rotation[0], "physics.velocity": velocity,
-		"physics.mass": fields["mass"].value, "physics.material.restitution": fields["bounce"].value,
-		"physics.material.friction": fields["friction"].value, "appearance.color": "#" + fields["color"].color.to_html(),
-		"physics.mode": F.selected(fields["mode"]), "physics.collision_layer": int(fields["layer"].value),
-		"physics.collision_mask": int(fields["mask"].value), "physics.ccd": fields["ccd"].button_pressed, "mechanisms": rules}
-	if fields.has("radius"): changes["shape.radius"] = fields["radius"].value
-	elif fields.has("inner_radius"):
-		for key in ["inner_radius","outer_radius","start_degrees","end_degrees"]: changes["shape."+key]=fields[key].value
+		"physics.mass": controls["mass"].value, "physics.material.restitution": controls["bounce"].value,
+		"physics.material.friction": controls["friction"].value, "appearance.color": "#" + controls["color"].color.to_html(),
+		"physics.mode": F.selected(controls["mode"]), "physics.collision_layer": int(controls["layer"].value),
+		"physics.collision_mask": int(controls["mask"].value), "physics.ccd": controls["ccd"].button_pressed, "mechanisms": rules}
+	if controls.has("radius"): changes["shape.radius"] = controls["radius"].value
+	elif controls.has("inner_radius"):
+		for key in ["inner_radius","outer_radius","start_degrees","end_degrees"]: changes["shape."+key]=controls[key].value
 	else: changes["shape.size"] = dimensions
-	if fields.has("glass_hits"):
-		changes["glass.hits"]=int(fields["glass_hits"].value)
-		changes["glass.shards"]=int(fields["glass_shards"].value)
-		changes["glass.font_size"]=int(fields["glass_font_size"].value)
-	command_requested.emit("object.update", {"id": selected_id, "changes": changes})
+	if controls.has("glass_hits"):
+		changes["glass.hits"]=int(controls["glass_hits"].value)
+		changes["glass.shards"]=int(controls["glass_shards"].value)
+		changes["glass.font_size"]=int(controls["glass_font_size"].value)
+	return changes

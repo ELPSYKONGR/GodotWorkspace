@@ -29,12 +29,38 @@ func execute(command: Dictionary) -> Dictionary:
 		var op := str(command.get("op", ""))
 		var args: Dictionary = command.get("args", {})
 		if op == "history.undo" or op == "history.redo": result = _history(op == "history.undo")
+		elif op == "scene.apply_run": result = _apply_run(args)
 		elif op in ["scene.patch", "object.add", "object.update", "object.remove", "object.duplicate", "object.arrange"]: result = _edit(op, args)
 		else: result = runtime_handler.call(op, args)
 	result["command_id"] = id
 	result["revision"] = int(document.get("revision", revision))
 	if not id.is_empty(): receipts[id] = result.duplicate(true)
 	completed.emit(result)
+	return result
+
+## Validate drafts on an isolated document; commit one undoable edit only if every draft passes.
+func _apply_run(args: Dictionary) -> Dictionary:
+	if not args.get("edits", []) is Array: return {"ok": false, "error": "待应用设置需要数组"}
+	var candidate := document.duplicate(true)
+	for edit in args.get("edits", []):
+		if not edit is Dictionary or edit.get("op", "") not in ["scene.patch", "object.update"] or not edit.get("args", {}) is Dictionary: return {"ok": false, "error": "待应用设置命令无效"}
+		var changes: Variant = edit["args"].get("changes", {})
+		if not changes is Dictionary: return {"ok": false, "error": "待应用changes需要对象"}
+		var target: Dictionary = candidate
+		if edit["op"] == "object.update":
+			if not candidate.get("objects", []) is Array or candidate.get("objects", []).any(func(spec): return not spec is Dictionary): return {"ok": false, "error": "物体数据无效"}
+			var index := Document.object_index(candidate, str(edit["args"].get("id", "")))
+			if index < 0: return {"ok": false, "error": "请选择初始场景物体"}
+			target = candidate["objects"][index]
+			if target.get("editor", {}).get("locked", false) and changes.keys() != ["editor.locked"]: return {"ok": false, "error": "物体已锁定"}
+		for path in changes:
+			if not Document.set_field_path(target, path, changes[path]): return {"ok": false, "error": "无效字段路径：" + str(path)}
+	var result := {"ok": true}
+	if not args.get("edits", []).is_empty():
+		candidate.erase("revision")
+		result = _edit("scene.patch", {"changes": candidate})
+	result["run_after_apply"] = result["ok"]
+	result["message"] = "所有修改已应用，已从初始布局运行" if result["ok"] else result.get("error", "应用失败")
 	return result
 
 ## Validate a whole editing transaction before making it visible.

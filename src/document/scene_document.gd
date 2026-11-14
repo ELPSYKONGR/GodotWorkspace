@@ -82,6 +82,8 @@ static func validate(doc: Dictionary) -> PackedStringArray:
 		if rule.get("type", "") not in ["split_on_contact", "despawn_on_contact", "hit_stop_on_event"]: errors.append("不支持的机制类型")
 		if rule.get("type", "") == "split_on_contact" and (int(rule.get("params", {}).get("children_total", 2)) < 2 or int(rule.get("params", {}).get("children_total", 2)) > 100): errors.append("分裂子球总数需要2～100")
 		if rule.get("type", "") == "split_on_contact" and not (rule.get("params", {}).get("children_can_split", true) is bool): errors.append("children_can_split需要布尔值true或false")
+		var speed: Variant = rule.get("conditions", {}).get("minimum_collision_speed", 0)
+		if not (speed is int or speed is float) or not is_finite(float(speed)) or float(speed) < 0 or float(speed) > 100000: errors.append("最低碰撞速度需要0～100000有限数值")
 	var presentation: Dictionary = doc.get("presentation", {})
 	for field in ["render", "audio", "effects"]:
 		if not presentation.get(field, {}) is Dictionary: errors.append("表现字段需要对象：" + field)

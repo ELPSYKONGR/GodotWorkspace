@@ -84,7 +84,16 @@ func _from_ui(op: String, args: Dictionary) -> void:
 func _after_command(result: Dictionary) -> void:
 	message = str(result.get("message", result.get("error", "完成")))
 	message_is_error = not result.get("ok", false)
-	if result.get("changed", false):
+	if result.get("run_after_apply", false):
+		output_fps = int(service.document.get("export_preset", {}).get("fps", output_fps))
+		panel.pending_edits.groups.clear()
+		panel.pending_edits.drafts.clear()
+		panel.synced_revision = -1
+		session.load_document(service.document)
+		session.play()
+		panel.sync_document(service.document, selected_id)
+		bridge.publish(session.get_info())
+	elif result.get("changed", false):
 		if result.get("requires_reset", false): session.load_document(service.document)
 		else: session.apply_presentation(service.document)
 		panel.sync_document(service.document, selected_id)
@@ -173,6 +182,8 @@ func _runtime_command(op: String, args: Dictionary) -> Dictionary:
 ## Load only validated v2 scene data and preserve the previous take for comparison.
 func _replace_scene(result: Dictionary) -> Dictionary:
 	if not result["ok"]: return result
+	panel.pending_edits.groups.clear()
+	panel.pending_edits.drafts.clear()
 	service.history.append(service.document.duplicate(true))
 	if service.history.size() > 50: service.history.pop_front()
 	service.future.clear()

@@ -4,7 +4,7 @@ const F = preload("res://src/ui/form_helpers.gd")
 
 
 # Edit rule parameters together with the world's collision-related settings.
-static func mechanisms(parent: Node, doc: Dictionary, send: Callable) -> void:
+static func mechanisms(parent: Node, doc: Dictionary, send: Callable, pending: RefCounted = null) -> void:
 	F.text(parent, "真实接触驱动规则。分裂移除原球，数量表示子球总数。容量或出生空间不足时在调试页显示拒绝原因。")
 	var rules: Array = doc.get("mechanisms", []).duplicate(true)
 	var split: Dictionary = {"id": "split_ball", "type": "split_on_contact", "enabled": true, "conditions": {}, "params": {}}
@@ -18,6 +18,8 @@ static func mechanisms(parent: Node, doc: Dictionary, send: Callable) -> void:
 	var children_can_split := F.check(parent, "子球继续分裂", bool(F.value(split, "params.children_can_split", true)))
 	F.text(parent, "关闭后仅初始球可分裂；开启后子球可继续分裂，仍受数量上限和出生空间保护限制。")
 	var protection := F.number(parent, "新生保护（秒）", float(F.value(split, "conditions.newborn_guard_seconds", 0.08)), 0, 2, 0.01)
+	var speed := F.number(parent, "分裂最低碰撞速度（0关闭）", float(F.value(split, "conditions.minimum_collision_speed", 0)), 0, 100000, 0.1)
+	F.text(parent, "接触前一物理步的相对线速度：二维px/s，三维m/s。低于阈值的接触不分裂；这是速度近似值，不是碰撞冲量。分裂顿帧会刻意短暂停住运动，可关闭该效果。")
 	var maximum := F.number(parent, "最大动态物体数", float(F.value(doc, "world.max_dynamic_bodies", 48)), 2, 256, 1)
 	var targets: Array = F.value(split, "conditions.other_tags_any", ["ball", "boundary"])
 	var walls := F.check(parent, "撞地面/墙壁触发", "boundary" in targets)
@@ -26,16 +28,16 @@ static func mechanisms(parent: Node, doc: Dictionary, send: Callable) -> void:
 	var seconds := F.number(parent, "顿帧（秒）", float(F.value(hit, "params.seconds", 0.06)), 0, 0.5, 0.01)
 	var hz := F.number(parent, "物理频率（Hz）", float(F.value(doc, "world.physics_hz", 120)), 60, 480, 30)
 	var gravity: Array = F.value(doc, "world.gravity", [0, 450])
-	var is_3d: bool = F.value(doc, "world.dimension", "2d") == "3d"
 	var g := F.number(parent, "重力Y（2D向下为正）", float(gravity[1]), -2000, 2000, 0.1)
-	F.button(parent, "应用机制并重新模拟", func():
-		for field in [children, protection, maximum, seconds, hz, g]: field.apply()
+	var rule_changes := func() -> Dictionary:
+		for field in [children, protection, speed, seconds]: field.apply()
 		var updated: Array = rules.duplicate(true)
 		var s: Dictionary = split.duplicate(true)
 		s["enabled"] = active.button_pressed
 		if not s.has("conditions"): s["conditions"] = {}
 		if not s.has("params"): s["params"] = {}
 		s["conditions"]["newborn_guard_seconds"] = protection.value
+		if speed.value > 0 or s["conditions"].has("minimum_collision_speed"): s["conditions"]["minimum_collision_speed"] = speed.value
 		var tags: Array = []
 		if walls.button_pressed: tags.append("boundary")
 		if balls.button_pressed: tags.append("ball")
@@ -48,12 +50,23 @@ static func mechanisms(parent: Node, doc: Dictionary, send: Callable) -> void:
 		updated = updated.filter(func(rule): return rule.get("type", "") not in ["split_on_contact", "hit_stop_on_event"])
 		updated.append(s)
 		updated.append(h)
-		send.call("scene.patch", {"changes": {"mechanisms": updated, "world.max_dynamic_bodies": int(maximum.value), "world.physics_hz": int(hz.value), "world.gravity": [0, g.value, 0] if is_3d else [0, g.value]}})
-	)
+		return {"mechanisms": updated}
+	var world_changes := func() -> Dictionary:
+		for field in [maximum, hz, g]: field.apply()
+		var updated_gravity: Array = gravity.duplicate()
+		updated_gravity[1] = g.value
+		return {"world.max_dynamic_bodies": int(maximum.value), "world.physics_hz": int(hz.value), "world.gravity": updated_gravity}
+	F.button(parent, "应用机制并重新模拟", func():
+		var changes: Dictionary = rule_changes.call()
+		changes.merge(world_changes.call())
+		send.call("scene.patch", {"changes": changes}))
+	if pending != null:
+		pending.register("mechanism_rules", [active, children, children_can_split, protection, speed, walls, balls, hold, seconds], func(): send.call("scene.patch", {"changes": rule_changes.call()}))
+		pending.register("mechanism_world", [maximum, hz, g], func(): send.call("scene.patch", {"changes": world_changes.call()}))
 
 
 # Configure the shared real-time and offline short-sound presets.
-static func audio(parent: Node, doc: Dictionary, send: Callable) -> void:
+static func audio(parent: Node, doc: Dictionary, send: Callable, pending: RefCounted = null) -> void:
 	F.text(parent, "预览与离线混音使用相同程序化短音预设。限流只影响听觉，不丢弃物理事件。")
 	var data: Dictionary = F.value(doc, "presentation.audio", {})
 	var enabled := F.check(parent, "启用碰撞音效", bool(data.get("enabled", true)))
@@ -72,12 +85,16 @@ static func audio(parent: Node, doc: Dictionary, send: Callable) -> void:
 	var pitch := F.number(parent, "音高倍率", float(data.get("pitch", 1)), 0.25, 4, 0.05)
 	var interval := F.number(parent, "最短间隔（秒）", float(data.get("min_interval", 0.035)), 0, 1, 0.005)
 	var voices := F.number(parent, "最大声部", float(data.get("max_voices", 16)), 1, 32, 1)
-	F.button(parent, "应用音效", func(): send.call("scene.patch", {"changes": {"presentation.audio": {"enabled": enabled.button_pressed, "preset": F.selected(preset), "wav_path": wav_path.text.strip_edges(), "volume_db": volume.value, "pitch": pitch.value, "min_interval": interval.value, "max_voices": int(voices.value), "sample_rate": 48000}}}))
+	var apply := func():
+		for field in [volume, pitch, interval, voices]: field.apply()
+		send.call("scene.patch", {"changes": {"presentation.audio": {"enabled": enabled.button_pressed, "preset": F.selected(preset), "wav_path": wav_path.text.strip_edges(), "volume_db": volume.value, "pitch": pitch.value, "min_interval": interval.value, "max_voices": int(voices.value), "sample_rate": 48000}}})
+	F.button(parent, "应用音效", apply)
+	if pending != null: pending.register("audio", [enabled, preset, wav_path, volume, pitch, interval, voices], apply)
 	F.button(parent, "试听当前已应用音色", func(): send.call("audio.audition", {}))
 
 
 # Expose analytic particle, flash, ring and trail settings.
-static func effects(parent: Node, doc: Dictionary, send: Callable) -> void:
+static func effects(parent: Node, doc: Dictionary, send: Callable, pending: RefCounted = null) -> void:
 	F.text(parent, "短效按事件种子与年龄重建，可往返寻帧。三维场景使用投影到画面的屏幕特效，不额外参与物理。")
 	var data: Dictionary = F.value(doc, "presentation.effects", {})
 	var enabled := F.check(parent, "特效总开关", bool(data.get("enabled", true)))
@@ -96,8 +113,10 @@ static func effects(parent: Node, doc: Dictionary, send: Callable) -> void:
 	for entry in [[enabled, "enabled"], [particles, "particles_enabled"], [impact_particles, "impact_particles"], [impact_flash, "impact_flash"], [trail, "trail_enabled"], [ring, "ring"], [flash, "flash"]]:
 		var field: String = entry[1]
 		(entry[0] as CheckBox).toggled.connect(func(value: bool): send.call("scene.patch", {"changes": {"presentation.effects." + field: value}}))
-	F.button(parent, "应用粒子与拖尾", func():
+	var apply := func():
 		for field in [count, lifetime, speed, trail_seconds]: field.apply()
 		var updated := data.duplicate(true)
 		updated.merge({"enabled": enabled.button_pressed, "particles_enabled": particles.button_pressed, "impact_particles": impact_particles.button_pressed, "impact_flash": impact_flash.button_pressed, "count": int(count.value), "lifetime": lifetime.value, "speed": speed.value, "trail_enabled": trail.button_pressed, "trail_seconds": trail_seconds.value, "ring": ring.button_pressed, "flash": flash.button_pressed, "time_domain": F.selected(clock)}, true)
-		send.call("scene.patch", {"changes": {"presentation.effects": updated}}))
+		send.call("scene.patch", {"changes": {"presentation.effects": updated}})
+	F.button(parent, "应用粒子与拖尾", apply)
+	if pending != null: pending.register("effects", [enabled, particles, impact_particles, impact_flash, trail, ring, flash, count, lifetime, speed, trail_seconds, clock], apply)
