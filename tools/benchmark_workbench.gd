@@ -16,12 +16,18 @@ func _run() -> void:
 		quit(2)
 		return
 	var seconds := 25.0
+	var take_path := ""
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--seconds="): seconds = clampf(arg.get_slice("=", 1).to_float(), 5, 60)
+		elif arg.begins_with("--take="): take_path = arg.trim_prefix("--take=")
 	var host = load("res://src/ui/workbench.gd").new()
 	root.add_child(host)
 	await process_frame
-	if "--record" in OS.get_cmdline_user_args(): host.session.start_recording()
+	if not take_path.is_empty():
+		var loaded: Dictionary = host.service.execute({"op": "take.load", "args": {"path": take_path}})
+		if not loaded.get("ok", false): push_error(str(loaded)); quit(2); return
+		host.session.play()
+	elif "--record" in OS.get_cmdline_user_args(): host.session.start_recording()
 	else: host.session.play()
 	var start := Time.get_ticks_usec()
 	var previous := start

@@ -24,6 +24,9 @@ var _requested_steps := 0
 var _event_serial := 0
 var _audio_cursor := -0.000001
 var _scale := 1.0
+var _presented_time := -1.0
+var _presented_sim_time := -1.0
+var _presented_event := -1
 
 ## Capture the previous solved step before choosing whether the next solver step runs.
 func _ready() -> void:
@@ -44,6 +47,7 @@ func load_document(doc: Dictionary, output_scale: float = 1.0) -> void:
 
 ## Create display-only edit/replay worlds or native dynamic simulation worlds.
 func _make_stage(playback: bool) -> void:
+	_presented_time = -1
 	_set_active(false)
 	if is_instance_valid(audio): audio.stop_all()
 	if is_instance_valid(stage):
@@ -122,6 +126,7 @@ func stop_recording() -> void:
 
 ## Update only appearance, fonts, audio and effect presets while retaining motion.
 func apply_presentation(doc: Dictionary) -> void:
+	_presented_time = -1
 	document = doc.duplicate(true)
 	stage.apply_presentation(doc)
 	audio.configure(doc)
@@ -141,7 +146,6 @@ func seek(value: float, silent: bool = true) -> bool:
 	time = frame["time"]
 	sim_time = frame["sim_time"]
 	stage.world.apply_state(frame["states"], frame["definitions"])
-	stage.world.apply_presentation(document)
 	stage.present(time, sim_time, take.get_data()["events"], take.get_data())
 	if silent: _audio_cursor = time
 	return true
@@ -190,13 +194,25 @@ func _process(delta: float) -> void:
 		if replay_playing:
 			var next := minf(time + delta, take.get_duration())
 			seek(next, false)
-			for event in take.get_data()["events"]:
-				if float(event["time"]) > _audio_cursor and float(event["time"]) <= time: audio.consume(event)
+			var replay_events: Array = take.get_data()["events"]
+			var low := 0
+			var high := replay_events.size()
+			while low < high:
+				var middle := (low + high) / 2
+				if float(replay_events[middle]["time"]) <= _audio_cursor: low = middle + 1
+				else: high = middle
+			for index in range(low, replay_events.size()):
+				if float(replay_events[index]["time"]) > time: break
+				audio.consume(replay_events[index])
 			_audio_cursor = time
 			if time >= take.get_duration(): replay_playing = false
 	else:
 		if mode == "recording": _capture()
+		if time == _presented_time and sim_time == _presented_sim_time and _event_serial == _presented_event: return
 		stage.present(time, sim_time, presentation_events, take.get_data() if mode == "recording" else {})
+		_presented_time = time
+		_presented_sim_time = sim_time
+		_presented_event = _event_serial
 
 ## Attach clocks and stable IDs before committing event-driven presentation.
 func _on_event(source: Dictionary) -> void:

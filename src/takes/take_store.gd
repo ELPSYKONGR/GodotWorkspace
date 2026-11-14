@@ -186,10 +186,13 @@ func _valid(candidate: Dictionary) -> bool:
 			elif not is_finite(float(rotation)):
 				return false
 		previous = t
+	var previous_event := -1.0
 	for event in candidate["events"]:
 		if event is Dictionary and not GlassRecording.event_valid(event,candidate["definitions"]): return false
 		if not event is Dictionary or not _number(event.get("time")) or float(event["time"]) < 0 or float(event["time"]) > MAX_SECONDS:
 			return false
+		if float(event["time"]) < previous_event: return false
+		previous_event = float(event["time"])
 	return _number(candidate.get("duration")) and absf(float(candidate["duration"]) - previous) < 0.001
 
 

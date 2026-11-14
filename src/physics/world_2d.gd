@@ -161,7 +161,7 @@ func _physics_process(_delta: float) -> void:
 				var mode := RigidBody2D.CCD_MODE_CAST_SHAPE if sweep else RigidBody2D.CCD_MODE_DISABLED
 				if body.continuous_cd != mode: body.continuous_cd = mode
 		runner.step()
-	queue_redraw()
+		queue_redraw()
 
 
 ## Return compact poses including static objects for complete playback reconstruction.

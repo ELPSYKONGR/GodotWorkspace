@@ -60,7 +60,7 @@ func present(time: float, sim_time: float, events: Array, take: Dictionary = {})
 	if not take.is_empty(): effects.set_take(take)
 	# Live trails only need dynamic positions, not velocities/colors or static-body poses.
 	var trail_states: Array = []
-	if effects.settings.get("enabled", true) and effects.settings.get("trail_enabled", true) and take.is_empty():
+	if effects.settings.get("enabled", true) and effects.settings.get("trail_enabled", true) and take.is_empty() and not world.playback:
 		for id in world.records:
 			if world.records[id]["spec"].get("physics", {}).get("mode", "dynamic") == "dynamic":
 				var body = world.records[id].get("body")

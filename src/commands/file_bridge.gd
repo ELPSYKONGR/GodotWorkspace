@@ -3,10 +3,12 @@ extends RefCounted
 var service: RefCounted
 var root := "res://outputs/control"
 var last_error := ""
+var published_revision := -1
 
 ## Keep command input, processed messages and receipts inside the project drive.
 func setup(command_service: RefCounted) -> void:
 	service = command_service
+	published_revision = -1
 	for folder in ["inbox", "processed", "results"]: DirAccess.make_dir_recursive_absolute(root.path_join(folder))
 	publish({})
 
@@ -29,15 +31,18 @@ func poll() -> void:
 
 ## Publish current state for AI revision checks without exposing live node references.
 func publish(info: Dictionary) -> void:
-	_write(root.path_join("scene.current.json"), service.document)
+	var revision := int(service.document.get("revision", 0))
+	if revision != published_revision:
+		if _write(root.path_join("scene.current.json"), service.document): published_revision = revision
 	_write(root.path_join("state.json"), info)
 
 ## Atomic replacement prevents the UI or AI from reading half a JSON document.
-func _write(path: String, data: Dictionary) -> void:
+func _write(path: String, data: Dictionary) -> bool:
 	var temporary := path + ".tmp"
 	var file := FileAccess.open(temporary, FileAccess.WRITE)
-	if file == null: last_error = "控制文件写入失败：" + path; push_error(last_error); return
+	if file == null: last_error = "控制文件写入失败：" + path; push_error(last_error); return false
 	file.store_string(JSON.stringify(data))
 	file.close()
 	var error := DirAccess.rename_absolute(temporary, path)
 	if error != OK: last_error = "控制文件替换失败：" + path; push_error(last_error)
+	return error == OK

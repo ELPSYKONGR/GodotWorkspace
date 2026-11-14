@@ -193,6 +193,7 @@ func apply_presentation(doc: Dictionary) -> void:
 
 ## Highlight selection without touching collision shapes or motion.
 func set_debug(enabled: bool, selected: String = "") -> void:
+	if debug_enabled == enabled and selected_id == selected: return
 	debug_enabled = enabled
 	selected_id = selected
 	for id in records: _update_material(id)
