@@ -125,9 +125,11 @@ func contact_pairs() -> Dictionary:
 			if other_id.is_empty() or not records.has(other_id): continue
 			var ids: Array = [str(id), other_id]
 			ids.sort()
+			var key := "%s|%s" % ids
+			if result.has(key): continue
 			var pair: Dictionary = ContactAnchor.for_3d(records, ids[0], ids[1])
 			pair.merge({"a": ids[0], "b": ids[1]})
-			result["%s|%s" % ids] = pair
+			result[key] = pair
 	return result
 
 

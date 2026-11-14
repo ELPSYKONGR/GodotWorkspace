@@ -19,6 +19,7 @@
 | `AGENTS.md` / `.env.example` | 其它AI接手约束、配置覆盖模板 |
 | `LESSONS.md` | 主开发线、Take与便携包的决策、踩坑预防和项目约定 |
 | `config/runtime-lock.json` | Windows x64工具的版本、URL、SHA-256、校验来源和许可 |
+| `docs/.gdignore` | 禁止把研究CSV自动导入为翻译；显式FileAccess读取不变 |
 | `docs/AI交接.md` / `docs/需求与对话决策.md` | 当前目标、真实架构边界、已定语义、历史需求与下一步 |
 | `docs/视频研究交接.md` / `docs/reference_media_inventory.json` / `docs/reference_media_index.csv` | 视频内容、研究证据与相对路径/大小/SHA媒体盘点 |
 | `docs/迁移与打包说明.md` / `docs/迁移验收.md` | 离线恢复、配置、完整性、Git历史及异盘实际验证 |
@@ -46,9 +47,12 @@
 | `src/physics/world_2d.gd` | 原生二维刚体与传感器、拾取/布置、接触、状态采样/恢复 |
 | `src/physics/world_3d.gd` | 原生三维刚体与传感器、三维拾取/平面布置、状态采样/恢复 |
 | `src/physics/primitive_3d.gd` | 三维原语、材质、变换及几何辅助 |
+| `src/physics/birth_space_2d.gd` | 出生几何的保守网格筛选，精确窄相仍由World2D判断 |
+| `src/physics/native_contacts_2d.gd` | 原生接触信号的双向集合与退役清理 |
 | `src/physics/contact_anchor.gd` | 从明确的形状几何估算表现锚点；不冒充引擎真实接触点 |
 | `src/mechanisms/contact_rules.gd` | 接触episode、保护期重试、子球继续分裂开关、批次分裂/移除、容量与空间拒绝原因 |
 | `src/presentation/stage.gd` | 共享的干净Stage、世界/特效/文字组合、三维投影与输出缩放 |
+| `src/presentation/effect_batch.gd` / `effect_circle.gdshader` | 圆形特效的实例批量与像素抗锯齿 |
 | `src/presentation/effects.gd` | 按事件/年龄恢复的屏幕粒子、圆环、闪光、Take拖尾 |
 | `src/presentation/audio.gd` | 合成短音、本地PCM WAV、试听、限流和预览声部 |
 | `src/takes/take_store.gd` | 有界完整JSON轨迹、生命周期定义、校验、二分寻帧与过期依据 |
@@ -79,6 +83,9 @@
 | `tools/render.ps1` / `tools/inspect_media.py` | 旧版无声样片导出、媒体和联系表检查 |
 
 ## 验证工具
+
+2026-11-14新增：`tools/validate_performance_paths.gd`（几何差分/接触集合/PCM/特效），`tools/validate_fast_ccd.gd`（独立高速碰撞），`tools/benchmark_workbench.gd`（真实GPU窗口的预览/录制计时，须在副本执行）；报告见`docs/性能验收_20261114.md`。
+
 
 本次新增：`tools/validate_split_controls.gd`覆盖真实机制面板、输入2/4/100、暂停后运行和Delete；`docs/工程标准落实.md`记录标准适用范围，`docs/standards/ENGINEERING_STANDARD_ENHANCED_v2.2.md`为本次用户标准原文。
 

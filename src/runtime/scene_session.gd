@@ -10,6 +10,7 @@ var audio: Node
 var take = Take.new()
 var mode := "edit"
 var events: Array = []
+var presentation_events: Array = []
 var time := 0.0
 var sim_time := 0.0
 var replay_playing := false
@@ -53,7 +54,7 @@ func _make_stage(playback: bool) -> void:
 	stage.event_logged.connect(_on_event)
 	stage.setup(document, playback, _scale)
 	if is_instance_valid(audio): audio.configure(document)
-	Engine.physics_ticks_per_second = int(document["world"].get("physics_hz", 240))
+	Engine.physics_ticks_per_second = int(document["world"].get("physics_hz", 120))
 
 ## Discard stale runtime clocks without editing initial object transforms.
 func _reset_clocks() -> void:
@@ -66,6 +67,7 @@ func _reset_clocks() -> void:
 	time = 0
 	sim_time = 0
 	events.clear()
+	presentation_events.clear()
 	_event_serial = 0
 	_audio_cursor = -0.000001
 
@@ -193,7 +195,7 @@ func _process(delta: float) -> void:
 			if time >= take.get_duration(): replay_playing = false
 	else:
 		if mode == "recording": _capture()
-		stage.present(time, sim_time, events, take.get_data() if mode == "recording" else {})
+		stage.present(time, sim_time, presentation_events, take.get_data() if mode == "recording" else {})
 
 ## Attach clocks and stable IDs before committing event-driven presentation.
 func _on_event(source: Dictionary) -> void:
@@ -204,10 +206,16 @@ func _on_event(source: Dictionary) -> void:
 	event["sim_time"] = sim_time
 	event["seed"] = _event_serial * 7919
 	events.append(event)
+	# Rejections/exits stay in the ledger, but cannot generate particles or impact rings.
+	if event.get("type", "") == "split" or (event.get("type", "") == "contact" and event.get("phase", "") == "enter"):
+		presentation_events.append(event)
+		if presentation_events.size() > 10000: presentation_events = presentation_events.slice(2000)
 	if mode == "recording": take.add_event(event)
 	if mode == "recording" and (event.get("type", "") == "split" or (event.get("type", "") == "retire" and event.get("reason", "") == "despawn")):
 		_capture()
-	if events.size() > 10000: events.pop_front()
+	# Drop an old block, rather than shifting ten thousand entries for every new contact.
+	# Recorded events remain complete in TakeStore; this is only the live preview window.
+	if events.size() > 10000: events = events.slice(2000)
 	if event.get("type", "") == "split":
 		for rule in document.get("mechanisms", []):
 			if rule.get("type", "") == "hit_stop_on_event" and rule.get("enabled", true):
@@ -217,7 +225,7 @@ func _on_event(source: Dictionary) -> void:
 
 ## Same-time replacement includes deferred spawn/retire changes in the final pose.
 func _capture() -> void:
-	if not take.append(time, sim_time, stage.world.capture_state(), stage.world.get_definitions()):
+	if not take.append(time, sim_time, stage.world.capture_state(), stage.world.definitions):
 		last_error = take.last_error
 		mode = "paused"
 		_set_active(false)

@@ -58,4 +58,13 @@ func project_point(position: Array) -> Vector2:
 func present(time: float, sim_time: float, events: Array, take: Dictionary = {}) -> void:
 	effects.set_timeline(events)
 	if not take.is_empty(): effects.set_take(take)
-	effects.present(time, sim_time, project_point, world.capture_state(), world.get_definitions())
+	# Live trails only need dynamic positions, not velocities/colors or static-body poses.
+	var trail_states: Array = []
+	if effects.settings.get("enabled", true) and effects.settings.get("trail_enabled", true) and take.is_empty():
+		for id in world.records:
+			if world.records[id]["spec"].get("physics", {}).get("mode", "dynamic") == "dynamic":
+				var body = world.records[id].get("body")
+				if (body is RigidBody2D or body is RigidBody3D) and body.sleeping: continue
+				trail_states.append({"id": id, "position": world.object_position(id)})
+	# Effects only read definitions; do not deep-copy retired generations every rendered frame.
+	effects.present(time, sim_time, project_point, trail_states, world.definitions)

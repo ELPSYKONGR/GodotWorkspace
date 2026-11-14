@@ -24,7 +24,7 @@ static func mechanisms(parent: Node, doc: Dictionary, send: Callable) -> void:
 	var balls := F.check(parent, "撞其他球触发", "ball" in targets)
 	var hold := F.check(parent, "启用分裂顿帧", bool(hit.get("enabled", true)))
 	var seconds := F.number(parent, "顿帧（秒）", float(F.value(hit, "params.seconds", 0.06)), 0, 0.5, 0.01)
-	var hz := F.number(parent, "物理频率（Hz）", float(F.value(doc, "world.physics_hz", 240)), 60, 480, 30)
+	var hz := F.number(parent, "物理频率（Hz）", float(F.value(doc, "world.physics_hz", 120)), 60, 480, 30)
 	var gravity: Array = F.value(doc, "world.gravity", [0, 450])
 	var is_3d: bool = F.value(doc, "world.dimension", "2d") == "3d"
 	var g := F.number(parent, "重力Y（2D向下为正）", float(gravity[1]), -2000, 2000, 0.1)

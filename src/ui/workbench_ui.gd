@@ -162,7 +162,7 @@ func sync_document(doc: Dictionary, selected_id: String = "") -> void:
 	debug_text.editable = false
 	debug_text.custom_minimum_size.y = 460
 	debug_text.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	debug_text.wrap_mode = TextEdit.LINE_WRAPPING_BOUNDARY
+	debug_text.wrap_mode = TextEdit.LINE_WRAPPING_NONE
 	pages["调试"].add_child(debug_text)
 
 
@@ -195,8 +195,12 @@ func update_runtime(info: Dictionary) -> void:
 			lines.append("最近一次机制未执行：" + str(REJECTION_LABELS.get(reason, reason)))
 			runtime_label.text += "\n最近一次机制未执行：" + str(REJECTION_LABELS.get(reason, reason))
 			break
-	for index in range(maxi(0, events.size() - 30), events.size()): lines.append(JSON.stringify(events[index]))
-	debug_text.text = "\n".join(lines)
+	# Hidden tabs need no text layout. Full event data stays in control state / recorded Take.
+	if debug_text.is_visible_in_tree():
+		for index in range(maxi(0, events.size() - 30), events.size()):
+			var event: Dictionary = events[index]
+			lines.append("%.3fs %s %s → %s %s" % [float(event.get("time", 0)), event.get("type", ""), event.get("id", ""), event.get("other_id", ""), event.get("reason", event.get("phase", ""))])
+		debug_text.text = "\n".join(lines)
 	if info.has("last_message") and not str(info["last_message"]).is_empty(): show_message(str(info["last_message"]), bool(info.get("last_message_is_error", false)))
 
 

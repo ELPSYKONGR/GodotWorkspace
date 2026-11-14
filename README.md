@@ -82,3 +82,7 @@ Godot 4.7.2 便携工程，现已实现独立工作台：**布置物体 → 真�
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File tools/validate_workbench.ps1 -Legacy -WavJob
 ```
+
+## 2026-11-14 性能更新
+
+默认二维物理120Hz，目标预览60FPS。当前百球布局实测预览59.98FPS、录制59.94FPS，仍存在少量约27ms的帧间隔波动；细节和复测方式见[性能验收](docs/性能验收_20261114.md)。机制页仍可修改物理频率，修改前的本机场景备份在scratch/performance_config_backup。

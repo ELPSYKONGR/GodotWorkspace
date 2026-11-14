@@ -11,6 +11,17 @@ var trails: Array = []
 var flashes: Array = []
 var current_time := 0.0
 var current_sim_time := 0.0
+const Batch = preload("res://src/presentation/effect_batch.gd")
+var ring_batch: MultiMeshInstance2D
+var particle_batch: MultiMeshInstance2D
+var flash_batch: MultiMeshInstance2D
+
+## Separate layers preserve trails/rings/particles/flashes while batching circular geometry.
+func _ready() -> void:
+	ring_batch = Batch.new()
+	particle_batch = Batch.new()
+	flash_batch = Batch.new()
+	for batch in [ring_batch, particle_batch, flash_batch]: add_child(batch)
 
 
 ## Load presentation-only settings without changing physics or event randomness.
@@ -41,14 +52,27 @@ func present(time: float, sim_time: float, projector: Callable, states: Array, d
 	trails.clear()
 	flashes.clear()
 	if not bool(settings.get("enabled", true)):
+		_update_batches()
 		queue_redraw()
 		return
 	var domain := str(settings.get("time_domain", "simulation"))
+	var ring_indices: Dictionary = {}
 	var lifetime := clampf(float(settings.get("lifetime", 0.35)), 0.05, 3.0)
-	for index in range(timeline.size()):
+	# Event clocks are monotonic. Seek to the visible lifetime instead of scanning history.
+	var clock_key := "sim_time" if domain == "simulation" else "time"
+	var cutoff := (sim_time if domain == "simulation" else time) - lifetime
+	var low := 0
+	var high := timeline.size()
+	while low < high:
+		var middle := (low + high) / 2
+		if float(timeline[middle].get(clock_key, timeline[middle].get("time", 0))) < cutoff:
+			low = middle + 1
+		else: high = middle
+	for index in range(low, timeline.size()):
 		var event: Dictionary = timeline[index]
 		if float(event.get("time", 0.0)) > time + 0.000001:
-			continue
+			break
+		if event.get("type", "") not in ["split", "contact"]: continue
 		var age := sim_time - float(event.get("sim_time", event.get("time", 0))) if domain == "simulation" else time - float(event.get("time", 0))
 		if age < 0 or age > lifetime or not event.get("position") is Array:
 			continue
@@ -56,13 +80,21 @@ func present(time: float, sim_time: float, projector: Callable, states: Array, d
 		if event.get("type", "") == "split":
 			_burst(event, index, point, age, lifetime)
 		elif event.get("type", "") == "contact" and str(event.get("phase", "enter")) == "enter" and bool(settings.get("ring", true)):
-			rings.append({"position": point, "radius": 5 + age * 65, "alpha": (1 - age / lifetime) * 0.6})
+			# Resting contacts can chatter at solver frequency. Show their latest ripple per pair.
+			# The full contact/audio/Take ledger is unaffected by this visual coalescing.
+			var key := str(event.get("id", "")) + "|" + str(event.get("other_id", ""))
+			var ring := {"position": point, "radius": 5 + age * 65, "alpha": (1 - age / lifetime) * 0.6}
+			if ring_indices.has(key): rings[ring_indices[key]] = ring
+			else:
+				ring_indices[key] = rings.size()
+				rings.append(ring)
 		if event.get("type", "") == "split" and bool(settings.get("flash", true)):
 			var flash_age := time - float(event.get("time", 0))
 			if flash_age < 0.08:
 				flashes.append({"position": point, "radius": 28.0, "alpha": (1 - flash_age / 0.08) * 0.65})
 	if bool(settings.get("trail_enabled", true)):
 		_make_trails(time, sim_time, projector, states, definitions)
+	_update_batches()
 	queue_redraw()
 
 
@@ -87,7 +119,10 @@ func _make_trails(time: float, sim_time: float, projector: Callable, states: Arr
 	var now := sim_time if domain == "simulation" else time
 	var frames: Array = take.get("frames", [])
 	if frames.is_empty():
-		history.append({"time": time, "sim_time": sim_time, "states": states.duplicate(true)})
+		var projected: Array = []
+		for state in states:
+			projected.append({"id": state["id"], "screen": projector.call(state["position"])})
+		history.append({"time": time, "sim_time": sim_time, "states": projected})
 		while history.size() > 500 or (not history.is_empty() and time - float(history[0]["time"]) > 3):
 			history.pop_front()
 		frames = history
@@ -117,7 +152,8 @@ func _make_trails(time: float, sim_time: float, projector: Callable, states: Arr
 			if definitions.get(id, {}).get("physics", {}).get("mode", "dynamic") != "dynamic":
 				continue
 			if not by_id.has(id): by_id[id] = []
-			by_id[id].append(projector.call(state["position"]))
+			var point: Vector2 = state["screen"] if state.has("screen") else projector.call(state["position"])
+			if by_id[id].is_empty() or point != by_id[id].back(): by_id[id].append(point)
 	for id in by_id:
 		if by_id[id].size() >= 2:
 			trails.append(PackedVector2Array(by_id[id]))
@@ -125,14 +161,19 @@ func _make_trails(time: float, sim_time: float, projector: Callable, states: Arr
 
 ## Draw a clean overlay which can be rendered at any output resolution.
 func _draw() -> void:
+	var segments := PackedVector2Array()
 	for line in trails:
-		draw_polyline(line, Color(0.45, 0.85, 0.72, 0.22), 2.5, true)
-	for ring in rings:
-		draw_arc(ring["position"], ring["radius"], 0, TAU, 32, Color(0.6, 0.9, 0.8, ring["alpha"]), 1.4, true)
-	for particle in particles:
-		draw_circle(particle["position"], maxf(0.05, particle["size"]), particle["color"])
-	for flash in flashes:
-		draw_circle(flash["position"], flash["radius"], Color(0.8, 1.0, 0.9, flash["alpha"]))
+		for index in range(1, line.size()):
+			segments.append(line[index - 1])
+			segments.append(line[index])
+	if not segments.is_empty(): draw_multiline(segments, Color(0.45, 0.85, 0.72, 0.22), 2.5, true)
+
+## No circular effects are dropped; storage expands to the actual visible count.
+func _update_batches() -> void:
+	if not is_instance_valid(ring_batch): return
+	ring_batch.update_circles(rings, "ring")
+	particle_batch.update_circles(particles, "particle")
+	flash_batch.update_circles(flashes, "flash")
 
 
 ## Expose effect counts and time domains to the debugging panel.

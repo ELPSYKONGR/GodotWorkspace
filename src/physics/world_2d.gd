@@ -13,6 +13,9 @@ var runner: Node
 var debug_enabled := false
 var selected_id := ""
 var initial_dynamic := 0
+var birth_space = preload("res://src/physics/birth_space_2d.gd").new()
+var birth_space_ready := false
+var native_contacts = preload("res://src/physics/native_contacts_2d.gd").new()
 
 
 ## Accept immutable initial scene data before entering the scene tree.
@@ -33,6 +36,7 @@ func _ready() -> void:
 
 ## Build a circle/box/sensor from the same geometry that is drawn on screen.
 func create_object(value: Dictionary, born: float) -> void:
+	birth_space_ready = false
 	var spec := value.duplicate(true)
 	var id := str(spec["id"])
 	spec["root_id"] = spec.get("root_id", id)
@@ -70,7 +74,7 @@ func create_object(value: Dictionary, born: float) -> void:
 			var velocity: Array = physics.get("velocity", [0, 0])
 			body.linear_velocity = Vector2(float(velocity[0]), float(velocity[1]))
 			body.angular_velocity = float(physics.get("angular_velocity", 0))
-			body.can_sleep = false
+			body.can_sleep = true
 			body.contact_monitor = true
 			body.max_contacts_reported = 32
 			body.continuous_cd = RigidBody2D.CCD_MODE_CAST_SHAPE if physics.get("ccd", true) else RigidBody2D.CCD_MODE_DISABLED
@@ -83,6 +87,7 @@ func create_object(value: Dictionary, born: float) -> void:
 			material.friction = clampf(float(physics.get("material", {}).get("friction", 0.03)), 0, 1)
 			body.physics_material_override = material
 		record["body"] = body
+		native_contacts.watch(body, id)
 		add_child(body)
 	records[id] = record
 	if not playback:
@@ -92,6 +97,8 @@ func create_object(value: Dictionary, born: float) -> void:
 
 ## Remove one active object while retaining its definition for recorded lifecycle data.
 func remove_object(id: String) -> void:
+	birth_space_ready = false
+	native_contacts.forget(id)
 	if not records.has(id): return
 	var record: Dictionary = records[id]
 	if record.has("body"):
@@ -104,26 +111,29 @@ func remove_object(id: String) -> void:
 ## Native contact lists are the sole source of contact eligibility.
 func contact_pairs() -> Dictionary:
 	var pairs: Dictionary = {}
-	for id in records:
-		var record: Dictionary = records[id]
-		var body = record.get("body")
-		var others: Array = []
-		if body is RigidBody2D: others = body.get_colliding_bodies()
-		elif body is Area2D: others = body.get_overlapping_bodies()
-		for other in others:
-			var other_id := str(other.get_meta("object_id", ""))
-			if other_id.is_empty() or not records.has(other_id): continue
-			var ids: Array = [str(id), other_id]
-			ids.sort()
-			var pair: Dictionary = ContactAnchor.for_2d(records, ids[0], ids[1])
-			pair.merge({"a": ids[0], "b": ids[1]})
-			pairs["%s|%s" % ids] = pair
+	for key in native_contacts.pairs:
+		var pair: Dictionary = native_contacts.pairs[key]
+		if records.has(pair["a"]) and records.has(pair["b"]):
+			pairs[key] = {"a": pair["a"], "b": pair["b"]}
 	return pairs
 
+## Geometry anchors are only needed when an event is actually emitted.
+func contact_anchor(pair: Dictionary) -> Dictionary:
+	return ContactAnchor.for_2d(records, pair["a"], pair["b"])
 
 ## Advance rule evaluation at fixed physics frequency.
 func _physics_process(_delta: float) -> void:
+	birth_space_ready = false
 	if not playback:
+		# Shape sweeps are needed for fast balls, not small per-tick displacements in a pile.
+		# Keep a conservative half-radius threshold; boxes retain their configured CCD mode.
+		for record in records.values():
+			var body = record.get("body")
+			var spec: Dictionary = record["spec"]
+			if body is RigidBody2D and spec.get("shape", {}).get("primitive", "") == "circle" and spec.get("physics", {}).get("ccd", true):
+				var sweep: bool = body.linear_velocity.length() * _delta > float(spec["shape"].get("radius", 18)) * 0.5
+				var mode := RigidBody2D.CCD_MODE_CAST_SHAPE if sweep else RigidBody2D.CCD_MODE_DISABLED
+				if body.continuous_cd != mode: body.continuous_cd = mode
 		runner.step()
 	queue_redraw()
 
@@ -209,6 +219,9 @@ func get_report() -> Dictionary:
 
 ## Find a complete non-overlapping child arrangement, never clamp children through walls.
 func birth_positions(id: String, count: int, radius: float) -> Array:
+	if not birth_space_ready:
+		birth_space.rebuild(records)
+		birth_space_ready = true
 	var center := _position(id)
 	var ring := radius * 1.08 / sin(PI / count)
 	# A tiny offset cannot fit four children beside a wall; also try a full ring clearance.
@@ -227,7 +240,7 @@ func birth_positions(id: String, count: int, radius: float) -> Array:
 
 ## Test a candidate circle against the configured circle/rotated-box geometry.
 func _space_free(point: Vector2, radius: float, ignored: String) -> bool:
-	for id in records:
+	for id in birth_space.query(point, radius):
 		if id == ignored or source_kind(id) == "sensor": continue
 		var spec: Dictionary = records[id]["spec"]
 		var local := (point - _position(id)).rotated(-_rotation(id))

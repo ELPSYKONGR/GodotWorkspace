@@ -8,6 +8,8 @@ var last_time := -1000.0
 var played := 0
 var skipped := 0
 var last_error := ""
+var synthesized_clip: AudioStreamWAV
+var synthesized_key := ""
 var imported_clip: AudioStreamWAV
 var imported_info: Dictionary = {}
 const SAMPLE_RATE := 48000
@@ -24,6 +26,14 @@ func configure(doc: Dictionary) -> void:
 	var path := str(settings.get("wav_path", "")).strip_edges()
 	if not path.is_empty():
 		_load_wav(path)
+	elif settings.get("enabled", true):
+		# Prepare the usual collision sound while applying settings, before the first impact.
+		var preset := str(settings.get("preset", "wood"))
+		var pitch := clampf(float(settings.get("pitch", 1)), 0.25, 4)
+		var key := "%s:%s:%s" % [preset, pitch, 1.0]
+		if synthesized_clip == null or synthesized_key != key:
+			synthesized_clip = _synthesize(preset, pitch, 1.0)
+			synthesized_key = key
 
 
 ## Play one sample immediately without consuming a collision event.
@@ -72,19 +82,13 @@ func _play(strength: float) -> void:
 	var wav: AudioStreamWAV = imported_clip
 	if wav == null:
 		var preset := str(settings.get("preset", "wood"))
-		var duration := 0.24 if preset == "bell" else (0.035 if preset == "click" else 0.09)
-		var bytes := PackedByteArray()
-		bytes.resize(int(duration * SAMPLE_RATE) * 4)
-		for index in int(duration * SAMPLE_RATE):
-			var value := clampf(_wave(float(index) / SAMPLE_RATE, preset, pitch) * strength * 0.70710678, -1, 1)
-			var sample := int(value * 32767)
-			bytes.encode_s16(index * 4, sample)
-			bytes.encode_s16(index * 4 + 2, sample)
-		wav = AudioStreamWAV.new()
-		wav.format = AudioStreamWAV.FORMAT_16_BITS
-		wav.mix_rate = SAMPLE_RATE
-		wav.stereo = true
-		wav.data = bytes
+		var key := "%s:%s:%s" % [preset, pitch, strength]
+		if synthesized_clip != null and synthesized_key == key:
+			wav = synthesized_clip
+		else:
+			wav = _synthesize(preset, pitch, strength)
+			synthesized_clip = wav
+			synthesized_key = key
 	var voice := AudioStreamPlayer.new()
 	voice.stream = wav
 	voice.volume_db = clampf(float(settings.get("volume_db", -12)), -60, 0)
@@ -97,6 +101,24 @@ func _play(strength: float) -> void:
 	voice.finished.connect(voice.queue_free)
 	voice.play()
 	played += 1
+
+
+## Cache immutable PCM by its actual synthesis inputs; events keep the same waveform.
+func _synthesize(preset: String, pitch: float, strength: float) -> AudioStreamWAV:
+	var duration := 0.24 if preset == "bell" else (0.035 if preset == "click" else 0.09)
+	var bytes := PackedByteArray()
+	bytes.resize(int(duration * SAMPLE_RATE) * 4)
+	for index in int(duration * SAMPLE_RATE):
+		var value := clampf(_wave(float(index) / SAMPLE_RATE, preset, pitch) * strength * 0.70710678, -1, 1)
+		var sample := int(value * 32767)
+		bytes.encode_s16(index * 4, sample)
+		bytes.encode_s16(index * 4 + 2, sample)
+	var wav := AudioStreamWAV.new()
+	wav.format = AudioStreamWAV.FORMAT_16_BITS
+	wav.mix_rate = SAMPLE_RATE
+	wav.stereo = true
+	wav.data = bytes
+	return wav
 
 
 ## Accept integer PCM assets only; never replace a broken asset with a synthetic tone.

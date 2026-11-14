@@ -21,7 +21,7 @@ static func validate(doc: Dictionary) -> PackedStringArray:
 	if dimension not in ["2d", "3d"]: errors.append("world.dimension需要2d或3d")
 	var dimensions := 3 if dimension == "3d" else 2
 	if not _vector(world.get("gravity", []), dimensions): errors.append("重力维度或数值无效")
-	if int(world.get("physics_hz", 240)) < 60 or int(world.get("physics_hz", 240)) > 480: errors.append("物理频率需要60～480")
+	if int(world.get("physics_hz", 120)) < 60 or int(world.get("physics_hz", 120)) > 480: errors.append("物理频率需要60～480")
 	var max_dynamic := int(world.get("max_dynamic_bodies", 48))
 	if max_dynamic < 2 or max_dynamic > MAX_DYNAMIC_OBJECTS: errors.append("动态物体上限需要2～256")
 	if not doc.get("objects", []) is Array: return PackedStringArray(["objects需要数组"])

@@ -1,0 +1,1 @@
+# Research documents are read explicitly with FileAccess; do not import CSV as translations.
