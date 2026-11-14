@@ -123,6 +123,7 @@
 | `tools/validate_session.gd` | 物理暂停/单步、双时间、录制与回放 |
 | `tools/validate_workbench.gd` | 原生工作台与统一命令集成 |
 | `tools/validate_ui.gd` | 面板命令、原值保持、相机/声音/碰撞过滤、锁定、预览坐标与错误展示 |
+| `tools/validate_effect_switches.gd` | 特效独立开关、碰撞喷溅上限、即时面板控制、保存与回退确定性 |
 | `tools/validate_scene_workspace.gd` | 四类型真实世界保存重开、中文路径、未保存提示、失败保护与布局保存 |
 | `tools/validate_media.gd` | 程序化表现、预览声音与资源格式 |
 | `tools/validate_mixer.py` | 离线混音、声部/限流与事件时间对齐 |

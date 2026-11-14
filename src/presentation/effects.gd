@@ -57,6 +57,7 @@ func present(time: float, sim_time: float, projector: Callable, states: Array, d
 		return
 	var domain := str(settings.get("time_domain", "simulation"))
 	var ring_indices: Dictionary = {}
+	var impacts: Dictionary = {}
 	var lifetime := clampf(float(settings.get("lifetime", 0.35)), 0.05, 3.0)
 	# Event clocks are monotonic. Seek to the visible lifetime instead of scanning history.
 	var clock_key := "sim_time" if domain == "simulation" else "time"
@@ -77,9 +78,12 @@ func present(time: float, sim_time: float, projector: Callable, states: Array, d
 		if age < 0 or age > lifetime or not event.get("position") is Array:
 			continue
 		var point: Vector2 = projector.call(event["position"])
-		if event.get("type", "") == "split":
+		if event.get("type", "") == "split" and bool(settings.get("particles_enabled", true)):
 			_burst(event, index, point, age, lifetime)
-		elif event.get("type", "") == "contact" and str(event.get("phase", "enter")) == "enter" and bool(settings.get("ring", true)):
+		if event.get("type", "") == "contact" and str(event.get("phase", "enter")) == "enter" and (settings.get("impact_particles", false) or settings.get("impact_flash", false)):
+			var pair := str(event.get("id", "")) + "|" + str(event.get("other_id", ""))
+			impacts[pair] = {"event": event, "index": index, "point": point, "age": age}
+		if event.get("type", "") == "contact" and str(event.get("phase", "enter")) == "enter" and bool(settings.get("ring", true)):
 			# Resting contacts can chatter at solver frequency. Show their latest ripple per pair.
 			# The full contact/audio/Take ledger is unaffected by this visual coalescing.
 			var key := str(event.get("id", "")) + "|" + str(event.get("other_id", ""))
@@ -92,6 +96,17 @@ func present(time: float, sim_time: float, projector: Callable, states: Array, d
 			var flash_age := time - float(event.get("time", 0))
 			if flash_age < 0.08:
 				flashes.append({"position": point, "radius": 28.0, "alpha": (1 - flash_age / 0.08) * 0.65})
+	# Keep new contact feedback bounded independently of the complete event/physics ledger.
+	var contact_bursts := 0
+	var impact_values := impacts.values()
+	impact_values.sort_custom(func(a, b): return a["index"] > b["index"])
+	for impact in impact_values:
+		if contact_bursts >= 16: break
+		contact_bursts += 1
+		if settings.get("impact_particles", false): _burst(impact["event"], impact["index"], impact["point"], impact["age"], lifetime)
+		var flash_age := time - float(impact["event"].get("time", 0))
+		if settings.get("impact_flash", false) and flash_age < 0.08:
+			flashes.append({"position": impact["point"], "radius": 14.0, "alpha": (1 - flash_age / 0.08) * 0.45})
 	if bool(settings.get("trail_enabled", true)):
 		_make_trails(time, sim_time, projector, states, definitions)
 	_update_batches()

@@ -85,6 +85,9 @@ static func validate(doc: Dictionary) -> PackedStringArray:
 	var presentation: Dictionary = doc.get("presentation", {})
 	for field in ["render", "audio", "effects"]:
 		if not presentation.get(field, {}) is Dictionary: errors.append("表现字段需要对象：" + field)
+	if presentation.get("effects", {}) is Dictionary:
+		for field in ["enabled", "particles_enabled", "impact_particles", "impact_flash", "trail_enabled", "ring", "flash"]:
+			if presentation.get("effects", {}).has(field) and not presentation["effects"][field] is bool: errors.append("特效开关需要布尔值：" + field)
 	if not presentation.get("captions", []) is Array: errors.append("文字需要数组")
 	else:
 		for caption in presentation.get("captions", []):
