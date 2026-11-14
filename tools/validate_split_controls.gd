@@ -72,10 +72,11 @@ func _run() -> void:
 		host.service.execute({"op": "simulation.reset"})
 		await process_frame
 	host.selected_id = "ball_A"
+	host.panel.sync_document(host.service.document, "ball_A")
 	var delete := InputEventKey.new()
 	delete.keycode = KEY_DELETE
 	delete.pressed = true
-	var name_field: LineEdit = host.panel.scene_path
+	var name_field: LineEdit = host.panel.object_panel.fields["mass"].get_line_edit()
 	name_field.grab_focus()
 	host._unhandled_key_input(delete)
 	results["delete_does_not_remove_while_editing_text"] = host.service.document["objects"].size() == 6

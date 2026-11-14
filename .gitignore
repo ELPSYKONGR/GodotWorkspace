@@ -2,4 +2,5 @@
 .godot/
 outputs/
 scratch/
+scenes/
 .env

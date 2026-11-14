@@ -21,7 +21,10 @@ func _run() -> void:
 	await process_frame
 	var buttons: Array[Button] = []
 	_buttons(ui, buttons)
-	for caption in ["二维", "正交三维", "透视三维", "应用物体参数并重置", "应用机制并重新模拟", "应用音效", "应用粒子与拖尾", "应用渲染与文字", "提交视频生产任务"]:
+	for index in 3:
+		ui.scene_bar.type_choice.select(index)
+		ui.scene_bar.new_dialog.confirmed.emit()
+	for caption in ["应用物体参数并重置", "应用机制并重新模拟", "应用音效", "应用粒子与拖尾", "应用渲染与文字", "提交视频生产任务"]:
 		for button in buttons:
 			if button.text == caption:
 				button.pressed.emit()
@@ -35,7 +38,7 @@ func _run() -> void:
 	ui._preview_input(click)
 	var result := {
 		"nine_control_commands": commands.size() == 9,
-		"preset_buttons_capture_distinct_values": commands[0]["args"]["name"] == "2d" and commands[1]["args"]["name"] == "3d" and commands[2]["args"]["name"] == "perspective",
+		"new_scene_types_capture_distinct_values": commands[0]["op"] == "scene.new" and commands[0]["args"]["name"] == "2d" and commands[1]["args"]["name"] == "3d" and commands[2]["args"]["name"] == "perspective",
 		"unchanged_numeric_values_preserved": commands[3]["args"]["changes"]["physics.mass"] == 1.0 and commands[3]["args"]["changes"]["shape.radius"] == 18.0 and is_equal_approx(commands[6]["args"]["changes"]["presentation.effects"]["lifetime"], 0.35),
 		"runtime_slider_update_does_not_issue_seek": commands.size() == unchanged_count,
 		"letterbox_center_maps_to_logical_center": mapped.is_equal_approx(Vector2(360, 640))

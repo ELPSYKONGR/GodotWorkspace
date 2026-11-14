@@ -7,6 +7,7 @@ const F = preload("res://src/ui/form_helpers.gd")
 const ObjectPanel = preload("res://src/ui/object_panel.gd")
 const Components = preload("res://src/ui/component_panels.gd")
 const Production = preload("res://src/ui/production_panels.gd")
+const SceneBar = preload("res://src/ui/scene_bar.gd")
 const REJECTION_LABELS := {
 	"capacity_limit": "动态物体容量不足，可在机制页调整上限",
 	"birth_space_blocked": "子球出生空间不足",
@@ -28,7 +29,7 @@ var runtime_label: Label
 var message_label: Label
 var debug_text: TextEdit
 var job_status_label: Label
-var scene_path: LineEdit
+var scene_bar: VBoxContainer
 var built := false
 var current_time := 0.0
 var current_fps := 30.0
@@ -112,17 +113,13 @@ func _build() -> void:
 
 # Route scene, simulation and file actions through the host command service.
 func _build_toolbar(parent: Node) -> void:
+	scene_bar = SceneBar.new()
+	scene_bar.command_requested.connect(_send)
+	parent.add_child(scene_bar)
 	var bar := HFlowContainer.new()
 	parent.add_child(bar)
-	for preset in [["二维", "2d"], ["玻璃演示", "glass"], ["正交三维", "3d"], ["透视三维", "perspective"]]:
-		F.button(bar, preset[0], func(): _send("scene.preset", {"name": preset[1]}))
 	for command in [["编辑布置", "simulation.edit"], ["运行", "simulation.play"], ["暂停", "simulation.pause"], ["单物理步", "simulation.step"], ["重置", "simulation.reset"], ["录制", "take.record"], ["停止录制", "take.stop"], ["撤销", "history.undo"], ["重做", "history.redo"]]:
 		F.button(bar, command[0], func(): _send(command[1], {}))
-	var files := HBoxContainer.new()
-	parent.add_child(files)
-	scene_path = F.line(files, "场景文件", "res://config/workbench_saved.json")
-	F.button(files, "保存场景", func(): _send("scene.save", {"path": scene_path.text}))
-	F.button(files, "加载场景", func(): _send("scene.load", {"path": scene_path.text}))
 
 
 # Distinguish video-frame seeking from the physical-step toolbar action.

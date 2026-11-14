@@ -6,6 +6,8 @@ const Session = preload("res://src/runtime/scene_session.gd")
 const UI = preload("res://src/ui/workbench_ui.gd")
 const Bridge = preload("res://src/commands/file_bridge.gd")
 const Jobs = preload("res://src/production/job_queue.gd")
+const Workspace = preload("res://src/document/scene_workspace.gd")
+var workspace = Workspace.new()
 var service = Commands.new()
 var bridge = Bridge.new()
 var jobs = Jobs.new()
@@ -39,6 +41,7 @@ func _ready() -> void:
 	var loaded := Document.load_file(scene_path)
 	if not loaded["ok"]: push_error(loaded["error"]); get_tree().quit(2); return
 	service.initialize(loaded["document"], _runtime_command)
+	workspace.initialize(service.document, scene_path)
 	service.completed.connect(_after_command)
 	viewport = SubViewport.new()
 	viewport.size = Vector2i(720, 1280)
@@ -53,6 +56,7 @@ func _ready() -> void:
 	panel.command_requested.connect(_from_ui)
 	panel.viewport_input.connect(_viewport_input)
 	add_child(panel)
+	_sync_scene_file()
 	bridge.setup(service)
 	if not snapshot_path.is_empty(): _snapshot_after_ready.call_deferred()
 
@@ -87,6 +91,13 @@ func _after_command(result: Dictionary) -> void:
 		bridge.publish(session.get_info())
 	elif result.get("refresh_document", false): panel.sync_document(service.document, selected_id)
 	panel.show_message(message, not result.get("ok", false))
+	_sync_scene_file()
+	panel.scene_bar.operation_finished(result)
+
+## File identity belongs to the document workspace, not the simulation or its Take.
+func _sync_scene_file() -> void:
+	panel.scene_bar.sync(workspace.path, workspace.is_dirty(service.document), service.document)
+	get_window().title = "%s%s · 解压视频工作台" % ["* " if workspace.is_dirty(service.document) else "", workspace.path.get_file() if not workspace.path.is_empty() else str(service.document.get("metadata", {}).get("title", "未命名场景"))]
 
 ## Delete uses the same validated, undoable command as the object inspector.
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -100,12 +111,17 @@ func _unhandled_key_input(event: InputEvent) -> void:
 ## Dispatch runtime commands without giving panels ownership of world nodes.
 func _runtime_command(op: String, args: Dictionary) -> Dictionary:
 	match op:
+		"scene.new":
+			return _replace_scene(workspace.create_scene(str(args.get("name", "2d")), bool(args.get("blank", false))))
 		"scene.preset":
-			return _load_scene("res://config/workbench_" + str(args.get("name", "2d")) + ".json")
-		"scene.load": return _load_scene(str(args.get("path", "")))
+			var kind := str(args.get("name", "2d"))
+			if not Workspace.TYPES.has(kind): return {"ok": false, "error": "未知场景类型"}
+			return _replace_scene(workspace.open_scene("res://config/workbench_" + kind + ".json"))
+		"scene.load": return _replace_scene(workspace.open_scene(str(args.get("path", ""))))
 		"scene.save":
-			var path := str(args.get("path", "res://config/workbench_saved.json"))
-			return _save_json(path, service.document)
+			var result: Dictionary = workspace.save_scene(str(args.get("path", "")), service.document)
+			result["scene_saved"] = result.get("ok", false)
+			return result
 		"scene.validate": return {"ok": Document.validate(service.document).is_empty(), "message": "场景数据校验完成"}
 		"object.select":
 			selected_id = str(args.get("id", ""))
@@ -127,6 +143,9 @@ func _runtime_command(op: String, args: Dictionary) -> Dictionary:
 				var revision := int(service.document.get("revision", 1)) + 1
 				service.document = session.take.get_data()["scene"].duplicate(true)
 				service.document["revision"] = revision
+				# A Take importing another scene must not inherit the previous file's destination.
+				workspace.path = ""
+				workspace.saved_signature = ""
 				session.load_document(service.document)
 			session.seek(0)
 			return {"ok": true, "refresh_document": true, "message": "轨迹已加载；使用匹配的物理场景"}
@@ -148,26 +167,17 @@ func _runtime_command(op: String, args: Dictionary) -> Dictionary:
 	return {"ok": true, "message": "已执行：" + op}
 
 ## Load only validated v2 scene data and preserve the previous take for comparison.
-func _load_scene(path: String) -> Dictionary:
-	var result := Document.load_file(path)
+func _replace_scene(result: Dictionary) -> Dictionary:
 	if not result["ok"]: return result
 	service.history.append(service.document.duplicate(true))
+	if service.history.size() > 50: service.history.pop_front()
 	service.future.clear()
 	var revision := int(service.document.get("revision", 1)) + 1
 	service.document = result["document"]
 	service.document["revision"] = revision
 	selected_id = ""
-	scene_path = path
-	return {"ok": true, "changed": true, "requires_reset": true, "message": "已加载场景：" + path}
-
-## Save the initial document, never the transient pose of falling bodies.
-func _save_json(path: String, data: Dictionary) -> Dictionary:
-	if not path.begins_with("res://") and not path.is_absolute_path(): return {"ok": false, "error": "请选择工程内或绝对路径"}
-	DirAccess.make_dir_recursive_absolute(path.get_base_dir())
-	var file := FileAccess.open(path, FileAccess.WRITE)
-	if file == null: return {"ok": false, "error": "无法保存：" + path}
-	file.store_string(JSON.stringify(data, "\t"))
-	return {"ok": true, "message": "已保存：" + path, "path": ProjectSettings.globalize_path(path)}
+	dragging = false
+	return {"ok": true, "changed": true, "requires_reset": true, "message": "已打开场景：" + workspace.path if not workspace.path.is_empty() else "已新建场景，请编辑后保存"}
 
 ## Keep both latest and uniquely named takes so subsequent recordings are recoverable.
 func _save_take(path: String) -> Dictionary:
