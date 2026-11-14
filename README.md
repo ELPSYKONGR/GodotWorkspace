@@ -86,3 +86,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tools/validate_workbench.ps1
 ## 2026-11-14 性能更新
 
 默认二维物理120Hz，目标预览60FPS。当前百球布局实测预览59.98FPS、录制59.94FPS，仍存在少量约27ms的帧间隔波动；细节和复测方式见[性能验收](docs/性能验收_20261114.md)。机制页仍可修改物理频率，修改前的本机场景备份在scratch/performance_config_backup。
+
+## 玻璃演示
+
+双击任务根“玻璃演示.cmd”或本工程glass.cmd，点击“运行”；顶部也可切换“玻璃演示”。物体页支持添加二维矩形玻璃，编辑剩余初始次数、数字字号、碎屑数量。见[使用和验收](docs/玻璃使用与验收.md)。碎屑为不参与碰撞的视觉效果，二维球和碎屑使用实例化显示。

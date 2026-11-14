@@ -207,11 +207,11 @@ func _on_event(source: Dictionary) -> void:
 	event["seed"] = _event_serial * 7919
 	events.append(event)
 	# Rejections/exits stay in the ledger, but cannot generate particles or impact rings.
-	if event.get("type", "") == "split" or (event.get("type", "") == "contact" and event.get("phase", "") == "enter"):
+	if event.get("type", "") in ["split","glass_hit","glass_break"] or (event.get("type", "") == "contact" and event.get("phase", "") == "enter"):
 		presentation_events.append(event)
 		if presentation_events.size() > 10000: presentation_events = presentation_events.slice(2000)
 	if mode == "recording": take.add_event(event)
-	if mode == "recording" and (event.get("type", "") == "split" or (event.get("type", "") == "retire" and event.get("reason", "") == "despawn")):
+	if mode == "recording" and (event.get("type", "") in ["split","glass_break"] or (event.get("type", "") == "retire" and event.get("reason", "") == "despawn")):
 		_capture()
 	# Drop an old block, rather than shifting ten thousand entries for every new contact.
 	# Recorded events remain complete in TakeStore; this is only the live preview window.

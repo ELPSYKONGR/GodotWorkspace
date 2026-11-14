@@ -47,6 +47,7 @@ func _edit(op: String, args: Dictionary) -> Dictionary:
 		for path in args.get("changes", {}):
 			if not Document.set_field_path(next, path, args["changes"][path]): return {"ok": false, "error": "无效字段路径：" + path}
 	elif op == "object.add":
+		if args.get("kind","")=="glass" and next["world"]["dimension"]!="2d": return {"ok":false,"error":"玻璃组件目前支持二维场景"}
 		var id := "object_" + str(Time.get_ticks_usec())
 		next["objects"].append(Document.new_object(next, str(args.get("kind", "ball")), id))
 	elif op == "object.arrange":

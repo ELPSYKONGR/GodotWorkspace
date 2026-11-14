@@ -1,6 +1,6 @@
 # Godot 解压视频工作台文件索引
 
-更新日期：2026-11-13。默认入口为新工作台，旧验证原型单独保留。`.gd.uid`是Godot生成的脚本标识，随对应脚本保存，此处不逐项重复。
+更新日期：2026-11-14。默认入口为新工作台，旧验证原型单独保留。`.gd.uid`是Godot生成的脚本标识，随对应脚本保存，此处不逐项重复。
 
 ## 入口、配置与文档
 
@@ -11,6 +11,8 @@
 | `preview.cmd` / `workbench.cmd` | 启动新工作台；preview支持场景选择与显式旧版入口 |
 | `editor.cmd` | 便携环境下启动原生Godot编辑器，F5运行工作台 |
 | `render.cmd` | 保留的旧版无声渲染入口 |
+| `config/workbench_glass.json` / `glass.cmd` | 8扇区二维玻璃演示与便携入口 |
+| `docs/玻璃使用与验收.md` | 使用方法、实例化边界、专项和样片证据 |
 | `config/workbench_2d.json` | 可运行v2二维碰撞分裂场景 |
 | `config/workbench_3d.json` | 可运行v2真实三维刚体＋正交相机场景 |
 | `config/workbench_perspective.json` | 可运行v2透视三维场景 |
@@ -64,6 +66,18 @@
 | `src/ui/object_panel.gd` | 初始对象列表、布置/物理/外观属性、锁定与增删复制 |
 | `src/ui/component_panels.gd` | 机制、声音、屏幕特效参数面板 |
 | `src/ui/production_panels.gd` | 渲染/相机/文字、Take回放与视频生产面板 |
+
+## 玻璃模块
+
+| 文件 | 职责 |
+|---|---|
+| `src/glass/geometry.gd` | 统一轮廓、原生凸碰撞片及最近边界估计 |
+| `src/glass/damage.gd` | 原生接触计次、防重复、暂停保护和一次延迟破裂 |
+| `src/glass/surface.gd` / `glass.gdshader` | 共享玻璃材质、附着裂纹、面内剩余数字 |
+| `src/glass/view.gd` | 实时/回放共享的面、中心HUD与碎屑组合 |
+| `src/glass/shards.gd` / `shard.gdshader` | 确定性三角视觉碎屑的MultiMesh实例化 |
+| `src/glass/recording.gd` | 损伤姿态序列化、回放输入校验 |
+| `tools/validate_glass.gd` | 真实撞击、反向寻帧、UI事务及非法状态回归 |
 
 ## 启动与生产工具
 
@@ -126,6 +140,9 @@ flowchart TD
   CMD --> Session[SceneSession 双时间与模式]
   Doc --> Session
   Session --> World[World2D / World3D]
+  World --> GlassDamage[Glass 原生计次]
+  GlassDamage --> Take
+  Stage --> GlassView[Glass 材质 / 裂纹 / HUD / 实例碎屑]
   World --> Rules[ContactRules 接触机制]
   Rules --> World
   World --> Take[TakeStore 实际轨迹]

@@ -39,16 +39,33 @@ static func validate(doc: Dictionary) -> PackedStringArray:
 		ids[id] = true
 		var shape: Dictionary = spec.get("shape", {})
 		var primitive := str(shape.get("primitive", ""))
-		var allowed := ["sphere", "box"] if dimensions == 3 else ["circle", "rectangle", "line"]
+		var allowed := ["sphere", "box"] if dimensions == 3 else ["circle", "rectangle", "line", "arc"]
 		if primitive not in allowed: errors.append("不支持的形状：" + primitive)
 		if primitive in ["circle", "sphere"]:
 			if not _positive(shape.get("radius", 0)) or float(shape.get("radius", 0)) < (0.02 if dimensions == 3 else 1.0): errors.append("半径低于物理最小尺寸：" + id)
+		elif primitive == "arc":
+			if not _positive(shape.get("inner_radius",0)) or not _positive(shape.get("outer_radius",0)) or float(shape.get("inner_radius",0))<1 or float(shape.get("outer_radius",0))>2000 or float(shape.get("outer_radius",0))-float(shape.get("inner_radius",0))<1: errors.append("玻璃环内外半径无效："+id)
+			var start: Variant=shape.get("start_degrees",null)
+			var end: Variant=shape.get("end_degrees",null)
+			if not _vector([start,end],2) or float(end)-float(start)<1 or float(end)-float(start)>350: errors.append("环形扇区角度范围需要1～350度："+id)
+			if spec.get("physics",{}).get("mode","dynamic")!="static": errors.append("环形扇区目前仅支持静态碰撞体："+id)
 		elif not _vector(shape.get("size", []), dimensions) or shape.get("size", []).any(func(n): return float(n) <= 0): errors.append("尺寸无效：" + id)
 		elif shape.get("size", []).any(func(n): return float(n) < (0.02 if dimensions == 3 else 1.0)): errors.append("尺寸低于物理最小尺寸：" + id)
 		if not _vector(spec.get("transform", {}).get("position", []), dimensions): errors.append("位置无效：" + id)
 		var rotation: Variant = spec.get("transform", {}).get("rotation_degrees", [0, 0, 0] if dimensions == 3 else 0)
 		if dimensions == 3 and not _vector(rotation, 3): errors.append("三维旋转无效：" + id)
 		elif dimensions == 2 and (not (rotation is int or rotation is float) or not is_finite(float(rotation))): errors.append("二维旋转无效：" + id)
+		if spec.has("glass"):
+			var glass: Variant=spec["glass"]
+			if not glass is Dictionary: errors.append("玻璃组件需要对象："+id)
+			else:
+				var hits: Variant=glass.get("hits",0)
+				if not _positive(hits) or float(hits)!=floor(float(hits)) or float(hits)>100000: errors.append("玻璃耐久需要1～100000整数："+id)
+				var font_size: Variant=glass.get("font_size",24)
+				if not _positive(font_size) or float(font_size)<8 or float(font_size)>96: errors.append("玻璃数字字号需要8～96："+id)
+				var shards: Variant=glass.get("shards",48)
+				if not _positive(shards) or float(shards)!=floor(float(shards)) or float(shards)>256: errors.append("玻璃视觉碎屑需要1～256整数："+id)
+			if dimensions!=2 or primitive not in ["rectangle","arc"] or spec.get("physics",{}).get("mode","dynamic")!="static": errors.append("玻璃目前支持二维静态矩形/扇区："+id)
 		var physics: Dictionary = spec.get("physics", {})
 		if not physics.get("material", {}) is Dictionary or not spec.get("appearance", {}).get("generation_color", {}) is Dictionary: errors.append("材质和代际颜色需要对象：" + id)
 		if physics.get("mode", "dynamic") not in ["dynamic", "static", "sensor"]: errors.append("物理模式无效：" + id)
@@ -111,6 +128,14 @@ static func object_index(doc: Dictionary, id: String) -> int:
 ## Produce a complete primitive specification for the active dimension.
 static func new_object(doc: Dictionary, kind: String, id: String) -> Dictionary:
 	var three: bool = doc.get("world", {}).get("dimension", "2d") == "3d"
+	if kind=="glass" and not three:
+		var pane := new_object(doc,"wall",id)
+		pane["name"]="玻璃"
+		pane["tags"]=["glass","boundary"]
+		pane["shape"]["size"]=[180,40]
+		pane["appearance"]["color"]="#64cde6"
+		pane["glass"]={"hits":8,"shards":48,"font_size":24}
+		return pane
 	var ball := kind == "ball"
 	var wall := kind == "wall"
 	return {"id": id, "name": {"ball": "球", "box": "方块", "wall": "墙"}.get(kind, "物体"), "tags": ["boundary"] if wall else (["ball", "splitter"] if ball else ["box"]),

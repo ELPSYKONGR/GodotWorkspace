@@ -1,5 +1,6 @@
 extends RefCounted
 ## Bounded pose recording; replay reads committed snapshots and never runs physics.
+const GlassRecording=preload("res://src/glass/recording.gd")
 const Document = preload("res://src/document/scene_document.gd")
 
 var data: Dictionary = {}
@@ -134,12 +135,16 @@ func is_empty() -> bool:
 func _valid(candidate: Dictionary) -> bool:
 	if candidate.get("take_version", 0) != 1 or not candidate.get("frames") is Array or not candidate.get("definitions") is Dictionary or not candidate.get("events") is Array or not candidate.get("scene") is Dictionary:
 		return false
+	var has_glass: bool=candidate["definitions"].values().any(func(spec): return spec is Dictionary and spec.has("glass"))
+	if has_glass and not Document.validate(candidate["scene"]).is_empty(): return false
 	var frames: Array = candidate["frames"]
 	if frames.is_empty() or frames.size() > MAX_FRAMES:
 		return false
 	for definition in candidate["definitions"].values():
 		if not definition is Dictionary or not definition.get("shape") is Dictionary:
 			return false
+	for definition in candidate["definitions"].values():
+		if definition.has("glass") and not GlassRecording.definition_valid(definition,candidate["scene"]): return false
 	var previous := -1.0
 	for frame in frames:
 		if not frame is Dictionary or not frame.get("states") is Array:
@@ -157,6 +162,7 @@ func _valid(candidate: Dictionary) -> bool:
 			var id := str(state.get("id", ""))
 			if id.is_empty() or ids.has(id) or not candidate["definitions"].has(id):
 				return false
+			if not GlassRecording.state_valid(state,candidate["definitions"][id]): return false
 			ids[id] = true
 			if state["position"].size() not in [2, 3]:
 				return false
@@ -181,6 +187,7 @@ func _valid(candidate: Dictionary) -> bool:
 				return false
 		previous = t
 	for event in candidate["events"]:
+		if event is Dictionary and not GlassRecording.event_valid(event,candidate["definitions"]): return false
 		if not event is Dictionary or not _number(event.get("time")) or float(event["time"]) < 0 or float(event["time"]) > MAX_SECONDS:
 			return false
 	return _number(candidate.get("duration")) and absf(float(candidate["duration"]) - previous) < 0.001

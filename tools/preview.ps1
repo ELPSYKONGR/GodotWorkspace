@@ -1,5 +1,6 @@
-param([ValidateSet('2d','3d','perspective')][string]$Scene = '2d', [switch]$Editor, [switch]$Workbench, [switch]$Legacy)
+param([ValidateSet('2d','3d','perspective','glass')][string]$Scene = '2d', [switch]$Editor, [switch]$Workbench, [switch]$Legacy)
 . "$PSScriptRoot\common.ps1"
+if ($Legacy -and $Scene -eq 'glass') { throw 'Glass is available in the workbench, not the legacy prototype.' }
 if ($Workbench -and $Legacy) { throw 'Use either -Workbench or -Legacy, not both.' }
 $sceneFile = "res://config/demo_$Scene.json"
 if ($Editor) {

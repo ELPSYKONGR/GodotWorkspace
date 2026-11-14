@@ -16,7 +16,7 @@ func _ready() -> void:
 	F.text(self, "编辑初始布局。预览中可点选，编辑模式可拖动。修改物理参数会重置并使旧轨迹过期。")
 	var actions := HFlowContainer.new()
 	add_child(actions)
-	for pair in [["添加球", "ball"], ["添加方块", "box"], ["添加墙", "wall"]]:
+	for pair in [["添加球", "ball"], ["添加方块", "box"], ["添加墙", "wall"], ["添加玻璃（2D）", "glass"]]:
 		F.button(actions, pair[0], func(): command_requested.emit("object.add", {"kind": pair[1]}))
 	F.button(actions, "排列成行", func(): command_requested.emit("object.arrange", {"mode": "row"}))
 	F.button(actions, "排列网格", func(): command_requested.emit("object.arrange", {"mode": "grid"}))
@@ -81,6 +81,9 @@ func _build_form() -> void:
 	var shape: Dictionary = selected_spec.get("shape", {})
 	if str(shape.get("primitive", "circle")) in ["circle", "sphere"]:
 		fields["radius"] = F.number(form, "半径", float(shape.get("radius", 18)), 0.02 if is_3d else 1, 500, 0.01 if is_3d else 1)
+	elif shape.get("primitive","")=="arc":
+		for key in ["inner_radius","outer_radius","start_degrees","end_degrees"]:
+			fields[key]=F.number(form,{"inner_radius":"内半径","outer_radius":"外半径","start_degrees":"起始角度","end_degrees":"结束角度"}[key],float(shape[key]),-3600 if "degrees" in key else 1,3600 if "degrees" in key else 2000,0.1 if "degrees" in key else 1)
 	else:
 		var dimensions: Array = shape.get("size", [1, 1, 1] if is_3d else [40, 40])
 		for index in count:
@@ -95,6 +98,11 @@ func _build_form() -> void:
 	fields["mask"] = F.number(form, "碰撞检测位掩码", float(F.value(selected_spec, "physics.collision_mask", 3)), 0, 4294967295, 1)
 	fields["ccd"] = F.check(form, "连续碰撞检测 CCD", bool(F.value(selected_spec, "physics.ccd", true)))
 	fields["split"] = F.check(form, "启用碰撞分裂组件", "split_ball" in selected_spec.get("mechanisms", []))
+	if selected_spec.has("glass"):
+		F.text(form,"二维玻璃：实际球体接触扣耐久；归零移除完整碰撞体，飞散碎屑为视觉效果，不参与物理碰撞。")
+		fields["glass_hits"]=F.number(form,"破裂所需碰撞次数",float(selected_spec["glass"]["hits"]),1,100000,1)
+		fields["glass_font_size"]=F.number(form,"玻璃数字字号",float(selected_spec["glass"].get("font_size",24)),8,96,1)
+		fields["glass_shards"]=F.number(form,"视觉碎屑数量",float(selected_spec["glass"].get("shards",48)),1,256,1)
 	var locked := bool(F.value(selected_spec, "editor.locked", false))
 	fields["locked"] = F.check(form, "锁定物体布置与参数", locked)
 	F.button(form, "应用锁定状态", func(): command_requested.emit("object.update", {"id": selected_id, "changes": {"editor.locked": fields["locked"].button_pressed}}))
@@ -118,6 +126,8 @@ func _apply() -> void:
 	var is_3d: bool = F.value(document, "world.dimension", "2d") == "3d"
 	var count := 3 if is_3d else 2
 	var position: Array = []
+	for field in fields.values():
+		if field is SpinBox: field.apply()
 	var velocity: Array = []
 	var rotation: Array = []
 	var dimensions: Array = []
@@ -139,5 +149,11 @@ func _apply() -> void:
 		"physics.mode": F.selected(fields["mode"]), "physics.collision_layer": int(fields["layer"].value),
 		"physics.collision_mask": int(fields["mask"].value), "physics.ccd": fields["ccd"].button_pressed, "mechanisms": rules}
 	if fields.has("radius"): changes["shape.radius"] = fields["radius"].value
+	elif fields.has("inner_radius"):
+		for key in ["inner_radius","outer_radius","start_degrees","end_degrees"]: changes["shape."+key]=fields[key].value
 	else: changes["shape.size"] = dimensions
+	if fields.has("glass_hits"):
+		changes["glass.hits"]=int(fields["glass_hits"].value)
+		changes["glass.shards"]=int(fields["glass_shards"].value)
+		changes["glass.font_size"]=int(fields["glass_font_size"].value)
 	command_requested.emit("object.update", {"id": selected_id, "changes": changes})

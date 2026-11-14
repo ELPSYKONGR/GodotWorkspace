@@ -85,6 +85,7 @@ try {
     Invoke-GodotCheck 'Session' 'validate_session.gd' 'outputs\session_validation.json' 60 1600
     Invoke-GodotCheck 'Commands' 'validate_commands.gd' 'outputs\commands_validation.json' 60 100
     Invoke-GodotCheck 'Capacity' 'validate_capacity.gd' 'outputs\capacity_validation.json' 60 300
+    Invoke-GodotCheck 'Glass' 'validate_glass.gd' 'outputs\glass_validation.json' 120 4000
     Invoke-GodotCheck 'UI' 'validate_ui.gd' 'outputs\ui_validation.json' 60 100
     Invoke-GodotCheck 'PerformancePaths' 'validate_performance_paths.gd' 'outputs\performance_paths_validation.json' 120 1000
     Invoke-GodotCheck 'FastCCD' 'validate_fast_ccd.gd' 'outputs\fast_ccd_validation.json' 120 200

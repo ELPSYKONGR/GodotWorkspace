@@ -114,7 +114,7 @@ func _build() -> void:
 func _build_toolbar(parent: Node) -> void:
 	var bar := HFlowContainer.new()
 	parent.add_child(bar)
-	for preset in [["二维", "2d"], ["正交三维", "3d"], ["透视三维", "perspective"]]:
+	for preset in [["二维", "2d"], ["玻璃演示", "glass"], ["正交三维", "3d"], ["透视三维", "perspective"]]:
 		F.button(bar, preset[0], func(): _send("scene.preset", {"name": preset[1]}))
 	for command in [["编辑布置", "simulation.edit"], ["运行", "simulation.play"], ["暂停", "simulation.pause"], ["单物理步", "simulation.step"], ["重置", "simulation.reset"], ["录制", "take.record"], ["停止录制", "take.stop"], ["撤销", "history.undo"], ["重做", "history.redo"]]:
 		F.button(bar, command[0], func(): _send(command[1], {}))

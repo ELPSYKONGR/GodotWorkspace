@@ -15,6 +15,8 @@ func rebuild(records: Dictionary) -> void:
 		var extent: Vector2
 		if shape.get("primitive", "") == "circle":
 			extent = Vector2.ONE * (float(shape.get("radius", 18)) + 0.05)
+		elif shape.get("primitive","")=="arc":
+			extent=Vector2.ONE*(float(shape["outer_radius"])+0.05)
 		else:
 			var size: Array = shape.get("size", [60, 20])
 			var half := Vector2(maxf(1, float(size[0])), maxf(1, float(size[1]))) / 2

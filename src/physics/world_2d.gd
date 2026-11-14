@@ -13,6 +13,11 @@ var runner: Node
 var debug_enabled := false
 var selected_id := ""
 var initial_dynamic := 0
+const GlassRecording=preload("res://src/glass/recording.gd")
+const GlassGeometry=preload("res://src/glass/geometry.gd")
+var glass_damage=preload("res://src/glass/damage.gd").new()
+var glass_view: Node2D
+var ball_batch: MultiMeshInstance2D
 var birth_space = preload("res://src/physics/birth_space_2d.gd").new()
 var birth_space_ready := false
 var native_contacts = preload("res://src/physics/native_contacts_2d.gd").new()
@@ -26,12 +31,19 @@ func setup(doc: Dictionary, replay: bool = false) -> void:
 
 ## Construct objects and the shared contact-rule component.
 func _ready() -> void:
+	glass_damage.world=self
 	runner = Rules.new()
 	runner.setup(self, document)
 	add_child(runner)
 	for spec in document.get("objects", []):
 		create_object(spec, -1000.0)
 	initial_dynamic = dynamic_count()
+	ball_batch=load("res://src/presentation/effect_batch.gd").new()
+	ball_batch.z_index=1
+	add_child(ball_batch)
+	glass_view=load("res://src/glass/view.gd").new()
+	glass_view.world=self
+	add_child(glass_view)
 
 
 ## Build a circle/box/sensor from the same geometry that is drawn on screen.
@@ -64,11 +76,14 @@ func create_object(value: Dictionary, born: float) -> void:
 			var circle := CircleShape2D.new()
 			circle.radius = maxf(1, float(shape.get("radius", 18)))
 			collider.shape = circle
+		elif shape.get("primitive","")=="arc":
+			for arc_collider in GlassGeometry.colliders(shape): body.add_child(arc_collider)
 		else:
 			var box := RectangleShape2D.new()
 			box.size = _size(spec)
 			collider.shape = box
-		body.add_child(collider)
+		if collider.shape!=null: body.add_child(collider)
+		else: collider.free()
 		if body is RigidBody2D:
 			body.mass = maxf(0.001, float(physics.get("mass", 1)))
 			var velocity: Array = physics.get("velocity", [0, 0])
@@ -82,6 +97,7 @@ func create_object(value: Dictionary, born: float) -> void:
 			body.gravity_scale = 0
 			body.constant_force = Vector2(float(gravity[0]), float(gravity[1])) * body.mass
 			body.linear_damp = float(physics.get("linear_damp", 0))
+			if physics.get("linear_damp_replace",false): body.linear_damp_mode=RigidBody2D.DAMP_MODE_REPLACE
 			var material := PhysicsMaterial.new()
 			material.bounce = clampf(float(physics.get("material", {}).get("restitution", 0.88)), 0, 1)
 			material.friction = clampf(float(physics.get("material", {}).get("friction", 0.03)), 0, 1)
@@ -89,6 +105,10 @@ func create_object(value: Dictionary, born: float) -> void:
 		record["body"] = body
 		native_contacts.watch(body, id)
 		add_child(body)
+	if spec.has("glass"):
+		record["glass_remaining"]=int(spec["glass"]["hits"])
+		record["glass_marks"]=[]
+		record["glass_hit_time"]=-1000.0
 	records[id] = record
 	if not playback:
 		emit_event({"type": "birth", "id": id, "parent": spec.get("parent", ""), "position": xy, "generation": spec["generation"], "time": maxf(0, born)})
@@ -145,6 +165,7 @@ func capture_state() -> Array:
 		var record: Dictionary = records[id]
 		result.append({"id": id, "position": object_position(id), "rotation": _rotation(id),
 			"velocity": object_velocity(id), "color": _color(record["spec"]).to_html(), "generation": record["spec"].get("generation", 0)})
+	for state in result: GlassRecording.capture_damage(state,records[state["id"]])
 	return result
 
 
@@ -164,6 +185,7 @@ func apply_state(states: Array, all_definitions: Dictionary) -> void:
 		if not records.has(id): continue
 		records[id]["position"] = Vector2(float(state["position"][0]), float(state["position"][1]))
 		records[id]["rotation"] = float(state["rotation"])
+		GlassRecording.restore_damage(state,records[id])
 	for id in records.keys():
 		if not keep.has(id): remove_object(id)
 	queue_redraw()
@@ -196,6 +218,8 @@ func pick(point: Vector2) -> String:
 		var spec: Dictionary = records[id]["spec"]
 		if spec.get("shape", {}).get("primitive", "") == "circle":
 			if local.length() <= float(spec["shape"].get("radius", 18)): return id
+		elif spec.get("shape",{}).get("primitive","")=="arc":
+			if Geometry2D.is_point_in_polygon(local,GlassGeometry.polygon(spec["shape"])): return id
 		elif Rect2(-_size(spec) / 2, _size(spec)).has_point(local): return id
 	return ""
 
@@ -246,6 +270,8 @@ func _space_free(point: Vector2, radius: float, ignored: String) -> bool:
 		var local := (point - _position(id)).rotated(-_rotation(id))
 		if spec.get("shape", {}).get("primitive", "") == "circle":
 			if local.length() < radius + float(spec["shape"].get("radius", 18)) + 0.05: return false
+		elif spec.get("shape",{}).get("primitive","")=="arc":
+			if Geometry2D.is_point_in_polygon(local,GlassGeometry.polygon(spec["shape"])) or local.distance_to(GlassGeometry.closest(spec["shape"],local))<radius+0.05: return false
 		else:
 			var half := _size(spec) / 2
 			if local.distance_to(local.clamp(-half, half)) < radius + 0.05: return false
@@ -262,17 +288,21 @@ func child_velocity(center: Array, point: Array, velocity: Array, speed: float) 
 func _draw() -> void:
 	var render: Dictionary = document.get("presentation", {}).get("render", {})
 	draw_rect(Rect2(0, 0, 720, 1280), Color(str(render.get("background", "#0c1722"))))
+	var instances: Array=[]
 	for id in records:
 		var spec: Dictionary = records[id]["spec"]
+		if spec.has("glass"): continue
 		draw_set_transform(_position(id), _rotation(id))
 		var circle: bool = spec.get("shape", {}).get("primitive", "") == "circle"
-		if circle: draw_circle(Vector2.ZERO, float(spec["shape"].get("radius", 18)), _color(spec))
+		if circle: instances.append({"position":_position(id),"size":float(spec["shape"].get("radius",18)),"color":_color(spec)})
+		elif spec.get("shape",{}).get("primitive","")=="arc": draw_colored_polygon(GlassGeometry.polygon(spec["shape"]),_color(spec))
 		else: draw_rect(Rect2(-_size(spec) / 2, _size(spec)), _color(spec))
 		if debug_enabled or id == selected_id or bool(render.get("outline", false)):
 			var tint := Color("fbbf24") if id == selected_id else Color(1, 1, 1, 0.5)
 			if circle: draw_circle(Vector2.ZERO, float(spec["shape"].get("radius", 18)), tint, false, 2)
 			else: draw_rect(Rect2(-_size(spec) / 2, _size(spec)), tint, false, 2)
 	draw_set_transform(Vector2.ZERO)
+	if is_instance_valid(ball_batch): ball_batch.update_circles(instances,"ball")
 
 
 ## Small adapter helpers expose a dimension-neutral interface to the rule component.
@@ -295,6 +325,16 @@ func source_kind(id: String) -> String: # Classify contact participants for the 
 	return "sensor" if spec.get("physics", {}).get("mode", "") == "sensor" else ("ball" if spec.get("shape", {}).get("primitive", "") == "circle" else "box")
 func emit_event(event: Dictionary) -> void: # Forward committed physics and mechanism events.
 	event_logged.emit(event)
+	if not playback and event.get("type","")=="contact" and event.get("phase","")=="enter": glass_damage.consume(event)
+
+## Commit deferred static pane retirement without modifying the dynamic-body ledger.
+func _commit_glass_break(id: String, point: Array) -> void:
+	glass_damage.commit(id,point)
+
+## Shared presentation entry for live play, recorded replay and independent rendering.
+func present_glass(time: float, events: Array) -> void:
+	glass_view.present(time,events)
+
 func project_array(value: Vector2) -> Array: # Convert native vectors to serializable coordinates.
 	return [value.x, value.y]
 func _size(spec: Dictionary) -> Vector2: # Read the rectangle extent from scene data.

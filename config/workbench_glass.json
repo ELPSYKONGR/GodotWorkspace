@@ -1,0 +1,614 @@
+{
+  "schema_version": 2,
+  "scene_id": "split_contact_lab",
+  "revision": 1,
+  "metadata": {
+    "status": "implemented_workbench_v1"
+  },
+  "world": {
+    "dimension": "2d",
+    "units": "logical_px",
+    "logical_size": [
+      720,
+      1280
+    ],
+    "physics_hz": 120,
+    "gravity": [
+      0,
+      0
+    ],
+    "seed": 20261113,
+    "max_dynamic_bodies": 64
+  },
+  "objects": [
+    {
+      "id": "glass_ball",
+      "name": "撞击球",
+      "tags": [
+        "ball",
+        "splitter"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 13
+      },
+      "transform": {
+        "position": [
+          360,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          280,
+          -490
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 1.0,
+          "friction": 0
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true,
+        "linear_damp": 0,
+        "linear_damp_replace": true
+      },
+      "appearance": {
+        "color": "#fff5e8",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "glass_1",
+      "name": "玻璃 1",
+      "tags": [
+        "glass",
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "arc",
+        "inner_radius": 195,
+        "outer_radius": 305,
+        "start_degrees": -89.4,
+        "end_degrees": -45.6
+      },
+      "transform": {
+        "position": [
+          360,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#56acdf"
+      },
+      "mechanisms": [],
+      "glass": {
+        "hits": 1,
+        "shards": 64,
+        "font_size": 24
+      }
+    },
+    {
+      "id": "glass_2",
+      "name": "玻璃 2",
+      "tags": [
+        "glass",
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "arc",
+        "inner_radius": 195,
+        "outer_radius": 305,
+        "start_degrees": -44.4,
+        "end_degrees": -0.6
+      },
+      "transform": {
+        "position": [
+          360,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#4dc4cc"
+      },
+      "mechanisms": [],
+      "glass": {
+        "hits": 2,
+        "shards": 64,
+        "font_size": 24
+      }
+    },
+    {
+      "id": "glass_3",
+      "name": "玻璃 3",
+      "tags": [
+        "glass",
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "arc",
+        "inner_radius": 195,
+        "outer_radius": 305,
+        "start_degrees": 0.6,
+        "end_degrees": 44.4
+      },
+      "transform": {
+        "position": [
+          360,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#73ce91"
+      },
+      "mechanisms": [],
+      "glass": {
+        "hits": 3,
+        "shards": 64,
+        "font_size": 24
+      }
+    },
+    {
+      "id": "glass_4",
+      "name": "玻璃 4",
+      "tags": [
+        "glass",
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "arc",
+        "inner_radius": 195,
+        "outer_radius": 305,
+        "start_degrees": 45.6,
+        "end_degrees": 89.4
+      },
+      "transform": {
+        "position": [
+          360,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#cdd46e"
+      },
+      "mechanisms": [],
+      "glass": {
+        "hits": 4,
+        "shards": 64,
+        "font_size": 24
+      }
+    },
+    {
+      "id": "glass_5",
+      "name": "玻璃 5",
+      "tags": [
+        "glass",
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "arc",
+        "inner_radius": 195,
+        "outer_radius": 305,
+        "start_degrees": 90.6,
+        "end_degrees": 134.4
+      },
+      "transform": {
+        "position": [
+          360,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#e9b85c"
+      },
+      "mechanisms": [],
+      "glass": {
+        "hits": 5,
+        "shards": 64,
+        "font_size": 24
+      }
+    },
+    {
+      "id": "glass_6",
+      "name": "玻璃 6",
+      "tags": [
+        "glass",
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "arc",
+        "inner_radius": 195,
+        "outer_radius": 305,
+        "start_degrees": 135.6,
+        "end_degrees": 179.4
+      },
+      "transform": {
+        "position": [
+          360,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#e78265"
+      },
+      "mechanisms": [],
+      "glass": {
+        "hits": 6,
+        "shards": 64,
+        "font_size": 24
+      }
+    },
+    {
+      "id": "glass_7",
+      "name": "玻璃 7",
+      "tags": [
+        "glass",
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "arc",
+        "inner_radius": 195,
+        "outer_radius": 305,
+        "start_degrees": 180.6,
+        "end_degrees": 224.4
+      },
+      "transform": {
+        "position": [
+          360,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#b38edc"
+      },
+      "mechanisms": [],
+      "glass": {
+        "hits": 7,
+        "shards": 64,
+        "font_size": 24
+      }
+    },
+    {
+      "id": "glass_8",
+      "name": "玻璃 8",
+      "tags": [
+        "glass",
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "arc",
+        "inner_radius": 195,
+        "outer_radius": 305,
+        "start_degrees": 225.6,
+        "end_degrees": 269.4
+      },
+      "transform": {
+        "position": [
+          360,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#638cd6"
+      },
+      "mechanisms": [],
+      "glass": {
+        "hits": 8,
+        "shards": 64,
+        "font_size": 24
+      }
+    },
+    {
+      "id": "safety_0",
+      "name": "安全边界",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          670,
+          12
+        ]
+      },
+      "transform": {
+        "position": [
+          360,
+          220
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#00000000"
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "safety_1",
+      "name": "安全边界",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          670,
+          12
+        ]
+      },
+      "transform": {
+        "position": [
+          360,
+          1060
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#00000000"
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "safety_2",
+      "name": "安全边界",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          12,
+          850
+        ]
+      },
+      "transform": {
+        "position": [
+          25,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#00000000"
+      },
+      "mechanisms": []
+    },
+    {
+      "id": "safety_3",
+      "name": "安全边界",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          12,
+          850
+        ]
+      },
+      "transform": {
+        "position": [
+          695,
+          640
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 1,
+          "friction": 0
+        }
+      },
+      "appearance": {
+        "color": "#00000000"
+      },
+      "mechanisms": []
+    }
+  ],
+  "mechanisms": [],
+  "presentation": {
+    "render": {
+      "backend": "compatibility",
+      "background": "#03090f",
+      "camera": {
+        "projection": "canvas"
+      },
+      "debug_overlay_in_export": false,
+      "roughness": 0.35,
+      "metallic": 0.15,
+      "shadows": true,
+      "debug": true
+    },
+    "captions": [
+      {
+        "text": "GLASS / IMPACT LAB",
+        "position": [
+          54,
+          100
+        ],
+        "font_family": "Bahnschrift",
+        "font_size": 32,
+        "color": "#f5dda3"
+      },
+      {
+        "text": "真实碰撞 · 裂纹累积 · 计次破碎",
+        "position": [
+          54,
+          158
+        ],
+        "font_family": "Microsoft YaHei",
+        "font_size": 23,
+        "color": "#9db4c9"
+      },
+      {
+        "text": "每块玻璃上的数字 = 剩余碰撞次数",
+        "position": [
+          100,
+          1110
+        ],
+        "font_family": "Microsoft YaHei",
+        "font_size": 22,
+        "color": "#9db4c9"
+      }
+    ],
+    "audio": {
+      "enabled": true,
+      "preset": "bell",
+      "volume_db": -12,
+      "pitch": 1.0,
+      "min_interval": 0.05,
+      "max_voices": 16,
+      "sample_rate": 48000
+    },
+    "effects": {
+      "enabled": true,
+      "count": 8,
+      "lifetime": 0.35,
+      "speed": 140,
+      "trail_enabled": true,
+      "trail_seconds": 0.2,
+      "ring": false,
+      "flash": true,
+      "time_domain": "simulation"
+    },
+    "glass_counter": true
+  },
+  "take_settings": {
+    "duration_seconds": 12,
+    "record_every_physics_tick": true,
+    "chunk_seconds": 1
+  },
+  "export_preset": {
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 60,
+    "duration_seconds": 12,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "source": "recorded_take"
+  }
+}

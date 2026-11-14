@@ -68,3 +68,4 @@ func present(time: float, sim_time: float, events: Array, take: Dictionary = {})
 				trail_states.append({"id": id, "position": world.object_position(id)})
 	# Effects only read definitions; do not deep-copy retired generations every rendered frame.
 	effects.present(time, sim_time, project_point, trail_states, world.definitions)
+	if world.has_method("present_glass"): world.present_glass(sim_time,events)

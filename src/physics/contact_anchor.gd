@@ -24,6 +24,7 @@ static func for_2d(records: Dictionary, a: String, b: String) -> Dictionary:
 		var size: Array = box["spec"]["shape"].get("size", [60, 20])
 		var half := Vector2(maxf(1, float(size[0])), maxf(1, float(size[1]))) * 0.5
 		var closest := local.clamp(-half, half)
+		if box["spec"]["shape"].get("primitive","")=="arc": closest=preload("res://src/glass/geometry.gd").closest(box["spec"]["shape"],local)
 		if closest == local:
 			var axis := 0 if half.x - absf(local.x) < half.y - absf(local.y) else 1
 			closest[axis] = half[axis] * (-1 if local[axis] < 0 else 1)
