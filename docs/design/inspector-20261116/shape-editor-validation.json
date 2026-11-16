@@ -1,0 +1,169 @@
+{
+  "date": "2026-11-16",
+  "scope": "prototype_and_separate_native_probe",
+  "workbench_integration": false,
+  "ui": [
+    {
+      "width": 1440,
+      "checks": [
+        {
+          "name": "initial_l_shape_six_vertices",
+          "passed": true
+        },
+        {
+          "name": "all_presets_valid",
+          "passed": true
+        },
+        {
+          "name": "self_intersection_rejected",
+          "passed": true
+        },
+        {
+          "name": "collinear_polygon_rejected",
+          "passed": true
+        },
+        {
+          "name": "u_preset_retains_eight_vertices",
+          "passed": true
+        },
+        {
+          "name": "draw_and_close_custom_concave_polygon",
+          "passed": true
+        },
+        {
+          "name": "vertex_drag_changes_source_outline",
+          "passed": true
+        },
+        {
+          "name": "assign_physical_property",
+          "passed": true
+        },
+        {
+          "name": "place_copy_with_properties",
+          "passed": true
+        },
+        {
+          "name": "scene_drag_updates_world_transform",
+          "passed": true
+        },
+        {
+          "name": "independent_shape_instances",
+          "passed": true
+        },
+        {
+          "name": "invalid_drawing_blocked_with_reason",
+          "passed": true
+        },
+        {
+          "name": "numeric_boxes_88_px",
+          "passed": true
+        },
+        {
+          "name": "three_physical_properties_share_one_row",
+          "passed": true
+        },
+        {
+          "name": "simulation_explicitly_disabled",
+          "passed": true
+        },
+        {
+          "name": "proposal_export_marked",
+          "passed": true
+        },
+        {
+          "name": "page_no_horizontal_overflow",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 320,
+      "checks": [
+        {
+          "name": "initial_l_shape_six_vertices",
+          "passed": true
+        },
+        {
+          "name": "all_presets_valid",
+          "passed": true
+        },
+        {
+          "name": "self_intersection_rejected",
+          "passed": true
+        },
+        {
+          "name": "collinear_polygon_rejected",
+          "passed": true
+        },
+        {
+          "name": "u_preset_retains_eight_vertices",
+          "passed": true
+        },
+        {
+          "name": "draw_and_close_custom_concave_polygon",
+          "passed": true
+        },
+        {
+          "name": "vertex_drag_changes_source_outline",
+          "passed": true
+        },
+        {
+          "name": "assign_physical_property",
+          "passed": true
+        },
+        {
+          "name": "place_copy_with_properties",
+          "passed": true
+        },
+        {
+          "name": "scene_drag_updates_world_transform",
+          "passed": true
+        },
+        {
+          "name": "independent_shape_instances",
+          "passed": true
+        },
+        {
+          "name": "invalid_drawing_blocked_with_reason",
+          "passed": true
+        },
+        {
+          "name": "numeric_boxes_88_px",
+          "passed": true
+        },
+        {
+          "name": "three_physical_properties_share_one_row",
+          "passed": true
+        },
+        {
+          "name": "simulation_explicitly_disabled",
+          "passed": true
+        },
+        {
+          "name": "proposal_export_marked",
+          "passed": true
+        },
+        {
+          "name": "page_no_horizontal_overflow",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "10-shape-editor.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "11-scene-layout.png",
+      "width": 1440,
+      "height": 1000
+    }
+  ],
+  "native_probe_passed": true,
+  "passed": true
+}

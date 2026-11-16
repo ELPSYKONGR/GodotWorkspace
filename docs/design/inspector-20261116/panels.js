@@ -20,7 +20,7 @@ window.RV_PANELS = [
   {id:'object',name:'物体布置',kind:'现有能力 + 紧凑重排',hint:'位置、尺寸使用成组输入，数值框不再拉满整行。',groups:[
     {name:'选中物体',fields:[
       {key:'name',label:'名称',type:'text',value:'绿色初始球 A'},
-      {key:'shape',label:'形状',type:'select',value:'圆球',options:['圆球','长方形','线段障碍','扇区玻璃']},
+      {key:'shape',label:'形状',type:'select',value:'圆球',options:['圆球','长方形','线段障碍','扇区玻璃','三角形（草图）','凹多边形（草图）','U形（草图）','胶囊 / 圆环（规划）']},
       {key:'tags',label:'标签',type:'text',value:'ball, splitter'},
       {key:'body_mode',label:'物理模式',type:'select',value:'动态刚体',options:['动态刚体','静态墙体','传感器']}]},
     {name:'变换与尺寸',fields:[

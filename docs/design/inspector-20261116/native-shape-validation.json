@@ -1,0 +1,38 @@
+{
+  "ball_final_y": 468.148071289063,
+  "checks": {
+    "ball_contacts_actual_u_body": true,
+    "ball_entered_u_opening": true,
+    "ball_remains_above_u_inner_floor": true,
+    "l_area_preserved": true,
+    "l_has_multiple_convex_fixtures": true,
+    "l_no_floor_pass_through_in_sample": true,
+    "l_reached_native_floor_contact": true,
+    "u_area_preserved": true,
+    "u_has_multiple_convex_fixtures": true
+  },
+  "engine": {
+    "build": "official",
+    "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+    "hex": 263938,
+    "major": 4,
+    "minor": 7,
+    "patch": 2,
+    "status": "stable",
+    "string": "4.7.2-stable (official)",
+    "timestamp": 0
+  },
+  "integrated_into_workbench": false,
+  "l_compiled_area": 8000.0,
+  "l_convex_parts": 2,
+  "l_floor_contacts": 3,
+  "l_max_vertex_y": 573.963684082031,
+  "l_original_area": 8000.0,
+  "passed": true,
+  "physics_ticks": 360,
+  "scope": "isolated_native_feasibility",
+  "u_ball_contacts": 2,
+  "u_compiled_area": 25600.0,
+  "u_convex_parts": 3,
+  "u_original_area": 25600.0
+}

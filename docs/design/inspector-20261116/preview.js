@@ -40,6 +40,7 @@
   function fieldRow(field) {
     const row = element(field.type === 'vector' ? 'div' : 'label', 'field-row');
     row.dataset.field = field.key;
+    if (['number','check','color'].includes(field.type) || field.type === 'select' && field.options.every(v => v.length <= 10)) row.classList.add('compact-field');
     const label = element('span', 'field-label', field.label);
     row.append(label);
     const controls = element('span', 'field-control');
@@ -104,7 +105,8 @@
     }
     active.groups.forEach(group => {
       const section = element('section', 'property-group'); section.append(element('h3', '', group.name));
-      group.fields.forEach(f => section.append(fieldRow(f))); content.append(section);
+      const grid = element('div', 'property-grid');
+      group.fields.forEach(f => grid.append(fieldRow(f))); section.append(grid); content.append(section);
     });
     if (active.id === 'collision-audio') {
       const audition = element('button', 'audition', '试听合成音示意'); audition.type = 'button';

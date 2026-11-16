@@ -5,7 +5,7 @@
   "renderer": "isolated headless Edge",
   "checks": [
     {
-      "width": 1416,
+      "width": 1440,
       "checks": [
         {
           "name": "all_nine_categories",
@@ -45,6 +45,10 @@
         },
         {
           "name": "layout_output",
+          "passed": true
+        },
+        {
+          "name": "multiple_attributes_share_row",
           "passed": true
         },
         {
@@ -181,7 +185,7 @@
       "passed": true
     },
     {
-      "width": 492,
+      "width": 320,
       "checks": [
         {
           "name": "all_nine_categories",
@@ -221,6 +225,10 @@
         },
         {
           "name": "layout_output",
+          "passed": true
+        },
+        {
+          "name": "multiple_attributes_share_row",
           "passed": true
         },
         {
@@ -361,47 +369,47 @@
     {
       "file": "01-scene.png",
       "width": 520,
-      "height": 923
+      "height": 859
     },
     {
       "file": "02-object.png",
       "width": 520,
-      "height": 933
+      "height": 812
     },
     {
       "file": "03-material.png",
       "width": 520,
-      "height": 934
+      "height": 810
     },
     {
       "file": "04-physics.png",
       "width": 520,
-      "height": 920
+      "height": 697
     },
     {
       "file": "05-background.png",
       "width": 520,
-      "height": 829
+      "height": 778
     },
     {
       "file": "06-collision-audio.png",
       "width": 520,
-      "height": 873
+      "height": 754
     },
     {
       "file": "07-music.png",
       "width": 520,
-      "height": 946
+      "height": 830
     },
     {
       "file": "08-text-effects.png",
       "width": 520,
-      "height": 854
+      "height": 733
     },
     {
       "file": "09-output.png",
       "width": 520,
-      "height": 842
+      "height": 799
     },
     {
       "file": "00-workbench.png",

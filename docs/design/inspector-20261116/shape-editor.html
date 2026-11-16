@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RelaxVideo · 形状编辑环境原型</title>
+  <link rel="stylesheet" href="shape-editor.css">
+  <script defer src="shape-model.js"></script><script defer src="shape-editor.js"></script>
+</head>
+<body>
+<main id="shape-studio">
+  <header><b>RelaxVideo</b><span>形状编辑环境</span><small>交互原型 · 物理运行待 Godot 接入</small><a href="index.html">返回属性面板</a></header>
+  <nav class="workflow" aria-label="工作阶段">
+    <button id="sketch-mode" type="button" class="active">1 绘制物体</button><span>→</span>
+    <button id="scene-mode" type="button">2 布置场景</button><span>→</span>
+    <button type="button" disabled>3 Godot 物理模拟 · 待接入</button><span>→</span><span>录制 / 输出视频</span>
+  </nav>
+  <div class="editor-layout">
+    <aside class="library">
+      <h2>形状工具</h2>
+      <div class="tools" id="tools">
+        <button data-tool="select" type="button" class="active">选择 / 移动</button>
+        <button data-tool="rectangle" type="button">矩形</button><button data-tool="circle" type="button">圆</button>
+        <button data-tool="polygon" type="button">闭合多边形</button>
+      </div>
+      <div class="draw-actions"><button id="finish" type="button">闭合轮廓</button><button id="cancel" type="button">取消绘制</button></div>
+      <h2>参数形状库</h2><div id="templates" class="tools"></div>
+      <h2>场景物体</h2><div id="scene-list"></div>
+      <p>绘制完成后可拖顶点修改。凹槽保留；碰撞体由 Godot 进行凸分解。</p>
+    </aside>
+    <section class="drawing-area" aria-label="形状与场景绘图区">
+      <div class="drawing-bar"><span id="mode-label">草图模式 · 拖动顶点编辑轮廓</span><label><input id="snap" type="checkbox" checked> 网格吸附 16 px</label><label><input id="collision" type="checkbox" checked> 轮廓叠加</label></div>
+      <svg id="drawing" viewBox="0 0 960 640" role="img" aria-label="可绘制和拖动顶点的二维编辑区">
+        <defs><pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#2a3d4b" stroke-width=".6"/></pattern></defs>
+        <rect width="960" height="640" fill="#101c28"/><rect width="960" height="640" fill="url(#grid)"/>
+        <path d="M0 320H960M480 0V640" stroke="#436073" stroke-width="1"/>
+        <g id="shape-layer"></g><g id="draft-layer"></g>
+      </svg>
+      <div class="canvas-footer"><span id="geometry-status" role="status">简单闭合轮廓 · 可生成碰撞体</span><span>编辑坐标 / px</span></div>
+      <div class="editing-actions"><button id="add-to-scene" type="button">加入场景</button><button id="export" type="button">导出设计数据</button><span id="action-status" role="status">拖动顶点修改形状，或选工具绘制新物体。</span></div>
+      <details><summary>当前对象数据</summary><pre id="data-preview"></pre></details>
+    </section>
+    <aside class="properties">
+      <h2>对象属性</h2><label class="wide">名称<input id="object-name" type="text"></label>
+      <h3>空间变换</h3>
+      <div class="property-grid">
+        <label>X / px<input data-prop="x" type="number" step="1"></label>
+        <label>Y / px<input data-prop="y" type="number" step="1"></label>
+        <label>旋转 / °<input data-prop="rotation" type="number" step="1"></label>
+      </div>
+      <h3>物理属性</h3>
+      <label class="wide">物体类型<select id="body-type"><option value="dynamic">动态刚体</option><option value="static">静态障碍</option><option value="sensor">传感器</option></select></label>
+      <div class="property-grid">
+        <label>质量<input data-prop="mass" type="number" min="0.01" max="10000" step="0.01"></label>
+        <label>摩擦<input data-prop="friction" type="number" min="0" max="1" step="0.01"></label>
+        <label>弹性<input data-prop="bounce" type="number" min="0" max="1" step="0.01"></label>
+      </div>
+      <h3>外观与组件</h3>
+      <label class="wide">颜色<input id="object-color" type="color"></label>
+      <label class="wide">机制<select id="mechanism"><option value="none">无附加机制</option><option value="damage">计次破坏（规划）</option><option value="split">分裂（当前引擎仅圆球）</option></select></label>
+      <h3>形状信息</h3><dl id="shape-info"></dl>
+      <p>数值框 88 px；一行三个参数。修改初始形状/物理属性后，旧运动轨迹需要重新录制。</p>
+      <p class="engine-note">这里可绘制、改顶点、赋属性和布置。模拟入口尚未接入，导出的数据不是当前工作台可直接加载的场景。</p>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

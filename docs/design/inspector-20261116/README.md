@@ -4,6 +4,8 @@
 
 双击 `index.html`，即可在普通浏览器离线查看九个属性面板。点击分类切换，数值框宽度常规88像素。颜色、标题、部分材质示意和深度可更新；“更新示意”只改变本页，不写场景、不调用引擎。试听为临时合成短音，不是现有素材的试听。
 
+用户补充后已改为一行2～3个相关属性。新增 [shape-editor.html](shape-editor.html)：可绘制圆/矩形/简单多边形、拖顶点、赋属性、加入场景并拖动布置；正式工作台的物理接口尚未接入，模拟按钮禁用，导出为设计数据。完整说明见[形状编辑方案](../../形状编辑环境与多列属性方案_20261116.md)。
+
 源文件职责：
 
 - `index.html`：整体工作台布局，明确设计状态。
@@ -12,9 +14,26 @@
 - `style.css`：紧凑输入、分组、固定画幅和响应式布局。
 - `00-workbench.png`：完整布局；`01-*.png`至`09-*.png`：各属性面板截图。
 - `validation.json`：本轮界面文件验证记录；不代表Godot功能验收。
+- `shape-editor.html` / `shape-editor.css`：绘制/布置环境布局与紧凑属性。
+- `shape-model.js`：独立形状源数据、轮廓校验和设计JSON序列化。
+- `shape-editor.js`：绘制/顶点编辑、属性编辑、场景副本与拖动；不运行物理。
+- `10-shape-editor.png` / `11-scene-layout.png` / `shape-editor-validation.json`：两种编辑状态的截图和交互验证。
+- `native-shape-check.gd` / `native-shape-validation.json`：独立工程运行的原生凸分解/碰撞可行性检查与本轮9项结果；未接入正式工作台。
 
 不依赖联网字体、第三方前端库或服务器。图片/音频路径是可编辑示例，本目录未捆绑这些媒体资源。
 
 预览可使用查询参数：`index.html?panel=material&mode=panel`。面板ID依次为 `scene`、`object`、`material`、`physics`、`background`、`collision-audio`、`music`、`text-effects`、`output`。省略mode显示完整布局。
 
 重新生成截图时用临时浏览器配置目录，放在本工程的scratch下；不要占用用户日常浏览器配置。建议单页520像素宽、完整布局1440像素宽；使用浏览器的实际渲染结果，避免将设计图写成引擎截图。
+
+复验原生物理样本：从项目根目录执行以下PowerShell，创建独立空工程。使用现有便携工具和重定向环境，不启动工作台；新报告写scratch，不覆盖随附证据。
+
+```powershell
+. .\tools\common.ps1
+$probeRoot = Join-Path $LabRoot 'scratch\native_shape_recheck'
+New-Item -ItemType Directory -Path $probeRoot -Force | Out-Null
+[IO.File]::WriteAllText((Join-Path $probeRoot 'project.godot'), "config_version=5`n")
+$probeScript = Join-Path $LabRoot 'docs\design\inspector-20261116\native-shape-check.gd'
+$probeReport = Join-Path $probeRoot 'report.json'
+& $Godot --headless --path $probeRoot --script $probeScript --max-fps 120 -- "--report=$probeReport"
+```
