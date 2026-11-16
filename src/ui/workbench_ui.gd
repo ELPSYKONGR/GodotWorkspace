@@ -155,6 +155,9 @@ func update_runtime(info: Dictionary) -> void:
 	var modes := {"edit": "布置", "playing": "运行中", "paused": "已暂停", "recording": "录制中", "replay": "回放"}
 	runtime_label.text = "%s · 物体 %d/%d%s · 渲染 %.0f FPS" % [str(modes.get(str(info.get("mode", "edit")), str(info.get("mode", "布置")))), active, capacity, capacity_status, float(info.get("fps", 0))]
 	runtime_label.tooltip_text = "%s · 碰撞 %d · 分裂 %d" % [take_status, int(info.get("contacts", 0)), int(info.get("splits", 0))]
+	if not str(info.get("camera", {}).get("blocked_reason", "")).is_empty():
+		runtime_label.text += " · 镜头受限"
+		runtime_label.tooltip_text += "\n" + str(info["camera"].get("status", ""))
 	if info.get("hit_stop_active", false): runtime_label.text += " · 分裂顿帧中：物理暂停"
 	if float(info.get("hit_stop_elapsed_seconds", 0)) > 0.001: runtime_label.text += " · 累计顿帧 %.2fs" % float(info["hit_stop_elapsed_seconds"])
 	var job: Variant = JSON.parse_string(str(info.get("job_status", "{}")))

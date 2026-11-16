@@ -95,6 +95,7 @@ try {
     Invoke-GodotCheck 'SceneWorkspace' 'validate_scene_workspace.gd' 'outputs\scene_workspace_validation.json' 120 1200
     Invoke-GodotCheck 'SceneEditing' 'validate_scene_editing.gd' 'outputs\scene_editing_validation.json' 120 1200
     Invoke-GodotCheck 'CameraTrack' 'validate_camera_track.gd' 'outputs\camera_track_validation.json' 120 200
+    Invoke-GodotCheck 'CameraFollow' 'validate_camera_follow.gd' 'outputs\camera_follow_validation.json' 120 1500
     Invoke-GodotCheck 'PolygonStyles' 'validate_polygon_styles.gd' 'outputs\polygon_styles_validation.json' 120 800
     Invoke-GodotCheck 'LongWorld' 'validate_long_world.gd' 'outputs\long_world_validation.json' 120 3000
     Invoke-GodotCheck 'PerformancePaths' 'validate_performance_paths.gd' 'outputs\performance_paths_validation.json' 120 1000

@@ -84,6 +84,7 @@
 | `PRODUCT.md` / `DESIGN.md` / `.impeccable/design.json` | 已确认产品约束、实现后的视觉规则和设计侧车；不是运行时场景数据 |
 | `docs/design/workbench-redesign-20261116/` | `brief.md`设置取舍；`验收.md`验证与复核；PNG/GPU截图、联系表与`capture_manifest.json`图片来源/哈希；JSON/日志为专项和完整回归证据 |
 | `docs/design/workbench-usability-20261116/` | 运行/暂停、物体ID可见、按名称选跟随目标的补充验收、原生GPU截图、专项报告和图片来源/哈希 |
+| `docs/design/camera-follow-fix-20261116/` | 当前用户场景边界钳制根因、修正副本、修复前后GPU证据、七项回归及主窗口跟随实测 |
 | `config/design-skill-lock.json` / `SKILLS_USED.md` | Taste/Impeccable来源、版本、许可、复现安装；仅用于AI开发辅助 |
 | `src/ui/scene_panel.gd` | 长世界范围、跟随参数、标准边界同步，复用统一草稿/命令事务 |
 | `src/ui/world_minimap.gd` | 编辑器世界缩略图、真实物体/画幅概览、编辑导航逆变换，不进入成片 |
@@ -157,6 +158,7 @@
 | `tools/validate_scene_workspace.gd` | 六类型真实世界保存重开、中文路径、未保存提示、失败保护与布局保存 |
 | `tools/validate_scene_editing.gd` | 原生轮廓新建/同ID修改/撤销/冲突、长世界选取拖动、局部表现/88px/持久化 |
 | `tools/validate_editor_layout.gd` | 三栏/尺寸/焦点/状态、草稿、参数过滤、继承、录制/导出/快捷键；可选真实GPU截图 |
+| `tools/validate_camera_follow.gd` | 实际短世界/根球后代下落、镜头受限复现、UI修正保持物理状态、真实回放；可选用户快照和GPU截图 |
 | `tools/validate_camera_track.gd` | 镜头死区/平滑/边界/只向下/谱系/乱序寻帧与非法配置 |
 | `tools/validate_polygon_styles.gd` | 实际L/U原生碰撞、出生空间、后代特效/颜色/时钟、3D静态/PBR材质 |
 | `tools/validate_long_world.gd` | 真实长场景录制/分裂/跟随及实时/回放镜头对照，生成供生产的Take |

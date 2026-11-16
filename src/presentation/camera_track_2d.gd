@@ -6,10 +6,13 @@ var state: Dictionary = {}
 var track: Array = []
 var target_root := ""
 var status := "固定镜头"
+var blocked_reason := ""
 
 ## Camera caches are disposable presentation data; a visual edit never changes native motion.
 func configure(doc: Dictionary) -> void:
 	settings = doc.get("presentation", {}).get("render", {}).get("camera", {}).duplicate(true)
+	status = "固定镜头" if settings.get("mode", "fixed") == "fixed" else "等待跟随目标"
+	blocked_reason = ""
 	var area: Array = doc.get("world", {}).get("bounds_2d", [0, 0, 720, 1280])
 	bounds = Rect2(float(area[0]), float(area[1]), float(area[2]), float(area[3]))
 	target_root = str(settings.get("target_root", ""))
@@ -49,6 +52,7 @@ func sample(time: float, take: Dictionary) -> void:
 
 ## Stable root lineage selection survives parent retirement; unrelated balls never become targets.
 func solve(previous: Dictionary, sim_time: float, states: Array, definitions: Dictionary) -> Dictionary:
+	blocked_reason = ""
 	var result := previous.duplicate()
 	result["sim_time"] = sim_time
 	if settings.get("mode", "fixed") != "follow_y": return result
@@ -74,6 +78,13 @@ func solve(previous: Dictionary, sim_time: float, states: Array, definitions: Di
 	var seconds := float(settings.get("smooth_seconds", 0.18))
 	var next := desired if seconds == 0 else lerpf(top.y, desired, 1 - exp(-delta / seconds))
 	result["top"] = _limit(Vector2(top.x, next))
+	if settings.get("limit_world", true):
+		if bounds.size.y <= 1280:
+			blocked_reason = "world_too_short"
+			status += " · 世界高度不超过画面，镜头无法下移"
+		elif not is_equal_approx(result["top"].y, next):
+			blocked_reason = "world_edge"
+			status += " · 已到世界边界"
 	return result
 
 ## Clamp the viewing rectangle, never synthesize a physics wall or teleport a body.

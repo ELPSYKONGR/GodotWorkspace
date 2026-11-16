@@ -1,0 +1,3 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+LONG_WORLD {"checks":{"arbitrary_seek_matches_sequential_camera":true,"camera_does_not_translate_native_floor":true,"camera_passes_first_screen":true,"camera_tracks_real_child_after_parent_retirement":true,"live_and_recorded_camera_match":true,"long_scene_records_native_splits":true,"only_down_camera_is_monotonic_in_real_run":true,"passed":true,"take_is_self_contained_and_saved":true},"duration":8.0,"frames":961,"live_replay_max_error_px":0.0,"maximum_camera_y":5151.04736328125,"passed":true,"seek_max_error_px":0.0,"splits":15}

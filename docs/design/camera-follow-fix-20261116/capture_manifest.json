@@ -1,0 +1,16 @@
+[
+    {
+        "file":  "01_blocked.png",
+        "bytes":  126856,
+        "sha256":  "d5839d0c2a06002d4b7cb0bba0dfcfa1d44a7e86f0758cac4b392e85872d8905",
+        "source":  "native Godot GPU; tools/validate_camera_follow.gd --capture --source=res://scratch/user_follow_original.json",
+        "generated":  false
+    },
+    {
+        "file":  "02_following.png",
+        "bytes":  114667,
+        "sha256":  "35667fde0e96db0a913d4bab9fb37ea508e0357b8a6b549df02720d9ed58a764",
+        "source":  "native Godot GPU; tools/validate_camera_follow.gd --capture --source=res://scratch/user_follow_original.json",
+        "generated":  false
+    }
+]

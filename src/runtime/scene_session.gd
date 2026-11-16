@@ -157,7 +157,7 @@ func seek(value: float, silent: bool = true) -> bool:
 func get_info() -> Dictionary:
 	var report: Dictionary = stage.world.get_report() if is_instance_valid(stage) else {}
 	report["audio"] = audio.get_report() if is_instance_valid(audio) else {}
-	if is_instance_valid(stage): report["camera"] = {"top": [stage.view_top.x, stage.view_top.y], "target": stage.camera_track.state.get("target", ""), "status": stage.camera_track.status}
+	if is_instance_valid(stage): report["camera"] = {"top": [stage.view_top.x, stage.view_top.y], "target": stage.camera_track.state.get("target", ""), "status": stage.camera_track.status, "blocked_reason": stage.camera_track.blocked_reason}
 	report["last_error"] = last_error
 	report["running"] = replay_playing if mode == "replay" else mode in ["playing", "recording"]
 	report["hit_stop_active"] = mode in ["playing", "recording"] and _last_hold

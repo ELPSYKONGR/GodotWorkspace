@@ -1,0 +1,14 @@
+{
+    "mode":  "playing",
+    "time":  3.01666666666667,
+    "camera":  {
+                   "blocked_reason":  "",
+                   "status":  "跟随：ball_A_child_1 · 根谱系：ball_A",
+                   "target":  "ball_A_child_1",
+                   "top":  [
+                               0.0,
+                               1919.6708984375
+                           ]
+               },
+    "source":  "main workbench with recovered user scene; paused after verification"
+}

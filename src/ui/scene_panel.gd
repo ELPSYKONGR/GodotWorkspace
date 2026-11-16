@@ -48,6 +48,9 @@ static func build(parent: Node, doc: Dictionary, send: Callable, pending: RefCou
 	lineage.tooltip_text = "沿原球谱系选择最低的存活后代；后代消失时保持最后镜头"
 	var down := F.check(following, "只向下移动", bool(camera.get("only_down", true)))
 	var limit := F.check(lens, "限制在世界范围", bool(camera.get("limit_world", true)))
+	var warning := VBoxContainer.new()
+	lens.add_child(warning)
+	F.text(warning, "世界高度不超过画面，镜头无法下移。增加世界高度，或允许镜头越界。").add_theme_color_override("font_color", Color("ffcf8d"))
 	var detail := F.section(following, "构图与平滑", false)
 	var framing := F.number(detail, "构图高度比例", float(camera.get("framing_y", 0.42)), 0, 1, 0.01)
 	var top := F.number(detail, "死区上边比例", float(camera.get("dead_zone_top", 0.32)), 0, 1, 0.01)
@@ -66,12 +69,18 @@ static func build(parent: Node, doc: Dictionary, send: Callable, pending: RefCou
 		updated.merge({"mode": F.selected(mode), "target_root": F.selected(target), "on_split": "lowest_descendant" if lineage.button_pressed else "stop", "only_down": down.button_pressed, "limit_world": limit.button_pressed, "framing_y": framing.value, "dead_zone_top": top.value, "dead_zone_bottom": bottom.value, "smooth_seconds": smoothing.value, "position_2d": [x.value, y.value]}, true)
 		return {"world.bounds_2d": [bounds[0].value, bounds[1].value, bounds[2].value, bounds[3].value], "presentation.render.camera": updated}
 	var apply := func(): send.call("scene.patch", {"changes": changes.call()})
+	F.button(warning, "允许越界跟随", func():
+		limit.button_pressed = false
+		apply.call()).tooltip_text = "关闭镜头世界限制并应用当前世界与镜头设置；物理墙壁保持原位"
 	F.button(parent, "应用世界与镜头", apply)
 	pending.register("world_camera", controls, apply)
 	var visibility := func():
 		following.visible = F.selected(mode) == "follow_y"
 		fixed.visible = not following.visible
+		warning.visible = following.visible and limit.button_pressed and bounds[3].value <= 1280
 	mode.item_selected.connect(func(_index): visibility.call())
+	limit.toggled.connect(func(_value): visibility.call())
+	bounds[3].value_changed.connect(func(_value): visibility.call())
 	visibility.call()
 	var tools := F.section(parent, "边界工具", false)
 	F.button(tools, "同步地面与侧墙", func():

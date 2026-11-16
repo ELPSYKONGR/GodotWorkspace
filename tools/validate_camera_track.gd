@@ -34,8 +34,10 @@ func _run() -> void:
 	camera.settings["smooth_seconds"] = 0
 	checks["zero_smoothing_snaps"] = is_equal_approx(camera.solve(origin, 1, [_pose("ball_A", 2000)], definitions)["top"].y, 2000 - 1280 * 0.42)
 	checks["world_limit_clamps_view_not_body"] = camera.solve(origin, 1, [_pose("ball_A", 50000)], definitions)["top"].y == 18720
+	checks["world_boundary_has_explicit_reason"] = camera.blocked_reason == "world_edge"
 	camera.settings["limit_world"] = false
 	checks["open_world_can_follow_beyond_bounds"] = camera.solve(origin, 1, [_pose("ball_A", 50000)], definitions)["top"].y > 20000
+	checks["open_world_clears_boundary_reason"] = camera.blocked_reason.is_empty()
 	camera.settings["on_split"] = "stop"
 	checks["split_continuation_can_be_disabled"] = camera.solve(origin, 1, [_pose("child_1", 3000)], definitions)["top"] == Vector2.ZERO
 	camera.configure(doc)

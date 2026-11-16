@@ -1,0 +1,33 @@
+{
+	"after": {
+		"status": "跟随：ball_A_child_1 · 根谱系：ball_A",
+		"target": "ball_A_child_1",
+		"top": [
+			0.0,
+			1909.54406738281
+		]
+	},
+	"before": {
+		"status": "跟随：ball_A_child_1 · 根谱系：ball_A",
+		"target": "ball_A_child_1",
+		"top": [
+			0.0,
+			0.0
+		]
+	},
+	"checks": {
+		"actual_child_lineage_remains_target": true,
+		"blocked_camera_is_visible_outside_debug": false,
+		"fix_clears_boundary_warning": false,
+		"fix_preserves_world_physics_and_paused_time": true,
+		"follow_does_not_translate_physics_world": true,
+		"passed": false,
+		"recorded_replay_matches_live_follow": true,
+		"reproduces_target_detected_but_camera_clamped": true,
+		"runtime_reports_actual_camera_block": false,
+		"short_world_explains_and_offers_fix": false,
+		"unbounded_follow_moves_past_first_screen": true
+	},
+	"passed": false,
+	"source": "res://scratch/user_follow_original.json"
+}
