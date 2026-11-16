@@ -1,6 +1,6 @@
 # Godot 解压视频工作台文件索引
 
-更新日期：2026-11-14。默认入口为新工作台，旧验证原型单独保留。`.gd.uid`是Godot生成的脚本标识，随对应脚本保存，此处不逐项重复。
+更新日期：2026-11-16。默认入口为新工作台，旧验证原型单独保留。`.gd.uid`是Godot生成的脚本标识，随对应脚本保存，此处不逐项重复。
 
 ## 入口、配置与文档
 
@@ -8,6 +8,7 @@
 |---|---|
 | `project.godot` / `workbench.tscn` | Godot工程与默认工作台场景 |
 | `production.tscn` | 独立生产进程的干净画面入口 |
+| `一键启动.cmd` | 双击打开工作台；保留重复启动/错误提示，支持空格路径 |
 | `preview.cmd` / `workbench.cmd` | 启动新工作台；preview支持场景选择与显式旧版入口 |
 | `editor.cmd` | 便携环境下启动原生Godot编辑器，F5运行工作台 |
 | `render.cmd` | 保留的旧版无声渲染入口 |
@@ -39,6 +40,7 @@
 | `.runtime/` / `.godot/` / `scratch/` | 工程盘运行依赖、导入缓存、临时验证数据；不纳入源码 |
 | `outputs/` | 控制命令、Take、生产任务、样片、验证证据；不纳入源码 |
 | `outputs/samples/manifest.json` | 稳定样片路径与原始生产任务来源 |
+| `outputs/one_click_validation.json` | 一键入口的独立副本真实启动、重复实例、GPU画面与缺工具检查记录 |
 
 ## 新工作台源码
 
@@ -98,6 +100,7 @@
 | `tools/build_handoff.py` | 选择必要资料/源码/运行工具、导出Git历史、冻结初始场景、生成ZIP与内容清单和校验 |
 | `tools/inventory_reference_media.py` | 按作品ID盘点媒体副本、SHA与历史指标/证据，相对研究根路径 |
 | `tools/preview.ps1` | 默认新工作台、编辑器与显式Legacy启动 |
+| `tools/one_click.ps1` | 复用便携预览入口，用项目互斥锁和进程检查避免重复工作台 |
 | `tools/record_take.gd` | 命令行调用实际物理解算并录制Take |
 | `tools/produce_take.gd` | 校验已有Take、提交同一生产模块、等待真实结束状态 |
 | `tools/render_take.ps1` | 独立原生渲染、离线混音、H.264/AAC编码、完整验证和协作取消 |
