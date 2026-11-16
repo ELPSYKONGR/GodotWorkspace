@@ -17,6 +17,9 @@ func rebuild(records: Dictionary) -> void:
 			extent = Vector2.ONE * (float(shape.get("radius", 18)) + 0.05)
 		elif shape.get("primitive","")=="arc":
 			extent=Vector2.ONE*(float(shape["outer_radius"])+0.05)
+		elif shape.get("primitive", "") == "polygon":
+			extent = Vector2.ZERO
+			for point in preload("res://src/document/shape_geometry.gd").polygon(shape): extent = extent.max(point.rotated(body.rotation).abs() + Vector2.ONE * 0.05)
 		else:
 			var size: Array = shape.get("size", [60, 20])
 			var half := Vector2(maxf(1, float(size[0])), maxf(1, float(size[1]))) / 2

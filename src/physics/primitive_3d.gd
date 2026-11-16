@@ -26,9 +26,9 @@ static func update_material(material: StandardMaterial3D, color: Color, render: 
 	material.albedo_color = color
 	material.metallic = clampf(float(render.get("metallic", 0.15)), 0, 1)
 	material.roughness = clampf(float(render.get("roughness", 0.35)), 0, 1)
-	material.emission_enabled = selected
-	material.emission = Color("fbbf24") if selected else Color.BLACK
-	material.emission_energy_multiplier = 0.35
+	material.emission_enabled = selected or float(render.get("emission", 0)) > 0
+	material.emission = Color("fbbf24") if selected else color
+	material.emission_energy_multiplier = 0.35 if selected else float(render.get("emission", 0))
 
 
 ## Draw collider outlines from the very same primitive shape dimensions.

@@ -15,7 +15,7 @@ func _run() -> void:
 	var directory := "res://outputs/scene_workspace_validation"
 	DirAccess.make_dir_recursive_absolute(directory)
 	var all_types := true
-	for index in 4:
+	for index in host.workspace.TYPES.size():
 		bar.dirty = false
 		bar.type_choice.select(index)
 		bar.examples.button_pressed = true
@@ -32,11 +32,12 @@ func _run() -> void:
 		var save: Dictionary = host.service.execute({"op": "scene.save", "args": {"path": destination}})
 		var saved := Document.load_file(destination)
 		all_types = all_types and save["ok"] and not bar.dirty and saved["ok"] and saved["document"]["objects"].size() == doc["objects"].size()
-		host.service.execute({"op": "object.add", "args": {"kind": "ball"}})
+		# Full/locked templates can still edit scene metadata without adding or unlocking bodies.
+		host.service.execute({"op": "scene.patch", "args": {"changes": {"metadata.title": str(doc["metadata"]["title"]) + "_dirty"}}})
 		all_types = all_types and bar.dirty
 		host.service.execute({"op": "scene.load", "args": {"path": destination}})
 		all_types = all_types and not bar.dirty and host.session.stage.world.records.size() == saved["document"]["objects"].size()
-	results["four_types_create_save_reopen_native_worlds"] = all_types
+	results["all_six_types_create_save_reopen_native_worlds"] = all_types
 	var file_path: String = host.workspace.path
 	var saved_doc := JSON.stringify(host.service.document)
 	var signature: String = host.workspace.saved_signature
@@ -65,7 +66,7 @@ func _run() -> void:
 	results["cancel_preserves_scene"] = bar.pending.is_empty() and before == JSON.stringify(host.service.document)
 	bar.request_replace("scene.new", {"name": "perspective", "blank": true})
 	bar.unsaved_dialog.confirmed.emit()
-	results["save_then_switch_keeps_previous_edits"] = Document.load_file(file_path)["document"]["objects"].size() == 14 and host.service.document["objects"].is_empty() and host.service.document["world"]["dimension"] == "3d" and bar.dirty and host.workspace.path.is_empty()
+	results["save_then_switch_keeps_previous_edits"] = Document.load_file(file_path)["document"]["objects"] == JSON.parse_string(before)["objects"] and host.service.document["objects"].is_empty() and host.service.document["world"]["dimension"] == "3d" and bar.dirty and host.workspace.path.is_empty()
 	bar.unsaved_dialog.hide()
 	# New scenes need a filename; canceling Save As also cancels the pending switch.
 	bar.request_replace("scene.new", {"name": "glass"})

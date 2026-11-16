@@ -57,7 +57,7 @@ func _run() -> void:
 		if button.text == "应用锁定状态": button.pressed.emit(); break
 	result["lock_is_independent_edit"] = commands.back()["args"]["changes"] == {"editor.locked": true}
 	var error_info := {"last_message": "测试错误", "last_message_is_error": true, "audio": {"error": "test_missing_audio"}}
-	ui.pages["调试"].get_parent().get_parent().current_tab = 7
+	ui.pages["调试"].get_parent().get_parent().current_tab = ui.pages["调试"].get_parent().get_index()
 	ui.update_runtime(error_info)
 	ui.update_runtime(error_info)
 	result["runtime_error_keeps_error_color"] = ui.message_label.get_theme_color("font_color") == Color("ff9d9d")

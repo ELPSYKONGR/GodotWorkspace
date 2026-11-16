@@ -9,7 +9,7 @@ func _initialize() -> void:
 
 func _control(node: Node, caption: String) -> Node:
 	if node is Button and node.text == caption: return node
-	if node is HBoxContainer and node.get_child_count() == 2 and node.get_child(0) is Label and node.get_child(0).text == caption: return node.get_child(1)
+	if node is BoxContainer and node.get_child_count() == 2 and node.get_child(0) is Label and node.get_child(0).text == caption: return node.get_child(1)
 	for child in node.get_children():
 		var found := _control(child, caption)
 		if found != null: return found

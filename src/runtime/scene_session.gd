@@ -37,6 +37,8 @@ func _ready() -> void:
 
 ## Reset only the active preview; a prior take is retained and can become stale.
 func load_document(doc: Dictionary, output_scale: float = 1.0) -> void:
+	var keep_view: bool = is_instance_valid(stage) and document.get("scene_id", "") == doc.get("scene_id", "") and document.get("world", {}).get("dimension", "") == "2d" and doc["world"]["dimension"] == "2d"
+	var edit_view: Vector2 = stage.view_top if keep_view else Vector2.ZERO
 	last_error = ""
 	document = doc.duplicate(true)
 	_scale = output_scale
@@ -44,6 +46,7 @@ func load_document(doc: Dictionary, output_scale: float = 1.0) -> void:
 	replay_playing = false
 	_reset_clocks()
 	_make_stage(true)
+	if keep_view: stage.pan_editor(edit_view)
 
 ## Create display-only edit/replay worlds or native dynamic simulation worlds.
 func _make_stage(playback: bool) -> void:
@@ -154,6 +157,7 @@ func seek(value: float, silent: bool = true) -> bool:
 func get_info() -> Dictionary:
 	var report: Dictionary = stage.world.get_report() if is_instance_valid(stage) else {}
 	report["audio"] = audio.get_report() if is_instance_valid(audio) else {}
+	if is_instance_valid(stage): report["camera"] = {"top": [stage.view_top.x, stage.view_top.y], "target": stage.camera_track.state.get("target", ""), "status": stage.camera_track.status}
 	report["last_error"] = last_error
 	report["running"] = replay_playing if mode == "replay" else mode in ["playing", "recording"]
 	report["hit_stop_active"] = mode in ["playing", "recording"] and _last_hold
@@ -180,6 +184,7 @@ func _physics_process(_delta: float) -> void:
 		_hold_ticks = maxi(0, _hold_ticks - 1)
 	time = _film_ticks / hz
 	sim_time = _sim_ticks / hz
+	if _last_active: stage.advance_camera(sim_time)
 	if mode == "recording" and (_last_active or _last_hold): _capture()
 	if mode == "recording" and time >= 60.0:
 		stop_recording()

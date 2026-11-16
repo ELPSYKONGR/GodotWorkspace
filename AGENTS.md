@@ -29,7 +29,7 @@
 - 主要语言GDScript；PowerShell启动和生产，Python负责离线音频/媒体处理。Godot本工程提供OpenGL与Vulkan路径，没有实现DX11切换。
 - `config/workbench_*.json` 是可运行v2场景；`docs/examples/scene_v2.example.json` 是方案示例，不能直接当作运行预设。
 - AI和界面通过 `CommandService` 修改初始数据，先校验再提交。不要绕过修订号、规则校验或直接篡改正在模拟的节点。
-- 当前按目录分模块，但尚未严格四层解耦：World包含绘制/材质，ContactRules访问World记录并创建/移除对象。不能对外声称已经彻底分离；修复小问题也不应顺手大重构。
+- 当前按目录分模块，但尚未严格四层解耦：二维绘制已迁至`body_visuals_2d.gd`，相机只移动显示子树，不准移动真实刚体来伪造镜头；World仍组织材质/表现，ContactRules访问World记录并创建/移除对象。不能对外声称已经彻底分离；修复小问题也不应顺手大重构。
 - 原生物理负责反弹/摩擦，分裂是显式玩法动作。分裂退役原球、子球数量表示总数，默认1→2；`params.children_can_split` 缺省为true。关闭只限制后代分裂，保留其其它机制。
 - 容量不足、出生空间不足、新生保护、最小尺寸等拒绝必须保留并解释。不要为了“每次都分裂”取消边界、叠放子球或偷改子球总数。
 - 真实法线/冲量当前不可用时为null。不得把中心点估算、屏幕粒子或附加喷射速度说成真实接触测量、真实物理碎片或守恒解算。
@@ -39,6 +39,7 @@
 ## 验证与交付
 
 - 按影响范围运行现有验证。分裂变化至少检查 `validate_split_inheritance.gd`；UI变化检查 `validate_ui.gd`；状态/录制变化检查Session；生产变化必须验证实际成片。
+- 轮廓/长世界/局部表现变化检查`validate_scene_editing.gd`、`validate_polygon_styles.gd`、`validate_camera_track.gd`、`validate_long_world.gd`；它们已接入完整入口。新增镜头/缩略图/轮廓用于二维，不将三维正交模式误报为已支持这些新增编辑能力。
 - `tools/validate_workbench.ps1 -Legacy -WavJob` 是完整验收入口，在独立工程副本运行。涉及真实异步生产和音频清理的检查需要真实时间，不同时设置固定帧率和最大帧率。
 - Godot可能脚本报错却退出0；同时检查退出码、日志中的 `SCRIPT ERROR` / `Parse Error` / `ERROR`，及本次新生成的 `passed:true` 报告。
 - 只生成JSON字段、设计文档或启动子进程，不等于功能已实现或任务已完成。最终说明实际改动、验证、证据与尚未完成部分。

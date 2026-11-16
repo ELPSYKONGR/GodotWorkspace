@@ -10,6 +10,10 @@ var form: VBoxContainer
 var fields: Dictionary = {}
 var selected_spec: Dictionary = {}
 var pending_edits: RefCounted
+var shape_editor: Window
+var new_shape_button: Button
+var view_top := Vector2.ZERO
+var parameter_baseline: Dictionary = {}
 
 
 # Build placement actions and the initial-object list once.
@@ -19,6 +23,11 @@ func _ready() -> void:
 	add_child(actions)
 	for pair in [["添加球", "ball"], ["添加方块", "box"], ["添加墙", "wall"], ["添加玻璃（2D）", "glass"]]:
 		F.button(actions, pair[0], func(): command_requested.emit("object.add", {"kind": pair[1]}))
+	new_shape_button = F.button(actions, "绘制新物体（2D）", func(): _open_shape(true))
+	shape_editor = preload("res://src/ui/shape_editor.gd").new()
+	shape_editor.submitted.connect(func(op, args): command_requested.emit(op, args))
+	add_child(shape_editor)
+	shape_editor.hide()
 	F.button(actions, "排列成行", func(): command_requested.emit("object.arrange", {"mode": "row"}))
 	F.button(actions, "排列网格", func(): command_requested.emit("object.arrange", {"mode": "grid"}))
 	listing = ItemList.new()
@@ -33,6 +42,7 @@ func _ready() -> void:
 func sync_document(doc: Dictionary, object_id: String = "") -> void:
 	document = doc
 	selected_id = object_id
+	new_shape_button.disabled = doc.get("world", {}).get("dimension", "2d") != "2d"
 	listing.clear()
 	var objects: Array = doc.get("objects", [])
 	for index in objects.size():
@@ -75,7 +85,7 @@ func _build_form() -> void:
 	var velocity: Array = F.value(selected_spec, "physics.velocity", [0, 0, 0] if is_3d else [0, 0])
 	for index in count:
 		var axis: String = ["X", "Y", "Z"][index]
-		fields["p%d" % index] = F.number(form, "位置 " + axis, float(position[index]), -10000, 10000, 0.1 if is_3d else 1)
+		fields["p%d" % index] = F.number(form, "位置 " + axis, float(position[index]), -100000, 100000, 0.1 if is_3d else 1)
 		fields["v%d" % index] = F.number(form, "初速度 " + axis, float(velocity[index]), -5000, 5000, 0.1 if is_3d else 1)
 	var rotation: Variant = F.value(selected_spec, "transform.rotation_degrees", [0, 0, 0] if is_3d else 0)
 	if is_3d:
@@ -89,13 +99,17 @@ func _build_form() -> void:
 	elif shape.get("primitive","")=="arc":
 		for key in ["inner_radius","outer_radius","start_degrees","end_degrees"]:
 			fields[key]=F.number(form,{"inner_radius":"内半径","outer_radius":"外半径","start_degrees":"起始角度","end_degrees":"结束角度"}[key],float(shape[key]),-3600 if "degrees" in key else 1,3600 if "degrees" in key else 2000,0.1 if "degrees" in key else 1)
+	elif shape.get("primitive", "") == "polygon":
+		F.text(form, "自定义轮廓：%d个顶点；通过下方轮廓编辑修改，凹槽由真实凸分解保留。" % shape["points"].size())
 	else:
 		var dimensions: Array = shape.get("size", [1, 1, 1] if is_3d else [40, 40])
 		for index in count:
-			fields["s%d" % index] = F.number(form, "尺寸 " + ["X", "Y", "Z"][index], float(dimensions[index]), 0.02 if is_3d else 1, 5000, 0.05 if is_3d else 1)
+			fields["s%d" % index] = F.number(form, "尺寸 " + ["X", "Y", "Z"][index], float(dimensions[index]), 0.02 if is_3d else 1, 100000, 0.05 if is_3d else 1)
 	fields["mass"] = F.number(form, "质量", float(F.value(selected_spec, "physics.mass", 1)), 0.01, 10000, 0.01)
-	fields["bounce"] = F.number(form, "弹性", float(F.value(selected_spec, "physics.material.restitution", 0.8)), 0, 1, 0.01)
-	fields["friction"] = F.number(form, "摩擦", float(F.value(selected_spec, "physics.material.friction", 0.1)), 0, 1, 0.01)
+	# Show the same absent-material defaults that the native body builder consumes.
+	var is_static: bool = F.value(selected_spec, "physics.mode", "dynamic") == "static"
+	fields["bounce"] = F.number(form, "弹性", float(F.value(selected_spec, "physics.material.restitution", 0.0 if is_static else (0.65 if is_3d else 0.88))), 0, 1, 0.01)
+	fields["friction"] = F.number(form, "摩擦", float(F.value(selected_spec, "physics.material.friction", 1.0 if is_static else (0.4 if is_3d else 0.03))), 0, 1, 0.01)
 	fields["color"] = F.color(form, "物体颜色", str(F.value(selected_spec, "appearance.color", "#22c55e")))
 	fields["mode"] = F.choice(form, "物理模式", ["dynamic", "static", "sensor"], str(F.value(selected_spec, "physics.mode", "dynamic")))
 	F.text(form, "dynamic受力运动；static作为实体边界；sensor只感知接触。碰撞层和掩码是位掩码（常用1、2、3）。")
@@ -118,6 +132,7 @@ func _build_form() -> void:
 		if control is LineEdit or control is SpinBox: control.editable = not locked
 		elif control is BaseButton: control.disabled = locked
 	F.button(form, "应用物体参数并重置", _apply).disabled = locked
+	parameter_baseline = _changes(fields, selected_spec, document)
 	if pending_edits != null:
 		var parameters: Array = []
 		for key in fields:
@@ -131,6 +146,33 @@ func _build_form() -> void:
 	form.add_child(actions)
 	F.button(actions, "复制物体", func(): command_requested.emit("object.duplicate", {"id": selected_id}))
 	F.button(actions, "删除物体", func(): command_requested.emit("object.remove", {"id": selected_id})).disabled = locked
+	if not is_3d:
+		F.button(actions, "编辑所选轮廓", func(): _open_shape(false)).disabled = locked or selected_spec.has("glass")
+		if selected_spec.has("glass"): F.text(form, "玻璃继续用尺寸/扇区参数编辑；通用轮廓暂不赋予玻璃组件。")
+	preload("res://src/ui/object_visual_panel.gd").build(form, document, selected_spec, func(op, args): command_requested.emit(op, args), pending_edits)
+
+## Open a local draft using typed properties as well as the saved geometry, preserving unknown fields.
+func _open_shape(creating: bool) -> void:
+	if document["world"]["dimension"] != "2d": return
+	if shape_editor.visible:
+		shape_editor.grab_focus()
+		return
+	var spec: Dictionary = preload("res://src/document/scene_document.gd").new_object(document, "box", "draft") if creating else selected_spec.duplicate(true)
+	if creating: spec["transform"]["position"] = [view_top.x + 360, view_top.y + 640]
+	else:
+		var changes := _changes(fields, selected_spec, document)
+		for path in changes:
+			if changes[path] != parameter_baseline.get(path): preload("res://src/document/scene_document.gd").set_field_path(spec, path, changes[path])
+	shape_editor.begin(spec, int(document.get("revision", 1)), creating)
+
+## Successful geometry edits consumed the draft values; do not restore stale pre-edit form snapshots.
+func shape_operation_finished(result: Dictionary) -> void:
+	if not is_instance_valid(shape_editor) or not shape_editor.awaiting: return
+	if result.get("ok", false) and pending_edits != null:
+		var key := "object_parameters:" + str(shape_editor.source["id"])
+		pending_edits.groups.erase(key)
+		pending_edits.drafts.erase(key)
+	shape_editor.operation_finished(result)
 
 
 # Commit one object edit instead of rebuilding on every spinbox change.
@@ -169,7 +211,7 @@ func _changes(controls: Dictionary, spec: Dictionary, doc: Dictionary) -> Dictio
 	if controls.has("radius"): changes["shape.radius"] = controls["radius"].value
 	elif controls.has("inner_radius"):
 		for key in ["inner_radius","outer_radius","start_degrees","end_degrees"]: changes["shape."+key]=controls[key].value
-	else: changes["shape.size"] = dimensions
+	elif controls.has("s0"): changes["shape.size"] = dimensions
 	if controls.has("glass_hits"):
 		changes["glass.hits"]=int(controls["glass_hits"].value)
 		changes["glass.shards"]=int(controls["glass_shards"].value)

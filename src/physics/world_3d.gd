@@ -75,6 +75,11 @@ func create_object(value: Dictionary, born: float) -> void:
 		var collider := CollisionShape3D.new()
 		collider.shape = geometry["shape"]
 		body.add_child(collider)
+	if body is RigidBody3D or body is StaticBody3D:
+		var material := PhysicsMaterial.new()
+		material.bounce = float(physics.get("material", {}).get("restitution", 0.0 if mode == "static" else 0.65))
+		material.friction = float(physics.get("material", {}).get("friction", 1.0 if mode == "static" else 0.4))
+		body.physics_material_override = material
 	if body is RigidBody3D:
 		body.mass = maxf(0.001, float(physics.get("mass", 1)))
 		body.gravity_scale = 0
@@ -86,10 +91,6 @@ func create_object(value: Dictionary, born: float) -> void:
 		body.contact_monitor = true
 		body.max_contacts_reported = 32
 		body.continuous_cd = bool(physics.get("ccd", true))
-		var material := PhysicsMaterial.new()
-		material.bounce = clampf(float(physics.get("material", {}).get("restitution", 0.65)), 0, 1)
-		material.friction = clampf(float(physics.get("material", {}).get("friction", 0.4)), 0, 1)
-		body.physics_material_override = material
 	var visual := MeshInstance3D.new()
 	visual.mesh = geometry["mesh"]
 	visual.material_override = StandardMaterial3D.new()
@@ -284,5 +285,6 @@ func _color(spec: Dictionary) -> Color: # Apply the current generation's appeara
 func _update_material(id: String) -> void: # Refresh visual resources without touching physical motion.
 	var material: StandardMaterial3D = records[id]["visual"].material_override
 	var render: Dictionary = document.get("presentation", {}).get("render", {})
+	render = preload("res://src/document/object_style.gd").material(records[id]["spec"], render)
 	Primitive.update_material(material, _color(records[id]["spec"]), render, id == selected_id)
 	records[id]["outline"].visible = debug_enabled or id == selected_id

@@ -39,10 +39,11 @@ static func validate(doc: Dictionary) -> PackedStringArray:
 		ids[id] = true
 		var shape: Dictionary = spec.get("shape", {})
 		var primitive := str(shape.get("primitive", ""))
-		var allowed := ["sphere", "box"] if dimensions == 3 else ["circle", "rectangle", "line", "arc"]
+		var allowed := ["sphere", "box"] if dimensions == 3 else ["circle", "rectangle", "line", "arc", "polygon"]
 		if primitive not in allowed: errors.append("不支持的形状：" + primitive)
 		if primitive in ["circle", "sphere"]:
 			if not _positive(shape.get("radius", 0)) or float(shape.get("radius", 0)) < (0.02 if dimensions == 3 else 1.0): errors.append("半径低于物理最小尺寸：" + id)
+		elif primitive == "polygon": errors.append_array(preload("res://src/document/shape_geometry.gd").validate(shape))
 		elif primitive == "arc":
 			if not _positive(shape.get("inner_radius",0)) or not _positive(shape.get("outer_radius",0)) or float(shape.get("inner_radius",0))<1 or float(shape.get("outer_radius",0))>2000 or float(shape.get("outer_radius",0))-float(shape.get("inner_radius",0))<1: errors.append("玻璃环内外半径无效："+id)
 			var start: Variant=shape.get("start_degrees",null)
@@ -74,6 +75,7 @@ static func validate(doc: Dictionary) -> PackedStringArray:
 		if not _positive(physics.get("mass", 1)): errors.append("质量必须是有限正数：" + id)
 		if physics.has("velocity") and not _vector(physics["velocity"], dimensions): errors.append("速度无效：" + id)
 		if not spec.get("mechanisms", []) is Array or not spec.get("tags", []) is Array: errors.append("标签和机制引用需要数组：" + id)
+		elif primitive not in ["circle", "sphere"] and "split_ball" in spec.get("mechanisms", []): errors.append("分裂组件仅支持圆/球；修改形状前请移除该组件：" + id)
 	if dynamic_count > max_dynamic: errors.append("初始动态物体超过world.max_dynamic_bodies")
 	if fixed_count > MAX_FIXED_OBJECTS: errors.append("静态物体和区域合计不能超过256")
 	if not doc.get("mechanisms", []) is Array: return PackedStringArray(["mechanisms需要数组"])
@@ -99,6 +101,7 @@ static func validate(doc: Dictionary) -> PackedStringArray:
 			if not _positive(size) or float(size) < 8 or float(size) > 256: errors.append("文字字号需要8～256")
 	if presentation.get("render", {}) is Dictionary and not presentation.get("render", {}).get("camera", {}) is Dictionary: errors.append("相机需要对象数据")
 	if presentation.get("render", {}) is Dictionary: errors.append_array(_validate_neon(presentation.get("render", {}).get("neon", {})))
+	errors.append_array(preload("res://src/document/extended_validation.gd").validate(doc))
 	return errors
 
 ## Bounded, finite visual parameters keep malformed scene files out of shader uniforms.

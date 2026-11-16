@@ -1,0 +1,562 @@
+{
+  "schema_version": 2,
+  "scene_id": "long_world_lineage_demo",
+  "revision": 1,
+  "metadata": {
+    "title": "纵向长场景 · 子球谱系跟随",
+    "status": "implemented_workbench"
+  },
+  "world": {
+    "dimension": "2d",
+    "units": "logical_px",
+    "logical_size": [
+      720,
+      1280
+    ],
+    "physics_hz": 120,
+    "gravity": [
+      0,
+      450
+    ],
+    "seed": 20261113,
+    "max_dynamic_bodies": 16,
+    "bounds_2d": [
+      0,
+      0,
+      720,
+      20000
+    ]
+  },
+  "objects": [
+    {
+      "id": "ball_A",
+      "name": "绿色初始球A",
+      "tags": [
+        "ball",
+        "splitter"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          240,
+          420
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          100,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.88,
+          "friction": 0.03
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#22c55e",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        },
+        "material": {
+          "mode": "custom",
+          "neon": {
+            "enabled": true,
+            "glow_width": 22,
+            "glow_strength": 1.0,
+            "highlight_size": 0.3,
+            "highlight_strength": 1.2
+          }
+        },
+        "effects": {
+          "mode": "custom",
+          "enabled": true,
+          "impact_particles": true,
+          "count": 6,
+          "color": "#a0f6bf",
+          "trail_enabled": true,
+          "ring": true
+        }
+      },
+      "mechanisms": [
+        "split_ball"
+      ],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "floor",
+      "name": "地面",
+      "tags": [
+        "boundary",
+        "floor"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          720,
+          24
+        ]
+      },
+      "transform": {
+        "position": [
+          360,
+          19988
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "friction": 0.1,
+          "restitution": 0.05
+        }
+      },
+      "appearance": {
+        "color": "#42667d"
+      },
+      "editor": {
+        "boundary_role": "floor"
+      }
+    },
+    {
+      "id": "wall_left",
+      "name": "左墙",
+      "tags": [
+        "boundary",
+        "wall"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          24,
+          20000
+        ]
+      },
+      "transform": {
+        "position": [
+          12,
+          10000
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "friction": 0.1,
+          "restitution": 0.05
+        }
+      },
+      "appearance": {
+        "color": "#42667d"
+      },
+      "editor": {
+        "boundary_role": "wall_left"
+      }
+    },
+    {
+      "id": "wall_right",
+      "name": "右墙",
+      "tags": [
+        "boundary",
+        "wall"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          24,
+          20000
+        ]
+      },
+      "transform": {
+        "position": [
+          708,
+          10000
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "friction": 0.1,
+          "restitution": 0.05
+        }
+      },
+      "appearance": {
+        "color": "#42667d"
+      },
+      "editor": {
+        "boundary_role": "wall_right"
+      }
+    },
+    {
+      "id": "ledge_0",
+      "name": "斜坡 1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          240,
+          18
+        ]
+      },
+      "transform": {
+        "position": [
+          150,
+          1800
+        ],
+        "rotation_degrees": -15
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "friction": 0.1,
+          "restitution": 0.05
+        }
+      },
+      "appearance": {
+        "color": "#447a99"
+      },
+      "editor": {
+        "locked": false
+      }
+    },
+    {
+      "id": "ledge_1",
+      "name": "斜坡 2",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          240,
+          18
+        ]
+      },
+      "transform": {
+        "position": [
+          560,
+          2900
+        ],
+        "rotation_degrees": 15
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "friction": 0.1,
+          "restitution": 0.05
+        }
+      },
+      "appearance": {
+        "color": "#447a99"
+      },
+      "editor": {
+        "locked": false
+      }
+    },
+    {
+      "id": "ledge_2",
+      "name": "斜坡 3",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          240,
+          18
+        ]
+      },
+      "transform": {
+        "position": [
+          140,
+          4400
+        ],
+        "rotation_degrees": -15
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "friction": 0.1,
+          "restitution": 0.05
+        }
+      },
+      "appearance": {
+        "color": "#447a99"
+      },
+      "editor": {
+        "locked": false
+      }
+    },
+    {
+      "id": "ledge_3",
+      "name": "斜坡 4",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          240,
+          18
+        ]
+      },
+      "transform": {
+        "position": [
+          570,
+          6000
+        ],
+        "rotation_degrees": 15
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "friction": 0.1,
+          "restitution": 0.05
+        }
+      },
+      "appearance": {
+        "color": "#447a99"
+      },
+      "editor": {
+        "locked": false
+      }
+    },
+    {
+      "id": "outline_U",
+      "name": "可编辑U形",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "polygon",
+        "points": [
+          [
+            -112,
+            -96
+          ],
+          [
+            -64,
+            -96
+          ],
+          [
+            -64,
+            64
+          ],
+          [
+            64,
+            64
+          ],
+          [
+            64,
+            -96
+          ],
+          [
+            112,
+            -96
+          ],
+          [
+            112,
+            112
+          ],
+          [
+            -112,
+            112
+          ]
+        ]
+      },
+      "transform": {
+        "position": [
+          360,
+          8500
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "friction": 0.1,
+          "restitution": 0.05
+        }
+      },
+      "appearance": {
+        "color": "#f2a65c",
+        "material": {
+          "mode": "custom",
+          "neon": {
+            "enabled": true
+          }
+        }
+      },
+      "editor": {
+        "locked": false
+      }
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "split_ball",
+      "type": "split_on_contact",
+      "enabled": true,
+      "priority": 100,
+      "trigger": {
+        "type": "contact",
+        "phases": [
+          "enter",
+          "stay"
+        ],
+        "recheck_active_after_birth_guard": true
+      },
+      "conditions": {
+        "other_tags_any": [
+          "ball",
+          "boundary"
+        ],
+        "newborn_guard_seconds": 0.08,
+        "require_minimum_impact": false
+      },
+      "params": {
+        "children_total": 2,
+        "remove_parent": true,
+        "size_policy": "conserve_area",
+        "capacity_policy": "skip_whole_split",
+        "placement_failure": "skip_and_report",
+        "ejection_speed": 80
+      }
+    },
+    {
+      "id": "split_hitstop",
+      "type": "hit_stop_on_event",
+      "enabled": false,
+      "scope": "global",
+      "trigger": {
+        "type": "split.committed"
+      },
+      "params": {
+        "seconds": 0.06,
+        "same_batch_policy": "maximum"
+      }
+    }
+  ],
+  "presentation": {
+    "render": {
+      "backend": "compatibility",
+      "background": "#0c1722",
+      "camera": {
+        "projection": "canvas",
+        "mode": "follow_y",
+        "target_root": "ball_A",
+        "on_split": "lowest_descendant",
+        "framing_y": 0.42,
+        "dead_zone_top": 0.32,
+        "dead_zone_bottom": 0.58,
+        "smooth_seconds": 0.18,
+        "only_down": true,
+        "limit_world": true,
+        "position_2d": [
+          0,
+          0
+        ]
+      },
+      "debug_overlay_in_export": false,
+      "roughness": 0.35,
+      "metallic": 0.15,
+      "shadows": true,
+      "debug": true,
+      "neon": {
+        "enabled": false
+      }
+    },
+    "captions": [
+      {
+        "id": "main_title",
+        "text": "沿子球谱系继续下落",
+        "position": [
+          44,
+          54
+        ],
+        "font_family": "Microsoft YaHei",
+        "font_size": 44,
+        "color": "#edf5ff"
+      },
+      {
+        "id": "subtitle",
+        "text": "真实碰撞 · 纵向镜头 · 独立物体材质",
+        "position": [
+          44,
+          130
+        ],
+        "font_family": "Microsoft YaHei",
+        "font_size": 23,
+        "color": "#9cb2cc"
+      }
+    ],
+    "audio": {
+      "enabled": true,
+      "preset": "wood",
+      "volume_db": -12,
+      "pitch": 1.0,
+      "min_interval": 0.035,
+      "max_voices": 16,
+      "sample_rate": 48000
+    },
+    "effects": {
+      "enabled": true,
+      "count": 12,
+      "lifetime": 0.35,
+      "speed": 140,
+      "trail_enabled": true,
+      "trail_seconds": 0.2,
+      "ring": true,
+      "flash": true,
+      "time_domain": "simulation"
+    }
+  },
+  "take_settings": {
+    "duration_seconds": 12,
+    "record_every_physics_tick": true,
+    "chunk_seconds": 1
+  },
+  "export_preset": {
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 60,
+    "duration_seconds": 12,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "source": "recorded_take"
+  }
+}

@@ -65,6 +65,7 @@ func _apply_run(args: Dictionary) -> Dictionary:
 
 ## Validate a whole editing transaction before making it visible.
 func _edit(op: String, args: Dictionary) -> Dictionary:
+	if args.has("expected_revision") and int(args["expected_revision"]) != int(document.get("revision", 1)): return {"ok": false, "error": "形状草稿期间场景已修改，请保留草稿并重新读取物体；可另存为新物体"}
 	if op in ["scene.patch", "object.update"] and not args.get("changes", {}) is Dictionary:
 		return {"ok": false, "error": "changes需要字段路径到值的对象数据"}
 	var next := document.duplicate(true)
@@ -73,9 +74,12 @@ func _edit(op: String, args: Dictionary) -> Dictionary:
 		for path in args.get("changes", {}):
 			if not Document.set_field_path(next, path, args["changes"][path]): return {"ok": false, "error": "无效字段路径：" + path}
 	elif op == "object.add":
+		if args.has("spec") and not args["spec"] is Dictionary: return {"ok": false, "error": "新物体规格需要对象数据"}
 		if args.get("kind","")=="glass" and next["world"]["dimension"]!="2d": return {"ok":false,"error":"玻璃组件目前支持二维场景"}
 		var id := "object_" + str(Time.get_ticks_usec())
-		next["objects"].append(Document.new_object(next, str(args.get("kind", "ball")), id))
+		var spec: Dictionary = args.get("spec", Document.new_object(next, str(args.get("kind", "ball")), id)).duplicate(true)
+		spec["id"] = id
+		next["objects"].append(spec)
 	elif op == "object.arrange":
 		var serial := 0
 		var three: bool = next["world"]["dimension"] == "3d"

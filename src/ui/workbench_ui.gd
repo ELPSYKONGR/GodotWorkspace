@@ -8,6 +8,8 @@ const ObjectPanel = preload("res://src/ui/object_panel.gd")
 const Components = preload("res://src/ui/component_panels.gd")
 const Production = preload("res://src/ui/production_panels.gd")
 const SceneBar = preload("res://src/ui/scene_bar.gd")
+const ScenePanel = preload("res://src/ui/scene_panel.gd")
+var minimap: Control
 var pending_edits = preload("res://src/ui/pending_edits.gd").new()
 var collecting_edits := false
 var collected_edits: Array = []
@@ -88,19 +90,23 @@ func _build() -> void:
 	preview.texture = preview_texture
 	preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	preview.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	preview.custom_minimum_size = Vector2(380, 450)
+	preview.custom_minimum_size = Vector2(380, 330)
 	preview.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	preview.mouse_filter = Control.MOUSE_FILTER_STOP
 	preview.focus_mode = Control.FOCUS_ALL
 	preview.gui_input.connect(_preview_input)
 	preview_column.add_child(preview)
+	F.text(preview_column, "世界缩略图 · 黄色框为当前画幅（二维编辑时可点击定位）")
+	minimap = preload("res://src/ui/world_minimap.gd").new()
+	minimap.navigate.connect(func(top): _send("camera.pan", {"position": [top.x, top.y]}))
+	preview_column.add_child(minimap)
 	F.text(preview_column, "点选物体 · Delete删除 · 编辑模式拖动布置 · 右侧应用参数\n视频只渲染上方画面，工作台与调试叠加不会进入成片。")
 	var tabs := TabContainer.new()
 	tabs.custom_minimum_size.x = 560
 	tabs.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	tabs.size_flags_stretch_ratio = 1.15
 	body.add_child(tabs)
-	for caption in ["物体", "机制", "渲染", "声音", "特效", "回放", "生产", "调试"]:
+	for caption in ["物体", "场景", "机制", "渲染", "声音", "特效", "回放", "生产", "调试"]:
 		var scroll := ScrollContainer.new()
 		scroll.name = caption
 		scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
@@ -164,7 +170,8 @@ func sync_document(doc: Dictionary, selected_id: String = "") -> void:
 	if synced_revision == int(doc.get("revision", 0)) and synced_document == doc: return
 	synced_revision = int(doc.get("revision", 0))
 	synced_document = doc.duplicate(true)
-	for caption in ["机制", "渲染", "声音", "特效", "回放", "生产", "调试"]: F.clear(pages[caption])
+	for caption in ["场景", "机制", "渲染", "声音", "特效", "回放", "生产", "调试"]: F.clear(pages[caption])
+	ScenePanel.build(pages["场景"], doc, _send, pending_edits, selected_id)
 	Components.mechanisms(pages["机制"], doc, _send, pending_edits)
 	Production.rendering(pages["渲染"], doc, _send, pending_edits)
 	Components.audio(pages["声音"], doc, _send, pending_edits)
@@ -210,6 +217,7 @@ func update_runtime(info: Dictionary) -> void:
 	lines.append("生产任务：" + str(info.get("job_status", "空闲")))
 	lines.append("选中：" + str(info.get("selected_id", "无")))
 	lines.append("声音状态：" + JSON.stringify(info.get("audio", {})))
+	lines.append("镜头状态：" + JSON.stringify(info.get("camera", {})))
 	var events: Array = info.get("events", [])
 	# This is historical evidence; a prior guard/space rejection may already have cleared.
 	for index in range(events.size() - 1, -1, -1):

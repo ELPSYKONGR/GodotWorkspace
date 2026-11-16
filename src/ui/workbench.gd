@@ -74,6 +74,8 @@ func _process(delta: float) -> void:
 	var job: Dictionary = jobs.status()
 	info.merge({"selected_id": selected_id, "last_message": message, "last_message_is_error": message_is_error, "job_status": JSON.stringify(job), "output_fps": output_fps}, true)
 	panel.update_runtime(info)
+	panel.minimap.update_world(session.stage)
+	panel.object_panel.view_top = session.stage.view_top
 	bridge.publish(info)
 
 ## UI edits become revisioned commands just like AI files.
@@ -84,6 +86,7 @@ func _from_ui(op: String, args: Dictionary) -> void:
 func _after_command(result: Dictionary) -> void:
 	message = str(result.get("message", result.get("error", "完成")))
 	message_is_error = not result.get("ok", false)
+	panel.object_panel.shape_operation_finished(result)
 	if result.get("run_after_apply", false):
 		output_fps = int(service.document.get("export_preset", {}).get("fps", output_fps))
 		panel.pending_edits.groups.clear()
@@ -121,6 +124,15 @@ func _unhandled_key_input(event: InputEvent) -> void:
 ## Dispatch runtime commands without giving panels ownership of world nodes.
 func _runtime_command(op: String, args: Dictionary) -> Dictionary:
 	match op:
+		"camera.pan":
+			if session.document["world"]["dimension"] != "2d" or session.mode != "edit": return {"ok": false, "error": "缩略图导航用于二维编辑模式；运行时镜头按跟随设置移动"}
+			var point: Variant = args.get("position", [])
+			if not point is Array or point.size() != 2 or not point.all(func(n): return (n is int or n is float) and is_finite(float(n))): return {"ok": false, "error": "导航位置需要二维有限坐标"}
+			session.stage.pan_editor(Vector2(float(point[0]), float(point[1])))
+			return {"ok": true, "message": "已定位世界区域；点击画面选中物体后可直接修改"}
+		"camera.return_view":
+			if session.document["world"]["dimension"] != "2d" or session.mode != "edit": return {"ok": false, "error": "返回镜头视图用于二维编辑模式"}
+			session.stage.pan_editor(session.stage.camera_track.initial()["top"])
 		"scene.new":
 			return _replace_scene(workspace.create_scene(str(args.get("name", "2d")), bool(args.get("blank", false))))
 		"scene.preset":
@@ -204,6 +216,7 @@ func _save_take(path: String) -> Dictionary:
 
 ## Picking and drag placement share logical coordinates across preview sizes.
 func _viewport_input(event: InputEvent, point: Vector2) -> void:
+	if session.document["world"]["dimension"] == "2d": point += session.stage.view_top
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			selected_id = session.stage.world.pick(point)

@@ -44,8 +44,27 @@ static func number(parent: Node, caption: String, initial: float, low: float = -
 	field.max_value = floor(high / step) * step
 	field.step = step
 	field.value = initial
-	field.custom_minimum_size.x = 120
-	row(parent, caption, field)
+	field.custom_minimum_size.x = 88
+	field.get_line_edit().add_theme_constant_override("minimum_character_width", 0)
+	field.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	# Consecutive numbers share a wrapping row; text/path controls retain full width.
+	var flow: HFlowContainer
+	if parent.get_child_count() > 0 and parent.get_child(-1) is HFlowContainer and parent.get_child(-1).has_meta("numeric_fields"):
+		flow = parent.get_child(-1)
+	else:
+		flow = HFlowContainer.new()
+		flow.set_meta("numeric_fields", true)
+		flow.add_theme_constant_override("h_separation", 10)
+		parent.add_child(flow)
+	var cell := VBoxContainer.new()
+	cell.custom_minimum_size.x = 150
+	var label := Label.new()
+	label.text = caption
+	label.tooltip_text = caption
+	label.clip_text = true
+	cell.add_child(label)
+	cell.add_child(field)
+	flow.add_child(cell)
 	return field
 
 

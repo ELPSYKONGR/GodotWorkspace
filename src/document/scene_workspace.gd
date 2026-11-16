@@ -1,7 +1,7 @@
 extends RefCounted
 ## User scene identity and safe persistence; built-in examples remain reusable templates.
 const Document = preload("res://src/document/scene_document.gd")
-const TYPES := {"2d": "二维", "3d": "正交三维", "perspective": "透视三维", "glass": "玻璃演示", "neon": "荧光演示"}
+const TYPES := {"2d": "二维", "3d": "正交三维", "perspective": "透视三维", "glass": "玻璃演示", "neon": "荧光演示", "long": "纵向长场景"}
 var path := ""
 var saved_signature := ""
 
@@ -33,6 +33,7 @@ func create_scene(kind: String, blank: bool) -> Dictionary:
 		doc["mechanisms"] = []
 		doc["presentation"]["captions"] = []
 		doc["presentation"]["glass_counter"] = false
+		if doc["presentation"]["render"].get("camera", {}).has("target_root"): doc["presentation"]["render"]["camera"]["target_root"] = ""
 	path = ""
 	saved_signature = ""
 	return result

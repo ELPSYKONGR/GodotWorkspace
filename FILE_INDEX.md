@@ -14,6 +14,8 @@
 | `render.cmd` | 保留的旧版无声渲染入口 |
 | `config/workbench_glass.json` / `glass.cmd` | 8扇区二维玻璃演示与便携入口 |
 | `config/workbench_neon.json` / `neon.cmd` | 128球青蓝/粉色荧光场景与便携入口 |
+| `config/workbench_long.json` | 720×20000纵向长世界、斜坡、U形与子球谱系跟随演示；`preview.cmd -Scene long`可启动 |
+| `docs/长场景与轮廓编辑使用验收.md` / `docs/design/native-editor-20261116/` | 原生长世界/轮廓/局部表现操作、数据字段、实际界面截图、验收与限制 |
 | `docs/二维荧光使用与验收.md` | 二维荧光、高光、性能与样片证据 |
 | `docs/玻璃使用与验收.md` | 使用方法、实例化边界、专项和样片证据 |
 | `config/workbench_2d.json` | 可运行v2二维碰撞分裂场景 |
@@ -30,8 +32,8 @@
 | `docs/迁移与打包说明.md` / `docs/迁移验收.md` | 离线恢复、配置、完整性、Git历史及异盘实际验证 |
 | `docs/standards/ENGINEERING_STANDARD_ENHANCED_v2.1.md` | 用户提供的通用工程标准原文 |
 | `docs/third_party/` | Godot、FFmpeg许可和附带声明正文 |
-| `docs/工作台使用说明.md` | 八个面板、录制/回放/生产、AI协议、代码调试与边界 |
-| `docs/长场景与属性面板方案_20261116.md` | Git现状证据、长世界/镜头、紧凑表单、材质/背景/多轨声音、分批接入与验收方案；尚未实现新增引擎功能 |
+| `docs/工作台使用说明.md` | 九个面板、录制/回放/生产、AI协议、代码调试与边界 |
+| `docs/长场景与属性面板方案_20261116.md` | 历史Git核对和接入设计；顶部链接最新实施状态，音频分路/多轨背景音等仍待实现 |
 | `docs/形状编辑环境与多列属性方案_20261116.md` | 多列属性、已有场景直接修改与新建草图双入口、轮廓原位更新、模拟接入方案，L形/U形物理可行性与未集成边界 |
 | `docs/design/inspector-20261116/` | 九类多列属性及形状绘制/布置原型、逐页PNG、交互验证；各源文件职责见目录README |
 | `docs/design/inspector-20261116/native-shape-check.gd` / `native-shape-validation.json` | 独立工程运行的凸分解/原生接触检查与9项实测结果；不启动工作台或控制桥 |
@@ -51,18 +53,24 @@
 | 文件 | 职责 |
 |---|---|
 | `src/document/scene_document.gd` | v2场景校验、稳定ID、字段路径更新、simulation_hash、对象初始规格 |
-| `src/document/scene_workspace.gd` | 四种新建模板、保存基线、文件身份、示例保护与原子保存 |
+| `src/document/shape_geometry.gd` | 无节点的简单多边形校验、轮廓/AABB/最近边界，供物理/绘制/拾取复用 |
+| `src/document/extended_validation.gd` | 可选长世界/镜头/独立材质/特效与物理材质校验，兼容旧v2 |
+| `src/document/object_style.gd` | 全局/独立物体材质及特效解析，后代沿root_id读取初始物体表现 |
+| `src/document/scene_workspace.gd` | 六种新建模板、保存基线、文件身份、示例保护与原子保存 |
 | `src/commands/command_service.gd` | AI/面板统一修订号命令、原子批量应用、校验、回执与50步初始数据撤销/重做 |
 | `src/commands/file_bridge.gd` | JSON收件箱、已处理文件、结果回执、原子发布场景/运行状态 |
 | `src/runtime/scene_session.gd` | 编辑/模拟/录制/回放状态、双时间、实际物理启停、音效消费 |
 | `src/physics/world_2d.gd` | 原生二维刚体与传感器、拾取/布置、接触、状态采样/恢复 |
 | `src/physics/world_3d.gd` | 原生三维刚体与传感器、三维拾取/平面布置、状态采样/恢复 |
+| `src/physics/shape_2d.gd` | 同一几何编译圆/矩形/厚线/扇区/凹多边形原生碰撞夹具；多片保持同一刚体 |
 | `src/physics/primitive_3d.gd` | 三维原语、材质、变换及几何辅助 |
 | `src/physics/birth_space_2d.gd` | 出生几何的保守网格筛选，精确窄相仍由World2D判断 |
 | `src/physics/native_contacts_2d.gd` | 原生接触信号的双向集合与退役清理 |
 | `src/physics/contact_anchor.gd` | 从明确的形状几何估算表现锚点；不冒充引擎真实接触点 |
 | `src/mechanisms/contact_rules.gd` | 接触episode、保护期重试、子球继续分裂开关、批次分裂/移除、容量与空间拒绝原因 |
 | `src/presentation/stage.gd` | 共享的干净Stage、世界/特效/文字组合、三维投影与输出缩放 |
+| `src/presentation/camera_track_2d.gd` | 固定快照驱动二维纵向镜头、死区/平滑/只向下/谱系选择，实时与任意Take寻帧共用 |
+| `src/presentation/body_visuals_2d.gd` | 独立二维显示子树、逐物体荧光分组；相机移动不改变物理节点 |
 | `src/presentation/effect_batch.gd` / `effect_circle.gdshader` | 圆形特效的实例批量与像素抗锯齿 |
 | `src/presentation/neon_2d.gd` / `neon_ball.gdshader` / `neon_wall.gdshader` | 两个实例批次的球面高光、边框亮线与解析光晕 |
 | `src/presentation/effects.gd` | 按事件/年龄恢复的屏幕粒子、圆环、闪光、Take拖尾 |
@@ -71,11 +79,15 @@
 | `src/production/job_queue.gd` | 单个活动任务、冻结场景/Take/WAV、子进程、状态与协作取消 |
 | `src/production/renderer.gd` | 无物理解算的Take恢复、干净画面逐帧PNG导出 |
 | `src/ui/workbench.gd` | 主控制器；串联命令/会话/预览/AI桥/生产，维护选择与拖动 |
-| `src/ui/workbench_ui.gd` | 原生Control界面、八标签页、工具栏、时间轴、预览坐标转换 |
+| `src/ui/workbench_ui.gd` | 原生Control界面、九标签页、工具栏、时间轴、预览坐标转换 |
+| `src/ui/scene_panel.gd` | 长世界范围、跟随参数、标准边界同步，复用统一草稿/命令事务 |
+| `src/ui/world_minimap.gd` | 编辑器世界缩略图、真实物体/画幅概览、编辑导航逆变换，不进入成片 |
+| `src/ui/shape_canvas.gd` / `shape_editor.gd` | 原生局部轮廓绘制/改顶点/网格吸附、已有ID应用/副本/取消/修订冲突保护 |
+| `src/ui/object_visual_panel.gd` | 独立材质/特效面板、各自应用/草稿/锁定，保留运动与全局设置 |
 | `src/ui/scene_bar.gd` | 新建/打开/保存/另存为入口、文件窗口与未保存切换提示 |
 | `docs/场景管理验收.md` | 场景管理范围、操作和实测证据 |
 | `scenes/` | 用户保存场景的默认目录，不纳入源码Git |
-| `src/ui/form_helpers.gd` | 表单控件、选项和字段读取辅助 |
+| `src/ui/form_helpers.gd` | 表单控件、88px数值框/多列换行、选项和字段读取辅助 |
 | `src/ui/pending_edits.gd` | 待应用表单组、草稿恢复、多物体修改快照与统一提交收集 |
 | `src/ui/object_panel.gd` | 初始对象列表、布置/物理/外观属性、锁定与增删复制 |
 | `src/ui/component_panels.gd` | 机制、声音、屏幕特效参数面板 |
@@ -137,7 +149,12 @@
 | `tools/benchmark_split_capacity.gd` / `docs/分裂同屏容量实测_20261114.md` | 独立副本真实GPU分裂容量/持续出生帧耗时测量；记录严格60帧尚未达标和屏内数量限制 |
 | `docs/碰撞停顿排查与修复.md` | FPS正常但运动冻结的根因、当前场景开/关对照与修复证据 |
 | `docs/性能与批量应用验收.md` | 最低速度/统一应用用法、回放修复与原始GPU性能证据 |
-| `tools/validate_scene_workspace.gd` | 四类型真实世界保存重开、中文路径、未保存提示、失败保护与布局保存 |
+| `tools/validate_scene_workspace.gd` | 六类型真实世界保存重开、中文路径、未保存提示、失败保护与布局保存 |
+| `tools/validate_scene_editing.gd` | 原生轮廓新建/同ID修改/撤销/冲突、长世界选取拖动、局部表现/88px/持久化 |
+| `tools/validate_camera_track.gd` | 镜头死区/平滑/边界/只向下/谱系/乱序寻帧与非法配置 |
+| `tools/validate_polygon_styles.gd` | 实际L/U原生碰撞、出生空间、后代特效/颜色/时钟、3D静态/PBR材质 |
+| `tools/validate_long_world.gd` | 真实长场景录制/分裂/跟随及实时/回放镜头对照，生成供生产的Take |
+| `outputs/scene_editing_20261116/` / `outputs/samples/long_world_follow.mp4` | 本轮专项/完整回归/媒体证据、冻结输入、Take及实际样片，不纳入源码Git |
 | `tools/validate_media.gd` | 程序化表现、预览声音与资源格式 |
 | `tools/validate_mixer.py` | 离线混音、声部/限流与事件时间对齐 |
 | `tools/validate_capacity.gd` | 活动物体/固定物体边界、实际世界采样、Take保存/加载和拒绝溢出 |
@@ -156,7 +173,7 @@
 
 ```mermaid
 flowchart TD
-  UI[八页工作台] --> CMD[CommandService]
+  UI[九页工作台 / 轮廓草稿] --> CMD[CommandService]
   AI[AI文件收件箱] --> Bridge[FileBridge]
   Bridge --> CMD
   CMD --> Doc[SceneDocument 初始数据]
@@ -171,6 +188,11 @@ flowchart TD
   World --> Take[TakeStore 实际轨迹]
   Rules --> Take
   Session --> Stage[Stage 画面 / 声音 / 特效]
+  Stage --> Camera[CameraTrack2D 镜头与谱系]
+  Camera --> Take
+  Stage --> Visuals[二维显示子树 / 独立材质与特效]
+  World --> Geometry[共享轮廓 / 原生夹具编译]
+  UI --> Geometry
   Take --> Stage
   Take --> Job[JobQueue 冻结输入]
   Job --> Renderer[独立Godot真实渲染]

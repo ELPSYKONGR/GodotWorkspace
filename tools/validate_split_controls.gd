@@ -16,7 +16,7 @@ func _button(node: Node, caption: String) -> Button:
 
 ## Locate the numeric property by its adjacent label, as presented to the user.
 func _number(node: Node, caption: String) -> SpinBox:
-	if node is HBoxContainer and node.get_child_count() == 2 and node.get_child(0) is Label:
+	if node is BoxContainer and node.get_child_count() == 2 and node.get_child(0) is Label:
 		if node.get_child(0).text == caption: return node.get_child(1) as SpinBox
 	for child in node.get_children():
 		var found := _number(child, caption)

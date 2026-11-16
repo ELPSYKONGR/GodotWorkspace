@@ -23,6 +23,7 @@ var neon: Node2D
 var birth_space = preload("res://src/physics/birth_space_2d.gd").new()
 var birth_space_ready := false
 var native_contacts = preload("res://src/physics/native_contacts_2d.gd").new()
+var visuals: Node2D
 
 
 ## Accept immutable initial scene data before entering the scene tree.
@@ -41,15 +42,18 @@ func _ready() -> void:
 	for spec in document.get("objects", []):
 		create_object(spec, -1000.0)
 	initial_dynamic = dynamic_count()
+	visuals = preload("res://src/presentation/body_visuals_2d.gd").new()
+	visuals.world = self
+	add_child(visuals)
 	ball_batch=load("res://src/presentation/effect_batch.gd").new()
 	ball_batch.z_index=1
-	add_child(ball_batch)
+	visuals.add_child(ball_batch)
 	neon = load("res://src/presentation/neon_2d.gd").new()
-	add_child(neon)
+	visuals.add_child(neon)
 	neon.configure(document.get("presentation", {}).get("render", {}).get("neon", {}))
 	glass_view=load("res://src/glass/view.gd").new()
 	glass_view.world=self
-	add_child(glass_view)
+	visuals.add_child(glass_view)
 
 
 ## Build a circle/box/sensor from the same geometry that is drawn on screen.
@@ -76,20 +80,13 @@ func create_object(value: Dictionary, born: float) -> void:
 		body.rotation = record["rotation"]
 		body.collision_layer = int(physics.get("collision_layer", 1 if mode == "dynamic" else 2))
 		body.collision_mask = int(physics.get("collision_mask", 3))
-		var collider := CollisionShape2D.new()
 		var shape: Dictionary = spec.get("shape", {})
-		if shape.get("primitive", "circle") == "circle":
-			var circle := CircleShape2D.new()
-			circle.radius = maxf(1, float(shape.get("radius", 18)))
-			collider.shape = circle
-		elif shape.get("primitive","")=="arc":
-			for arc_collider in GlassGeometry.colliders(shape): body.add_child(arc_collider)
-		else:
-			var box := RectangleShape2D.new()
-			box.size = _size(spec)
-			collider.shape = box
-		if collider.shape!=null: body.add_child(collider)
-		else: collider.free()
+		for collider in preload("res://src/physics/shape_2d.gd").colliders(shape): body.add_child(collider)
+		if body is RigidBody2D or body is StaticBody2D:
+			var material := PhysicsMaterial.new()
+			material.bounce = float(physics.get("material", {}).get("restitution", 0.0 if mode == "static" else 0.88))
+			material.friction = float(physics.get("material", {}).get("friction", 1.0 if mode == "static" else 0.03))
+			body.physics_material_override = material
 		if body is RigidBody2D:
 			body.mass = maxf(0.001, float(physics.get("mass", 1)))
 			var velocity: Array = physics.get("velocity", [0, 0])
@@ -104,10 +101,6 @@ func create_object(value: Dictionary, born: float) -> void:
 			body.constant_force = Vector2(float(gravity[0]), float(gravity[1])) * body.mass
 			body.linear_damp = float(physics.get("linear_damp", 0))
 			if physics.get("linear_damp_replace",false): body.linear_damp_mode=RigidBody2D.DAMP_MODE_REPLACE
-			var material := PhysicsMaterial.new()
-			material.bounce = clampf(float(physics.get("material", {}).get("restitution", 0.88)), 0, 1)
-			material.friction = clampf(float(physics.get("material", {}).get("friction", 0.03)), 0, 1)
-			body.physics_material_override = material
 		record["body"] = body
 		native_contacts.watch(body, id)
 		add_child(body)
@@ -228,6 +221,8 @@ func pick(point: Vector2) -> String:
 			if local.length() <= float(spec["shape"].get("radius", 18)): return id
 		elif spec.get("shape",{}).get("primitive","")=="arc":
 			if Geometry2D.is_point_in_polygon(local,GlassGeometry.polygon(spec["shape"])): return id
+		elif spec.get("shape",{}).get("primitive","")=="polygon":
+			if Geometry2D.is_point_in_polygon(local,preload("res://src/document/shape_geometry.gd").polygon(spec["shape"])): return id
 		elif Rect2(-_size(spec) / 2, _size(spec)).has_point(local): return id
 	return ""
 
@@ -280,6 +275,9 @@ func _space_free(point: Vector2, radius: float, ignored: String) -> bool:
 			if local.length() < radius + float(spec["shape"].get("radius", 18)) + 0.05: return false
 		elif spec.get("shape",{}).get("primitive","")=="arc":
 			if Geometry2D.is_point_in_polygon(local,GlassGeometry.polygon(spec["shape"])) or local.distance_to(GlassGeometry.closest(spec["shape"],local))<radius+0.05: return false
+		elif spec.get("shape",{}).get("primitive","")=="polygon":
+			var geometry = preload("res://src/document/shape_geometry.gd")
+			if Geometry2D.is_point_in_polygon(local,geometry.polygon(spec["shape"])) or local.distance_to(geometry.closest(spec["shape"],local))<radius+0.05: return false
 		else:
 			var half := _size(spec) / 2
 			if local.distance_to(local.clamp(-half, half)) < radius + 0.05: return false
@@ -294,29 +292,7 @@ func child_velocity(center: Array, point: Array, velocity: Array, speed: float) 
 
 ## Draw bodies at their actual solver poses, or the selected recorded poses.
 func _draw() -> void:
-	var render: Dictionary = document.get("presentation", {}).get("render", {})
-	draw_rect(Rect2(0, 0, 720, 1280), Color(str(render.get("background", "#0c1722"))))
-	var instances: Array=[]
-	var wall_instances: Array = []
-	var glowing: bool = is_instance_valid(neon) and neon.enabled
-	for id in records:
-		var spec: Dictionary = records[id]["spec"]
-		if spec.has("glass"): continue
-		draw_set_transform(_position(id), _rotation(id))
-		var circle: bool = spec.get("shape", {}).get("primitive", "") == "circle"
-		if circle: instances.append({"position":_position(id),"size":float(spec["shape"].get("radius",18)),"color":_color(spec)})
-		elif spec.get("shape",{}).get("primitive","")=="arc": draw_colored_polygon(GlassGeometry.polygon(spec["shape"]),_color(spec))
-		elif glowing: wall_instances.append({"position": _position(id), "rotation": _rotation(id), "half_size": _size(spec) / 2, "color": _color(spec)})
-		else: draw_rect(Rect2(-_size(spec) / 2, _size(spec)), _color(spec))
-		if debug_enabled or id == selected_id or bool(render.get("outline", false)):
-			var tint := Color("fbbf24") if id == selected_id else Color(1, 1, 1, 0.5)
-			if circle: draw_circle(Vector2.ZERO, float(spec["shape"].get("radius", 18)), tint, false, 2)
-			else: draw_rect(Rect2(-_size(spec) / 2, _size(spec)), tint, false, 2)
-	draw_set_transform(Vector2.ZERO)
-	if is_instance_valid(ball_batch):
-		ball_batch.visible = not glowing
-		if not glowing: ball_batch.update_circles(instances,"ball")
-	if glowing: neon.present(instances, wall_instances)
+	if is_instance_valid(visuals): visuals.queue_redraw()
 
 
 ## Small adapter helpers expose a dimension-neutral interface to the rule component.
