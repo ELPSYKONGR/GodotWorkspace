@@ -15,6 +15,7 @@ var new_shape_button: Button
 var view_top := Vector2.ZERO
 var parameter_baseline: Dictionary = {}
 var browser: VBoxContainer
+var device_menu: MenuButton
 
 
 # Build placement actions and the initial-object list once.
@@ -32,6 +33,11 @@ func _ready() -> void:
 	add_menu.get_popup().id_pressed.connect(func(id): command_requested.emit("object.add", {"kind": ["ball", "box", "wall", "glass"][id]}))
 	new_shape_button = F.button(actions, "绘制", func(): _open_shape(true))
 	new_shape_button.tooltip_text = "绘制二维轮廓并赋予物理属性"
+	device_menu = MenuButton.new()
+	device_menu.text = "添加机关"
+	browser.add_child(device_menu)
+	for caption in preload("res://src/document/device_spec.gd").LABELS: device_menu.get_popup().add_item(caption)
+	device_menu.get_popup().id_pressed.connect(func(id): command_requested.emit("object.add", {"kind": preload("res://src/document/device_spec.gd").KINDS[id]}))
 	shape_editor = preload("res://src/ui/shape_editor.gd").new()
 	shape_editor.submitted.connect(func(op, args): command_requested.emit(op, args))
 	add_child(shape_editor)
@@ -57,6 +63,8 @@ func sync_document(doc: Dictionary, object_id: String = "") -> void:
 	document = doc
 	selected_id = object_id
 	new_shape_button.disabled = doc.get("world", {}).get("dimension", "2d") != "2d"
+	device_menu.disabled = new_shape_button.disabled
+	device_menu.tooltip_text = "二维电机机关，可放置、编辑轮廓与材质" if not device_menu.disabled else "机关目前仅支持二维场景"
 	listing.clear()
 	var objects: Array = doc.get("objects", [])
 	for index in objects.size():
@@ -135,6 +143,8 @@ func _build_form() -> void:
 	fields["friction"] = F.number(physical, "摩擦", float(F.value(selected_spec, "physics.material.friction", 1.0 if is_static else (0.4 if is_3d else 0.03))), 0, 1, 0.01)
 	fields["color"] = F.color(form, "物体颜色", str(F.value(selected_spec, "appearance.color", "#22c55e")))
 	fields["split"] = F.check(physical, "参与碰撞分裂", "split_ball" in selected_spec.get("mechanisms", []))
+	if not is_3d and not selected_spec.has("glass"):
+		preload("res://src/ui/device_panel.gd").build(form, selected_spec, fields)
 	var advanced := F.section(form, "高级碰撞", false)
 	fields["tags"] = F.line(advanced, "标签", ",".join(selected_spec.get("tags", [])))
 	fields["tags"].tooltip_text = "用英文逗号分隔；机制用标签识别碰撞对象"
@@ -168,6 +178,7 @@ func _build_form() -> void:
 		var captured_spec := selected_spec.duplicate(true)
 		var captured_doc := document
 		pending_edits.register("object_parameters:" + selected_id, parameters, _apply, func() -> Dictionary: return {"op": "object.update", "args": {"id": captured_spec["id"], "changes": _changes(captured_fields, captured_spec, captured_doc)}})
+	preload("res://src/ui/device_panel.gd").refresh(fields)
 	preload("res://src/ui/object_visual_panel.gd").build(form, document, selected_spec, func(op, args): command_requested.emit(op, args), pending_edits)
 
 ## Open a local draft using typed properties as well as the saved geometry, preserving unknown fields.
@@ -235,4 +246,5 @@ func _changes(controls: Dictionary, spec: Dictionary, doc: Dictionary) -> Dictio
 		changes["glass.hits"]=int(controls["glass_hits"].value)
 		changes["glass.shards"]=int(controls["glass_shards"].value)
 		changes["glass.font_size"]=int(controls["glass_font_size"].value)
+	changes.merge(preload("res://src/ui/device_panel.gd").changes(controls, spec))
 	return changes

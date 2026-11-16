@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+JOB_STARTED D:/codex/AGI/scratch/relax_ui_redesign_20261116/outputs/jobs/devices_demo_20261116
+JOB_STATUS {"state":"queued"}
+JOB_STATUS {"elapsed_seconds":0.073,"message":"","stage_seconds":{},"state":"rendering","updated_utc":"2026-11-16T08:18:39.0115680Z"}
+JOB_STATUS {"frame":240.0,"state":"rendered","total":240.0}
+JOB_STATUS {"elapsed_seconds":13.217,"message":"","stage_seconds":{"godot":12.708},"state":"mixing","updated_utc":"2026-11-16T08:18:52.1590314Z"}
+JOB_STATUS {"elapsed_seconds":13.902,"message":"","stage_seconds":{"godot":12.708,"mix":0.588},"state":"encoding","updated_utc":"2026-11-16T08:18:52.8440354Z"}
+JOB_STATUS {"elapsed_seconds":15.126,"message":"","stage_seconds":{"encode":1.142,"godot":12.708,"mix":0.588},"state":"validating","updated_utc":"2026-11-16T08:18:54.0673632Z"}
+JOB_STATUS {"elapsed_seconds":16.32,"message":"Video, audio and media validation complete","stage_seconds":{"encode":1.142,"godot":12.708,"inspect":0.862,"mix":0.588},"state":"complete","updated_utc":"2026-11-16T08:18:55.2612666Z"}
+JOB_RESULT {"path":"D:/codex/AGI/scratch/relax_ui_redesign_20261116/outputs/jobs/devices_demo_20261116","status":{"elapsed_seconds":16.32,"message":"Video, audio and media validation complete","stage_seconds":{"encode":1.142,"godot":12.708,"inspect":0.862,"mix":0.588},"state":"complete","updated_utc":"2026-11-16T08:18:55.2612666Z"}}

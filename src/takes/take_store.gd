@@ -137,6 +137,10 @@ func _valid(candidate: Dictionary) -> bool:
 		return false
 	var has_glass: bool=candidate["definitions"].values().any(func(spec): return spec is Dictionary and spec.has("glass"))
 	if has_glass and not Document.validate(candidate["scene"]).is_empty(): return false
+	# Motor components remain valid data even in display-only replay/import paths.
+	var device_validator = preload("res://src/document/device_spec.gd")
+	if not device_validator.validate(candidate["scene"]).is_empty(): return false
+	if not device_validator.validate({"world": candidate["scene"].get("world", {}), "objects": candidate["definitions"].values()}).is_empty(): return false
 	var frames: Array = candidate["frames"]
 	if frames.is_empty() or frames.size() > MAX_FRAMES:
 		return false

@@ -2,6 +2,8 @@
 
 Godot 工作台运行不依赖额外 Skill。运行依赖为 Godot、FFmpeg、Python；来源与许可见 docs/依赖来源.md。中文系统字体从本机读取，不附带字体文件。
 
+2026-11-16机关面板延续原生Operate布局：读取已安装Impeccable的context、polish和craft-floor，保持现有矿物绿、88px多列、按类型披露参数和草稿应用规则。静态检测对本次改动返回空问题列表，GDScript真实功能和视觉仍以专项/GPU/完整回归为准；没有新增运行依赖或安装其它Skill。
+
 2026-11-16 原生界面重设计使用用户指定的 Taste 与 Impeccable 作为 AI 开发辅助。锁定来源、下载 ref、版本、许可和引擎校验见 `config/design-skill-lock.json`；上游许可保存在 `docs/third_party/taste-skill-LICENSE.txt` 和 `docs/third_party/impeccable-LICENSE.txt`。这些工具不进入成片、不增加 Godot 的运行依赖。
 
 安装复现：使用 Codex 内置 skill-installer 的 `install-skill-from-github.py`，按锁定文件的 `repository`、`download_ref` 和 `path` 下载，`--dest` 指向目标机器非系统盘技能目录；再在目标 Codex 技能目录建立对应目录引用。Impeccable 原生 Windows 引擎放到该技能的 `scripts/bin/windows-x64/impeccable.exe`，按锁定 SHA256 校验。技能不随本工程全量复制；离线运行工作台无需安装它们。

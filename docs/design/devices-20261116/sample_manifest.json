@@ -1,0 +1,14 @@
+{
+    "scene":  "config/workbench_devices.json",
+    "video":  "outputs/samples/devices_demo.mp4",
+    "take":  "outputs/samples/devices_demo.take.json",
+    "video_sha256":  "a2c3ee5d6e7f3b42ecd67abb1dc7f2c3a5c6966d786c5fdf120dc941e6883205",
+    "take_sha256":  "190873bc51e91d4a7c847d6f00b1fcffae29069dc41a166747348c55a653c387",
+    "width":  720,
+    "height":  1280,
+    "fps":  30,
+    "frames":  240,
+    "seconds":  8,
+    "source_job":  "devices_demo_20261116",
+    "checks":  "docs/design/devices-20261116/media_validation.json"
+}

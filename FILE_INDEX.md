@@ -15,6 +15,12 @@
 | `config/workbench_glass.json` / `glass.cmd` | 8扇区二维玻璃演示与便携入口 |
 | `config/workbench_neon.json` / `neon.cmd` | 128球青蓝/粉色荧光场景与便携入口 |
 | `config/workbench_long.json` | 720×20000纵向长世界、斜坡、U形与子球谱系跟随演示；`preview.cmd -Scene long`可启动 |
+| `config/workbench_devices.json` | 三分区二维旋转、往复平台、扇形摆板演示；新建场景与`preview.cmd -Scene devices`入口 |
+| `docs/机关设置与验收.md` / `docs/design/devices-20261116/` | 机关使用、参数语义、原片抽帧、架构与实际验证证据 |
+| `src/document/device_spec.gd` | 机关JSON默认值、二维/模式约束及有限数值校验，无运行节点 |
+| `src/physics/device_motion_2d.gd` | 固定物理步驱动原生AnimatableBody2D；偏心支点、旋转、往复与摆动 |
+| `src/ui/device_panel.gd` | 独立物体机关参数组；88px多列、按类型显示、草稿统一应用 |
+| `tools/validate_devices.gd` | 真实托球/接触分裂、支点/暂停/顿帧/单步、UI/保存/回放及非法数据验收 |
 | `docs/长场景与轮廓编辑使用验收.md` / `docs/design/native-editor-20261116/` | 原生长世界/轮廓/局部表现操作、数据字段、实际界面截图、验收与限制 |
 | `docs/二维荧光使用与验收.md` | 二维荧光、高光、性能与样片证据 |
 | `docs/玻璃使用与验收.md` | 使用方法、实例化边界、专项和样片证据 |
@@ -186,9 +192,12 @@ flowchart TD
   AI[AI文件收件箱] --> Bridge[FileBridge]
   Bridge --> CMD
   CMD --> Doc[SceneDocument 初始数据]
+  Doc --> DeviceSpec[DeviceSpec 机关数据校验]
   CMD --> Session[SceneSession 双时间与模式]
   Doc --> Session
   Session --> World[World2D / World3D]
+  World --> Motor[DeviceMotion2D 固定步电机]
+  Motor --> NativeMotor[AnimatableBody2D 原生碰撞体]
   World --> GlassDamage[Glass 原生计次]
   GlassDamage --> Take
   Stage --> GlassView[Glass 材质 / 裂纹 / HUD / 实例碎屑]

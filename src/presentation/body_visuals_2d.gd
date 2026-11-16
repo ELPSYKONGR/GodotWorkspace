@@ -48,6 +48,11 @@ func _draw() -> void:
 				var points := Geometry.polygon(spec["shape"])
 				points.append(points[0]); draw_polyline(points, tint, 2, true)
 			else: draw_rect(Rect2(-world._size(spec) / 2, world._size(spec)), tint, false, 2)
+		if id == world.selected_id and spec.get("motion", {}).get("enabled", false) and spec["motion"].get("type", "") != "slider":
+			var pivot: Array = spec["motion"].get("pivot", [0, 0])
+			var hinge := Vector2(float(pivot[0]), float(pivot[1]))
+			draw_line(Vector2.ZERO, hinge, Color("8de0c5"), 1, true)
+			draw_circle(hinge, 5, Color("8de0c5"), false, 2, true)
 	draw_set_transform(Vector2.ZERO)
 	world.ball_batch.visible = true
 	world.ball_batch.update_circles(plain, "ball")

@@ -1,6 +1,6 @@
-param([ValidateSet('2d','3d','perspective','glass','neon','long')][string]$Scene = '2d', [switch]$Editor, [switch]$Workbench, [switch]$Legacy)
+param([ValidateSet('2d','3d','perspective','glass','neon','long','devices')][string]$Scene = '2d', [switch]$Editor, [switch]$Workbench, [switch]$Legacy)
 . "$PSScriptRoot\common.ps1"
-if ($Legacy -and $Scene -in @('glass','neon','long')) { throw 'Glass, neon and long scenes are available in the workbench, not the legacy prototype.' }
+if ($Legacy -and $Scene -in @('glass','neon','long','devices')) { throw 'Glass, neon, long and device scenes are available in the workbench, not the legacy prototype.' }
 if ($Workbench -and $Legacy) { throw 'Use either -Workbench or -Legacy, not both.' }
 $sceneFile = "res://config/demo_$Scene.json"
 if ($Editor) {

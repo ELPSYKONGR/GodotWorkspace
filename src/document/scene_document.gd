@@ -102,6 +102,7 @@ static func validate(doc: Dictionary) -> PackedStringArray:
 	if presentation.get("render", {}) is Dictionary and not presentation.get("render", {}).get("camera", {}) is Dictionary: errors.append("相机需要对象数据")
 	if presentation.get("render", {}) is Dictionary: errors.append_array(_validate_neon(presentation.get("render", {}).get("neon", {})))
 	errors.append_array(preload("res://src/document/extended_validation.gd").validate(doc))
+	errors.append_array(preload("res://src/document/device_spec.gd").validate(doc))
 	return errors
 
 ## Bounded, finite visual parameters keep malformed scene files out of shader uniforms.
@@ -149,6 +150,13 @@ static func object_index(doc: Dictionary, id: String) -> int:
 ## Produce a complete primitive specification for the active dimension.
 static func new_object(doc: Dictionary, kind: String, id: String) -> Dictionary:
 	var three: bool = doc.get("world", {}).get("dimension", "2d") == "3d"
+	if kind in preload("res://src/document/device_spec.gd").KINDS:
+		var device := new_object(doc, "wall", id)
+		device["name"] = preload("res://src/document/device_spec.gd").LABELS[preload("res://src/document/device_spec.gd").KINDS.find(kind)]
+		device["tags"] = ["boundary", "device"]
+		device["motion"] = preload("res://src/document/device_spec.gd").defaults(kind)
+		device["appearance"]["color"] = "#e2ad68"
+		return device
 	if kind=="glass" and not three:
 		var pane := new_object(doc,"wall",id)
 		pane["name"]="玻璃"

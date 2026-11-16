@@ -1,0 +1,41 @@
+{
+	"checks": {
+		"3d_command_rejected": true,
+		"3d_entry_disabled": true,
+		"add_rotor": true,
+		"add_slider": true,
+		"add_swing": true,
+		"adding_device_undo_preserves_scene": true,
+		"all_three_are_native_driven_colliders": true,
+		"all_three_make_native_ball_contacts": true,
+		"apply_run_commits_motor_draft": true,
+		"demo_document_valid": true,
+		"device_entry_visible_in_2d": true,
+		"draft_survives_selection": true,
+		"dynamic_motor_rejected": true,
+		"existing_object_can_enable_motor": true,
+		"malformed_component_container_rejected": true,
+		"malformed_pivot_rejected": true,
+		"motor_change_invalidates_old_take": true,
+		"motor_contact_triggers_existing_split_rules": true,
+		"numbers_keep_88px": true,
+		"offcentre_hinge_is_fixed_in_world": true,
+		"pause_freezes_all_bodies_and_motor_clock": true,
+		"platform_physically_lifts_ball": true,
+		"scene_roundtrip_keeps_component": true,
+		"seek_roundtrip_replays_identical_motor_poses": true,
+		"single_step_drives_motor_once": true,
+		"split_hitstop_freezes_motor_in_recorded_frames": true,
+		"swing_pivot_remains_fixed": true,
+		"take_loads_with_motor_definitions": true,
+		"take_saves_real_motor_motion": true,
+		"zero_period_rejected": true
+	},
+	"native_contacts": {
+		"device_rotor": true,
+		"device_slider": true,
+		"device_swing": true
+	},
+	"passed": true,
+	"pivot_error": 0.0
+}

@@ -94,6 +94,7 @@ try {
     Invoke-GodotCheck 'EditorLayout' 'validate_editor_layout.gd' 'outputs\editor_layout_validation.json' 60 1200
     Invoke-GodotCheck 'SceneWorkspace' 'validate_scene_workspace.gd' 'outputs\scene_workspace_validation.json' 120 1200
     Invoke-GodotCheck 'SceneEditing' 'validate_scene_editing.gd' 'outputs\scene_editing_validation.json' 120 1200
+    Invoke-GodotCheck 'Devices' 'validate_devices.gd' 'outputs\devices_validation.json' 120 2400
     Invoke-GodotCheck 'CameraTrack' 'validate_camera_track.gd' 'outputs\camera_track_validation.json' 120 200
     Invoke-GodotCheck 'CameraFollow' 'validate_camera_follow.gd' 'outputs\camera_follow_validation.json' 120 1500
     Invoke-GodotCheck 'PolygonStyles' 'validate_polygon_styles.gd' 'outputs\polygon_styles_validation.json' 120 800

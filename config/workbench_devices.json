@@ -1,0 +1,1015 @@
+{
+  "schema_version": 2,
+  "scene_id": "motor_devices_demo",
+  "revision": 1,
+  "metadata": {
+    "title": "机关演示 · 旋转 / 往复 / 摆动",
+    "status": "implemented"
+  },
+  "world": {
+    "dimension": "2d",
+    "units": "logical_px",
+    "logical_size": [
+      720,
+      1280
+    ],
+    "physics_hz": 120,
+    "gravity": [
+      0,
+      450
+    ],
+    "seed": 20261113,
+    "max_dynamic_bodies": 48,
+    "bounds_2d": [
+      0,
+      0,
+      720,
+      1280
+    ]
+  },
+  "objects": [
+    {
+      "id": "left",
+      "name": "左墙",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          18,
+          1140
+        ]
+      },
+      "transform": {
+        "position": [
+          45,
+          650
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 0.3,
+          "friction": 0.2
+        }
+      },
+      "appearance": {
+        "color": "#42667d"
+      },
+      "editor": {
+        "locked": false
+      }
+    },
+    {
+      "id": "right",
+      "name": "右墙",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          18,
+          1140
+        ]
+      },
+      "transform": {
+        "position": [
+          675,
+          650
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 0.3,
+          "friction": 0.2
+        }
+      },
+      "appearance": {
+        "color": "#42667d"
+      },
+      "editor": {
+        "locked": false
+      }
+    },
+    {
+      "id": "floor_0",
+      "name": "分区底板1",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          630,
+          18
+        ]
+      },
+      "transform": {
+        "position": [
+          360,
+          485
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 0.3,
+          "friction": 0.2
+        }
+      },
+      "appearance": {
+        "color": "#42667d"
+      },
+      "editor": {
+        "locked": false
+      }
+    },
+    {
+      "id": "floor_1",
+      "name": "分区底板2",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          630,
+          18
+        ]
+      },
+      "transform": {
+        "position": [
+          360,
+          845
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 0.3,
+          "friction": 0.2
+        }
+      },
+      "appearance": {
+        "color": "#42667d"
+      },
+      "editor": {
+        "locked": false
+      }
+    },
+    {
+      "id": "floor_2",
+      "name": "分区底板3",
+      "tags": [
+        "boundary"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          630,
+          18
+        ]
+      },
+      "transform": {
+        "position": [
+          360,
+          1220
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 0.3,
+          "friction": 0.2
+        }
+      },
+      "appearance": {
+        "color": "#42667d"
+      },
+      "editor": {
+        "locked": false
+      }
+    },
+    {
+      "id": "device_rotor",
+      "name": "旋转挡板",
+      "tags": [
+        "boundary",
+        "device"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          250,
+          20
+        ]
+      },
+      "transform": {
+        "position": [
+          360,
+          340
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 0.3,
+          "friction": 0.2
+        }
+      },
+      "appearance": {
+        "color": "#e2ad68"
+      },
+      "editor": {
+        "locked": false
+      },
+      "motion": {
+        "enabled": true,
+        "type": "rotor",
+        "speed_degrees": 55,
+        "travel": 130,
+        "direction_degrees": 0,
+        "amplitude_degrees": 42,
+        "period_seconds": 3.2,
+        "phase_degrees": 0,
+        "pivot": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "ball_0_0",
+      "name": "1区彩球1",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          285,
+          170
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#8de0c5",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "ball_0_1",
+      "name": "1区彩球2",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          333,
+          165
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#e7b86b",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "ball_0_2",
+      "name": "1区彩球3",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          381,
+          160
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#e895a0",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "ball_0_3",
+      "name": "1区彩球4",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          429,
+          155
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#8db2e0",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "device_slider",
+      "name": "往复平台",
+      "tags": [
+        "boundary",
+        "device"
+      ],
+      "shape": {
+        "primitive": "rectangle",
+        "size": [
+          230,
+          20
+        ]
+      },
+      "transform": {
+        "position": [
+          360,
+          745
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 0.3,
+          "friction": 0.2
+        }
+      },
+      "appearance": {
+        "color": "#78b7df"
+      },
+      "editor": {
+        "locked": false
+      },
+      "motion": {
+        "enabled": true,
+        "type": "slider",
+        "speed_degrees": 55,
+        "travel": 130,
+        "direction_degrees": 0,
+        "amplitude_degrees": 42,
+        "period_seconds": 3.2,
+        "phase_degrees": 0,
+        "pivot": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "ball_1_0",
+      "name": "2区彩球1",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          285,
+          560
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#8de0c5",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "ball_1_1",
+      "name": "2区彩球2",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          333,
+          555
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#e7b86b",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "ball_1_2",
+      "name": "2区彩球3",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          381,
+          550
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#e895a0",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "ball_1_3",
+      "name": "2区彩球4",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          429,
+          545
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#8db2e0",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "device_swing",
+      "name": "扇形摆板",
+      "tags": [
+        "boundary",
+        "device"
+      ],
+      "shape": {
+        "primitive": "polygon",
+        "points": [
+          [
+            -64,
+            -210
+          ],
+          [
+            64,
+            -210
+          ],
+          [
+            16,
+            0
+          ],
+          [
+            -16,
+            0
+          ]
+        ]
+      },
+      "transform": {
+        "position": [
+          360,
+          1155
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "static",
+        "collision_layer": 2,
+        "collision_mask": 1,
+        "material": {
+          "restitution": 0.3,
+          "friction": 0.2
+        }
+      },
+      "appearance": {
+        "color": "#ae96df"
+      },
+      "editor": {
+        "locked": false
+      },
+      "motion": {
+        "enabled": true,
+        "type": "swing",
+        "speed_degrees": 55,
+        "travel": 130,
+        "direction_degrees": 0,
+        "amplitude_degrees": 42,
+        "period_seconds": 3.2,
+        "phase_degrees": 0,
+        "pivot": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "ball_2_0",
+      "name": "3区彩球1",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          285,
+          900
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#8de0c5",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "ball_2_1",
+      "name": "3区彩球2",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          333,
+          895
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#e7b86b",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "ball_2_2",
+      "name": "3区彩球3",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          381,
+          890
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#e895a0",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    },
+    {
+      "id": "ball_2_3",
+      "name": "3区彩球4",
+      "tags": [
+        "ball"
+      ],
+      "shape": {
+        "primitive": "circle",
+        "radius": 18
+      },
+      "transform": {
+        "position": [
+          429,
+          885
+        ],
+        "rotation_degrees": 0
+      },
+      "physics": {
+        "mode": "dynamic",
+        "mass": 1,
+        "velocity": [
+          0,
+          0
+        ],
+        "angular_velocity": 0,
+        "material": {
+          "restitution": 0.6,
+          "friction": 0.25
+        },
+        "collision_layer": 1,
+        "collision_mask": 3,
+        "ccd": true
+      },
+      "appearance": {
+        "color": "#8db2e0",
+        "generation_color": {
+          "mode": "lighten_same_hue",
+          "fade": 0.2
+        }
+      },
+      "mechanisms": [],
+      "editor": {
+        "locked": false,
+        "group": "initial_balls"
+      }
+    }
+  ],
+  "mechanisms": [],
+  "presentation": {
+    "render": {
+      "backend": "compatibility",
+      "background": "#0c1722",
+      "camera": {
+        "mode": "fixed",
+        "position_2d": [
+          0,
+          0
+        ]
+      },
+      "debug_overlay_in_export": false,
+      "roughness": 0.35,
+      "metallic": 0.15,
+      "shadows": true,
+      "debug": true
+    },
+    "captions": [
+      {
+        "text": "旋转挡板",
+        "position": [
+          85,
+          95
+        ],
+        "font_size": 26,
+        "color": "#d9e4df"
+      },
+      {
+        "text": "往复平台",
+        "position": [
+          85,
+          525
+        ],
+        "font_size": 26,
+        "color": "#d9e4df"
+      },
+      {
+        "text": "扇形摆板",
+        "position": [
+          85,
+          885
+        ],
+        "font_size": 26,
+        "color": "#d9e4df"
+      }
+    ],
+    "audio": {
+      "enabled": true,
+      "preset": "wood",
+      "volume_db": -12,
+      "pitch": 1.0,
+      "min_interval": 0.035,
+      "max_voices": 16,
+      "sample_rate": 48000
+    },
+    "effects": {
+      "enabled": true,
+      "count": 12,
+      "lifetime": 0.35,
+      "speed": 140,
+      "trail_enabled": true,
+      "trail_seconds": 0.2,
+      "ring": true,
+      "flash": true,
+      "time_domain": "simulation"
+    }
+  },
+  "take_settings": {
+    "duration_seconds": 12,
+    "record_every_physics_tick": true,
+    "chunk_seconds": 1
+  },
+  "export_preset": {
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 60,
+    "duration_seconds": 12,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "source": "recorded_take"
+  }
+}

@@ -1,0 +1,338 @@
+{
+    "suite_version":  1,
+    "passed":  true,
+    "status":  "complete",
+    "started_utc":  "2026-11-16T08:16:45.0930097Z",
+    "elapsed_seconds":  278.505,
+    "legacy":  true,
+    "wav_job":  true,
+    "python_path":  "D:\\codex\\deliveries\\RelaxVideo_Handoff_20261113\\.runtime\\python\\python.exe",
+    "stages":  [
+                   {
+                       "name":  "World",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:16:45.1610096Z",
+                       "elapsed_seconds":  0.557,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\worlds_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_World.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:16:45.7176581Z"
+                   },
+                   {
+                       "name":  "SplitInheritance",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:16:45.7216578Z",
+                       "elapsed_seconds":  32.186,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\split_inheritance_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_SplitInheritance.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:17:17.9066970Z"
+                   },
+                   {
+                       "name":  "Session",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:17:17.9076972Z",
+                       "elapsed_seconds":  1.423,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\session_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_Session.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:17:19.3302871Z"
+                   },
+                   {
+                       "name":  "Commands",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:17:19.3322872Z",
+                       "elapsed_seconds":  0.301,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\commands_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_Commands.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:17:19.6329068Z"
+                   },
+                   {
+                       "name":  "Capacity",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:17:19.6339057Z",
+                       "elapsed_seconds":  1.236,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\capacity_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_Capacity.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:17:20.8708144Z"
+                   },
+                   {
+                       "name":  "Glass",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:17:20.8718151Z",
+                       "elapsed_seconds":  11.828,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\glass_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_Glass.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:17:32.6998008Z"
+                   },
+                   {
+                       "name":  "Neon",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:17:32.7008009Z",
+                       "elapsed_seconds":  2.717,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\neon_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_Neon.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:17:35.4182356Z"
+                   },
+                   {
+                       "name":  "EffectSwitches",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:17:35.4192352Z",
+                       "elapsed_seconds":  2.168,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\effect_switches_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_EffectSwitches.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:17:37.5878412Z"
+                   },
+                   {
+                       "name":  "SpeedApply",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:17:37.5888406Z",
+                       "elapsed_seconds":  4.4,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\speed_apply_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_SpeedApply.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:17:41.9890694Z"
+                   },
+                   {
+                       "name":  "Motion",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:17:41.9900696Z",
+                       "elapsed_seconds":  11.27,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\motion_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_Motion.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:17:53.2607364Z"
+                   },
+                   {
+                       "name":  "UI",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:17:53.2617357Z",
+                       "elapsed_seconds":  0.76,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\ui_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_UI.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:17:54.0218380Z"
+                   },
+                   {
+                       "name":  "EditorLayout",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:17:54.0228448Z",
+                       "elapsed_seconds":  2.248,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\editor_layout_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_EditorLayout.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:17:56.2706016Z"
+                   },
+                   {
+                       "name":  "SceneWorkspace",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:17:56.2716016Z",
+                       "elapsed_seconds":  5.875,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\scene_workspace_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_SceneWorkspace.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:18:02.1463536Z"
+                   },
+                   {
+                       "name":  "SceneEditing",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:18:02.1473536Z",
+                       "elapsed_seconds":  3.185,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\scene_editing_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_SceneEditing.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:18:05.3319431Z"
+                   },
+                   {
+                       "name":  "Devices",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:18:05.3339411Z",
+                       "elapsed_seconds":  21.959,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\devices_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_Devices.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:18:27.2920720Z"
+                   },
+                   {
+                       "name":  "CameraTrack",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:18:27.2930717Z",
+                       "elapsed_seconds":  0.301,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\camera_track_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_CameraTrack.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:18:27.5951039Z"
+                   },
+                   {
+                       "name":  "CameraFollow",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:18:27.5961039Z",
+                       "elapsed_seconds":  4.11,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\camera_follow_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_CameraFollow.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:18:31.7049381Z"
+                   },
+                   {
+                       "name":  "PolygonStyles",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:18:31.7069373Z",
+                       "elapsed_seconds":  0.392,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\polygon_styles_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_PolygonStyles.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:18:32.0986435Z"
+                   },
+                   {
+                       "name":  "LongWorld",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:18:32.0996436Z",
+                       "elapsed_seconds":  8.847,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\long_world_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_LongWorld.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:18:40.9472210Z"
+                   },
+                   {
+                       "name":  "PerformancePaths",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:18:40.9482213Z",
+                       "elapsed_seconds":  0.422,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\performance_paths_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_PerformancePaths.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:18:41.3706063Z"
+                   },
+                   {
+                       "name":  "FastCCD",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:18:41.3716053Z",
+                       "elapsed_seconds":  0.294,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\fast_ccd_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_FastCCD.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:18:41.6656068Z"
+                   },
+                   {
+                       "name":  "SplitControls",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:18:41.6666069Z",
+                       "elapsed_seconds":  116.376,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\split_controls_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_SplitControls.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:20:38.0429919Z"
+                   },
+                   {
+                       "name":  "Media",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:20:38.0439924Z",
+                       "elapsed_seconds":  0.861,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\media_components_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_Media.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:20:38.9050894Z"
+                   },
+                   {
+                       "name":  "Mixer",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:20:38.9060891Z",
+                       "elapsed_seconds":  0.217,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\mixer_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_Mixer.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:20:39.1231311Z"
+                   },
+                   {
+                       "name":  "Host",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:20:39.1250895Z",
+                       "elapsed_seconds":  34.872,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\workbench_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_Host.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:21:13.9968178Z"
+                   },
+                   {
+                       "name":  "Legacy",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:21:14.0098175Z",
+                       "elapsed_seconds":  3.526,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\probe_2d_validation.json",
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\host_validation.json",
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\3d_physics.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_Legacy.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:21:17.5360063Z"
+                   },
+                   {
+                       "name":  "WavJob",
+                       "passed":  true,
+                       "started_utc":  "2026-11-16T08:21:17.5370063Z",
+                       "elapsed_seconds":  5.863,
+                       "report_paths":  [
+                                            "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\wav_job_validation.json"
+                                        ],
+                       "log_path":  "D:\\codex\\AGI\\scratch\\relax_ui_redesign_20261116\\outputs\\suite_WavJob.log",
+                       "exit_code":  0,
+                       "completed_utc":  "2026-11-16T08:21:23.4010541Z"
+                   }
+               ]
+}

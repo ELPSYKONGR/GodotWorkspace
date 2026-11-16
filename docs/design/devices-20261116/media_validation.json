@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "checks": {
+    "dimensions": true,
+    "fps": true,
+    "frame_count": true,
+    "duration": true,
+    "full_video_decode": true,
+    "no_black_frames": true,
+    "audio_present_and_decodable": true,
+    "h264_aac_codecs": true,
+    "audio_stream_48khz": true,
+    "wav_format": true,
+    "wav_duration": true,
+    "audio_non_silent_when_expected": true,
+    "event_sample_alignment": true,
+    "encoded_audio_onset_alignment": true,
+    "wav_asset_frozen": true
+  },
+  "video": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30.0,
+    "frames": 240,
+    "duration": 8.0,
+    "unique_frame_hashes": 240,
+    "black_frames": []
+  },
+  "audio": {
+    "expected": true,
+    "decoded": {
+      "peak": 0.11334648728370667,
+      "rms": 0.021913966295075193,
+      "non_silent": true,
+      "sample_count": 768000,
+      "first_audible_time": 0.45839583333333334
+    },
+    "wav": {
+      "peak": 0.11328125,
+      "rms": 0.021955233674955384,
+      "non_silent": true,
+      "sample_count": 768000,
+      "first_audible_time": 0.45839583333333334
+    },
+    "accepted_events": 93,
+    "max_event_sample_error_seconds": 3.552713678800501e-15,
+    "encoded_onset_error_seconds": 0.0
+  },
+  "inputs": {
+    "take.json": "63d15a8811dd19b017f0254257e0710a484825895168e27edade9e6f76d7a86d",
+    "scene.snapshot.json": "cc02716f684fce00471cef6f349f67598b46f3df4a74366f8778bf706c2e6655",
+    "job.json": "367a36f99bf2b5aaebccb6e1d000d64e9921319d32eedc837e68805231c6d209"
+  }
+}

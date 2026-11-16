@@ -24,6 +24,7 @@ var birth_space = preload("res://src/physics/birth_space_2d.gd").new()
 var birth_space_ready := false
 var native_contacts = preload("res://src/physics/native_contacts_2d.gd").new()
 var visuals: Node2D
+var devices = preload("res://src/physics/device_motion_2d.gd").new()
 
 
 ## Accept immutable initial scene data before entering the scene tree.
@@ -72,12 +73,13 @@ func create_object(value: Dictionary, born: float) -> void:
 		var mode := str(physics.get("mode", "dynamic"))
 		var body: CollisionObject2D
 		if mode == "sensor": body = Area2D.new()
-		elif mode == "static": body = StaticBody2D.new()
+		elif mode == "static": body = AnimatableBody2D.new() if spec.get("motion", {}).get("enabled", false) else StaticBody2D.new()
 		else: body = RigidBody2D.new()
 		body.name = "Body_" + id
 		body.set_meta("object_id", id)
 		body.position = record["position"]
 		body.rotation = record["rotation"]
+		if body is AnimatableBody2D: body.sync_to_physics = true
 		body.collision_layer = int(physics.get("collision_layer", 1 if mode == "dynamic" else 2))
 		body.collision_mask = int(physics.get("collision_mask", 3))
 		var shape: Dictionary = spec.get("shape", {})
@@ -144,6 +146,7 @@ func contact_anchor(pair: Dictionary) -> Dictionary:
 func _physics_process(_delta: float) -> void:
 	birth_space_ready = false
 	if not playback:
+		devices.advance(records, _delta)
 		# Shape sweeps are needed for fast balls, not small per-tick displacements in a pile.
 		# Keep a conservative half-radius threshold; boxes retain their configured CCD mode.
 		for record in records.values():
@@ -304,7 +307,7 @@ func object_position(id: String) -> Array: # Expose a JSON-compatible position t
 	return project_array(_position(id))
 func object_velocity(id: String) -> Array: # Read actual motion for child spawning.
 	var body = records[id].get("body")
-	return project_array(body.linear_velocity) if body is RigidBody2D else [0.0, 0.0]
+	return project_array(body.linear_velocity) if body is RigidBody2D else project_array(records[id].get("motor_velocity", Vector2.ZERO))
 func dynamic_count() -> int: # Count active dynamics for transactional capacity checks.
 	var count := 0
 	for record in records.values():
