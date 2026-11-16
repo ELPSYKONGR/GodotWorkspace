@@ -10,9 +10,9 @@
 <main id="shape-studio">
   <header><b>RelaxVideo</b><span>形状编辑环境</span><small>交互原型 · 物理运行待 Godot 接入</small><a href="index.html">返回属性面板</a></header>
   <nav class="workflow" aria-label="工作阶段">
-    <button id="sketch-mode" type="button" class="active">1 绘制物体</button><span>→</span>
-    <button id="scene-mode" type="button">2 布置场景</button><span>→</span>
-    <button type="button" disabled>3 Godot 物理模拟 · 待接入</button><span>→</span><span>录制 / 输出视频</span>
+    <button id="scene-mode" type="button">已有场景 / 布置调试</button><span>↔</span>
+    <button id="sketch-mode" type="button" class="active">新建 / 编辑形状</button><span>→</span>
+    <button type="button" disabled>Godot 物理模拟 · 待接入</button><span>→</span><span>录制 / 输出视频</span>
   </nav>
   <div class="editor-layout">
     <aside class="library">
@@ -36,7 +36,7 @@
         <g id="shape-layer"></g><g id="draft-layer"></g>
       </svg>
       <div class="canvas-footer"><span id="geometry-status" role="status">简单闭合轮廓 · 可生成碰撞体</span><span>编辑坐标 / px</span></div>
-      <div class="editing-actions"><button id="add-to-scene" type="button">加入场景</button><button id="export" type="button">导出设计数据</button><span id="action-status" role="status">拖动顶点修改形状，或选工具绘制新物体。</span></div>
+      <div class="editing-actions"><button id="edit-existing" type="button" hidden>编辑所选轮廓</button><button id="apply-existing" type="button" hidden>应用回当前物体</button><button id="cancel-existing" type="button" hidden>放弃轮廓草稿</button><button id="add-to-scene" type="button">加入场景</button><button id="export" type="button">导出设计数据</button><span id="action-status" role="status">拖动顶点修改形状，或选工具绘制新物体。</span></div>
       <details><summary>当前对象数据</summary><pre id="data-preview"></pre></details>
     </section>
     <aside class="properties">

@@ -55,6 +55,58 @@
           "passed": true
         },
         {
+          "name": "existing_scene_direct_property_edit",
+          "passed": true
+        },
+        {
+          "name": "existing_outline_draft_retains_transform_and_properties",
+          "passed": true
+        },
+        {
+          "name": "outline_draft_does_not_mutate_original",
+          "passed": true
+        },
+        {
+          "name": "outline_draft_survives_space_switch",
+          "passed": true
+        },
+        {
+          "name": "apply_updates_same_id_without_duplicate",
+          "passed": true
+        },
+        {
+          "name": "apply_retains_unedited_fields_and_other_objects",
+          "passed": true
+        },
+        {
+          "name": "apply_commits_edited_properties",
+          "passed": true
+        },
+        {
+          "name": "cancel_restores_exact_original_scene",
+          "passed": true
+        },
+        {
+          "name": "stale_outline_draft_reports_conflict",
+          "passed": true
+        },
+        {
+          "name": "stale_outline_draft_cannot_overwrite_newer_source",
+          "passed": true
+        },
+        {
+          "name": "redraw_polygon_retains_existing_object_transform",
+          "passed": true
+        },
+        {
+          "name": "redraw_circle_retains_existing_object_identity_and_transform",
+          "passed": true
+        },
+        {
+          "name": "redraw_circle_renders_local_center",
+          "passed": true
+        },
+        {
           "name": "numeric_boxes_88_px",
           "passed": true
         },
@@ -126,6 +178,58 @@
         },
         {
           "name": "invalid_drawing_blocked_with_reason",
+          "passed": true
+        },
+        {
+          "name": "existing_scene_direct_property_edit",
+          "passed": true
+        },
+        {
+          "name": "existing_outline_draft_retains_transform_and_properties",
+          "passed": true
+        },
+        {
+          "name": "outline_draft_does_not_mutate_original",
+          "passed": true
+        },
+        {
+          "name": "outline_draft_survives_space_switch",
+          "passed": true
+        },
+        {
+          "name": "apply_updates_same_id_without_duplicate",
+          "passed": true
+        },
+        {
+          "name": "apply_retains_unedited_fields_and_other_objects",
+          "passed": true
+        },
+        {
+          "name": "apply_commits_edited_properties",
+          "passed": true
+        },
+        {
+          "name": "cancel_restores_exact_original_scene",
+          "passed": true
+        },
+        {
+          "name": "stale_outline_draft_reports_conflict",
+          "passed": true
+        },
+        {
+          "name": "stale_outline_draft_cannot_overwrite_newer_source",
+          "passed": true
+        },
+        {
+          "name": "redraw_polygon_retains_existing_object_transform",
+          "passed": true
+        },
+        {
+          "name": "redraw_circle_retains_existing_object_identity_and_transform",
+          "passed": true
+        },
+        {
+          "name": "redraw_circle_renders_local_center",
           "passed": true
         },
         {

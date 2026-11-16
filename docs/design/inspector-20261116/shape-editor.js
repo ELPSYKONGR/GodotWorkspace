@@ -1,7 +1,7 @@
-/* Editable local prototype: draw outlines, drag vertices, assign attributes, place copies. */
+/* Local prototype: create shapes or edit existing objects through checked outline drafts. */
 (() => {
   const root=document.getElementById('shape-studio'),svg=root.querySelector('#drawing'),M=window.ShapeModel;
-  let draft=M.object(M.templates.L形,'L形滑块'),objects=[],selected='draft',mode='sketch',tool='select',points=[],drag=null,sequence=0;
+  let draft=M.object(M.templates.L形,'L形滑块'),objects=[],selected='draft',mode='sketch',tool='select',points=[],drag=null,sequence=0,editingId=null,sourceSnapshot=null;
   const el=(tag,attrs={})=>{const n=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,v);return n;};
   const current=()=>mode==='sketch'?draft:objects.find(o=>o.id===selected);
   const status=text=>{root.querySelector('#action-status').textContent=text;};
@@ -12,8 +12,9 @@
   }
   function local(p,o) { const a=-o.rotation*Math.PI/180,x=p[0]-o.x,y=p[1]-o.y;return [Math.round(x*Math.cos(a)-y*Math.sin(a)),Math.round(x*Math.sin(a)+y*Math.cos(a))]; }
   function shapeNode(shape) {
-    if(shape.kind==='circle') return el('circle',{r:shape.radius});
-    if(shape.kind==='rectangle') return el('rect',{x:-shape.width/2,y:-shape.height/2,width:shape.width,height:shape.height});
+    const center=shape.center||[0,0];
+    if(shape.kind==='circle') return el('circle',{cx:center[0],cy:center[1],r:shape.radius});
+    if(shape.kind==='rectangle') return el('rect',{x:center[0]-shape.width/2,y:center[1]-shape.height/2,width:shape.width,height:shape.height});
     return el('polygon',{points:shape.points.map(p=>p.join(',')).join(' ')});
   }
   function render() {
@@ -30,7 +31,11 @@
     if(points.length)overlay.append(el('polyline',{points:points.map(p=>p.join(',')).join(' '),class:'pending-polygon'}));
     root.querySelectorAll('[data-tool]').forEach(b=>b.classList.toggle('active',b.dataset.tool===tool));
     root.querySelector('#sketch-mode').classList.toggle('active',mode==='sketch');root.querySelector('#scene-mode').classList.toggle('active',mode==='scene');
-    root.querySelector('#mode-label').textContent=mode==='sketch'?'草图模式 · 拖动顶点编辑轮廓':'场景布置 · 拖动物体，右侧设置位置/角度';
+    root.querySelector('#mode-label').textContent=mode==='sketch'?(editingId?'编辑已有物体 '+editingId+' · 应用后返回原场景':'新建草图 · 拖动顶点编辑轮廓'):'已有场景 · 直接修改属性，或进入所选物体轮廓';
+    root.querySelector('#edit-existing').hidden=mode!=='scene';
+    root.querySelector('#apply-existing').hidden=!editingId||mode!=='sketch';
+    root.querySelector('#cancel-existing').hidden=!editingId;
+    root.querySelector('#add-to-scene').textContent=editingId?'保存为新物体副本':'加入场景';
     const list=root.querySelector('#scene-list');list.replaceChildren();
     for(const o of objects){const b=document.createElement('button');b.type='button';b.className='scene-item';b.textContent=o.name;b.classList.toggle('active',o.id===selected);b.onclick=()=>{mode='scene';selected=o.id;render();};list.append(b);}
     syncProperties();
@@ -46,13 +51,27 @@
     root.querySelector('#geometry-status').textContent=valid.ok?'轮廓有效 · 等待 Godot 编译与物理验证':valid.reason;
     root.querySelector('#data-preview').textContent=JSON.stringify(M.serialize(mode==='sketch'?[draft]:objects),null,2);
   }
-  function setMode(next) {mode=next;points=[];drag=null;tool='select';if(mode==='scene'&&!objects.length) addToScene();else {if(mode==='scene')selected=objects[0].id;render();}}
-  function addToScene() {const o=M.clone(draft);o.id='object_'+(++sequence);o.name=draft.name+' '+sequence;o.x=224+sequence*96;o.y=160+sequence*48;objects.push(o);mode='scene';selected=o.id;points=[];tool='select';render();status('已加入场景，可拖动布置；物理模拟尚未接入。');}
+  function setMode(next) {mode=next;points=[];drag=null;tool='select';if(mode==='scene'&&!objects.length) addToScene();else {if(mode==='scene'&&!objects.some(o=>o.id===selected))selected=editingId||objects[0].id;render();}}
+  function editExisting() {
+    if(editingId){mode='sketch';render();status('已返回尚未应用的轮廓草稿；先应用或放弃后再编辑其它物体。');return;}
+    const o=current();if(!o||mode!=='scene')return;
+    editingId=o.id;sourceSnapshot=JSON.stringify(o);draft=M.clone(o);draft.id='draft';mode='sketch';selected='draft';points=[];tool='select';render();status('正在编辑原物体草稿；原场景保持不变。');
+  }
+  function applyExisting() {
+    if(!editingId)return;const valid=M.validate(draft.shape);if(!valid.ok){status(valid.reason);return;}
+    const index=objects.findIndex(o=>o.id===editingId);if(index<0){status('来源物体已不存在，不能覆盖。');return;}
+    if(JSON.stringify(objects[index])!==sourceSnapshot){status('原物体在草稿期间已修改；请先放弃草稿并重新编辑，或保存为新物体副本。');return;}
+    objects[index]={...M.clone(draft),id:editingId};selected=editingId;editingId=null;sourceSnapshot=null;mode='scene';points=[];tool='select';render();status('已更新原物体，保留ID和其它场景物体；正式物理参数应用沿用重跑流程。');
+  }
+  function cancelExisting() {if(!editingId)return;selected=editingId;editingId=null;sourceSnapshot=null;mode='scene';points=[];tool='select';render();status('已放弃轮廓草稿，原物体保持不变。');}
+  function addToScene() {const o=M.clone(draft);o.id='object_'+(++sequence);o.name=draft.name+' '+sequence;o.x=224+sequence*96;o.y=160+sequence*48;objects.push(o);editingId=null;sourceSnapshot=null;mode='scene';selected=o.id;points=[];tool='select';render();status('已加入场景，可拖动布置；物理模拟尚未接入。');}
   function finish() {
     const shape={kind:'polygon',points:M.clone(points)},valid=M.validate(shape);
     if(!valid.ok){status(valid.reason);return;}
     const center=[0,1].map(axis=>Math.round((Math.min(...points.map(p=>p[axis]))+Math.max(...points.map(p=>p[axis])))/2));
-    shape.points=points.map(p=>[p[0]-center[0],p[1]-center[1]]);draft=M.object(shape,'自绘多边形');draft.x=center[0];draft.y=center[1];selected='draft';points=[];tool='select';render();status('轮廓已闭合，可拖动顶点或加入场景。');
+    if(editingId){shape.points=points.map(p=>local(p,draft));draft.shape=shape;}
+    else {shape.points=points.map(p=>[p[0]-center[0],p[1]-center[1]]);draft=M.object(shape,'自绘多边形');draft.x=center[0];draft.y=center[1];}
+    selected='draft';points=[];tool='select';render();status(editingId?'轮廓已闭合，可应用回原物体或保存为副本。':'轮廓已闭合，可拖动顶点或加入场景。');
   }
   svg.addEventListener('pointerdown',event=>{
     const p=point(event),o=current();
@@ -69,15 +88,18 @@
     if(drag.type==='vertex'){const next=M.clone(o.shape);next.points[drag.index]=local(p,o);const valid=M.validate(next);if(valid.ok){o.shape=next;render();}else status(valid.reason);}
     if(drag.type==='draw'){
       const start=drag.start,shape=tool==='circle'?{kind:'circle',radius:Math.max(1,Math.hypot(p[0]-start[0],p[1]-start[1]))}:{kind:'rectangle',width:Math.max(1,Math.abs(p[0]-start[0])),height:Math.max(1,Math.abs(p[1]-start[1]))};
-      draft=M.object(shape,tool==='circle'?'自绘圆':'自绘矩形');draft.x=tool==='circle'?start[0]:(p[0]+start[0])/2;draft.y=tool==='circle'?start[1]:(p[1]+start[1])/2;render();
+      const center=tool==='circle'?start:[(p[0]+start[0])/2,(p[1]+start[1])/2];
+      if(editingId){shape.center=local(center,draft);draft.shape=shape;}
+      else {draft=M.object(shape,tool==='circle'?'自绘圆':'自绘矩形');draft.x=center[0];draft.y=center[1];}render();
     }
   });
   svg.addEventListener('pointerup',()=>{if(drag?.type==='draw')tool='select';drag=null;render();});
   svg.addEventListener('pointercancel',()=>{drag=null;});
   root.querySelectorAll('[data-tool]').forEach(b=>b.onclick=()=>{mode='sketch';tool=b.dataset.tool;selected='draft';points=[];render();});
-  for(const[name,shape]of Object.entries(M.templates)){const b=document.createElement('button');b.type='button';b.textContent=name;b.onclick=()=>{draft=M.object(shape,name);selected='draft';mode='sketch';tool='select';points=[];render();};root.querySelector('#templates').append(b);}
+  for(const[name,shape]of Object.entries(M.templates)){const b=document.createElement('button');b.type='button';b.textContent=name;b.onclick=()=>{if(editingId)draft.shape=M.clone(shape);else draft=M.object(shape,name);selected='draft';mode='sketch';tool='select';points=[];render();};root.querySelector('#templates').append(b);}
   root.querySelector('#finish').onclick=finish;root.querySelector('#cancel').onclick=()=>{points=[];drag=null;tool='select';render();};
   root.querySelector('#sketch-mode').onclick=()=>setMode('sketch');root.querySelector('#scene-mode').onclick=()=>setMode('scene');root.querySelector('#add-to-scene').onclick=addToScene;
+  root.querySelector('#edit-existing').onclick=editExisting;root.querySelector('#apply-existing').onclick=applyExisting;root.querySelector('#cancel-existing').onclick=cancelExisting;
   root.querySelectorAll('[data-prop]').forEach(input=>input.onchange=()=>{if(input.validity.valid&&input.value!==''){current()[input.dataset.prop]=Number(input.value);render();}});
   for(const[id,key]of [['object-name','name'],['body-type','body'],['object-color','color'],['mechanism','mechanism']])root.querySelector('#'+id).onchange=event=>{current()[key]=event.target.value;render();};
   root.querySelector('#collision').onchange=render;
