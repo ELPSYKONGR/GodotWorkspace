@@ -41,11 +41,11 @@ func _run() -> void:
 	var position: Vector2 = body.position
 	var hash_before := Document.simulation_hash(host.service.document)
 	var page: Node = host.panel.pages["渲染"]
-	(_find(page, "光晕范围（像素）") as SpinBox).get_line_edit().text = "30"
+	(_find(page, "光晕范围 / px") as SpinBox).get_line_edit().text = "30"
 	(_find(page, "光晕强度") as SpinBox).get_line_edit().text = "1.5"
-	(_find(page, "小球高光大小") as SpinBox).get_line_edit().text = "0.4"
-	(_find(page, "小球高光强度") as SpinBox).get_line_edit().text = "1.8"
-	(_find(page, "应用二维荧光材质") as Button).pressed.emit()
+	(_find(page, "高光大小") as SpinBox).get_line_edit().text = "0.4"
+	(_find(page, "高光强度") as SpinBox).get_line_edit().text = "1.8"
+	(_find(page, "应用荧光") as Button).pressed.emit()
 	print("NEON_SETTINGS ", JSON.stringify(world.neon.settings))
 	checks["inspector_commits_typed_glow_values"] = world.neon.settings["glow_width"] == 30 and world.neon.settings["glow_strength"] == 1.5
 	checks["uniforms_apply_to_both_batches"] = world.neon.balls.material.get_shader_parameter("glow_width") == 30 and world.neon.walls.material.get_shader_parameter("glow_width") == 30 and is_equal_approx(world.neon.balls.material.get_shader_parameter("highlight_strength"), 1.8)

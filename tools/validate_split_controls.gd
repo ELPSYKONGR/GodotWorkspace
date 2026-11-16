@@ -39,9 +39,9 @@ func _run() -> void:
 		host.service.execute({"op": "simulation.reset"})
 		await process_frame
 	for count in [2, 4, 100]:
-		var field := _number(host.panel.pages["机制"], "子球总数（2～100）")
+		var field := _number(host.panel.pages["机制"], "每次子球总数")
 		field.get_line_edit().text = str(count)
-		_button(host.panel.pages["机制"], "应用机制并重新模拟").pressed.emit()
+		_button(host.panel.pages["机制"], "应用机制").pressed.emit()
 		await process_frame
 		results["typed_count_" + str(count)] = host.service.document["mechanisms"][0]["params"]["children_total"] == count
 		host.session.play()
@@ -53,13 +53,13 @@ func _run() -> void:
 		host.service.execute({"op": "simulation.reset"})
 		await process_frame
 	# Restore two children for policy checks below.
-	_number(host.panel.pages["机制"], "子球总数（2～100）").get_line_edit().text = "2"
-	_button(host.panel.pages["机制"], "应用机制并重新模拟").pressed.emit()
+	_number(host.panel.pages["机制"], "每次子球总数").get_line_edit().text = "2"
+	_button(host.panel.pages["机制"], "应用机制").pressed.emit()
 	await process_frame
 	for enabled in [false, true, false, true]:
 		var checkbox := _button(host.panel.pages["机制"], "子球继续分裂") as CheckBox
 		checkbox.button_pressed = enabled
-		_button(host.panel.pages["机制"], "应用机制并重新模拟").pressed.emit()
+		_button(host.panel.pages["机制"], "应用机制").pressed.emit()
 		await process_frame
 		print("APPLIED ", JSON.stringify(host.service.document["mechanisms"]))
 		host.service.execute({"op": "simulation.play"})
@@ -91,8 +91,8 @@ func _run() -> void:
 	objects[0]["shape"]["radius"] = 1.0
 	objects[0]["transform"]["position"] = [360, 1000]
 	host.service.execute({"op": "scene.patch", "args": {"changes": {"objects": objects, "world.max_dynamic_bodies": 100}}})
-	_number(host.panel.pages["机制"], "子球总数（2～100）").get_line_edit().text = "100"
-	_button(host.panel.pages["机制"], "应用机制并重新模拟").pressed.emit()
+	_number(host.panel.pages["机制"], "每次子球总数").get_line_edit().text = "100"
+	_button(host.panel.pages["机制"], "应用机制").pressed.emit()
 	host.session.play()
 	for frame in 1200:
 		await process_frame

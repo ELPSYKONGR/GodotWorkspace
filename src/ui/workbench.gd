@@ -15,7 +15,7 @@ var session: Node
 var panel: Control
 var viewport: SubViewport
 var selected_id := ""
-var message := "就绪：先布置，再运行或录制。"
+var message := "就绪"
 var message_is_error := false
 var output_fps := 30
 var scene_path := "res://config/workbench_2d.json"
@@ -31,7 +31,7 @@ var exit_after_snapshot := false
 func _ready() -> void:
 	get_window().title = "解压视频工作台 · Godot"
 	get_window().content_scale_size = Vector2i(1440, 900)
-	get_window().content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
+	get_window().content_scale_mode = Window.CONTENT_SCALE_MODE_DISABLED
 	get_window().min_size = Vector2i(1100, 720)
 	get_window().size = Vector2i(1440, 900)
 	Engine.max_fps = 60
@@ -114,11 +114,14 @@ func _sync_scene_file() -> void:
 
 ## Delete uses the same validated, undoable command as the object inspector.
 func _unhandled_key_input(event: InputEvent) -> void:
-	if not event is InputEventKey or not event.pressed or event.echo or event.keycode != KEY_DELETE: return
+	if not event is InputEventKey or not event.pressed or event.echo: return
 	var focus := get_viewport().gui_get_focus_owner()
 	if focus is LineEdit or focus is TextEdit: return
-	if selected_id.is_empty(): return
-	_from_ui("object.remove", {"id": selected_id})
+	if event.ctrl_pressed and event.keycode == KEY_S: panel.scene_bar.save()
+	elif event.ctrl_pressed and event.keycode == KEY_Z: _from_ui("history.redo" if event.shift_pressed else "history.undo", {})
+	elif event.keycode == KEY_SPACE: _from_ui("simulation.toggle", {})
+	elif event.keycode == KEY_DELETE and not selected_id.is_empty(): _from_ui("object.remove", {"id": selected_id})
+	else: return
 	get_viewport().set_input_as_handled()
 
 ## Dispatch runtime commands without giving panels ownership of world nodes.
@@ -222,6 +225,7 @@ func _viewport_input(event: InputEvent, point: Vector2) -> void:
 			selected_id = session.stage.world.pick(point)
 			session.stage.world.set_debug(true, selected_id)
 			panel.sync_document(service.document, selected_id)
+			if not selected_id.is_empty(): panel.select_page("物体")
 			dragging = session.mode == "edit" and Document.object_index(service.document, selected_id) >= 0
 			drag_moved = false
 			if dragging:

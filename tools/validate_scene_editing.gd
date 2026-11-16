@@ -29,7 +29,7 @@ func _run() -> void:
 	host.service.execute({"op": "scene.load", "args": {"path": "res://config/workbench_long.json"}})
 	var original: Dictionary = host.service.document.duplicate(true)
 	_select(host, "outline_U")
-	(_find(host.panel.object_panel, "编辑所选轮廓") as Button).pressed.emit()
+	(_find(host.panel.object_panel, "编辑轮廓") as Button).pressed.emit()
 	var editor: Window = host.panel.object_panel.shape_editor
 	checks["existing_outline_opens_native_draft"] = editor.visible and editor.source["id"] == "outline_U"
 	var shape := {"primitive": "polygon", "points": [[-120,-80],[120,-80],[120,-32],[-64,-32],[-64,96],[-120,96]]}
@@ -94,15 +94,17 @@ func _run() -> void:
 	var hash_before := Document.simulation_hash(host.service.document)
 	var global: Dictionary = host.service.document["presentation"].duplicate(true)
 	var other: Dictionary = host.service.document["objects"][1].duplicate(true)
-	(_find(host.panel.object_panel, "物体材质来源") as OptionButton).select(1)
-	(_find(host.panel.object_panel, "物体光晕范围") as SpinBox).get_line_edit().text = "35"
-	(_find(host.panel.object_panel, "应用物体材质（保留运动）") as Button).pressed.emit()
+	(_find(host.panel.object_panel, "材质来源") as OptionButton).select(1)
+	(_find(host.panel.object_panel, "光晕范围 / px") as SpinBox).get_line_edit().text = "35"
+	(_find(host.panel.object_panel, "应用材质") as Button).pressed.emit()
 	checks["local_material_changes_only_selected_object"] = host.service.document["presentation"] == global and host.service.document["objects"][1] == other and host.service.document["objects"][0]["appearance"]["material"]["neon"]["glow_width"] == 35
 	checks["local_material_preserves_native_body_and_running_mode"] = body == host.session.stage.world.records["ball_A"]["body"] and host.session.mode == "playing" and hash_before == Document.simulation_hash(host.service.document)
-	(_find(host.panel.object_panel, "物体特效来源") as OptionButton).select(1)
-	(_find(host.panel.object_panel, "物体粒子数量") as SpinBox).get_line_edit().text = "4"
-	(_find(host.panel.object_panel, "应用物体特效（保留运动）") as Button).pressed.emit()
+	(_find(host.panel.object_panel, "特效来源") as OptionButton).select(1)
+	(_find(host.panel.object_panel, "粒子数量") as SpinBox).get_line_edit().text = "4"
+	(_find(host.panel.object_panel, "应用特效") as Button).pressed.emit()
 	checks["local_effects_keep_global_and_physical_state"] = host.service.document["presentation"] == global and host.service.document["objects"][0]["appearance"]["effects"]["count"] == 4 and hash_before == Document.simulation_hash(host.service.document) and body == host.session.stage.world.records["ball_A"]["body"]
+	await process_frame
+	(_find(host.panel.object_panel, "物理与运动") as Button).button_pressed = true
 	await process_frame
 	var numeric: SpinBox = host.panel.object_panel.fields["mass"]
 	checks["numeric_controls_are_fixed_88_pixels"] = is_equal_approx(numeric.size.x, 88)

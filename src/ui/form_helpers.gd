@@ -28,7 +28,8 @@ static func row(parent: Node, caption: String, control: Control) -> Control:
 	box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	var label := Label.new()
 	label.text = caption
-	label.custom_minimum_size.x = 150
+	label.custom_minimum_size.x = 84
+	label.add_theme_color_override("font_color", Color("a5b5b3"))
 	box.add_child(label)
 	control.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	box.add_child(control)
@@ -57,11 +58,13 @@ static func number(parent: Node, caption: String, initial: float, low: float = -
 		flow.add_theme_constant_override("h_separation", 10)
 		parent.add_child(flow)
 	var cell := VBoxContainer.new()
-	cell.custom_minimum_size.x = 150
+	cell.custom_minimum_size.x = 148
 	var label := Label.new()
 	label.text = caption
 	label.tooltip_text = caption
 	label.clip_text = true
+	label.add_theme_color_override("font_color", Color("a5b5b3"))
+	label.add_theme_font_size_override("font_size", 12)
 	cell.add_child(label)
 	cell.add_child(field)
 	flow.add_child(cell)
@@ -90,15 +93,18 @@ static func choice(parent: Node, caption: String, items: Array, initial: String)
 	var field := OptionButton.new()
 	for item in items:
 		field.add_item(str(item))
+		field.set_item_metadata(field.item_count - 1, str(item))
 		if str(item) == initial:
 			field.select(field.item_count - 1)
+	var names := {"dynamic": "动态物体", "static": "固定物体", "sensor": "接触感应", "inherit": "跟随全局", "custom": "独立设置", "fixed": "固定镜头", "follow_y": "纵向跟随", "wood": "木音", "bell": "铃音", "click": "轻击", "simulation": "模拟时间", "presentation": "成片时间", "orthogonal": "正交", "perspective": "透视", "gl_compatibility": "OpenGL（兼容）", "forward_plus": "Vulkan（高级）"}
+	for index in field.item_count: field.set_item_text(index, names.get(str(items[index]), str(items[index])))
 	row(parent, caption, field)
 	return field
 
 
 # Return the selected option's persisted string value.
 static func selected(field: OptionButton) -> String:
-	return field.get_item_text(field.selected)
+	return str(field.get_item_metadata(field.selected))
 
 
 # Edit a color with the native picker.
@@ -124,3 +130,37 @@ static func clear(parent: Node) -> void:
 	for child in parent.get_children():
 		parent.remove_child(child)
 		child.queue_free()
+
+## Collapse low-frequency settings and preserve the user's disclosure choices across rebuilds.
+static func section(parent: Node, caption: String, opened: bool = true) -> VBoxContainer:
+	var owner: Node = parent
+	while owner.get_parent() != null and not owner.has_meta("inspector_shell"): owner = owner.get_parent()
+	var key := "section_" + str(caption.hash()).replace("-", "n")
+	var wrapper := VBoxContainer.new()
+	parent.add_child(wrapper)
+	var header := Button.new()
+	header.text = caption
+	header.alignment = HORIZONTAL_ALIGNMENT_LEFT
+	header.toggle_mode = true
+	header.flat = true
+	header.tooltip_text = "展开 / 收起"
+	header.button_pressed = owner.get_meta(key, opened)
+	header.add_theme_font_size_override("font_size", 14)
+	wrapper.add_child(header)
+	var content := VBoxContainer.new()
+	content.visible = header.button_pressed
+	wrapper.add_child(content)
+	content.set_meta("section_header", header)
+	header.icon = _chevron(header.button_pressed)
+	header.toggled.connect(func(value):
+		content.visible = value
+		header.icon = _chevron(value)
+		owner.set_meta(key, value))
+	return content
+
+## The only custom icon is a geometric disclosure chevron in the control's text color.
+static func _chevron(opened: bool) -> ImageTexture:
+	var points := "4,6 8,10 12,6" if opened else "6,4 10,8 6,12"
+	var image := Image.new()
+	image.load_svg_from_string('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><polyline points="%s" fill="none" stroke="#a5b5b3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' % points)
+	return ImageTexture.create_from_image(image)

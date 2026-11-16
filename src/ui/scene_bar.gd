@@ -17,13 +17,18 @@ var awaiting_save := false
 
 ## Keep file actions on one row and the full scene identity on a separate line.
 func _ready() -> void:
-	var row := HFlowContainer.new()
+	var row := HBoxContainer.new()
 	add_child(row)
-	F.button(row, "新建场景", func(): new_dialog.popup_centered(Vector2i(480, 200)))
-	F.button(row, "打开场景", func(): _choose_file("open"))
-	F.button(row, "保存场景", save)
-	F.button(row, "另存为", func(): _choose_file("save"))
-	title = F.text(self, "正在加载场景")
+	var file_menu := MenuButton.new()
+	file_menu.text = "文件"
+	row.add_child(file_menu)
+	for caption in ["新建场景", "打开场景", "保存", "另存为"]: file_menu.get_popup().add_item(caption)
+	file_menu.get_popup().id_pressed.connect(_file_menu_action)
+	title = F.text(row, "正在加载场景")
+	title.clip_text = true
+	title.autowrap_mode = TextServer.AUTOWRAP_OFF
+	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	F.button(row, "保存", save).tooltip_text = "保存初始场景 · Ctrl+S"
 	new_dialog = ConfirmationDialog.new()
 	new_dialog.title = "新建场景"
 	new_dialog.ok_button_text = "新建"
@@ -33,8 +38,6 @@ func _ready() -> void:
 	new_dialog.add_child(form)
 	type_choice = F.choice(form, "场景类型", Workspace.TYPES.values(), "二维")
 	examples = F.check(form, "包含示例物体（取消则创建空场景）", true)
-	# A single-line hint avoids an oversized minimum height before dialog layout.
-	F.text(form, "所有类型共用物体编辑、录制、回放和视频生产。").autowrap_mode = TextServer.AUTOWRAP_OFF
 	new_dialog.confirmed.connect(func():
 		new_dialog.hide()
 		request_replace("scene.new", {"name": Workspace.TYPES.keys()[type_choice.selected], "blank": not examples.button_pressed}))
@@ -60,6 +63,14 @@ func _ready() -> void:
 	file_dialog.canceled.connect(_cancel_pending)
 	add_child(file_dialog)
 
+## File menu keeps less frequent actions available without crowding the header.
+func _file_menu_action(id: int) -> void:
+	match id:
+		0: new_dialog.popup_centered(Vector2i(480, 200))
+		1: _choose_file("open")
+		2: save()
+		3: _choose_file("save")
+
 ## The host owns dirty tracking and file identity; this control only presents them.
 func sync(path: String, changed: bool, doc: Dictionary) -> void:
 	current_path = path
@@ -68,8 +79,8 @@ func sync(path: String, changed: bool, doc: Dictionary) -> void:
 	var mode := "二维" if doc.get("world", {}).get("dimension", "2d") == "2d" else ("透视三维" if F.value(doc, "presentation.render.camera.projection", "orthogonal") == "perspective" else "正交三维")
 	if doc.get("objects", []).any(func(spec: Dictionary): return spec.has("glass")): mode = "玻璃演示 · 二维"
 	if mode == "二维" and F.value(doc, "presentation.render.neon.enabled", false): mode = "荧光 · 二维"
-	title.text = "%s%s  |  %s  |  %s" % ["* " if dirty else "", name, mode, path if not path.is_empty() else "未保存到文件"]
-	title.tooltip_text = title.text
+	title.text = "%s%s · %s" % ["* " if dirty else "", name, mode]
+	title.tooltip_text = path if not path.is_empty() else "尚未保存到文件"
 
 ## Replacing a document is deferred until the user resolves unsaved edits.
 func request_replace(op: String, args: Dictionary) -> void:

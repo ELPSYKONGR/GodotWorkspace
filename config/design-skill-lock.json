@@ -1,0 +1,27 @@
+{
+  "purpose": "AI design assistance only; not a Godot runtime dependency",
+  "installed_on": "2026-11-16",
+  "skills": [
+    {
+      "name": "design-taste-frontend",
+      "version": "2.5.1",
+      "repository": "https://github.com/Leonxlnx/taste-skill",
+      "download_ref": "f6b76575f949707b4e3c37cd86cb44b0b98643e8",
+      "path": "skills/taste-skill",
+      "license": "MIT"
+    },
+    {
+      "name": "impeccable",
+      "version": "4.9.2",
+      "repository": "https://github.com/pbakaus/impeccable",
+      "download_ref": "d41d9860b0094dcb68030657da63461212835aaa",
+      "path": ".agents/skills/impeccable",
+      "license": "Apache-2.0",
+      "engine": {
+        "version": "0.1.25",
+        "asset": "impeccable-windows-x64.exe",
+        "sha256": "ef4ef9df8871eff2b219cede89ca7e7086eed9531aafdc9a8afbc74b0be5fbba"
+      }
+    }
+  ]
+}

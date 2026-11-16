@@ -24,7 +24,7 @@ func _run() -> void:
 	for index in 3:
 		ui.scene_bar.type_choice.select(index)
 		ui.scene_bar.new_dialog.confirmed.emit()
-	for caption in ["应用物体参数并重置", "应用机制并重新模拟", "应用音效", "应用粒子与拖尾", "应用渲染与文字", "提交视频生产任务"]:
+	for caption in ["应用物体", "应用机制", "应用音效", "应用粒子与拖尾", "应用画面", "开始导出"]:
 		for button in buttons:
 			if button.text == caption:
 				button.pressed.emit()
@@ -53,8 +53,6 @@ func _run() -> void:
 	ui.object_panel._apply()
 	result["sensor_mode_command"] = commands.back()["args"]["changes"]["physics.mode"] == "sensor"
 	ui.object_panel.fields["locked"].button_pressed = true
-	for button in buttons:
-		if button.text == "应用锁定状态": button.pressed.emit(); break
 	result["lock_is_independent_edit"] = commands.back()["args"]["changes"] == {"editor.locked": true}
 	var error_info := {"last_message": "测试错误", "last_message_is_error": true, "audio": {"error": "test_missing_audio"}}
 	ui.pages["调试"].get_parent().get_parent().current_tab = ui.pages["调试"].get_parent().get_index()
@@ -92,7 +90,7 @@ func _buttons(node: Node, result: Array[Button]) -> void:
 func _validate_child_split_control(ui: Control, doc: Dictionary, result: Dictionary) -> void:
 	var original_params: Dictionary = _split_rule(doc["mechanisms"])["params"].duplicate(true)
 	var control := _button(ui.pages["机制"], "子球继续分裂") as CheckBox
-	var apply := _button(ui.pages["机制"], "应用机制并重新模拟")
+	var apply := _button(ui.pages["机制"], "应用机制")
 	var default_params: Dictionary = _split_rule(commands[4]["args"]["changes"]["mechanisms"])["params"]
 	result["children_can_split_defaults_true"] = control != null and control.button_pressed and default_params.get("children_can_split") == true
 	if control == null or apply == null:
@@ -110,7 +108,7 @@ func _validate_child_split_control(ui: Control, doc: Dictionary, result: Diction
 	disabled_doc["mechanisms"] = disabled_rules.duplicate(true)
 	ui.sync_document(disabled_doc, "ball_A")
 	control = _button(ui.pages["机制"], "子球继续分裂") as CheckBox
-	apply = _button(ui.pages["机制"], "应用机制并重新模拟")
+	apply = _button(ui.pages["机制"], "应用机制")
 	result["children_can_split_false_reloads_unchecked"] = control != null and not control.button_pressed
 	if control == null or apply == null: return
 	control.button_pressed = true

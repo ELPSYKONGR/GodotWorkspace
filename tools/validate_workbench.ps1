@@ -91,6 +91,7 @@ try {
     Invoke-GodotCheck 'SpeedApply' 'validate_speed_apply.gd' 'outputs\speed_apply_validation.json' 120 6000
     Invoke-GodotCheck 'Motion' 'validate_motion.gd' 'outputs\motion_validation.json' 120 1600
     Invoke-GodotCheck 'UI' 'validate_ui.gd' 'outputs\ui_validation.json' 60 100
+    Invoke-GodotCheck 'EditorLayout' 'validate_editor_layout.gd' 'outputs\editor_layout_validation.json' 60 1200
     Invoke-GodotCheck 'SceneWorkspace' 'validate_scene_workspace.gd' 'outputs\scene_workspace_validation.json' 120 1200
     Invoke-GodotCheck 'SceneEditing' 'validate_scene_editing.gd' 'outputs\scene_editing_validation.json' 120 1200
     Invoke-GodotCheck 'CameraTrack' 'validate_camera_track.gd' 'outputs\camera_track_validation.json' 120 200

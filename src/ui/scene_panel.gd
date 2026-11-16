@@ -4,26 +4,46 @@ const F = preload("res://src/ui/form_helpers.gd")
 
 ## Reuse the normal command/draft path for both loaded scenes and newly drawn scenes.
 static func build(parent: Node, doc: Dictionary, send: Callable, pending: RefCounted, selected: String) -> void:
+	var physics := F.section(parent, "世界物理", false)
+	var hz := F.number(physics, "物理频率 / Hz", float(F.value(doc, "world.physics_hz", 120)), 60, 480, 30)
+	var gravity: Array = doc["world"].get("gravity", [0, 450])
+	var g := F.number(physics, "重力 Y", float(gravity[1]), -2000, 2000, 0.1)
+	g.tooltip_text = "二维向下为正（px/s²）；三维向上为正（m/s²）"
+	var apply_physics := func():
+		hz.apply(); g.apply()
+		var updated: Array = gravity.duplicate()
+		updated[1] = g.value
+		send.call("scene.patch", {"changes": {"world.physics_hz": int(hz.value), "world.gravity": updated}})
+	F.button(physics, "应用世界物理", apply_physics)
+	pending.register("world_physics", [hz, g], apply_physics)
 	if doc["world"]["dimension"] != "2d":
-		F.text(parent, "纵向跟随、世界缩略图和轮廓绘制用于二维场景。正交三维/透视三维镜头仍在渲染页设置；逐物体材质和特效支持三维。")
+		F.text(parent, "三维相机在“画面”中设置。")
 		return
-	F.text(parent, "世界可以长于画幅。范围用于镜头/编辑导航，不产生隐形地板；原有地面需要移动、删除或同步到新边界。")
+	var world := F.section(parent, "世界范围")
+	world.tooltip_text = "范围用于镜头和导航，不产生隐形墙壁或地板；可在边界工具中同步现有标准墙壁"
 	var area: Array = doc["world"].get("bounds_2d", [0, 0, 720, 1280])
 	var bounds: Array = []
-	for i in 4: bounds.append(F.number(parent, ["世界起点 X", "世界起点 Y", "世界宽度", "世界高度"][i], float(area[i]), 1 if i > 1 else -100000, 100000, 1))
+	for i in 4: bounds.append(F.number(world, ["起点 X", "起点 Y", "宽度 / px", "高度 / px"][i], float(area[i]), 1 if i > 1 else -100000, 100000, 1))
 	var camera: Dictionary = F.value(doc, "presentation.render.camera", {})
-	var mode := F.choice(parent, "二维镜头模式", ["fixed", "follow_y"], str(camera.get("mode", "fixed")))
-	var target := F.line(parent, "跟随根物体 ID", str(camera.get("target_root", selected)))
-	var lineage := F.check(parent, "原球分裂后继续跟随存活子孙（选择最低者）", camera.get("on_split", "lowest_descendant") == "lowest_descendant")
-	var down := F.check(parent, "镜头只向下移动", bool(camera.get("only_down", true)))
-	var limit := F.check(parent, "镜头限制在世界范围内", bool(camera.get("limit_world", true)))
-	var framing := F.number(parent, "目标构图位置 / 高度比例", float(camera.get("framing_y", 0.42)), 0, 1, 0.01)
-	var top := F.number(parent, "死区上边 / 高度比例", float(camera.get("dead_zone_top", 0.32)), 0, 1, 0.01)
-	var bottom := F.number(parent, "死区下边 / 高度比例", float(camera.get("dead_zone_bottom", 0.58)), 0, 1, 0.01)
-	var smoothing := F.number(parent, "平滑时间 / 秒（0为立即）", float(camera.get("smooth_seconds", 0.18)), 0, 10, 0.01)
+	var lens := F.section(parent, "镜头")
+	var mode := F.choice(lens, "模式", ["fixed", "follow_y"], str(camera.get("mode", "fixed")))
+	var following := VBoxContainer.new()
+	lens.add_child(following)
+	var target := F.line(following, "跟随物体 ID", str(camera.get("target_root", selected)))
+	var lineage := F.check(following, "分裂后跟随子球", camera.get("on_split", "lowest_descendant") == "lowest_descendant")
+	lineage.tooltip_text = "沿原球谱系选择最低的存活后代；后代消失时保持最后镜头"
+	var down := F.check(following, "只向下移动", bool(camera.get("only_down", true)))
+	var limit := F.check(lens, "限制在世界范围", bool(camera.get("limit_world", true)))
+	var detail := F.section(following, "构图与平滑", false)
+	var framing := F.number(detail, "构图高度比例", float(camera.get("framing_y", 0.42)), 0, 1, 0.01)
+	var top := F.number(detail, "死区上边比例", float(camera.get("dead_zone_top", 0.32)), 0, 1, 0.01)
+	var bottom := F.number(detail, "死区下边比例", float(camera.get("dead_zone_bottom", 0.58)), 0, 1, 0.01)
+	var smoothing := F.number(detail, "平滑时间 / s", float(camera.get("smooth_seconds", 0.18)), 0, 10, 0.01)
+	var fixed := VBoxContainer.new()
+	lens.add_child(fixed)
 	var position: Array = camera.get("position_2d", [0, 0])
-	var x := F.number(parent, "固定镜头左侧 X", float(position[0]), -100000, 100000, 1)
-	var y := F.number(parent, "固定镜头顶部 Y", float(position[1]), -100000, 100000, 1)
+	var x := F.number(fixed, "镜头左侧 X", float(position[0]), -100000, 100000, 1)
+	var y := F.number(fixed, "镜头顶部 Y", float(position[1]), -100000, 100000, 1)
 	var controls: Array = bounds + [mode, target, lineage, down, limit, framing, top, bottom, smoothing, x, y]
 	var changes := func() -> Dictionary:
 		for field in controls:
@@ -34,7 +54,13 @@ static func build(parent: Node, doc: Dictionary, send: Callable, pending: RefCou
 	var apply := func(): send.call("scene.patch", {"changes": changes.call()})
 	F.button(parent, "应用世界与镜头", apply)
 	pending.register("world_camera", controls, apply)
-	F.button(parent, "同步标准地面/侧墙到新世界边界", func():
+	var visibility := func():
+		following.visible = F.selected(mode) == "follow_y"
+		fixed.visible = not following.visible
+	mode.item_selected.connect(func(_index): visibility.call())
+	visibility.call()
+	var tools := F.section(parent, "边界工具", false)
+	F.button(tools, "同步地面与侧墙", func():
 		var updates: Dictionary = changes.call()
 		var objects: Array = doc["objects"].duplicate(true)
 		var a: Array = updates["world.bounds_2d"]
@@ -47,5 +73,5 @@ static func build(parent: Node, doc: Dictionary, send: Callable, pending: RefCou
 				"wall_right": size[1] = a[3]; spec["transform"]["position"] = [a[0] + a[2] - size[0] / 2, a[1] + a[3] / 2]
 		updates["objects"] = objects
 		send.call("scene.patch", {"changes": updates}))
-	F.text(parent, "同步仅更新未锁定的标准floor / wall_left / wall_right矩形，保留其它障碍。镜头死区内保持不动，超出后向构图位置平滑；全部后代消失时保持最后镜头。")
-	F.button(parent, "返回镜头视图", func(): send.call("camera.return_view", {}))
+	tools.tooltip_text = "同步只更新未锁定的标准 floor / wall_left / wall_right 矩形，保留其它障碍"
+	F.button(tools, "返回镜头视图", func(): send.call("camera.return_view", {}))

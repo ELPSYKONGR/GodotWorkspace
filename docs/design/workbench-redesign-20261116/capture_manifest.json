@@ -1,0 +1,96 @@
+{
+    "recorded_date":  "2026-11-16",
+    "generated_assets":  false,
+    "captures":  [
+                     {
+                         "file":  "01_objects.png",
+                         "bytes":  104161,
+                         "sha256":  "8985935a8b8c772b3fe52a81bdf2839136ea032bc4db99a1df51d615c603bae9",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "02_physics.png",
+                         "bytes":  115341,
+                         "sha256":  "9e8a0789146414fed5e187b75c6916a1a2e3e06c832c839d6e1cdc3b24e7655e",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "03_material.png",
+                         "bytes":  115968,
+                         "sha256":  "df5f78eea216426023c894e6a7d2b5679e6f586029d528a4581783e1cc8b11b8",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "04_picture.png",
+                         "bytes":  101967,
+                         "sha256":  "4ad97aa1b2291728d3431583261a3f9f778ce1fd05c0aec78ee650145023bfd1",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "05_mechanisms.png",
+                         "bytes":  98933,
+                         "sha256":  "d74731fd8af93112c668a029c14713b5fc72393468bb3c9ab9b26ad725b1df0e",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "06_audio.png",
+                         "bytes":  97276,
+                         "sha256":  "4b5c68393b64ee891bcd6da7746f7a90174a1307713173bfb5c7891b8bd69d38",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "07_effects.png",
+                         "bytes":  98407,
+                         "sha256":  "3ae3a3af1c3facc772c357422d83d13aa762017b9f85039af95986ee790743e5",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "08_export_empty.png",
+                         "bytes":  100087,
+                         "sha256":  "d214d6ba70519b975de317e93cf5ecb5398b7ab1a90a68affc51781a7e91d4b0",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "09_long_world.png",
+                         "bytes":  122916,
+                         "sha256":  "0c0edbd8e78763cd9be74a6b6eb5e4c3167e177da527c0de7db7d42e60e51f40",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "10_compact_1100.png",
+                         "bytes":  107986,
+                         "sha256":  "321c646114875babb2c37de38e5aa6e1d4accf3abf0b95c2b45f0c0bc35d74e5",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "11_wide_1920.png",
+                         "bytes":  135979,
+                         "sha256":  "47828a9a9e9e19a1a471725f2743ff1426ae084eb076d784f8daa7705bd15a4c",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "12_3d.png",
+                         "bytes":  183535,
+                         "sha256":  "938996d243ead016654f7db23052648aa0febddf70ba805dfe5413928afcc77f",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "13_error_and_focus.png",
+                         "bytes":  185297,
+                         "sha256":  "005308859984bc3a21ddd310dc4e4f67a875b59494db33d4d0f4305d0c005876",
+                         "source":  "native Godot GPU window; tools/validate_editor_layout.gd --capture"
+                     },
+                     {
+                         "file":  "before.png",
+                         "bytes":  149747,
+                         "sha256":  "e0afa86a2052fb69b274fee6b1c24d23564053fad2dc34187a1cdf3ecf531b89",
+                         "source":  "native Godot workbench before redesign"
+                     },
+                     {
+                         "file":  "contact_sheet.jpg",
+                         "bytes":  184917,
+                         "sha256":  "0c0f85daada05d213a1c7d891779cf824484e86bf4db95a1990021d2f98968b9",
+                         "source":  "Pillow contact sheet of 13 native GPU captures"
+                     }
+                 ]
+}

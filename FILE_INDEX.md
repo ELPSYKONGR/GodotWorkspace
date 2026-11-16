@@ -32,7 +32,7 @@
 | `docs/迁移与打包说明.md` / `docs/迁移验收.md` | 离线恢复、配置、完整性、Git历史及异盘实际验证 |
 | `docs/standards/ENGINEERING_STANDARD_ENHANCED_v2.1.md` | 用户提供的通用工程标准原文 |
 | `docs/third_party/` | Godot、FFmpeg许可和附带声明正文 |
-| `docs/工作台使用说明.md` | 九个面板、录制/回放/生产、AI协议、代码调试与边界 |
+| `docs/工作台使用说明.md` | 三栏界面、六个设置入口、录制/回放/生产、AI协议、代码调试与边界 |
 | `docs/长场景与属性面板方案_20261116.md` | 历史Git核对和接入设计；顶部链接最新实施状态，音频分路/多轨背景音等仍待实现 |
 | `docs/形状编辑环境与多列属性方案_20261116.md` | 多列属性、已有场景直接修改与新建草图双入口、轮廓原位更新、模拟接入方案，L形/U形物理可行性与未集成边界 |
 | `docs/design/inspector-20261116/` | 九类多列属性及形状绘制/布置原型、逐页PNG、交互验证；各源文件职责见目录README |
@@ -79,7 +79,11 @@
 | `src/production/job_queue.gd` | 单个活动任务、冻结场景/Take/WAV、子进程、状态与协作取消 |
 | `src/production/renderer.gd` | 无物理解算的Take恢复、干净画面逐帧PNG导出 |
 | `src/ui/workbench.gd` | 主控制器；串联命令/会话/预览/AI桥/生产，维护选择与拖动 |
-| `src/ui/workbench_ui.gd` | 原生Control界面、九标签页、工具栏、时间轴、预览坐标转换 |
+| `src/ui/workbench_ui.gd` | 原生界面协调、六入口/上下文导航、草稿同步、状态、时间轴与预览坐标转换 |
+| `src/ui/workbench_layout.gd` / `workbench_theme.gd` | 三栏工作空间与原生控件主题、顶部文件/底部录制、可见状态及键盘焦点 |
+| `PRODUCT.md` / `DESIGN.md` / `.impeccable/design.json` | 已确认产品约束、实现后的视觉规则和设计侧车；不是运行时场景数据 |
+| `docs/design/workbench-redesign-20261116/` | `brief.md`设置取舍；`验收.md`验证与复核；PNG/GPU截图、联系表与`capture_manifest.json`图片来源/哈希；JSON/日志为专项和完整回归证据 |
+| `config/design-skill-lock.json` / `SKILLS_USED.md` | Taste/Impeccable来源、版本、许可、复现安装；仅用于AI开发辅助 |
 | `src/ui/scene_panel.gd` | 长世界范围、跟随参数、标准边界同步，复用统一草稿/命令事务 |
 | `src/ui/world_minimap.gd` | 编辑器世界缩略图、真实物体/画幅概览、编辑导航逆变换，不进入成片 |
 | `src/ui/shape_canvas.gd` / `shape_editor.gd` | 原生局部轮廓绘制/改顶点/网格吸附、已有ID应用/副本/取消/修订冲突保护 |
@@ -151,6 +155,7 @@
 | `docs/性能与批量应用验收.md` | 最低速度/统一应用用法、回放修复与原始GPU性能证据 |
 | `tools/validate_scene_workspace.gd` | 六类型真实世界保存重开、中文路径、未保存提示、失败保护与布局保存 |
 | `tools/validate_scene_editing.gd` | 原生轮廓新建/同ID修改/撤销/冲突、长世界选取拖动、局部表现/88px/持久化 |
+| `tools/validate_editor_layout.gd` | 三栏/尺寸/焦点/状态、草稿、参数过滤、继承、录制/导出/快捷键；可选真实GPU截图 |
 | `tools/validate_camera_track.gd` | 镜头死区/平滑/边界/只向下/谱系/乱序寻帧与非法配置 |
 | `tools/validate_polygon_styles.gd` | 实际L/U原生碰撞、出生空间、后代特效/颜色/时钟、3D静态/PBR材质 |
 | `tools/validate_long_world.gd` | 真实长场景录制/分裂/跟随及实时/回放镜头对照，生成供生产的Take |
@@ -173,7 +178,8 @@
 
 ```mermaid
 flowchart TD
-  UI[九页工作台 / 轮廓草稿] --> CMD[CommandService]
+  UI[三栏工作台 / 轮廓草稿] --> CMD[CommandService]
+  UI --> Shell[原生布局 / 主题 / 表单控件]
   AI[AI文件收件箱] --> Bridge[FileBridge]
   Bridge --> CMD
   CMD --> Doc[SceneDocument 初始数据]

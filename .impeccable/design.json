@@ -1,0 +1,438 @@
+{
+    "schemaVersion":  2,
+    "generatedAt":  "2026-11-16T07:13:53.9485211Z",
+    "title":  "Design System: 解压视频工作台",
+    "extensions":  {
+                       "colorMeta":  {
+                                         "mint":  {
+                                                      "role":  "primary",
+                                                      "displayName":  "薄荷",
+                                                      "tonalRamp":  [
+                                                                        "oklch(15.00% 0.03005 171.40)",
+                                                                        "oklch(26.43% 0.05295 171.40)",
+                                                                        "oklch(37.86% 0.07584 171.40)",
+                                                                        "oklch(49.29% 0.09015 171.40)",
+                                                                        "oklch(60.71% 0.09015 171.40)",
+                                                                        "oklch(72.14% 0.09015 171.40)",
+                                                                        "oklch(83.57% 0.07406 171.40)",
+                                                                        "oklch(95.00% 0.02254 171.40)"
+                                                                    ]
+                                                  },
+                                         "mint-hover":  {
+                                                            "role":  "primary",
+                                                            "displayName":  "浅薄荷",
+                                                            "tonalRamp":  [
+                                                                              "oklch(15.00% 0.02119 172.34)",
+                                                                              "oklch(26.43% 0.03733 172.34)",
+                                                                              "oklch(37.86% 0.05348 172.34)",
+                                                                              "oklch(49.29% 0.06356 172.34)",
+                                                                              "oklch(60.71% 0.06356 172.34)",
+                                                                              "oklch(72.14% 0.06356 172.34)",
+                                                                              "oklch(83.57% 0.05222 172.34)",
+                                                                              "oklch(95.00% 0.01589 172.34)"
+                                                                          ]
+                                                        },
+                                         "mint-pressed":  {
+                                                              "role":  "primary",
+                                                              "displayName":  "深薄荷",
+                                                              "tonalRamp":  [
+                                                                                "oklch(15.00% 0.03377 169.89)",
+                                                                                "oklch(26.43% 0.05950 169.89)",
+                                                                                "oklch(37.86% 0.08524 169.89)",
+                                                                                "oklch(49.29% 0.10131 169.89)",
+                                                                                "oklch(60.71% 0.10131 169.89)",
+                                                                                "oklch(72.14% 0.10131 169.89)",
+                                                                                "oklch(83.57% 0.08323 169.89)",
+                                                                                "oklch(95.00% 0.02533 169.89)"
+                                                                            ]
+                                                          },
+                                         "on-mint":  {
+                                                         "role":  "primary",
+                                                         "displayName":  "薄荷上的深绿文字",
+                                                         "tonalRamp":  [
+                                                                           "oklch(15.00% 0.01104 169.16)",
+                                                                           "oklch(26.43% 0.01945 169.16)",
+                                                                           "oklch(37.86% 0.02786 169.16)",
+                                                                           "oklch(49.29% 0.03312 169.16)",
+                                                                           "oklch(60.71% 0.03312 169.16)",
+                                                                           "oklch(72.14% 0.03312 169.16)",
+                                                                           "oklch(83.57% 0.02721 169.16)",
+                                                                           "oklch(95.00% 0.00828 169.16)"
+                                                                       ]
+                                                     },
+                                         "selected-text":  {
+                                                               "role":  "primary",
+                                                               "displayName":  "选中浅绿文字",
+                                                               "tonalRamp":  [
+                                                                                 "oklch(15.00% 0.01908 169.87)",
+                                                                                 "oklch(26.43% 0.03361 169.87)",
+                                                                                 "oklch(37.86% 0.04815 169.87)",
+                                                                                 "oklch(49.29% 0.05723 169.87)",
+                                                                                 "oklch(60.71% 0.05723 169.87)",
+                                                                                 "oklch(72.14% 0.05723 169.87)",
+                                                                                 "oklch(83.57% 0.04701 169.87)",
+                                                                                 "oklch(95.00% 0.01431 169.87)"
+                                                                             ]
+                                                           },
+                                         "selected-surface":  {
+                                                                  "role":  "primary",
+                                                                  "displayName":  "选中绿",
+                                                                  "tonalRamp":  [
+                                                                                    "oklch(15.00% 0.01525 170.18)",
+                                                                                    "oklch(26.43% 0.02686 170.18)",
+                                                                                    "oklch(37.86% 0.03848 170.18)",
+                                                                                    "oklch(49.29% 0.04574 170.18)",
+                                                                                    "oklch(60.71% 0.04574 170.18)",
+                                                                                    "oklch(72.14% 0.04574 170.18)",
+                                                                                    "oklch(83.57% 0.03757 170.18)",
+                                                                                    "oklch(95.00% 0.01143 170.18)"
+                                                                                ]
+                                                              },
+                                         "selection":  {
+                                                           "role":  "primary",
+                                                           "displayName":  "文本选中绿",
+                                                           "tonalRamp":  [
+                                                                             "oklch(15.00% 0.01899 170.39)",
+                                                                             "oklch(26.43% 0.03346 170.39)",
+                                                                             "oklch(37.86% 0.04793 170.39)",
+                                                                             "oklch(49.29% 0.05697 170.39)",
+                                                                             "oklch(60.71% 0.05697 170.39)",
+                                                                             "oklch(72.14% 0.05697 170.39)",
+                                                                             "oklch(83.57% 0.04680 170.39)",
+                                                                             "oklch(95.00% 0.01424 170.39)"
+                                                                         ]
+                                                       },
+                                         "result":  {
+                                                        "role":  "primary",
+                                                        "displayName":  "结果绿",
+                                                        "tonalRamp":  [
+                                                                          "oklch(15.00% 0.02060 158.06)",
+                                                                          "oklch(26.43% 0.03630 158.06)",
+                                                                          "oklch(37.86% 0.05201 158.06)",
+                                                                          "oklch(49.29% 0.06181 158.06)",
+                                                                          "oklch(60.71% 0.06181 158.06)",
+                                                                          "oklch(72.14% 0.06181 158.06)",
+                                                                          "oklch(83.57% 0.05078 158.06)",
+                                                                          "oklch(95.00% 0.01545 158.06)"
+                                                                      ]
+                                                    },
+                                         "error":  {
+                                                       "role":  "primary",
+                                                       "displayName":  "错误粉",
+                                                       "tonalRamp":  [
+                                                                         "oklch(15.00% 0.03913 20.00)",
+                                                                         "oklch(26.43% 0.06895 20.00)",
+                                                                         "oklch(37.86% 0.09877 20.00)",
+                                                                         "oklch(49.29% 0.11740 20.00)",
+                                                                         "oklch(60.71% 0.11740 20.00)",
+                                                                         "oklch(72.14% 0.11740 20.00)",
+                                                                         "oklch(83.57% 0.09645 20.00)",
+                                                                         "oklch(95.00% 0.02935 20.00)"
+                                                                     ]
+                                                   },
+                                         "canvas":  {
+                                                        "role":  "neutral",
+                                                        "displayName":  "深矿物底",
+                                                        "tonalRamp":  [
+                                                                          "oklch(15.00% 0.00523 174.27)",
+                                                                          "oklch(26.43% 0.00922 174.27)",
+                                                                          "oklch(37.86% 0.01321 174.27)",
+                                                                          "oklch(49.29% 0.01570 174.27)",
+                                                                          "oklch(60.71% 0.01570 174.27)",
+                                                                          "oklch(72.14% 0.01570 174.27)",
+                                                                          "oklch(83.57% 0.01290 174.27)",
+                                                                          "oklch(95.00% 0.00392 174.27)"
+                                                                      ]
+                                                    },
+                                         "panel":  {
+                                                       "role":  "neutral",
+                                                       "displayName":  "矿物面板",
+                                                       "tonalRamp":  [
+                                                                         "oklch(15.00% 0.00584 177.82)",
+                                                                         "oklch(26.43% 0.01029 177.82)",
+                                                                         "oklch(37.86% 0.01475 177.82)",
+                                                                         "oklch(49.29% 0.01753 177.82)",
+                                                                         "oklch(60.71% 0.01753 177.82)",
+                                                                         "oklch(72.14% 0.01753 177.82)",
+                                                                         "oklch(83.57% 0.01440 177.82)",
+                                                                         "oklch(95.00% 0.00438 177.82)"
+                                                                     ]
+                                                   },
+                                         "field":  {
+                                                       "role":  "neutral",
+                                                       "displayName":  "内凹输入底",
+                                                       "tonalRamp":  [
+                                                                         "oklch(15.00% 0.00600 177.29)",
+                                                                         "oklch(26.43% 0.01057 177.29)",
+                                                                         "oklch(37.86% 0.01515 177.29)",
+                                                                         "oklch(49.29% 0.01800 177.29)",
+                                                                         "oklch(60.71% 0.01800 177.29)",
+                                                                         "oklch(72.14% 0.01800 177.29)",
+                                                                         "oklch(83.57% 0.01479 177.29)",
+                                                                         "oklch(95.00% 0.00450 177.29)"
+                                                                     ]
+                                                   },
+                                         "control":  {
+                                                         "role":  "neutral",
+                                                         "displayName":  "控件绿",
+                                                         "tonalRamp":  [
+                                                                           "oklch(15.00% 0.00645 180.43)",
+                                                                           "oklch(26.43% 0.01136 180.43)",
+                                                                           "oklch(37.86% 0.01627 180.43)",
+                                                                           "oklch(49.29% 0.01934 180.43)",
+                                                                           "oklch(60.71% 0.01934 180.43)",
+                                                                           "oklch(72.14% 0.01934 180.43)",
+                                                                           "oklch(83.57% 0.01589 180.43)",
+                                                                           "oklch(95.00% 0.00483 180.43)"
+                                                                       ]
+                                                     },
+                                         "control-hover":  {
+                                                               "role":  "neutral",
+                                                               "displayName":  "控件悬停绿",
+                                                               "tonalRamp":  [
+                                                                                 "oklch(15.00% 0.00776 175.09)",
+                                                                                 "oklch(26.43% 0.01368 175.09)",
+                                                                                 "oklch(37.86% 0.01960 175.09)",
+                                                                                 "oklch(49.29% 0.02329 175.09)",
+                                                                                 "oklch(60.71% 0.02329 175.09)",
+                                                                                 "oklch(72.14% 0.02329 175.09)",
+                                                                                 "oklch(83.57% 0.01913 175.09)",
+                                                                                 "oklch(95.00% 0.00582 175.09)"
+                                                                             ]
+                                                           },
+                                         "control-pressed":  {
+                                                                 "role":  "neutral",
+                                                                 "displayName":  "控件按下绿",
+                                                                 "tonalRamp":  [
+                                                                                   "oklch(15.00% 0.01563 170.22)",
+                                                                                   "oklch(26.43% 0.02755 170.22)",
+                                                                                   "oklch(37.86% 0.03946 170.22)",
+                                                                                   "oklch(49.29% 0.04690 170.22)",
+                                                                                   "oklch(60.71% 0.04690 170.22)",
+                                                                                   "oklch(72.14% 0.04690 170.22)",
+                                                                                   "oklch(83.57% 0.03853 170.22)",
+                                                                                   "oklch(95.00% 0.01173 170.22)"
+                                                                               ]
+                                                             },
+                                         "control-disabled":  {
+                                                                  "role":  "neutral",
+                                                                  "displayName":  "控件失效绿",
+                                                                  "tonalRamp":  [
+                                                                                    "oklch(15.00% 0.00578 177.97)",
+                                                                                    "oklch(26.43% 0.01019 177.97)",
+                                                                                    "oklch(37.86% 0.01459 177.97)",
+                                                                                    "oklch(49.29% 0.01735 177.97)",
+                                                                                    "oklch(60.71% 0.01735 177.97)",
+                                                                                    "oklch(72.14% 0.01735 177.97)",
+                                                                                    "oklch(83.57% 0.01425 177.97)",
+                                                                                    "oklch(95.00% 0.00434 177.97)"
+                                                                                ]
+                                                              },
+                                         "popup":  {
+                                                       "role":  "neutral",
+                                                       "displayName":  "菜单绿",
+                                                       "tonalRamp":  [
+                                                                         "oklch(15.00% 0.00693 171.00)",
+                                                                         "oklch(26.43% 0.01220 171.00)",
+                                                                         "oklch(37.86% 0.01748 171.00)",
+                                                                         "oklch(49.29% 0.02078 171.00)",
+                                                                         "oklch(60.71% 0.02078 171.00)",
+                                                                         "oklch(72.14% 0.02078 171.00)",
+                                                                         "oklch(83.57% 0.01707 171.00)",
+                                                                         "oklch(95.00% 0.00519 171.00)"
+                                                                     ]
+                                                   },
+                                         "popup-hover":  {
+                                                             "role":  "neutral",
+                                                             "displayName":  "菜单悬停绿",
+                                                             "tonalRamp":  [
+                                                                               "oklch(15.00% 0.01371 164.77)",
+                                                                               "oklch(26.43% 0.02416 164.77)",
+                                                                               "oklch(37.86% 0.03461 164.77)",
+                                                                               "oklch(49.29% 0.04114 164.77)",
+                                                                               "oklch(60.71% 0.04114 164.77)",
+                                                                               "oklch(72.14% 0.04114 164.77)",
+                                                                               "oklch(83.57% 0.03380 164.77)",
+                                                                               "oklch(95.00% 0.01029 164.77)"
+                                                                           ]
+                                                         },
+                                         "ink":  {
+                                                     "role":  "neutral",
+                                                     "displayName":  "浅灰正文",
+                                                     "tonalRamp":  [
+                                                                       "oklch(15.00% 0.00218 185.27)",
+                                                                       "oklch(26.43% 0.00384 185.27)",
+                                                                       "oklch(37.86% 0.00550 185.27)",
+                                                                       "oklch(49.29% 0.00654 185.27)",
+                                                                       "oklch(60.71% 0.00654 185.27)",
+                                                                       "oklch(72.14% 0.00654 185.27)",
+                                                                       "oklch(83.57% 0.00537 185.27)",
+                                                                       "oklch(95.00% 0.00163 185.27)"
+                                                                   ]
+                                                 },
+                                         "muted":  {
+                                                       "role":  "neutral",
+                                                       "displayName":  "灰绿辅助",
+                                                       "tonalRamp":  [
+                                                                         "oklch(15.00% 0.00600 187.75)",
+                                                                         "oklch(26.43% 0.01056 187.75)",
+                                                                         "oklch(37.86% 0.01513 187.75)",
+                                                                         "oklch(49.29% 0.01799 187.75)",
+                                                                         "oklch(60.71% 0.01799 187.75)",
+                                                                         "oklch(72.14% 0.01799 187.75)",
+                                                                         "oklch(83.57% 0.01478 187.75)",
+                                                                         "oklch(95.00% 0.00450 187.75)"
+                                                                     ]
+                                                   },
+                                         "disabled-ink":  {
+                                                              "role":  "neutral",
+                                                              "displayName":  "失效灰绿",
+                                                              "tonalRamp":  [
+                                                                                "oklch(15.00% 0.00634 187.54)",
+                                                                                "oklch(26.43% 0.01117 187.54)",
+                                                                                "oklch(37.86% 0.01600 187.54)",
+                                                                                "oklch(49.29% 0.01901 187.54)",
+                                                                                "oklch(60.71% 0.01901 187.54)",
+                                                                                "oklch(72.14% 0.01901 187.54)",
+                                                                                "oklch(83.57% 0.01562 187.54)",
+                                                                                "oklch(95.00% 0.00475 187.54)"
+                                                                            ]
+                                                          }
+                                     },
+                       "typographyMeta":  {
+                                              "title":  {
+                                                            "displayName":  "属性标题",
+                                                            "purpose":  "右侧属性面板主标题。"
+                                                        },
+                                              "body":  {
+                                                           "displayName":  "原生正文",
+                                                           "purpose":  "正文、按钮、菜单、列表、输入与折叠标题。"
+                                                       },
+                                              "label":  {
+                                                            "displayName":  "紧凑标签",
+                                                            "purpose":  "数值字段上标签、运行状态与底部结果。"
+                                                        }
+                                          },
+                       "shadows":  [
+
+                                   ],
+                       "motion":  [
+
+                                  ],
+                       "breakpoints":  [
+
+                                       ]
+                   },
+    "components":  [
+                       {
+                           "name":  "主操作按钮",
+                           "kind":  "button",
+                           "refersTo":  "button-primary",
+                           "description":  "导出相关主操作；Godot Theme 的 HTML/CSS 展示转译。",
+                           "html":  "\u003cbutton class=\"ds-primary\"\u003e导出视频\u003c/button\u003e",
+                           "css":  ".ds-primary{font-family:\u0027Microsoft YaHei UI\u0027,\u0027Microsoft YaHei\u0027,\u0027Noto Sans CJK SC\u0027,Arial;font-size:14px; background:#8de0c5;color:#132a22;border:0;border-radius:5px;padding:7px 14px}.ds-primary:hover{background:#b5eedb}.ds-primary:active{background:#69c7a8}.ds-primary:focus-visible{outline:1px solid #8de0c5;outline-offset:-1px;}.ds-primary:disabled{background:#202c29;color:#71817f}"
+                       },
+                       {
+                           "name":  "普通操作按钮",
+                           "kind":  "button",
+                           "refersTo":  "button-secondary",
+                           "description":  "保存、应用和播放等普通操作；状态直接切换。",
+                           "html":  "\u003cbutton class=\"ds-secondary\"\u003e应用物体\u003c/button\u003e",
+                           "css":  ".ds-secondary{font-family:\u0027Microsoft YaHei UI\u0027,\u0027Microsoft YaHei\u0027,\u0027Noto Sans CJK SC\u0027,Arial;font-size:14px; background:#283633;color:#e8eeed;border:0;border-radius:5px;padding:6px 10px}.ds-secondary:hover{background:#354641}.ds-secondary:active{background:#284c40;color:#8de0c5}.ds-secondary:focus-visible{outline:1px solid #8de0c5;outline-offset:-1px;}.ds-secondary:disabled{background:#202c29;color:#71817f}"
+                       },
+                       {
+                           "name":  "平面按钮",
+                           "kind":  "button",
+                           "refersTo":  "button-flat",
+                           "description":  "文件、物体操作等原生平面入口，静止时无填充。",
+                           "html":  "\u003cbutton class=\"ds-flat\"\u003e物体操作\u003c/button\u003e",
+                           "css":  ".ds-flat{font-family:\u0027Microsoft YaHei UI\u0027,\u0027Microsoft YaHei\u0027,\u0027Noto Sans CJK SC\u0027,Arial;font-size:14px; background:transparent;color:#e8eeed;border:0;border-radius:5px;padding:6px 10px}.ds-flat:hover{background:#354641}.ds-flat:active{background:#284c40;color:#8de0c5}.ds-flat:focus-visible{outline:1px solid #8de0c5;outline-offset:-1px;}.ds-flat:disabled{color:#71817f}"
+                       },
+                       {
+                           "name":  "文本输入",
+                           "kind":  "input",
+                           "refersTo":  "input",
+                           "description":  "可编辑属性；只读底、插入光标、文本选择和焦点均来自原生主题。",
+                           "html":  "\u003cinput class=\"ds-input\" aria-label=\"物体名称\" value=\"绿色初始球A\"\u003e",
+                           "css":  ".ds-input{font-family:\u0027Microsoft YaHei UI\u0027,\u0027Microsoft YaHei\u0027,\u0027Noto Sans CJK SC\u0027,Arial;font-size:14px; background:#121e1b;color:#e8eeed;border:0;border-radius:4px;padding:7px 9px;caret-color:#8de0c5}.ds-input::placeholder{color:#a5b5b3}.ds-input::selection{background:#315f50}.ds-input:focus-visible{outline:1px solid #8de0c5;outline-offset:-1px;}.ds-input:read-only{background:#1c2825}.ds-input:disabled{color:#71817f}"
+                       },
+                       {
+                           "name":  "设置导航",
+                           "kind":  "nav",
+                           "refersTo":  "navigation",
+                           "description":  "六个原生切换入口，两列排列；当前项采用按下态。",
+                           "html":  "\u003cnav class=\"ds-nav\" aria-label=\"设置\"\u003e\u003cbutton aria-current=\"page\"\u003e物体\u003c/button\u003e\u003cbutton\u003e场景\u003c/button\u003e\u003cbutton\u003e画面\u003c/button\u003e\u003cbutton\u003e机制\u003c/button\u003e\u003cbutton\u003e声音\u003c/button\u003e\u003cbutton\u003e特效\u003c/button\u003e\u003c/nav\u003e",
+                           "css":  ".ds-nav{display:grid;grid-template-columns:repeat(2,1fr);gap:9px 8px}.ds-nav button{font-family:\u0027Microsoft YaHei UI\u0027,\u0027Microsoft YaHei\u0027,\u0027Noto Sans CJK SC\u0027,Arial;font-size:14px; background:#283633;color:#e8eeed;border:0;border-radius:5px;padding:6px 10px}.ds-nav button:hover{background:#354641}.ds-nav button:active,.ds-nav button[aria-current=page]{background:#284c40;color:#8de0c5}.ds-nav button:focus-visible{outline:1px solid #8de0c5;outline-offset:-1px;}"
+                       },
+                       {
+                           "name":  "选中物体列表",
+                           "kind":  "custom",
+                           "refersTo":  "object-list-selected",
+                           "description":  "左侧物体列表的选择与键盘焦点；原生列表行为由 Godot 提供。",
+                           "html":  "\u003cdiv class=\"ds-list\" role=\"listbox\" aria-label=\"场景物体\" tabindex=\"0\"\u003e\u003cdiv class=\"ds-list-selected\" role=\"option\" aria-selected=\"true\"\u003e绿色初始球A\u003c/div\u003e\u003cdiv role=\"option\" aria-selected=\"false\"\u003e地面\u003c/div\u003e\u003c/div\u003e",
+                           "css":  ".ds-list{font-family:\u0027Microsoft YaHei UI\u0027,\u0027Microsoft YaHei\u0027,\u0027Noto Sans CJK SC\u0027,Arial;font-size:14px; background:#1c2825;color:#e8eeed;padding:4px 0;display:grid;row-gap:10px}.ds-list-selected{background:#315448;color:#c3f5e2;border-radius:4px;padding:7px}.ds-list:focus-visible{border-radius:4px;outline:1px solid #8de0c5;outline-offset:-1px;}"
+                       },
+                       {
+                           "name":  "工作区面板",
+                           "kind":  "card",
+                           "refersTo":  "panel",
+                           "description":  "方角工作容器，依靠色面分层；不添加卡片投影。",
+                           "html":  "\u003csection class=\"ds-panel\"\u003e\u003ch2\u003e物体属性\u003c/h2\u003e\u003cp\u003e当前物体\u003c/p\u003e\u003c/section\u003e",
+                           "css":  ".ds-panel{font-family:\u0027Microsoft YaHei UI\u0027,\u0027Microsoft YaHei\u0027,\u0027Noto Sans CJK SC\u0027,Arial;font-size:14px; background:#1c2825;color:#e8eeed;border-radius:0;padding:12px 14px;display:grid;gap:9px}.ds-panel h2{font:inherit;font-size:18px;margin:0}.ds-panel p{color:#a5b5b3;margin:0}"
+                       },
+                       {
+                           "name":  "折叠属性组",
+                           "kind":  "custom",
+                           "refersTo":  "disclosure",
+                           "description":  "平面标题与真实几何折线；展开记忆由原生应用维护。",
+                           "html":  "\u003cdetails class=\"ds-disclosure\"\u003e\u003csummary\u003e\u003csvg class=\"ds-chevron-closed\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"\u003e\u003cpolyline points=\"6,4 10,8 6,12\" fill=\"none\" stroke=\"#a5b5b3\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/\u003e\u003c/svg\u003e\u003csvg class=\"ds-chevron-open\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"\u003e\u003cpolyline points=\"4,6 8,10 12,6\" fill=\"none\" stroke=\"#a5b5b3\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/\u003e\u003c/svg\u003e物理与运动\u003c/summary\u003e\u003cp\u003e初速度、质量、弹性与摩擦\u003c/p\u003e\u003c/details\u003e",
+                           "css":  ".ds-disclosure{font-family:\u0027Microsoft YaHei UI\u0027,\u0027Microsoft YaHei\u0027,\u0027Noto Sans CJK SC\u0027,Arial;font-size:14px; color:#e8eeed}.ds-disclosure summary{list-style:none;display:flex;align-items:center;gap:4px;background:transparent;border-radius:5px;padding:6px 10px}.ds-disclosure summary::-webkit-details-marker{display:none}.ds-disclosure summary:hover{background:#354641}.ds-disclosure summary:active{background:#284c40;color:#8de0c5}.ds-disclosure summary:focus-visible{outline:1px solid #8de0c5;outline-offset:-1px;}.ds-disclosure[open] summary{color:#8de0c5}.ds-disclosure .ds-chevron-open{display:none}.ds-disclosure[open] .ds-chevron-closed{display:none}.ds-disclosure[open] .ds-chevron-open{display:block}.ds-disclosure p{color:#a5b5b3;margin:9px 0 0}"
+                       }
+                   ],
+    "narrative":  {
+                      "northStar":  "克制的矿物绿工作空间",
+                      "overview":  "矿物绿面板承载紧凑的原生工具，中央画面是持续可见的工作对象。薄荷色只承担主操作、选中和焦点反馈；界面保持安静，让可编辑的场景内容决定画面的色彩与表现。\n\n系统中文字体、稳定输入宽度和按需展开的属性组，服务连续的布置、验证和输出。物体属性与全局设置用标题和作用范围区分；简短结果反馈留在滚动区外。这里记录的是已实现的 Godot Control 工作台，不约束视频内容中的字体、颜色、荧光或三维光照。",
+                      "keyCharacteristics":  [
+                                                 "矿物绿平面层次与薄荷色状态反馈。",
+                                                 "系统中文字体与紧凑、稳定的原生输入。",
+                                                 "中央画面扩展，物体与属性各有固定工作区。",
+                                                 "低频选项逐级展开，状态与结果持续可见。"
+                                             ],
+                      "rules":  [
+                                    {
+                                        "name":  "The Stable Type Rule",
+                                        "body":  "缩小窗口保留原字号与输入尺寸，以自动换行和属性区滚动适配，不整体缩放工作台。",
+                                        "section":  "typography"
+                                    },
+                                    {
+                                        "name":  "The Canvas Space Rule",
+                                        "body":  "窗口变宽时扩展中央工作画面，保持两侧工具的稳定密度；窗口变矮时让属性内容滚动。",
+                                        "section":  "layout"
+                                    },
+                                    {
+                                        "name":  "The Flat Workbench Rule",
+                                        "body":  "用色面和状态组织原生工作台；不要将视频中的光照与特效用作工具面板装饰。",
+                                        "section":  "elevation"
+                                    },
+                                    {
+                                        "name":  "The State Color Rule",
+                                        "body":  "界面强调色说明可操作、选中、焦点或结果；场景自身的色彩不进入工作台主题。",
+                                        "section":  "colors"
+                                    }
+                                ],
+                      "dos":  [
+                                  "Do 复用原生主题的普通、悬停、按下、禁用与焦点状态。",
+                                  "Do 保留数值框（88px）与系统字号，让字段换行、属性区滚动。",
+                                  "Do 用短标题和上下文说明当前物体或全局设置的作用范围。",
+                                  "Do 在滚动区外显示真实运行状态和操作结果，错误同时提供文字说明。",
+                                  "Do 将新增低频设置归入可折叠属性组，并遵守维度与继承条件。"
+                              ],
+                      "donts":  [
+                                    "Don\u0027t 把场景预览中的字体、颜色、荧光或三维阴影提升为工作台主题。",
+                                    "Don\u0027t 用整体缩小字体与控件适配支持范围内的紧凑窗口。",
+                                    "Don\u0027t 为工作面板添加装饰投影或重复浮动卡片层次。",
+                                    "Don\u0027t 用普通按钮的颜色替代真实禁用状态，或只用颜色表达错误。",
+                                    "Don\u0027t 以文字字符替代几何折叠图标或原生功能图标。"
+                                ]
+                  }
+}

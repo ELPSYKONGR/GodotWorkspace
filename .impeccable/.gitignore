@@ -1,0 +1,6 @@
+# Durable design records are committed; local questions/captures are not.
+questions/
+review/
+mocks/
+reference/
+config.local.json

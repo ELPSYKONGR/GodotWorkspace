@@ -66,8 +66,8 @@ func _run() -> void:
 	host.service.execute({"op": "object.select", "args": {"id": "ball_A"}})
 	host.panel.sync_document(host.service.document, "ball_A")
 	host.panel.object_panel.fields["mass"].get_line_edit().text = "2.5"
-	(_control(host.panel.pages["机制"], "分裂最低碰撞速度（0关闭）") as SpinBox).get_line_edit().text = "125"
-	(_control(host.panel.pages["机制"], "子球总数（2～100）") as SpinBox).get_line_edit().text = "4"
+	(_control(host.panel.pages["机制"], "最低碰撞速度") as SpinBox).get_line_edit().text = "125"
+	(_control(host.panel.pages["机制"], "每次子球总数") as SpinBox).get_line_edit().text = "4"
 	(_control(host.panel.pages["渲染"], "标题") as LineEdit).text = "统一应用测试"
 	(_control(host.panel.pages["渲染"], "光晕强度") as SpinBox).get_line_edit().text = "1.5"
 	(_control(host.panel.pages["声音"], "音量（dB）") as SpinBox).get_line_edit().text = "-18"
@@ -75,10 +75,10 @@ func _run() -> void:
 	(_control(host.panel.pages["生产"], "输出FPS") as OptionButton).select(1)
 	(_control(host.panel.pages["生产"], "输出帧数") as SpinBox).get_line_edit().text = "180"
 	(_control(host.panel.pages["特效"], "碰撞粒子") as CheckBox).button_pressed = true
-	checks["unrelated_immediate_switch_keeps_typed_drafts"] = host.panel.object_panel.fields["mass"].get_line_edit().text.to_float() == 2.5 and (_control(host.panel.pages["机制"], "分裂最低碰撞速度（0关闭）") as SpinBox).get_line_edit().text.to_float() == 125 and (_control(host.panel.pages["特效"], "单次粒子数") as SpinBox).get_line_edit().text.to_int() == 7
+	checks["unrelated_immediate_switch_keeps_typed_drafts"] = host.panel.object_panel.fields["mass"].get_line_edit().text.to_float() == 2.5 and (_control(host.panel.pages["机制"], "最低碰撞速度") as SpinBox).get_line_edit().text.to_float() == 125 and (_control(host.panel.pages["特效"], "单次粒子数") as SpinBox).get_line_edit().text.to_int() == 7
 	var before: Dictionary = host.service.document.duplicate(true)
 	var history_size: int = host.service.history.size()
-	(_control(host.panel, "应用更改并运行") as Button).pressed.emit()
+	host.panel.apply_button.pressed.emit()
 	var doc: Dictionary = host.service.document
 	checks["all_panels_apply_in_one_transaction"] = doc["objects"][0]["physics"]["mass"] == 2.5 and doc["mechanisms"][0]["conditions"]["minimum_collision_speed"] == 125 and doc["mechanisms"][0]["params"]["children_total"] == 4 and doc["presentation"]["captions"][0]["text"] == "统一应用测试" and doc["presentation"]["render"]["neon"]["glow_strength"] == 1.5 and doc["presentation"]["audio"]["volume_db"] == -18 and doc["presentation"]["effects"]["count"] == 7
 	checks["batch_runs_once_and_adds_one_undo"] = host.session.mode == "playing" and host.service.history.size() == history_size + 1 and host.panel.play_button.text == "暂停"
@@ -94,14 +94,14 @@ func _run() -> void:
 	host.panel.object_panel.fields["mass"].get_line_edit().text = "3.1"
 	host.panel.object_panel._select(Document.object_index(host.service.document, "ball_B"))
 	host.panel.object_panel.fields["mass"].get_line_edit().text = "4.2"
-	(_control(host.panel, "应用更改并运行") as Button).pressed.emit()
+	host.panel.apply_button.pressed.emit()
 	checks["all_modified_objects_apply_after_selection_changes"] = is_equal_approx(host.service.document["objects"][0]["physics"]["mass"], 3.1) and is_equal_approx(host.service.document["objects"][1]["physics"]["mass"], 4.2)
 	host.service.execute({"op": "scene.preset", "args": {"name": "neon"}})
 	before = host.service.document.duplicate(true)
-	(_control(host.panel, "应用更改并运行") as Button).pressed.emit()
+	host.panel.apply_button.pressed.emit()
 	checks["untouched_panels_do_not_create_rules_or_titles"] = before == host.service.document and host.service.document["mechanisms"].is_empty() and host.session.mode == "playing"
-	(_control(host.panel.pages["机制"], "重力Y（2D向下为正）") as SpinBox).get_line_edit().text = "300"
-	(_control(host.panel, "应用更改并运行") as Button).pressed.emit()
+	(_control(host.panel.pages["场景"], "重力 Y") as SpinBox).get_line_edit().text = "300"
+	host.panel.apply_button.pressed.emit()
 	checks["world_only_edit_does_not_enable_virtual_split_rules"] = host.service.document["mechanisms"].is_empty() and host.service.document["world"]["gravity"][1] == 300
 	var service = load("res://src/commands/command_service.gd").new()
 	service.initialize(Document.load_file("res://config/workbench_neon.json")["document"], Callable())

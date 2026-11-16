@@ -42,6 +42,13 @@ var scene_bar: VBoxContainer
 var built := false
 var current_time := 0.0
 var current_fps := 30.0
+var tabs: TabContainer
+var navigation: Dictionary = {}
+var inspector_title: Label
+var inspector_context: Label
+var record_button: Button
+var apply_button: Button
+var is_recording := false
 
 
 # Accept scene data and the clean stage texture before or after tree insertion.
@@ -61,101 +68,29 @@ func _ready() -> void:
 func _build() -> void:
 	built = true
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	var font := SystemFont.new()
-	font.font_names = PackedStringArray(["Microsoft YaHei", "Noto Sans CJK SC", "Arial"])
-	theme = Theme.new()
-	theme.default_font = font
-	theme.default_font_size = 16
-	var background := ColorRect.new()
-	background.color = Color("111a27")
-	background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	background.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(background)
-	var margin := MarginContainer.new()
-	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	for side in ["left", "right", "top", "bottom"]: margin.add_theme_constant_override("margin_" + side, 10)
-	add_child(margin)
-	var layout := VBoxContainer.new()
-	margin.add_child(layout)
-	_build_toolbar(layout)
-	runtime_label = F.text(layout, "编辑模式 · 正在加载场景")
-	var body := HBoxContainer.new()
-	body.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	layout.add_child(body)
-	var preview_column := VBoxContainer.new()
-	preview_column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	preview_column.size_flags_stretch_ratio = 0.9
-	body.add_child(preview_column)
-	preview = TextureRect.new()
-	preview.texture = preview_texture
-	preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	preview.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	preview.custom_minimum_size = Vector2(380, 330)
-	preview.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	preview.mouse_filter = Control.MOUSE_FILTER_STOP
-	preview.focus_mode = Control.FOCUS_ALL
-	preview.gui_input.connect(_preview_input)
-	preview_column.add_child(preview)
-	F.text(preview_column, "世界缩略图 · 黄色框为当前画幅（二维编辑时可点击定位）")
-	minimap = preload("res://src/ui/world_minimap.gd").new()
-	minimap.navigate.connect(func(top): _send("camera.pan", {"position": [top.x, top.y]}))
-	preview_column.add_child(minimap)
-	F.text(preview_column, "点选物体 · Delete删除 · 编辑模式拖动布置 · 右侧应用参数\n视频只渲染上方画面，工作台与调试叠加不会进入成片。")
-	var tabs := TabContainer.new()
-	tabs.custom_minimum_size.x = 560
-	tabs.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	tabs.size_flags_stretch_ratio = 1.15
-	body.add_child(tabs)
-	for caption in ["物体", "场景", "机制", "渲染", "声音", "特效", "回放", "生产", "调试"]:
-		var scroll := ScrollContainer.new()
-		scroll.name = caption
-		scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-		tabs.add_child(scroll)
-		var page := VBoxContainer.new()
-		page.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		page.add_theme_constant_override("separation", 8)
-		scroll.add_child(page)
-		pages[caption] = page
-	object_panel = ObjectPanel.new()
-	object_panel.pending_edits = pending_edits
-	object_panel.command_requested.connect(_send)
-	pages["物体"].add_child(object_panel)
-	_build_timeline(layout)
-	message_label = F.text(layout, "就绪。保存场景保留初始布局，录制保存实际运动轨迹。")
+	set_meta("inspector_shell", true)
+	preload("res://src/ui/workbench_layout.gd").build(self)
 	sync_document(document)
 
 
-# Route scene, simulation and file actions through the host command service.
-func _build_toolbar(parent: Node) -> void:
-	scene_bar = SceneBar.new()
-	scene_bar.command_requested.connect(_send)
-	parent.add_child(scene_bar)
-	var bar := HFlowContainer.new()
-	parent.add_child(bar)
-	F.button(bar, "编辑布置", func(): _send("simulation.edit", {}))
-	play_button = F.button(bar, "运行", func(): _send("simulation.toggle", {}))
-	F.button(bar, "应用更改并运行", _apply_all_and_run).tooltip_text = "统一校验所有已修改设置，成功后从初始布局重新运行；未修改项保持原样。"
-	for command in [["单物理步", "simulation.step"], ["重置", "simulation.reset"], ["录制", "take.record"], ["停止录制", "take.stop"], ["撤销", "history.undo"], ["重做", "history.redo"]]:
-		F.button(bar, command[0], func(): _send(command[1], {}))
+## Navigation changes the inspector, never destroys a page or its uncommitted draft.
+func select_page(caption: String) -> void:
+	if not pages.has(caption): return
+	tabs.current_tab = pages[caption].get_parent().get_index()
+	for key in navigation: navigation[key].set_pressed_no_signal(key == caption)
+	inspector_title.text = {"物体": "物体属性", "场景": "世界与镜头", "渲染": "画面", "机制": "碰撞机制", "声音": "碰撞声音", "特效": "全局特效", "回放": "轨迹文件", "生产": "导出视频", "调试": "调试日志"}.get(caption, caption)
+	_update_inspector_context()
 
+## Selecting an existing object also returns to its contextual properties.
+func _object_command(op: String, args: Dictionary) -> void:
+	if op == "object.select": select_page("物体")
+	_send(op, args)
 
-# Distinguish video-frame seeking from the physical-step toolbar action.
-func _build_timeline(parent: Node) -> void:
-	var row := HBoxContainer.new()
-	parent.add_child(row)
-	F.button(row, "◀ 一帧", func(): _send("take.seek", {"time": maxf(0, current_time - 1.0 / current_fps)}))
-	F.button(row, "一帧 ▶", func(): _send("take.seek", {"time": current_time + 1.0 / current_fps}))
-	timeline = HSlider.new()
-	timeline.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	timeline.min_value = 0
-	timeline.max_value = 0.01
-	timeline.step = 0.001
-	timeline.value_changed.connect(func(value: float): _send("take.seek", {"time": value}))
-	row.add_child(timeline)
-	clock_label = Label.new()
-	clock_label.custom_minimum_size.x = 255
-	clock_label.tooltip_text = "成片逐帧默认30fps，提交生产任务后沿用该任务FPS；顶部“单物理步”推进一次求解。"
-	row.add_child(clock_label)
+## Distinguish the selected object's scope from global settings without paragraphs.
+func _update_inspector_context() -> void:
+	if not is_instance_valid(inspector_context): return
+	var object_page: bool = tabs.current_tab == pages["物体"].get_parent().get_index()
+	inspector_context.text = "当前场景 · 全局设置" if not object_page else (str(object_panel.selected_spec.get("name", object_panel.selected_id)) if not object_panel.selected_spec.is_empty() else "点击画面或左侧列表选择物体")
 
 
 # Refresh controls only when their underlying document or selection changes.
@@ -167,6 +102,7 @@ func sync_document(doc: Dictionary, selected_id: String = "") -> void:
 	document = doc
 	if not built: return
 	object_panel.sync_document(doc, selected_id)
+	_update_inspector_context()
 	if synced_revision == int(doc.get("revision", 0)) and synced_document == doc: return
 	synced_revision = int(doc.get("revision", 0))
 	synced_document = doc.duplicate(true)
@@ -179,7 +115,7 @@ func sync_document(doc: Dictionary, selected_id: String = "") -> void:
 	Production.replay(pages["回放"], _send)
 	Production.production(pages["生产"], _send, doc, pending_edits)
 	job_status_label = F.text(pages["生产"], "生产任务：空闲")
-	F.text(pages["调试"], "接触事件来源于物理引擎。rule_rejected显示机制未执行的原因；无法获取真实接触点时来源标为估算。")
+	F.text(pages["调试"], "接触与机制事件").tooltip_text = "无法获取真实接触点时标为估算；这里只读，不修改模拟。"
 	debug_text = TextEdit.new()
 	debug_text.editable = false
 	debug_text.custom_minimum_size.y = 460
@@ -191,6 +127,8 @@ func sync_document(doc: Dictionary, selected_id: String = "") -> void:
 # Reflect actual playback state, including a replay reaching its end.
 func update_play_button(info: Dictionary) -> void:
 	if is_instance_valid(play_button): play_button.text = "暂停" if info.get("running", false) else "运行"
+	is_recording = bool(info.get("recording", false))
+	if is_instance_valid(record_button): record_button.text = "停止录制" if is_recording else "录制"
 
 
 # Update counters without issuing commands or overwriting fields being edited.
@@ -200,19 +138,39 @@ func update_runtime(info: Dictionary) -> void:
 	current_time = float(info.get("time", 0))
 	current_fps = maxf(1, float(info.get("output_fps", 30)))
 	var duration := float(info.get("duration", 0))
+	timeline.editable = duration > 0 and not is_recording
 	timeline.set_block_signals(true)
 	timeline.max_value = maxf(0.01, duration)
 	timeline.set_value_no_signal(minf(current_time, duration))
 	timeline.set_block_signals(false)
-	clock_label.text = "成片 %.3fs / %.3fs\n模拟 %.3fs" % [current_time, duration, float(info.get("sim_time", 0))]
+	clock_label.text = "%.2f / %.2f s" % [current_time, duration]
+	clock_label.tooltip_text = "成片 %.3f s · 模拟 %.3f s · %d fps" % [current_time, float(info.get("sim_time", 0)), current_fps]
 	var take_status := "尚未录制轨迹" if duration <= 0 else ("轨迹已过期：请重新录制" if info.get("take_stale", false) else "轨迹可用")
+	if duration <= 0: clock_label.text = "尚未录制"
+	elif info.get("take_stale", false): clock_label.text = "轨迹已过期"
+	clock_label.tooltip_text += "\n" + take_status
 	var active := int(info.get("active", 0))
 	var capacity := int(F.value(document, "world.max_dynamic_bodies", 48))
 	var capacity_status := "（已达上限）" if active >= capacity else ""
-	runtime_label.text = "%s%s  |  物体 %d/%d%s  碰撞 %d  分裂 %d  |  渲染 %.0f FPS  |  %s" % [str(info.get("mode", "编辑")), " · 录制中" if info.get("recording", false) else "", active, capacity, capacity_status, int(info.get("contacts", 0)), int(info.get("splits", 0)), float(info.get("fps", 0)), take_status]
+	var modes := {"edit": "布置", "playing": "运行中", "paused": "已暂停", "recording": "录制中", "replay": "回放"}
+	runtime_label.text = "%s · 物体 %d/%d%s · 渲染 %.0f FPS" % [str(modes.get(str(info.get("mode", "edit")), str(info.get("mode", "布置")))), active, capacity, capacity_status, float(info.get("fps", 0))]
+	runtime_label.tooltip_text = "%s · 碰撞 %d · 分裂 %d" % [take_status, int(info.get("contacts", 0)), int(info.get("splits", 0))]
 	if info.get("hit_stop_active", false): runtime_label.text += " · 分裂顿帧中：物理暂停"
 	if float(info.get("hit_stop_elapsed_seconds", 0)) > 0.001: runtime_label.text += " · 累计顿帧 %.2fs" % float(info["hit_stop_elapsed_seconds"])
-	job_status_label.text = "生产任务：" + str(info.get("job_status", "空闲"))
+	var job: Variant = JSON.parse_string(str(info.get("job_status", "{}")))
+	var state := str(job.get("state", "idle")) if job is Dictionary else "idle"
+	var states := {"idle": "空闲", "starting": "准备中", "queued": "排队中", "rendering": "正在渲染", "mixing": "正在混音", "encoding": "正在编码", "complete": "已完成", "cancelled": "已取消", "failed": "失败"}
+	job_status_label.text = "导出：" + str(states.get(state, state))
+	if duration <= 0: job_status_label.text = "请先在底部录制一段轨迹"
+	elif info.get("take_stale", false): job_status_label.text = "物理设置已改变，请重新录制"
+	job_status_label.tooltip_text = str(info.get("job_status", ""))
+	for control in get_tree().get_nodes_in_group("export_controls"):
+		if control.get_meta("cancel", false): control.disabled = state in ["idle", "complete", "cancelled", "failed"]
+		else: control.disabled = duration <= 0 or bool(info.get("take_stale", false)) or is_recording or state not in ["idle", "complete", "cancelled", "failed"]
+	var dirty: bool = not pending_edits.drafts.is_empty()
+	for group in pending_edits.groups.values():
+		if pending_edits.changed(group): dirty = true; break
+	apply_button.text = "应用更改并运行" if dirty else "应用并运行"
 	var lines: PackedStringArray = PackedStringArray()
 	lines.append("生产任务：" + str(info.get("job_status", "空闲")))
 	lines.append("选中：" + str(info.get("selected_id", "无")))
@@ -224,7 +182,7 @@ func update_runtime(info: Dictionary) -> void:
 		if events[index].get("type", "") == "rule_rejected":
 			var reason := str(events[index].get("reason", ""))
 			lines.append("最近一次机制未执行：" + str(REJECTION_LABELS.get(reason, reason)))
-			runtime_label.text += "\n最近一次机制未执行：" + str(REJECTION_LABELS.get(reason, reason))
+			runtime_label.tooltip_text += "\n最近一次机制未执行：" + str(REJECTION_LABELS.get(reason, reason))
 			break
 	# Hidden tabs need no text layout. Full event data stays in control state / recorded Take.
 	if debug_text.is_visible_in_tree():
@@ -239,6 +197,7 @@ func update_runtime(info: Dictionary) -> void:
 func show_message(message: String, is_error: bool = false) -> void:
 	if not is_instance_valid(message_label): return
 	message_label.text = message
+	message_label.tooltip_text = message
 	message_label.add_theme_color_override("font_color", Color("ff9d9d") if is_error else Color("abd9bd"))
 
 
