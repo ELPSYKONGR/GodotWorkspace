@@ -85,5 +85,7 @@ static func _register(parent: Node, caption: String, prefix: String, spec: Dicti
 	var apply := func():
 		var value: Dictionary = command.call()
 		send.call(value["op"], value["args"])
-	F.button(parent, caption, apply).disabled = locked
+	var button := F.button(parent, caption, apply)
+	button.disabled = locked
+	button.tooltip_text = "输入后点击应用，立即更新画面并保留当前运动"
 	if pending != null: pending.register(prefix + str(spec["id"]), controls, apply, command)

@@ -95,6 +95,10 @@ func _build_form() -> void:
 	var is_3d: bool = F.value(document, "world.dimension", "2d") == "3d"
 	var count := 3 if is_3d else 2
 	fields["name"] = F.line(form, "名称", str(selected_spec.get("name", selected_id)))
+	var identity := F.line(form, "物体 ID", selected_id)
+	identity.editable = false
+	identity.add_theme_color_override("font_uneditable_color", Color("a5b5b3"))
+	identity.tooltip_text = "固定标识，可选中文字后 Ctrl+C；镜头跟随可直接按名称选择物体"
 	var geometry := F.section(form, "几何与布置")
 	var position: Array = F.value(selected_spec, "transform.position", [0, 0, 0] if is_3d else [0, 0])
 	var velocity: Array = F.value(selected_spec, "physics.velocity", [0, 0, 0] if is_3d else [0, 0])
@@ -151,7 +155,9 @@ func _build_form() -> void:
 		var control: Control = fields[key]
 		if control is LineEdit or control is SpinBox: control.editable = not locked
 		elif control is BaseButton: control.disabled = locked
-	F.button(form, "应用物体", _apply).disabled = locked
+	var apply := F.button(form, "应用物体", _apply)
+	apply.disabled = locked
+	apply.tooltip_text = "点击后提交；形状、位置或物理变化会回到初始布置，再点运行。单改外观保留运动"
 	form.tooltip_text = "几何或物理修改会回到初始布局，旧轨迹可能过期；材质与特效独立应用"
 	parameter_baseline = _changes(fields, selected_spec, document)
 	if pending_edits != null:

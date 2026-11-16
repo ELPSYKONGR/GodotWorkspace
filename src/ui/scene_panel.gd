@@ -29,7 +29,21 @@ static func build(parent: Node, doc: Dictionary, send: Callable, pending: RefCou
 	var mode := F.choice(lens, "模式", ["fixed", "follow_y"], str(camera.get("mode", "fixed")))
 	var following := VBoxContainer.new()
 	lens.add_child(following)
-	var target := F.line(following, "跟随物体 ID", str(camera.get("target_root", selected)))
+	var target_id := str(camera.get("target_root", selected))
+	var ids: Array = [""]
+	var names: Dictionary = {"": "自动（首个动态物体）"}
+	for spec in doc.get("objects", []):
+		var id := str(spec["id"])
+		ids.append(id)
+		names[id] = "%s · %s" % [spec.get("name", id), id]
+	if not target_id in ids:
+		ids.append(target_id)
+		names[target_id] = "缺失物体 · " + target_id
+	var target := F.choice(following, "跟随物体", ids, target_id)
+	target.fit_to_longest_item = false
+	target.clip_text = true
+	target.tooltip_text = "按名称和 ID 选择初始物体；点击应用世界与镜头后生效"
+	for index in target.item_count: target.set_item_text(index, names[ids[index]])
 	var lineage := F.check(following, "分裂后跟随子球", camera.get("on_split", "lowest_descendant") == "lowest_descendant")
 	lineage.tooltip_text = "沿原球谱系选择最低的存活后代；后代消失时保持最后镜头"
 	var down := F.check(following, "只向下移动", bool(camera.get("only_down", true)))
@@ -49,7 +63,7 @@ static func build(parent: Node, doc: Dictionary, send: Callable, pending: RefCou
 		for field in controls:
 			if field is SpinBox: field.apply()
 		var updated := camera.duplicate(true)
-		updated.merge({"mode": F.selected(mode), "target_root": target.text, "on_split": "lowest_descendant" if lineage.button_pressed else "stop", "only_down": down.button_pressed, "limit_world": limit.button_pressed, "framing_y": framing.value, "dead_zone_top": top.value, "dead_zone_bottom": bottom.value, "smooth_seconds": smoothing.value, "position_2d": [x.value, y.value]}, true)
+		updated.merge({"mode": F.selected(mode), "target_root": F.selected(target), "on_split": "lowest_descendant" if lineage.button_pressed else "stop", "only_down": down.button_pressed, "limit_world": limit.button_pressed, "framing_y": framing.value, "dead_zone_top": top.value, "dead_zone_bottom": bottom.value, "smooth_seconds": smoothing.value, "position_2d": [x.value, y.value]}, true)
 		return {"world.bounds_2d": [bounds[0].value, bounds[1].value, bounds[2].value, bounds[3].value], "presentation.render.camera": updated}
 	var apply := func(): send.call("scene.patch", {"changes": changes.call()})
 	F.button(parent, "应用世界与镜头", apply)

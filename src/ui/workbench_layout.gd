@@ -131,6 +131,8 @@ static func _transport(ui: Control, parent: Node) -> void:
 	var row := HBoxContainer.new()
 	panel.add_child(row)
 	ui.play_button = F.button(row, "运行", func(): ui._send("simulation.toggle", {}))
+	ui.play_button.custom_minimum_size.x = 88
+	T.primary(ui.play_button)
 	ui.play_button.tooltip_text = "运行 / 暂停 · Space（文本编辑时不触发）"
 	ui.record_button = F.button(row, "录制", func(): ui._send("take.stop" if ui.is_recording else "take.record", {}))
 	ui.record_button.tooltip_text = "从初始场景录制；再次点击停止并保存"

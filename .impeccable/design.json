@@ -328,7 +328,7 @@
                            "name":  "主操作按钮",
                            "kind":  "button",
                            "refersTo":  "button-primary",
-                           "description":  "导出相关主操作；Godot Theme 的 HTML/CSS 展示转译。",
+                           "description":  "运行/暂停及导出相关主操作；Godot Theme 的 HTML/CSS 展示转译。",
                            "html":  "\u003cbutton class=\"ds-primary\"\u003e导出视频\u003c/button\u003e",
                            "css":  ".ds-primary{font-family:\u0027Microsoft YaHei UI\u0027,\u0027Microsoft YaHei\u0027,\u0027Noto Sans CJK SC\u0027,Arial;font-size:14px; background:#8de0c5;color:#132a22;border:0;border-radius:5px;padding:7px 14px}.ds-primary:hover{background:#b5eedb}.ds-primary:active{background:#69c7a8}.ds-primary:focus-visible{outline:1px solid #8de0c5;outline-offset:-1px;}.ds-primary:disabled{background:#202c29;color:#71817f}"
                        },

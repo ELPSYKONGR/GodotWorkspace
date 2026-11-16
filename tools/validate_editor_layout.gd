@@ -52,6 +52,8 @@ func _run() -> void:
 	checks["object_browser_stays_left_of_stage"] = ui.object_panel.listing.global_position.x < ui.preview.global_position.x
 	checks["properties_stay_right_of_stage"] = ui.object_panel.form.global_position.x >= ui.preview.get_global_rect().end.x
 	checks["six_visible_setting_entries"] = ui.navigation.size() == 6 and not ui.tabs.tabs_visible
+	var identity := _find(ui.object_panel, "物体 ID") as LineEdit
+	checks["object_id_is_visible_readonly_and_selectable"] = identity.text == "ball_A" and not identity.editable and identity.selecting_enabled and identity.is_visible_in_tree()
 	checks["stage_height_at_least_650_at_1440x900"] = ui.get_preview_rect().size.y >= 650
 	checks["runtime_and_result_labels_have_visible_height"] = ui.runtime_label.size.y >= 20 and ui.message_label.size.y >= 20
 	checks["object_browser_has_keyboard_focus_outline"] = ui.object_panel.listing.get_theme_stylebox("focus") is StyleBoxFlat and ui.object_panel.listing.get_theme_stylebox("focus").border_width_left >= 1
@@ -114,9 +116,23 @@ func _run() -> void:
 	ui.object_panel.fields["name"].grab_focus()
 	host._unhandled_key_input(key)
 	checks["text_editing_does_not_trigger_space_shortcut"] = host.session.mode == "playing"
+	ui.play_button.pressed.emit()
+	var paused: bool = host.session.mode == "paused" and ui.play_button.text == "运行"
+	await _shot("14_paused")
+	ui.play_button.pressed.emit()
+	checks["visible_run_button_pauses_and_resumes"] = paused and host.session.mode == "playing" and ui.play_button.text == "暂停" and ui.play_button.custom_minimum_size.x == 88
 	ui.preview.grab_focus()
 	host.service.execute({"op": "scene.load", "args": {"path": "res://config/workbench_long.json"}})
 	ui.select_page("场景")
+	var target := _find(ui.pages["场景"], "跟随物体") as OptionButton
+	checks["camera_target_shows_name_and_persists_id"] = target.get_item_text(target.selected).contains("ball_A") and F.selected(target) == "ball_A"
+	var target_index := -1
+	for index in target.item_count:
+		if str(target.get_item_metadata(index)) == "outline_U": target_index = index
+	target.select(target_index)
+	var before_stage: Node = host.session.stage
+	(_find(ui.pages["场景"], "应用世界与镜头") as Button).pressed.emit()
+	checks["camera_dropdown_applies_actual_id_without_reset"] = host.service.document["presentation"]["render"]["camera"]["target_root"] == "outline_U" and host.session.stage == before_stage
 	await _shot("09_long_world")
 	root.size = Vector2i(1100, 720)
 	await _settle()

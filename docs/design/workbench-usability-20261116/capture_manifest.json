@@ -1,0 +1,23 @@
+[
+    {
+        "file":  "01_objects.png",
+        "bytes":  106449,
+        "sha256":  "ee3e6a18c0728b83d7d74319021e1e8cdf7f1b06a212901a8bdbd864b5c6d899",
+        "source":  "native Godot GPU capture; tools/validate_editor_layout.gd --capture",
+        "generated":  false
+    },
+    {
+        "file":  "09_long_world.png",
+        "bytes":  126808,
+        "sha256":  "bcd867c89ff99bd2771867f54c687811e258c63f0adfb8396a210834fd15a757",
+        "source":  "native Godot GPU capture; tools/validate_editor_layout.gd --capture",
+        "generated":  false
+    },
+    {
+        "file":  "14_paused.png",
+        "bytes":  117503,
+        "sha256":  "d3fa16f0c20d39b6852b0dd2c5a0a2a2a9258a739a859ec2b5184911a3c684d2",
+        "source":  "native Godot GPU capture; tools/validate_editor_layout.gd --capture",
+        "generated":  false
+    }
+]

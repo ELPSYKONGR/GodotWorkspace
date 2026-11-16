@@ -83,6 +83,7 @@
 | `src/ui/workbench_layout.gd` / `workbench_theme.gd` | 三栏工作空间与原生控件主题、顶部文件/底部录制、可见状态及键盘焦点 |
 | `PRODUCT.md` / `DESIGN.md` / `.impeccable/design.json` | 已确认产品约束、实现后的视觉规则和设计侧车；不是运行时场景数据 |
 | `docs/design/workbench-redesign-20261116/` | `brief.md`设置取舍；`验收.md`验证与复核；PNG/GPU截图、联系表与`capture_manifest.json`图片来源/哈希；JSON/日志为专项和完整回归证据 |
+| `docs/design/workbench-usability-20261116/` | 运行/暂停、物体ID可见、按名称选跟随目标的补充验收、原生GPU截图、专项报告和图片来源/哈希 |
 | `config/design-skill-lock.json` / `SKILLS_USED.md` | Taste/Impeccable来源、版本、许可、复现安装；仅用于AI开发辅助 |
 | `src/ui/scene_panel.gd` | 长世界范围、跟随参数、标准边界同步，复用统一草稿/命令事务 |
 | `src/ui/world_minimap.gd` | 编辑器世界缩略图、真实物体/画幅概览、编辑导航逆变换，不进入成片 |
