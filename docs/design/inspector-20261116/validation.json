@@ -1,0 +1,480 @@
+{
+  "date": "2026-11-16",
+  "scope": "design_artifact_only",
+  "godot_runtime_modified": false,
+  "renderer": "isolated headless Edge",
+  "checks": [
+    {
+      "width": 1416,
+      "checks": [
+        {
+          "name": "all_nine_categories",
+          "passed": true
+        },
+        {
+          "name": "layout_scene",
+          "passed": true
+        },
+        {
+          "name": "layout_object",
+          "passed": true
+        },
+        {
+          "name": "layout_material",
+          "passed": true
+        },
+        {
+          "name": "layout_physics",
+          "passed": true
+        },
+        {
+          "name": "layout_background",
+          "passed": true
+        },
+        {
+          "name": "layout_collision-audio",
+          "passed": true
+        },
+        {
+          "name": "layout_music",
+          "passed": true
+        },
+        {
+          "name": "layout_text-effects",
+          "passed": true
+        },
+        {
+          "name": "layout_output",
+          "passed": true
+        },
+        {
+          "name": "2d_pbr_fields_disabled",
+          "passed": true
+        },
+        {
+          "name": "3d_pbr_fields_enabled",
+          "passed": true
+        },
+        {
+          "name": "material_preview_updates",
+          "passed": true
+        },
+        {
+          "name": "title_preview_updates",
+          "passed": true
+        },
+        {
+          "name": "draft_survives_category_switch",
+          "passed": true
+        },
+        {
+          "name": "camera_map_updates",
+          "passed": true
+        },
+        {
+          "name": "page_no_horizontal_overflow",
+          "passed": true
+        }
+      ],
+      "layouts": [
+        {
+          "panel": "scene",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "object",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "material",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "physics",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "background",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "collision-audio",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "music",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "text-effects",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "output",
+          "number_widths": [
+            88
+          ],
+          "overflow": false
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 492,
+      "checks": [
+        {
+          "name": "all_nine_categories",
+          "passed": true
+        },
+        {
+          "name": "layout_scene",
+          "passed": true
+        },
+        {
+          "name": "layout_object",
+          "passed": true
+        },
+        {
+          "name": "layout_material",
+          "passed": true
+        },
+        {
+          "name": "layout_physics",
+          "passed": true
+        },
+        {
+          "name": "layout_background",
+          "passed": true
+        },
+        {
+          "name": "layout_collision-audio",
+          "passed": true
+        },
+        {
+          "name": "layout_music",
+          "passed": true
+        },
+        {
+          "name": "layout_text-effects",
+          "passed": true
+        },
+        {
+          "name": "layout_output",
+          "passed": true
+        },
+        {
+          "name": "2d_pbr_fields_disabled",
+          "passed": true
+        },
+        {
+          "name": "3d_pbr_fields_enabled",
+          "passed": true
+        },
+        {
+          "name": "material_preview_updates",
+          "passed": true
+        },
+        {
+          "name": "title_preview_updates",
+          "passed": true
+        },
+        {
+          "name": "draft_survives_category_switch",
+          "passed": true
+        },
+        {
+          "name": "camera_map_updates",
+          "passed": true
+        },
+        {
+          "name": "page_no_horizontal_overflow",
+          "passed": true
+        }
+      ],
+      "layouts": [
+        {
+          "panel": "scene",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "object",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "material",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "physics",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "background",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "collision-audio",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "music",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "text-effects",
+          "number_widths": [
+            88,
+            88,
+            88,
+            88,
+            88,
+            88
+          ],
+          "overflow": false
+        },
+        {
+          "panel": "output",
+          "number_widths": [
+            88
+          ],
+          "overflow": false
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "01-scene.png",
+      "width": 520,
+      "height": 923
+    },
+    {
+      "file": "02-object.png",
+      "width": 520,
+      "height": 933
+    },
+    {
+      "file": "03-material.png",
+      "width": 520,
+      "height": 934
+    },
+    {
+      "file": "04-physics.png",
+      "width": 520,
+      "height": 920
+    },
+    {
+      "file": "05-background.png",
+      "width": 520,
+      "height": 829
+    },
+    {
+      "file": "06-collision-audio.png",
+      "width": 520,
+      "height": 873
+    },
+    {
+      "file": "07-music.png",
+      "width": 520,
+      "height": 946
+    },
+    {
+      "file": "08-text-effects.png",
+      "width": 520,
+      "height": 854
+    },
+    {
+      "file": "09-output.png",
+      "width": 520,
+      "height": 842
+    },
+    {
+      "file": "00-workbench.png",
+      "width": 1440,
+      "height": 1160
+    }
+  ],
+  "sources": {
+    "main": {
+      "url": "https://api.github.com/repos/ELPSYKONGR/GodotWorkspace/branches/main",
+      "ok": true,
+      "terms": {},
+      "branch": "main",
+      "sha": "2c07a708e19ba902aa5ed6ecd07c84bfdca27ebf"
+    },
+    "Camera2D": {
+      "url": "https://api.github.com/repos/godotengine/godot/contents/doc/classes/Camera2D.xml",
+      "ok": true,
+      "terms": {
+        "position_smoothing_enabled": true,
+        "drag_vertical_enabled": true,
+        "limit_bottom": true
+      },
+      "html_url": "https://github.com/godotengine/godot/blob/master/doc/classes/Camera2D.xml"
+    },
+    "Camera3D": {
+      "url": "https://api.github.com/repos/godotengine/godot/contents/doc/classes/Camera3D.xml",
+      "ok": true,
+      "terms": {
+        "projection": true,
+        "size": true,
+        "far": true
+      },
+      "html_url": "https://github.com/godotengine/godot/blob/master/doc/classes/Camera3D.xml"
+    },
+    "Material": {
+      "url": "https://api.github.com/repos/godotengine/godot/contents/doc/classes/BaseMaterial3D.xml",
+      "ok": true,
+      "terms": {
+        "roughness": true,
+        "metallic": true,
+        "albedo_color": true,
+        "emission_enabled": true
+      },
+      "html_url": "https://github.com/godotengine/godot/blob/master/doc/classes/BaseMaterial3D.xml"
+    },
+    "Audio": {
+      "url": "https://api.github.com/repos/godotengine/godot/contents/doc/classes/AudioStreamPlayer.xml",
+      "ok": true,
+      "terms": {
+        "bus": true,
+        "stream": true,
+        "volume_db": true
+      },
+      "html_url": "https://github.com/godotengine/godot/blob/master/doc/classes/AudioStreamPlayer.xml"
+    },
+    "CanvasLayer": {
+      "url": "https://api.github.com/repos/godotengine/godot/contents/doc/classes/CanvasLayer.xml",
+      "ok": true,
+      "terms": {
+        "follow_viewport_enabled": true,
+        "layer": true
+      },
+      "html_url": "https://github.com/godotengine/godot/blob/master/doc/classes/CanvasLayer.xml"
+    },
+    "CameraDemo": {
+      "url": "https://api.github.com/repos/godotengine/godot-demo-projects/git/trees/master?recursive=1",
+      "ok": true,
+      "terms": {},
+      "files": [
+        "3d/physical_light_camera_units/project.godot"
+      ]
+    }
+  },
+  "passed": true
+}

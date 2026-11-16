@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RelaxVideo · 属性界面设计预览</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="panels.js"></script>
+  <script defer src="preview.js"></script>
+</head>
+<body>
+<main id="rv-inspector">
+  <header class="app-bar">
+    <div class="brand"><b>RelaxVideo</b><span>场景工作台</span></div>
+    <span class="proposal">界面设计预览 · 尚未接入引擎</span>
+    <span class="document-name">long_fall.scene</span>
+  </header>
+  <div class="command-bar">
+    <span class="crumb">场景 / 长场景小球实验</span>
+    <button type="button" id="apply-top">更新示意</button>
+    <span id="edit-status" role="status">可修改右侧参数查看示意</span>
+  </div>
+  <div class="workspace">
+    <aside class="outliner">
+      <h2>场景物体</h2>
+      <div class="tree-row">世界 <span>720 × 20,000</span></div>
+      <div class="tree-row selected">● 绿色初始球 A</div>
+      <div class="tree-row">▰ 左墙 / 右墙</div>
+      <div class="tree-row">▰ 斜坡障碍组</div>
+      <div class="tree-row">▱ 世界底部地面</div>
+      <div class="tree-row">◉ 跟随镜头</div>
+      <h2 class="map-heading">世界缩略图</h2>
+      <div class="minimap" aria-label="长世界与固定画幅的相对位置">
+        <div class="map-wall left"></div><div class="map-wall right"></div>
+        <div class="map-obstacle o1"></div><div class="map-obstacle o2"></div>
+        <div class="map-obstacle o3"></div><div class="map-obstacle o4"></div>
+        <div class="camera-window"><span>视频画幅</span></div>
+      </div>
+      <div class="map-caption">世界深度 20,000 px</div>
+    </aside>
+    <section class="stage-column" aria-label="成片画幅示意">
+      <div class="stage-heading"><span>镜头预览 · 静态构图示意</span><span id="frame-size">1080 × 1920</span></div>
+      <div class="stage-wrap">
+        <div class="video-frame">
+          <div class="stage-grid"></div>
+          <div class="video-title" id="video-title">小球会落到哪里？</div>
+          <div class="video-subtitle">跟随镜头 · 世界向下延伸</div>
+          <div class="depth-line"><span id="depth-label">Y = 3,200</span></div>
+          <div class="wall wall-left"></div><div class="wall wall-right"></div>
+          <div class="ramp ramp-a"></div><div class="ramp ramp-b"></div>
+          <div class="ramp ramp-c"></div>
+          <div class="trail-illustration"></div><div class="hero-ball"></div>
+          <div class="ball-selection"></div>
+          <div class="stage-bottom">画面外的世界继续存在 ↓</div>
+        </div>
+      </div>
+      <div class="stage-note">此处用于确认构图与属性布局，不运行物理模拟。</div>
+      <div class="timeline"><span>轨迹时间轴</span><div class="timeline-track"><i></i></div><span>00:00 / 00:15</span></div>
+    </section>
+    <aside class="inspector">
+      <div class="inspector-top"><span>属性检查器</span><span class="numeric-note">数值框 88 px</span></div>
+      <nav id="panel-tabs" aria-label="属性分类"></nav>
+      <section id="panel-content" aria-live="polite"></section>
+      <footer class="inspector-footer"><span id="panel-status">界面方案 · 非运行功能</span><button type="button" id="apply-bottom">更新示意</button></footer>
+    </aside>
+  </div>
+</main>
+</body>
+</html>
